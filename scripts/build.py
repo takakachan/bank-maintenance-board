@@ -12,6 +12,12 @@ from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
 
+try:
+    # ボット対策(TLSフィンガープリント判定)のあるサイト向けにChromeを擬装
+    from curl_cffi import requests as chrome_requests
+except ImportError:
+    chrome_requests = None
+
 JST = timezone(timedelta(hours=9))
 NOW = datetime.now(JST)
 
@@ -47,8 +53,7 @@ BANKS = [
          regular="夜間（23:55前後–翌朝）に振込・アプリの休止が入ることが多い"),
     dict(id="resona", name="りそな銀行", group="mega",
          official="https://www.resonabank.co.jp/direct/service/",
-         news_urls=["https://www.resonabank.co.jp/kojin/oshirase_s/",
-                    "https://www.resonabank.co.jp/kojin/gochui_s/"],
+         news_urls=["https://www.resonabank.co.jp/kojin/oshirase/"],
          regular="マイゲート・アプリ：毎月第1月曜 2:00–6:00／第2土曜 23:00–翌日曜 6:00"),
     # --- ネット銀行 ---
     dict(id="netbk", name="住信SBIネット銀行", group="net",
@@ -130,6 +135,13 @@ def resolve_url(url: str) -> str:
 
 
 def fetch(url: str) -> str | None:
+    if chrome_requests is not None:
+        try:
+            r = chrome_requests.get(url, impersonate="chrome", timeout=25)
+            if r.status_code == 200:
+                return r.text
+        except Exception:
+            pass  # 通常のrequestsで再試行
     try:
         r = requests.get(url, headers=HEADERS, timeout=25)
         r.raise_for_status()

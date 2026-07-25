@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-25T08:12:36.710375+09:00",
+ "updated": "2026-07-25T09:24:33.308066+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -9,8 +9,34 @@
    "official": "https://www.mizuhobank.co.jp/oshirase/maintenance_personal.html",
    "regular": "臨時メンテナンスはお知らせページで随時告知",
    "note": null,
-   "fetch_ok": false,
-   "items": []
+   "fetch_ok": true,
+   "items": [
+    {
+     "title": "「かんたん残高照会（インターネット残高照会）」における宝くじの購入申込・自動購入機能の停止に伴い、インターネット残高照会規定を改定します（改定日：2026年3月15日）。",
+     "url": "https://www.mizuhobank.co.jp/oshirase/kitei_kaitei/index.html#kitei20260315",
+     "date": "2026-03-15"
+    },
+    {
+     "title": "【臨時メンテナンスのお知らせ】みずほダイレクトの投資信託メニュー（2026年3月実施）",
+     "url": "https://www.mizuhobank.co.jp/direct/about/service/fund.html",
+     "date": null
+    },
+    {
+     "title": "休止する商品・サービス一覧",
+     "url": "https://www.mizuhobank.co.jp/oshirase/maintenance_personal.html#pause",
+     "date": null
+    },
+    {
+     "title": "【法人のお客さま】サービス休止のお知らせはこちら",
+     "url": "https://www.mizuhobank.co.jp/corporate/oshirase/maintenance_corporate.html",
+     "date": null
+    },
+    {
+     "title": "みずほ信託銀行の一部サービスも休止いたします。詳しくはこちら",
+     "url": "https://www.mizuhobank.co.jp/external.html?site_id=0003",
+     "date": null
+    }
+   ]
   },
   {
    "id": "mufg",
@@ -43,33 +69,7 @@
    "regular": "SMBCダイレクト：毎週日曜 21:00–月曜 7:00 は一部機能停止",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "お知らせ 2026年6月24日（水）・7月8日（水）にプッシュ通知機能のシステムメンテナンスを行います。",
-     "url": "https://www.smbc.co.jp/kojin/spaplli/directapp/news/support/20260624.html",
-     "date": "2026-06-24"
-    },
-    {
-     "title": "お知らせ 2026年4月13日（月）1：00〜6：00頃まで、SMBC IDのシステムメンテナンスを行います。",
-     "url": "https://www.smbc.co.jp/kojin/spaplli/directapp/news/support/20260406.html",
-     "date": "2026-04-13"
-    },
-    {
-     "title": "お知らせ 2026年3月18日（水）にプッシュ通知機能のシステムメンテナンスを行います。",
-     "url": "https://www.smbc.co.jp/kojin/spaplli/directapp/news/support/20260318.html",
-     "date": "2026-03-18"
-    },
-    {
-     "title": "お知らせ 2026年2月12日（木）に家計管理の一部サービス（Moneytree ® ）の臨時メンテナンスを行います。",
-     "url": "https://www.smbc.co.jp/kojin/spaplli/directapp/news/support/20260206.html",
-     "date": "2026-02-12"
-    },
-    {
-     "title": "お知らせ 2026年2月9日（月）0：00〜8：00頃まで、三井住友カードのシステムメンテナンスを行います。",
-     "url": "https://www.smbc.co.jp/kojin/spaplli/directapp/news/support/20260209.html",
-     "date": "2026-02-09"
-    }
-   ]
+   "items": []
   },
   {
    "id": "jpbank",
@@ -116,8 +116,34 @@
    "official": "https://www.resonabank.co.jp/direct/service/",
    "regular": "マイゲート・アプリ：毎月第1月曜 2:00–6:00／第2土曜 23:00–翌日曜 6:00",
    "note": null,
-   "fetch_ok": false,
-   "items": []
+   "fetch_ok": true,
+   "items": [
+    {
+     "title": "システムメンテナンスに伴うマイゲートからのファンドラップ増額申込み停止について（2026年6月27日20:00～2026年6月29日8:00）",
+     "url": "https://www.resonabank.co.jp/kojin/oshirase_s/2026/detail/oshirase_9789.html",
+     "date": "2026-06-27"
+    },
+    {
+     "title": "【お知らせ】システムメンテナンスに伴うiDeCoオンライン申込サービスの一時利用停止について(2026年6月1日)",
+     "url": "https://www.resonabank.co.jp/kojin/oshirase_s/2026/detail/oshirase_9693.html",
+     "date": "2026-06-01"
+    },
+    {
+     "title": "【お知らせ】システムメンテナンスに伴う来店予約サービスの一時利用停止について(2026年05月04日)",
+     "url": "https://www.resonabank.co.jp/kojin/oshirase_s/2026/detail/oshirase_9676.html",
+     "date": "2026-05-04"
+    },
+    {
+     "title": "【お知らせ】システムメンテナンスに伴う来店予約サービスの一時利用停止について(2026年04月20日)",
+     "url": "https://www.resonabank.co.jp/kojin/oshirase_s/2026/detail/oshirase_9613.html",
+     "date": "2026-04-20"
+    },
+    {
+     "title": "【お知らせ】システムメンテナンスに伴う来店予約サービスの一時利用停止について (2026年1月19日)",
+     "url": "https://www.resonabank.co.jp/kojin/oshirase_s/2026/detail/oshirase_9310.html",
+     "date": "2026-01-19"
+    }
+   ]
   },
   {
    "id": "netbk",
@@ -165,33 +191,7 @@
    "regular": "1・4・7・10月の最終火曜 1:00–6:00（全体）／日曜未明に一部機能停止あり",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "外貨預金サービスの停止のお知らせ（7月25日〜26日）",
-     "url": "https://www.paypay-bank.co.jp/news/2026/0714.html",
-     "date": "2026-07-25"
-    },
-    {
-     "title": "【再開】FXサービスの停止のお知らせ（7月18日）",
-     "url": "https://www.paypay-bank.co.jp/news/2026/0713-02.html",
-     "date": "2026-07-18"
-    },
-    {
-     "title": "スポーツくじ（toto・BIG）販売の一時休止について（6月25日〜）",
-     "url": "https://www.paypay-bank.co.jp/news/2026/0623.html",
-     "date": "2026-06-25"
-    },
-    {
-     "title": "【再開】FXサービスの停止のお知らせ（5月23日）",
-     "url": "https://www.paypay-bank.co.jp/news/2026/0522.html",
-     "date": null
-    },
-    {
-     "title": "スポーツくじ（toto・BIG）販売の一時休止について（5月23日〜27日）",
-     "url": "https://www.paypay-bank.co.jp/news/2026/0522-03.html",
-     "date": null
-    }
-   ]
+   "items": []
   },
   {
    "id": "rakuten",
