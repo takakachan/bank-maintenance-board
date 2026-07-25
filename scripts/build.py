@@ -292,10 +292,10 @@ def render(results: list[dict]) -> str:
             else:
                 notice = '<span class="muted">自動取得に失敗しました。公式ページをご確認ください</span>'
             rows.append(
-                f'<tr><td class="bank">{esc(b["name"])}{pref}</td>'
-                f'<td class="period">{note}{notice}</td>'
-                f'<td class="regular">{esc(b["regular"]) or "—"}</td>'
-                f'<td class="src"><a href="{esc(b["official"])}" target="_blank" rel="noopener">公式ページ</a></td></tr>'
+                f'<tr><td class="bank" data-label="銀行名">{esc(b["name"])}{pref}</td>'
+                f'<td class="period" data-label="メンテナンス関連の告知">{note}{notice}</td>'
+                f'<td class="regular" data-label="定例メンテナンス">{esc(b["regular"]) or "—"}</td>'
+                f'<td class="src" data-label="ソース"><a href="{esc(b["official"])}" target="_blank" rel="noopener">公式ページ</a></td></tr>'
             )
             count = len([r for r in results if r["group"] == gid])
         sections.append(
