@@ -7,37 +7,37 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏦</text></svg>">
 <style>
   :root {
-    --paper: #f4f1ea;
-    --surface: #fffdf8;
-    --surface-soft: #faf6ee;
+    --paper: #f7f9fb;
+    --surface: #ffffff;
+    --surface-soft: #f3f6f9;
     --surface-solid: #ffffff;
-    --ink: #1c2430;
-    --muted: #687482;
-    --line: #d8d2c8;
-    --accent: #2f4f77;
-    --accent-soft: #e8eef5;
-    --warn-ink: #7a5516;
-    --warn-bg: #f7ebcc;
-    --alert-ink: #993a31;
-    --alert-bg: #f9e3df;
-    --ok-ink: #2e6b49;
+    --ink: #18212b;
+    --muted: #64707c;
+    --line: #d8e0e8;
+    --accent: #2d5f8f;
+    --accent-soft: #e8f0f8;
+    --warn-ink: #4e6376;
+    --warn-bg: #f2f6f9;
+    --alert-ink: #7b3f3a;
+    --alert-bg: #f7ecea;
+    --ok-ink: #31664a;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --paper: #10151c;
-      --surface: #18212a;
-      --surface-soft: #141b22;
-      --surface-solid: #18212a;
+      --paper: #0f141a;
+      --surface: #161d25;
+      --surface-soft: #121820;
+      --surface-solid: #161d25;
       --ink: #e8edf3;
-      --muted: #94a1ae;
-      --line: #2a3641;
-      --accent: #9bb8da;
-      --accent-soft: #1d2b3a;
-      --warn-ink: #e2be68;
-      --warn-bg: #372d14;
-      --alert-ink: #e08f87;
-      --alert-bg: #40211d;
-      --ok-ink: #7bc096;
+      --muted: #9aa7b3;
+      --line: #26323d;
+      --accent: #8eb2d8;
+      --accent-soft: #1b2633;
+      --warn-ink: #a1b0bf;
+      --warn-bg: #16202a;
+      --alert-ink: #cf9a95;
+      --alert-bg: #251918;
+      --ok-ink: #7ab590;
     }
   }
   * { box-sizing: border-box; }
@@ -52,9 +52,9 @@
   }
   .wrap { max-width: 1160px; margin: 0 auto; padding: 28px 18px 56px; }
   header.page {
-    background: linear-gradient(180deg, var(--surface), var(--surface-soft));
+    background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: 20px;
+    border-radius: 16px;
     padding: 20px 20px 18px;
     margin-bottom: 18px;
   }
@@ -174,7 +174,7 @@
 
   @media (max-width: 860px) {
     .wrap { padding: 14px 12px 40px; }
-    header.page { padding: 18px 16px 16px; border-radius: 18px; }
+    header.page { padding: 18px 16px 16px; border-radius: 14px; }
     .meta-row { gap: 8px; }
     h2 { margin-top: 26px; }
     .filter-row { margin-top: 22px; }
