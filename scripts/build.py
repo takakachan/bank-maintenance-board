@@ -292,8 +292,10 @@ def render(results: list[dict]) -> str:
                 notice = '<span class="muted">キーワードに一致する告知は見つかりませんでした</span>'
             else:
                 notice = '<span class="muted">自動取得に失敗しました。公式ページをご確認ください</span>'
+            focused = '1' if (b["items"] or not b["fetch_ok"]) else '0'
             rows.append(
-                f'<tr><td class="bank" data-label="銀行名">{esc(b["name"])}{pref}</td>'
+                f'<tr class="bank-row" data-focused="{focused}">'
+                f'<td class="bank" data-label="銀行名">{esc(b["name"])}{pref}</td>'
                 f'<td class="period" data-label="メンテナンス関連の告知">{note}{notice}</td>'
                 f'<td class="regular" data-label="定例メンテナンス">{esc(b["regular"]) or "—"}</td>'
                 f'<td class="src" data-label="ソース"><a href="{esc(b["official"])}" target="_blank" rel="noopener">公式ページ</a></td></tr>'

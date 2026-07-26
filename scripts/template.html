@@ -249,6 +249,7 @@
 
   <div class="filter-row">
     <input id="filter" type="search" placeholder="銀行名で絞り込み（例：みずほ、信用金庫）" aria-label="銀行名で絞り込み">
+    <button class="theme-toggle" id="focus-toggle" type="button" aria-pressed="true">注目のみ</button>
     <span class="filter-hint" id="filter-hint"></span>
   </div>
 
@@ -286,26 +287,41 @@
   });
 
   const filter = document.getElementById('filter');
+  const focusToggle = document.getElementById('focus-toggle');
   const hint = document.getElementById('filter-hint');
   const rows = Array.from(document.querySelectorAll('table[data-group] tbody tr'));
+  const sections = Array.from(document.querySelectorAll('section'));
   const total = rows.length;
-  hint.textContent = `全${total}行を表示中`;
-  filter.addEventListener('input', () => {
+  let focusOnly = true;
+
+  const applyFilter = () => {
     const q = filter.value.trim().toLowerCase();
     let shown = 0;
     rows.forEach(tr => {
-      const hit = !q || tr.textContent.toLowerCase().includes(q);
+      const focused = tr.dataset.focused === '1';
+      const hit = (!focusOnly || focused) && (!q || tr.textContent.toLowerCase().includes(q));
       tr.style.display = hit ? '' : 'none';
       if (hit) shown++;
     });
-    hint.textContent = q ? `${shown}件が該当` : `全${total}行を表示中`;
-    document.querySelectorAll('section').forEach(sec => {
+    sections.forEach(sec => {
       const tbl = sec.querySelector('table[data-group]');
       if (!tbl) return;
       const anyVisible = Array.from(tbl.querySelectorAll('tbody tr')).some(tr => tr.style.display !== 'none');
       sec.style.display = anyVisible ? '' : 'none';
     });
+    const mode = focusOnly ? '注目のみ' : '全件';
+    hint.textContent = q ? `${shown}件が該当 / ${mode}` : `${shown}行を表示中 / ${mode}`;
+  };
+
+  focusToggle.addEventListener('click', () => {
+    focusOnly = !focusOnly;
+    focusToggle.textContent = focusOnly ? '注目のみ' : '全件';
+    focusToggle.setAttribute('aria-pressed', focusOnly ? 'true' : 'false');
+    applyFilter();
   });
+
+  filter.addEventListener('input', applyFilter);
+  applyFilter();
 </script>
 </body>
 </html>
