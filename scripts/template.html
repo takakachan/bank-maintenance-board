@@ -22,23 +22,21 @@
     --alert-bg: #f7ecea;
     --ok-ink: #31664a;
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --paper: #0f141a;
-      --surface: #161d25;
-      --surface-soft: #121820;
-      --surface-solid: #161d25;
-      --ink: #e8edf3;
-      --muted: #9aa7b3;
-      --line: #26323d;
-      --accent: #8eb2d8;
-      --accent-soft: #1b2633;
-      --warn-ink: #a1b0bf;
-      --warn-bg: #16202a;
-      --alert-ink: #cf9a95;
-      --alert-bg: #251918;
-      --ok-ink: #7ab590;
-    }
+  :root[data-theme="dark"] {
+    --paper: #0f141a;
+    --surface: #161d25;
+    --surface-soft: #121820;
+    --surface-solid: #161d25;
+    --ink: #e8edf3;
+    --muted: #9aa7b3;
+    --line: #26323d;
+    --accent: #8eb2d8;
+    --accent-soft: #1b2633;
+    --warn-ink: #a1b0bf;
+    --warn-bg: #16202a;
+    --alert-ink: #cf9a95;
+    --alert-bg: #251918;
+    --ok-ink: #7ab590;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -71,6 +69,19 @@
     display: inline-block; padding: 4px 12px; border-radius: 999px;
     background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 12px;
   }
+  .theme-toggle {
+    border: 1px solid var(--line);
+    background: var(--surface-solid);
+    color: var(--ink);
+    border-radius: 999px;
+    padding: 6px 12px;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .theme-toggle:hover { border-color: var(--accent); }
+  .theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   section + section { margin-top: 18px; }
   h2 {
     font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
@@ -226,6 +237,7 @@
     <div class="meta-row">
       <span class="chip">最終自動更新：{{UPDATED}}（日本時間）</span>
       <span>各行の公式ページから拾っています。詳細は必ずリンク先で確認してください。</span>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">ダークに切り替え</button>
     </div>
   </header>
 
@@ -253,6 +265,26 @@
 </div>
 
 <script>
+  const root = document.documentElement;
+  const themeToggle = document.getElementById('theme-toggle');
+  const THEME_KEY = 'bank-maintenance-theme';
+
+  const applyTheme = (theme) => {
+    root.dataset.theme = theme;
+    const dark = theme === 'dark';
+    themeToggle.textContent = dark ? 'ライトに切り替え' : 'ダークに切り替え';
+    themeToggle.setAttribute('aria-pressed', dark ? 'true' : 'false');
+  };
+
+  const savedTheme = localStorage.getItem(THEME_KEY) || 'light';
+  applyTheme(savedTheme);
+
+  themeToggle.addEventListener('click', () => {
+    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    localStorage.setItem(THEME_KEY, next);
+    applyTheme(next);
+  });
+
   const filter = document.getElementById('filter');
   const hint = document.getElementById('filter-hint');
   const rows = Array.from(document.querySelectorAll('table[data-group] tbody tr'));
