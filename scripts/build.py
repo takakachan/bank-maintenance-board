@@ -274,10 +274,19 @@ def render(results: list[dict]) -> str:
         for u in ups
     ) or '<p class="section-note">日付を特定できる今後の告知は現在ありません。各行の告知一覧をご確認ください。</p>'
 
+    summary_html = (
+        '<div class="summary">'
+        f'<div class="box"><span class="label">公開中の金融機関</span><span class="value">{len(results)}行</span><span class="sub">メガ・ネット・東海の3区分</span></div>'
+        f'<div class="box"><span class="label">直近の告知</span><span class="value">{len(ups)}件</span><span class="sub">日付を拾えたものだけ</span></div>'
+        f'<div class="box"><span class="label">取得成功</span><span class="value">{sum(1 for r in results if r["fetch_ok"])}行</span><span class="sub">公式ページを読めた件数</span></div>'
+        '</div>'
+    )
+
     sections = []
     for gid, gname in GROUPS:
+        group_banks = [r for r in results if r["group"] == gid]
         rows = []
-        for b in [r for r in results if r["group"] == gid]:
+        for b in group_banks:
             pref = f'<span class="pref">{esc(b["pref"])}</span>' if b.get("pref") else ""
             note = (f'<p class="note">⚠ {esc(b["note"])}</p>' if b.get("note") else "")
             if b["items"]:
@@ -297,9 +306,8 @@ def render(results: list[dict]) -> str:
                 f'<td class="regular" data-label="定例メンテナンス">{esc(b["regular"]) or "—"}</td>'
                 f'<td class="src" data-label="ソース"><a href="{esc(b["official"])}" target="_blank" rel="noopener">公式ページ</a></td></tr>'
             )
-            count = len([r for r in results if r["group"] == gid])
         sections.append(
-            f'<section><h2>{gname}<span class="count">{count}行</span></h2>'
+            f'<section><h2>{gname}<span class="count">{len(group_banks)}行</span></h2>'
             f'<div class="table-scroll"><table data-group><thead><tr>'
             f'<th>銀行名</th><th>メンテナンス関連の告知（自動取得）</th><th>定例メンテナンス</th><th>ソース</th>'
             f'</tr></thead><tbody>{"".join(rows)}</tbody></table></div></section>'
@@ -308,6 +316,7 @@ def render(results: list[dict]) -> str:
     template = (Path(__file__).parent / "template.html").read_text(encoding="utf-8")
     return (template
             .replace("{{UPDATED}}", NOW.strftime("%Y年%m月%d日 %H:%M"))
+            .replace("{{SUMMARY}}", summary_html)
             .replace("{{UPCOMING}}", up_html)
             .replace("{{SECTIONS}}", "".join(sections)))
 
