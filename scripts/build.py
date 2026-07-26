@@ -274,14 +274,6 @@ def render(results: list[dict]) -> str:
         for u in ups
     ) or '<p class="section-note">日付を特定できる今後の告知は現在ありません。各行の告知一覧をご確認ください。</p>'
 
-    summary_html = (
-        '<div class="summary">'
-        f'<div class="box"><span class="label">公開中の金融機関</span><span class="value">{len(results)}行</span><span class="sub">メガ・ネット・東海の3区分</span></div>'
-        f'<div class="box"><span class="label">直近の告知</span><span class="value">{len(ups)}件</span><span class="sub">日付を拾えたものだけ</span></div>'
-        f'<div class="box"><span class="label">取得成功</span><span class="value">{sum(1 for r in results if r["fetch_ok"])}行</span><span class="sub">公式ページを読めた件数</span></div>'
-        '</div>'
-    )
-
     sections = []
     for gid, gname in GROUPS:
         group_banks = [r for r in results if r["group"] == gid]
@@ -316,7 +308,6 @@ def render(results: list[dict]) -> str:
     template = (Path(__file__).parent / "template.html").read_text(encoding="utf-8")
     return (template
             .replace("{{UPDATED}}", NOW.strftime("%Y年%m月%d日 %H:%M"))
-            .replace("{{SUMMARY}}", summary_html)
             .replace("{{UPCOMING}}", up_html)
             .replace("{{SECTIONS}}", "".join(sections)))
 

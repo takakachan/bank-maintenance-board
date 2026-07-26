@@ -71,21 +71,6 @@
     display: inline-block; padding: 4px 12px; border-radius: 999px;
     background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 12px;
   }
-  .summary {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 10px;
-    margin: 16px 0 4px;
-  }
-  .summary .box {
-    background: var(--surface-solid);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 12px 14px;
-  }
-  .summary .label { display: block; font-size: 11px; color: var(--muted); letter-spacing: 0.08em; margin-bottom: 6px; }
-  .summary .value { display: block; font-size: 18px; font-weight: 700; color: var(--ink); }
-  .summary .sub { display: block; font-size: 12px; color: var(--muted); margin-top: 4px; }
   section + section { margin-top: 18px; }
   h2 {
     font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
@@ -190,7 +175,6 @@
   @media (max-width: 860px) {
     .wrap { padding: 14px 12px 40px; }
     header.page { padding: 18px 16px 16px; border-radius: 18px; }
-    .summary { grid-template-columns: 1fr; }
     .meta-row { gap: 8px; }
     h2 { margin-top: 26px; }
     .filter-row { margin-top: 22px; }
@@ -240,10 +224,9 @@
     <div class="eyebrow">BANK MAINTENANCE BOARD</div>
     <h1>銀行メンテナンス・サービス停止情報</h1>
     <div class="meta-row">
-      <span class="chip">最終自動更新：2026年07月26日 09:09（日本時間）</span>
+      <span class="chip">最終自動更新：2026年07月26日 09:23（日本時間）</span>
       <span>各行の公式ページから拾っています。詳細は必ずリンク先で確認してください。</span>
     </div>
-    <div class="summary"><div class="box"><span class="label">公開中の金融機関</span><span class="value">19行</span><span class="sub">メガ・ネット・東海の3区分</span></div><div class="box"><span class="label">直近の告知</span><span class="value">1件</span><span class="sub">日付を拾えたものだけ</span></div><div class="box"><span class="label">取得成功</span><span class="value">19行</span><span class="sub">公式ページを読めた件数</span></div></div>
   </header>
 
   <section>
