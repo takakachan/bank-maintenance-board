@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-29T20:13:54.393798+09:00",
+ "updated": "2026-07-29T22:09:45.106756+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -12,28 +12,8 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "「かんたん残高照会（インターネット残高照会）」における宝くじの購入申込・自動購入機能の停止に伴い、インターネット残高照会規定を改定します（改定日：2026年3月15日）。",
-     "url": "https://www.mizuhobank.co.jp/oshirase/kitei_kaitei/index.html#kitei20260315",
-     "date": "2026-03-15"
-    },
-    {
-     "title": "【臨時メンテナンスのお知らせ】みずほダイレクトの投資信託メニュー（2026年3月実施）",
-     "url": "https://www.mizuhobank.co.jp/direct/about/service/fund.html",
-     "date": null
-    },
-    {
      "title": "休止する商品・サービス一覧",
      "url": "https://www.mizuhobank.co.jp/oshirase/maintenance_personal.html#pause",
-     "date": null
-    },
-    {
-     "title": "【法人のお客さま】サービス休止のお知らせはこちら",
-     "url": "https://www.mizuhobank.co.jp/corporate/oshirase/maintenance_corporate.html",
-     "date": null
-    },
-    {
-     "title": "みずほ信託銀行の一部サービスも休止いたします。詳しくはこちら",
-     "url": "https://www.mizuhobank.co.jp/external.html?site_id=0003",
      "date": null
     }
    ]
@@ -90,21 +70,6 @@
      "title": "システムメンテナンスによる振込（他の金融機関口座への送金）の休止について",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002436.html",
      "date": null
-    },
-    {
-     "title": "「口座開設サポートシステム」・「メールオーダー用異動届出書受付Webサイト」・「相続Web案内サービス」のシステムメンテナンスのお知らせ",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002444.html",
-     "date": null
-    },
-    {
-     "title": "「JP BANK カード」お申し込みサイトのシステムメンテナンスのお知らせ",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002433.html",
-     "date": null
-    },
-    {
-     "title": "「口座開設サポートシステム」・「メールオーダー用異動届出書受付Webサイト」・「相続Web案内サービス」のシステムメンテナンスのお知らせ",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002432.html",
-     "date": null
     }
    ]
   },
@@ -117,33 +82,7 @@
    "regular": "マイゲート・アプリ：毎月第1月曜 2:00–6:00／第2土曜 23:00–翌日曜 6:00",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "システムメンテナンスに伴うマイゲートからのファンドラップ増額申込み停止について（2026年6月27日20:00～2026年6月29日8:00）",
-     "url": "https://www.resonabank.co.jp/kojin/oshirase_s/2026/detail/oshirase_9789.html",
-     "date": "2026-06-27"
-    },
-    {
-     "title": "【お知らせ】システムメンテナンスに伴うiDeCoオンライン申込サービスの一時利用停止について(2026年6月1日)",
-     "url": "https://www.resonabank.co.jp/kojin/oshirase_s/2026/detail/oshirase_9693.html",
-     "date": "2026-06-01"
-    },
-    {
-     "title": "【お知らせ】システムメンテナンスに伴う来店予約サービスの一時利用停止について(2026年05月04日)",
-     "url": "https://www.resonabank.co.jp/kojin/oshirase_s/2026/detail/oshirase_9676.html",
-     "date": "2026-05-04"
-    },
-    {
-     "title": "【お知らせ】システムメンテナンスに伴う来店予約サービスの一時利用停止について(2026年04月20日)",
-     "url": "https://www.resonabank.co.jp/kojin/oshirase_s/2026/detail/oshirase_9613.html",
-     "date": "2026-04-20"
-    },
-    {
-     "title": "【お知らせ】システムメンテナンスに伴う来店予約サービスの一時利用停止について (2026年1月19日)",
-     "url": "https://www.resonabank.co.jp/kojin/oshirase_s/2026/detail/oshirase_9310.html",
-     "date": "2026-01-19"
-    }
-   ]
+   "items": []
   },
   {
    "id": "netbk",
@@ -158,27 +97,8 @@
     {
      "title": "振込サービスにかかる臨時メンテナンスのご案内",
      "url": "https://www.netbk.co.jp/contents/company/info/2026/0702_005979.html",
-     "date": null
-    },
-    {
-     "title": "振込サービスにかかる臨時メンテナンスのご案内",
-     "url": "https://www.netbk.co.jp/contents/company/info/2026/0527_005782.html",
-     "date": null
-    },
-    {
-     "title": "振込サービスにかかる臨時メンテナンスのご案内",
-     "url": "https://www.netbk.co.jp/contents/company/info/2026/0514_005741.html",
-     "date": null
-    },
-    {
-     "title": "振込サービスにかかる臨時メンテナンスのご案内",
-     "url": "https://www.netbk.co.jp/contents/company/info/2026/0430_005717.html",
-     "date": null
-    },
-    {
-     "title": "【重要】QRコードログインの一時停止について",
-     "url": "https://www.netbk.co.jp/contents/company/info/2026/0408_005642.html",
-     "date": null
+     "date": "2026-07-31",
+     "period": "2026年7月31日(金)16:00 ～ 8月3日(月)8:00"
     }
    ]
   },
@@ -202,33 +122,7 @@
    "regular": "毎月1回・月曜未明 1:00–7:00 が通例",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "証券担保ローンメンテナンス（2026年7月18日（土）午後5:00～ 7月19日（日）午前5:00）のお知らせ",
-     "url": "https://www.rakuten-bank.co.jp/info/2026/260713-2.html",
-     "date": "2026-07-18"
-    },
-    {
-     "title": "Pay-easy（ペイジー）のシステムメンテナンス（2026年7月18日（土） 午後8:00～7月19日（日）午前6:00）のお知らせ",
-     "url": "https://www.rakuten-bank.co.jp/info/2026/260701.html",
-     "date": "2026-07-18"
-    },
-    {
-     "title": "オンライン住宅ローン相談サービスのシステムメンテナンス（2026年7月13日～7月14日）のお知らせ",
-     "url": "https://www.rakuten-bank.co.jp/info/2026/260706.html",
-     "date": "2026-07-13"
-    },
-    {
-     "title": "証券担保ローンメンテナンス（2026年7月4日（土）午後6:00～ 7月5日（日）午前5:00）のお知らせ",
-     "url": "https://www.rakuten-bank.co.jp/info/2026/260702.html",
-     "date": "2026-07-04"
-    },
-    {
-     "title": "住宅ローン関連サービスのメンテナンス（2026年6月21日（日）午後7:00～2026年6月22日（月）午前7:00）のお知らせ",
-     "url": "https://www.rakuten-bank.co.jp/info/2026/260615-2.html",
-     "date": "2026-06-21"
-    }
-   ]
+   "items": []
   },
   {
    "id": "jibun",
@@ -243,7 +137,8 @@
     {
      "title": "じぶん銀行FX メンテナンス日時 2026年8月1日（土）5：50 ～ 18：30 じぶん銀行FXのシステムメンテナンス時間を通常よりも延長し、サービスを停止いたします。 ※ 終了時間は前後する場合があります。あらかじめご了承ください。 ※",
      "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-08-01"
+     "date": "2026-08-01",
+     "period": "2026年8月1日（土）5：50 ～ 18：30"
     }
    ]
   },
@@ -256,33 +151,7 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026.07.21 システムメンテナンスに伴う、サービス停止のお知らせ（7月27日（月）0:00～7:00）",
-     "url": "https://www.aeonbank.co.jp/news/2026/0721_01/",
-     "date": "2026-07-27"
-    },
-    {
-     "title": "2026.07.08 マネックス証券のシステムメンテナンスに伴う投資信託（金融商品仲介）受付業務休止について（7月18日（土）12:00～24:00）",
-     "url": "https://www.aeonbank.co.jp/news/2026/0708_01/",
-     "date": "2026-07-18"
-    },
-    {
-     "title": "2026.06.15 システムメンテナンスに伴う、サービス停止のお知らせ（6月22日（月）0:00～7:00）",
-     "url": "https://www.aeonbank.co.jp/news/2026/0615_01/",
-     "date": "2026-06-22"
-    },
-    {
-     "title": "2026.06.01 システムメンテナンスに伴う、サービス停止のお知らせ（6月8日（月）0:00～7:00）",
-     "url": "https://www.aeonbank.co.jp/news/2026/0601_01/",
-     "date": "2026-06-08"
-    },
-    {
-     "title": "2026.05.29 マネックス証券のシステムメンテナンスに伴う投資信託（金融商品仲介）受付業務休止について（6月6日（土）12:00～14:00）",
-     "url": "https://www.aeonbank.co.jp/news/2026/0529_01/",
-     "date": "2026-06-06"
-    }
-   ]
+   "items": []
   },
   {
    "id": "seven",
@@ -293,18 +162,7 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026年7月13日 2026年7月15日（水） ATMでの募金取引の一時停止について",
-     "url": "https://www.sevenbank.co.jp/support/info_topics163.html",
-     "date": "2026-07-13"
-    },
-    {
-     "title": "システムメンテナンスに伴うセブン銀行口座の一部サービス制限について",
-     "url": "https://www.sevenbank.co.jp/support/info_notice122.html",
-     "date": null
-    }
-   ]
+   "items": []
   },
   {
    "id": "okashin",
@@ -369,17 +227,20 @@
     {
      "title": "2026年07月23日 お知らせ メンテナンスに伴うWeb口振サービスの休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/260723.html",
-     "date": "2026-07-23"
+     "date": "2026-08-04",
+     "period": "2026年8月4日（火）午前1時～午前6時 20"
     },
     {
      "title": "2026年07月13日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/20260713.html",
-     "date": "2026-07-13"
+     "date": "2026-07-28",
+     "period": "2026年7月28日（火）18時～2026年7月29日（水）8時"
     },
     {
      "title": "2026年06月11日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/260611.html",
-     "date": "2026-06-11"
+     "date": "2026-07-28",
+     "period": "2026年7月28日（火）18時～2026年7月29日（水）8時"
     }
    ]
   },
@@ -407,7 +268,8 @@
     {
      "title": "2026年06月26日 お知らせ 「105スマホ投信」投信口座開設・投信取引機能の臨時停止について",
      "url": "https://www.hyakugo.co.jp/whats_new/20260626_01.html",
-     "date": "2026-06-26"
+     "date": "2026-08-22",
+     "period": "2026年8月22日（土）19:00 ～ 8月23日（日）10:00"
     }
    ]
   },
@@ -420,23 +282,7 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026/03/31 ニュースリリース 有限会社市川メンテナンス工業とのポジティブ・インパクト・ファイナンス契約締結について",
-     "url": "https://www.33bank.co.jp/release/back-number/2026/pdf/20260331d.pdf",
-     "date": "2026-03-31"
-    },
-    {
-     "title": "2026/03/17 お知らせ イオンタウン弥富の停電に伴う当行ATMの休止について",
-     "url": "https://www.33bank.co.jp/news/oshirase20260317.html",
-     "date": "2026-03-17"
-    },
-    {
-     "title": "Q 個人インターネットバンキングが利用できません。",
-     "url": "https://helpfeel.com/33bank-faq/--6870dd36a8a1bee1f9ace51e",
-     "date": null
-    }
-   ]
+   "items": []
   }
  ]
 }
