@@ -5,7 +5,9 @@
 import json
 import re
 import sys
+import time
 from datetime import datetime, timedelta, timezone
+from io import BytesIO
 from pathlib import Path
 from urllib.parse import urljoin
 
@@ -17,6 +19,11 @@ try:
     from curl_cffi import requests as chrome_requests
 except ImportError:
     chrome_requests = None
+
+try:
+    from pypdf import PdfReader
+except ImportError:
+    PdfReader = None
 
 JST = timezone(timedelta(hours=9))
 NOW = datetime.now(JST)
@@ -30,7 +37,7 @@ HEADERS = {
 }
 
 KEYWORD = re.compile(r"メンテナンス|休止|停止|システム更改|利用できません")
-EXCLUDE = re.compile(r"復旧|再開しました|解除|平成|完了|販売停止|受付停止|取り次ぎ停止|取扱停止|お問い合わせ|お客さまセンター")
+EXCLUDE = re.compile(r"復旧|再開しました|解除|平成|完了|販売停止|受付停止|取り次ぎ停止|取扱停止|お問い合わせ|お客さまセンター|メンテナンス工業")
 
 BANKS = [
     # --- メガバンク・大手 ---
@@ -129,6 +136,13 @@ GROUPS = [
 DATE_RE = re.compile(r"(?:(\d{4})\s*年)?\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日")
 DATE_RE2 = re.compile(r"(\d{4})[./-](\d{1,2})[./-](\d{1,2})")
 
+# 「2026年8月8日（土曜日）22時00分～2026年8月9日（日曜日）11時00分」等の期間表記
+_WD = r"(?:\s*[（(][^）)]{1,8}[）)])?"
+_TIME = r"(?:午前|午後)?\s*\d{1,2}\s*[:：時]\s*(?:\d{1,2})?\s*分?\s*(?:頃|ごろ)?"
+_D_FULL = rf"\d{{4}}\s*年\s*\d{{1,2}}\s*月\s*\d{{1,2}}\s*日{_WD}(?:\s*{_TIME})?"
+_D_PART = rf"(?:\d{{4}}\s*年\s*)?\d{{1,2}}\s*月\s*\d{{1,2}}\s*日{_WD}(?:\s*{_TIME})?"
+RANGE_RE = re.compile(rf"{_D_FULL}\s*[〜～~－\-から]{{1,4}}\s*(?:{_D_PART}|{_TIME})")
+
 
 def resolve_url(url: str) -> str:
     return url.replace("{year}", str(NOW.year))
@@ -151,6 +165,86 @@ def fetch(url: str) -> str | None:
     except Exception as e:
         print(f"  fetch NG: {url} ({e})", file=sys.stderr)
         return None
+
+
+_page_cache: dict[str, str | None] = {}
+
+
+def linked_page_text(url: str) -> str | None:
+    """リンク先(HTML/PDF)の本文テキストを取得する。失敗時はNone。"""
+    if url in _page_cache:
+        return _page_cache[url]
+    text = None
+    try:
+        if url.lower().split("?")[0].endswith(".pdf"):
+            if PdfReader is not None:
+                getter = chrome_requests if chrome_requests is not None else requests
+                kw = {"impersonate": "chrome"} if chrome_requests is not None else {"headers": HEADERS}
+                r = getter.get(url, timeout=25, **kw)
+                if r.status_code == 200 and len(r.content) < 5_000_000:
+                    reader = PdfReader(BytesIO(r.content))
+                    text = " ".join(p.extract_text() or "" for p in reader.pages[:5])
+        else:
+            html = fetch(url)
+            if html:
+                soup = BeautifulSoup(html, "html.parser")
+                for tag in soup(["script", "style", "nav", "header", "footer"]):
+                    tag.decompose()
+                text = " ".join(soup.get_text(" ", strip=True).split())
+    except Exception as e:
+        print(f"  deep NG: {url} ({e})", file=sys.stderr)
+    _page_cache[url] = text
+    return text
+
+
+def _dates_in(text: str) -> list[datetime]:
+    """テキスト中の年付き日付をすべて返す(年なしは直前の年を引き継ぐ)"""
+    dates, last_year = [], None
+    for m in DATE_RE.finditer(text):
+        y = m.group(1) or last_year
+        if not y:
+            continue
+        last_year = y
+        try:
+            d = datetime(int(y), int(m.group(2)), int(m.group(3)), tzinfo=JST)
+        except ValueError:
+            continue
+        # 年なし日付が前の日付より過去に見える場合は年跨ぎとみなす
+        if not m.group(1) and dates and d < dates[-1]:
+            d = d.replace(year=d.year + 1)
+        dates.append(d)
+    for m in DATE_RE2.finditer(text):
+        try:
+            dates.append(datetime(int(m.group(1)), int(m.group(2)), int(m.group(3)), tzinfo=JST))
+        except ValueError:
+            continue
+    return dates
+
+
+def deep_check(item: dict) -> bool:
+    """リンク先本文から停止期間を読み取り、item に period / date を設定する。
+    終了日時が過去と判定できた告知は False (=除外) を返す。"""
+    text = linked_page_text(item["url"])
+    if not text:
+        return True  # 読めない場合は除外しない(リンクは生きているため)
+    today = NOW.strftime("%Y-%m-%d")
+    # 期間表記(○月○日○時〜○月○日○時)のうち、終了が未来のものを探す
+    for m in RANGE_RE.finditer(text):
+        snippet = " ".join(m.group(0).split())
+        dates = _dates_in(snippet)
+        if dates and max(dates) + timedelta(days=1) > NOW:
+            item["period"] = snippet[:110]
+            item["date"] = min(dates).strftime("%Y-%m-%d")
+            return True
+    dates = [d for d in _dates_in(text) if abs((d - NOW).days) < 400]
+    future = [d for d in dates if d + timedelta(days=1) > NOW]
+    if future:
+        item.setdefault("date", min(future).strftime("%Y-%m-%d"))
+        return True
+    if not dates:
+        return True  # 日付が読み取れないページは除外しない
+    # 本文の日付は全て過去。ただしタイトル側の日付が未来なら信じて残す
+    return bool(item.get("date")) and item["date"] >= today
 
 
 def guess_date(title: str):
@@ -185,6 +279,8 @@ def extract_items(html: str, base_url: str) -> list[dict]:
         text = " ".join(a.get_text(" ", strip=True).split())
         if len(text) < 10:
             continue
+        if text.startswith(("Q ", "Q.", "Q&")) or text.endswith("こちら"):
+            continue  # FAQ・リンクラベルはノイズ
         if not KEYWORD.search(text) or EXCLUDE.search(text):
             continue
         href = urljoin(base_url, a["href"])
@@ -241,6 +337,20 @@ def collect() -> list[dict]:
                 continue
             seen.add(it["url"])
             uniq.append(it)
+        # リンク先の本文を読み、終了済みの告知を除外して停止期間を抽出
+        # (タイトルの日付が未来の告知は、リンク先の判定に関わらず残す)
+        today = NOW.strftime("%Y-%m-%d")
+        kept = []
+        for it in uniq[:5]:
+            time.sleep(0.2)
+            title_future = bool(it.get("date")) and it["date"] >= today
+            if deep_check(it) or title_future:
+                kept.append(it)
+        uniq = kept
+        # 期間を特定できず、日付が30日以上前の告知は古いものとして落とす
+        cutoff = (NOW - timedelta(days=30)).strftime("%Y-%m-%d")
+        uniq = [it for it in uniq
+                if it.get("period") or not it.get("date") or it["date"] >= cutoff]
         results.append({
             "id": bank["id"], "name": bank["name"], "group": bank["group"],
             "pref": bank.get("pref"), "official": resolve_url(bank["official"]),
@@ -270,7 +380,9 @@ def render(results: list[dict]) -> str:
     up_html = "".join(
         f'<div class="up-card"><span class="up-date">{esc(u["date"])}</span>'
         f'<span class="up-bank">{esc(u["bank"])}</span>'
-        f'<span class="up-desc"><a href="{esc(u["url"])}" target="_blank" rel="noopener">{esc(u["title"])}</a></span></div>'
+        f'<span class="up-desc"><a href="{esc(u["url"])}" target="_blank" rel="noopener">{esc(u["title"])}</a>'
+        + (f'<span class="when">停止期間：{esc(u["period"])}</span>' if u.get("period") else "")
+        + "</span></div>"
         for u in ups
     ) or '<p class="section-note">日付を特定できる今後の告知は現在ありません。各行の告知一覧をご確認ください。</p>'
 
@@ -284,7 +396,9 @@ def render(results: list[dict]) -> str:
             if b["items"]:
                 lis = "".join(
                     f'<li>{("<b>" + esc(it["date"]) + "</b> ") if it["date"] else ""}'
-                    f'<a href="{esc(it["url"])}" target="_blank" rel="noopener">{esc(it["title"])}</a></li>'
+                    f'<a href="{esc(it["url"])}" target="_blank" rel="noopener">{esc(it["title"])}</a>'
+                    + (f'<span class="when">停止期間：{esc(it["period"])}</span>' if it.get("period") else "")
+                    + "</li>"
                     for it in b["items"]
                 )
                 notice = f'<ul class="notice-list">{lis}</ul>'
