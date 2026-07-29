@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-29T07:10:16.771063+09:00",
+ "updated": "2026-07-29T20:13:54.393798+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -82,6 +82,11 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "【7月30日一部店舗営業再開】令和8年熊本地震による店舗の休止について",
+     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002449.html",
+     "date": "2026-07-30"
+    },
+    {
      "title": "システムメンテナンスによる振込（他の金融機関口座への送金）の休止について",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002436.html",
      "date": null
@@ -99,11 +104,6 @@
     {
      "title": "「口座開設サポートシステム」・「メールオーダー用異動届出書受付Webサイト」・「相続Web案内サービス」のシステムメンテナンスのお知らせ",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002432.html",
-     "date": null
-    },
-    {
-     "title": "「JP BANK カード」および「ゆうちょデビット」お申し込みサイトのシステムメンテナンスのお知らせ",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002429.html",
      "date": null
     }
    ]
@@ -241,9 +241,9 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "【au PAY 残高チャージ等】システムメンテナンスのお知らせ メンテナンス日時 2026年7月22日（水）1：15 ～ 4：50",
+     "title": "じぶん銀行FX メンテナンス日時 2026年8月1日（土）5：50 ～ 18：30 じぶん銀行FXのシステムメンテナンス時間を通常よりも延長し、サービスを停止いたします。 ※ 終了時間は前後する場合があります。あらかじめご了承ください。 ※",
      "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-07-22"
+     "date": "2026-08-01"
     }
    ]
   },
@@ -421,11 +421,6 @@
    "note": null,
    "fetch_ok": true,
    "items": [
-    {
-     "title": "2026/07/13 お知らせ 貸金庫新規受付・予備鍵（副鍵）使用の一時休止について（新郊通支店）",
-     "url": "https://www.33bank.co.jp/news/oshirase20260713.html",
-     "date": "2026-07-13"
-    },
     {
      "title": "2026/03/31 ニュースリリース 有限会社市川メンテナンス工業とのポジティブ・インパクト・ファイナンス契約締結について",
      "url": "https://www.33bank.co.jp/release/back-number/2026/pdf/20260331d.pdf",
