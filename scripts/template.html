@@ -12,7 +12,7 @@
   :root {
     --paper: #ffffff;
     --surface: #ffffff;
-    --surface-soft: #f4f4f4;
+    --surface-soft: #fdf0dc;
     --surface-solid: #ffffff;
     --ink: #231815;
     --muted: #666666;
@@ -28,26 +28,6 @@
     --ok-ink: #429765;
     --pop: #f75774;             /* UCSピンク(数字の強調) */
     --shadow: #231815;
-  }
-  :root[data-theme="dark"] {
-    --paper: #15100e;
-    --surface: #1f1917;
-    --surface-soft: #191412;
-    --surface-solid: #1f1917;
-    --ink: #f2ece9;
-    --muted: #a59c98;
-    --line: #382e2a;
-    --accent: #ff7b74;
-    --accent-soft: #351a19;
-    --btn: #f0b46a;
-    --btn-ink: #1b1310;
-    --warn-ink: #e8b45e;
-    --warn-bg: #33270f;
-    --alert-ink: #ff7b74;
-    --alert-bg: #351a19;
-    --ok-ink: #7fc29b;
-    --pop: #ff85a1;
-    --shadow: #000000;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -65,7 +45,6 @@
     line-height: 1.65;
     font-size: 15px;
   }
-  :root[data-theme="dark"] body { background: var(--paper); }
   .wrap { max-width: 1160px; margin: 0 auto; padding: 28px 18px 56px; }
   header.page {
     background: var(--surface);
@@ -75,7 +54,6 @@
     padding: 20px 20px 18px;
     margin-bottom: 24px;
   }
-  .eyebrow { font-size: 12px; letter-spacing: 0.18em; color: var(--muted); font-weight: 700; }
   h1 {
     font-family: inherit;
     font-size: clamp(26px, 4.2vw, 36px);
@@ -292,12 +270,10 @@
 <body>
 <div class="wrap">
   <header class="page">
-    <div class="eyebrow">BANK MAINTENANCE BOARD</div>
     <h1>銀行メンテナンス・サービス停止情報</h1>
     <div class="meta-row">
       <span class="chip">最終自動更新：{{UPDATED}}（日本時間）</span>
       <span>各行の公式ページから拾っています。詳細は必ずリンク先で確認してください。</span>
-      <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">ダークに切り替え</button>
     </div>
   </header>
 
@@ -332,26 +308,6 @@
 </div>
 
 <script>
-  const root = document.documentElement;
-  const themeToggle = document.getElementById('theme-toggle');
-  const THEME_KEY = 'bank-maintenance-theme';
-
-  const applyTheme = (theme) => {
-    root.dataset.theme = theme;
-    const dark = theme === 'dark';
-    themeToggle.textContent = dark ? 'ライトに切り替え' : 'ダークに切り替え';
-    themeToggle.setAttribute('aria-pressed', dark ? 'true' : 'false');
-  };
-
-  const savedTheme = localStorage.getItem(THEME_KEY) || 'light';
-  applyTheme(savedTheme);
-
-  themeToggle.addEventListener('click', () => {
-    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
-    localStorage.setItem(THEME_KEY, next);
-    applyTheme(next);
-  });
-
   const filter = document.getElementById('filter');
   const focusToggle = document.getElementById('focus-toggle');
   const hint = document.getElementById('filter-hint');

@@ -92,10 +92,10 @@ BANKS = [
     # --- 東海3県の地銀・信金 ---
     dict(id="okashin", name="岡崎信用金庫", group="tokai", pref="愛知",
          official="https://www.okashin.co.jp/",
-         news_urls=["https://www.okashin.co.jp/info/important/index.html",
-                    "https://www.okashin.co.jp/info/{year}/index.html"],
-         regular="臨時休止はPDFで随時告知",
-         note="2026/10/10(土)〜10/12(月祝) システム更改のためATM等オンラインサービスを3日間臨時休止予定（公式PDF告知より・手動記載）"),
+         news_urls=[],
+         pdf_probe="https://www.okashin.co.jp/system/data/{date}_info.pdf",
+         probe_days=90,
+         regular="臨時休止はPDFで随時告知"),
     dict(id="okb", name="大垣共立銀行", group="tokai", pref="岐阜",
          official="https://www.okb.co.jp/",
          news_urls=["https://www.okb.co.jp/"],
@@ -319,6 +319,42 @@ def extract_items(html: str, base_url: str) -> list[dict]:
     return items
 
 
+def probe_pdf_items(bank: dict) -> tuple[list[dict], bool]:
+    """お知らせ一覧がJS描画のサイト向け: 規則的な命名のPDFを日付総当たりで探す。
+    返り値は (メンテ関連の告知リスト, PDFが1件でも見つかったか)"""
+    pattern = bank.get("pdf_probe")
+    if not pattern or PdfReader is None:
+        return [], False
+    items, found_any = [], False
+    for i in range(bank.get("probe_days", 60)):
+        d = NOW - timedelta(days=i)
+        url = pattern.replace("{date}", d.strftime("%Y%m%d"))
+        try:
+            if chrome_requests is not None:
+                r = chrome_requests.head(url, impersonate="chrome", timeout=10)
+            else:
+                r = requests.head(url, headers=HEADERS, timeout=10)
+            if r.status_code != 200:
+                continue
+        except Exception:
+            continue
+        found_any = True
+        text = linked_page_text(url)
+        if not text:
+            continue
+        flat = re.sub(r"\s+", "", text)  # PDF抽出で混入する空白を除去
+        if not KEYWORD.search(flat) or EXCLUDE.search(flat[:120]):
+            continue
+        # 冒頭の日付・宛名・金庫名を除いてタイトルを切り出す
+        head = re.sub(r"^.{0,40}?各位", "", flat[:200])
+        head = re.sub(r"^.{0,20}?(?:信用金庫|銀行)", "", head, count=1)
+        m = re.search(r"(.{0,25}?(?:臨時休止|休止|停止|メンテナンス|システム更改).{0,25}?お知らせ(?:（[^）]{1,15}）)?)", head)
+        title = m.group(1) if m else head[:60]
+        items.append({"title": title[:120], "url": url, "date": d.strftime("%Y-%m-%d")})
+        time.sleep(0.1)
+    return items, found_any
+
+
 def collect() -> list[dict]:
     results = []
     for bank in BANKS:
@@ -330,6 +366,10 @@ def collect() -> list[dict]:
                 continue
             ok = True
             items.extend(extract_items(html, resolve_url(url)))
+        pdf_items, pdf_found = probe_pdf_items(bank)
+        if bank.get("pdf_probe"):
+            ok = ok or pdf_found
+            items.extend(pdf_items)
         # URL重複を除きつつ日付の新しい順に最大5件
         uniq, seen = [], set()
         for it in sorted(items, key=lambda x: x["date"] or "", reverse=True):

@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-29T23:27:57.764406+09:00",
+ "updated": "2026-07-29T23:35:51.782013+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -171,9 +171,16 @@
    "pref": "愛知",
    "official": "https://www.okashin.co.jp/",
    "regular": "臨時休止はPDFで随時告知",
-   "note": "2026/10/10(土)〜10/12(月祝) システム更改のためATM等オンラインサービスを3日間臨時休止予定（公式PDF告知より・手動記載）",
+   "note": null,
    "fetch_ok": true,
-   "items": []
+   "items": [
+    {
+     "title": "ATM等のオンラインサービス臨時休止のお知らせ（2026年7月）",
+     "url": "https://www.okashin.co.jp/system/data/20260525_info.pdf",
+     "date": "2026-10-10",
+     "period": "2026 年 10 月 10 日(土)～10 月 12 日(月祝)"
+    }
+   ]
   },
   {
    "id": "okb",
