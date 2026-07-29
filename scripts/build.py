@@ -381,7 +381,7 @@ def render(results: list[dict]) -> str:
         f'<div class="up-card"><span class="up-date">{esc(u["date"])}</span>'
         f'<span class="up-bank">{esc(u["bank"])}</span>'
         f'<span class="up-desc"><a href="{esc(u["url"])}" target="_blank" rel="noopener">{esc(u["title"])}</a>'
-        + (f'<span class="when">停止期間：{esc(u["period"])}</span>' if u.get("period") else "")
+        + (f'<span class="when">【停止期間】{esc(u["period"])}</span>' if u.get("period") else "")
         + "</span></div>"
         for u in ups
     ) or '<p class="section-note">日付を特定できる今後の告知は現在ありません。各行の告知一覧をご確認ください。</p>'
@@ -395,7 +395,7 @@ def render(results: list[dict]) -> str:
             lis = "".join(
                 f'<li>{("<b>" + esc(it["date"]) + "</b> ") if it["date"] else ""}'
                 f'<a href="{esc(it["url"])}" target="_blank" rel="noopener">{esc(it["title"])}</a>'
-                + (f'<span class="when">停止期間：{esc(it["period"])}</span>' if it.get("period") else "")
+                + (f'<span class="when">【停止期間】{esc(it["period"])}</span>' if it.get("period") else "")
                 + "</li>"
                 for it in b["items"]
             )
