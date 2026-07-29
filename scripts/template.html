@@ -130,6 +130,25 @@
   }
   #filter:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
   .filter-hint { color: var(--muted); font-size: 12px; }
+  .group-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 0; }
+  .group-btn {
+    border: 1px solid var(--line);
+    background: var(--surface-solid);
+    color: var(--muted);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font: inherit;
+    font-size: 12.5px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .group-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .group-btn.is-active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  .group-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   .table-scroll {
     overflow-x: auto;
     border: 1px solid var(--line);
@@ -260,6 +279,12 @@
     <button class="theme-toggle" id="focus-toggle" type="button" aria-pressed="true">注目のみ</button>
     <span class="filter-hint" id="filter-hint"></span>
   </div>
+  <div class="group-row" role="group" aria-label="区分で絞り込み">
+    <button class="group-btn is-active" data-group="all" type="button">すべて</button>
+    <button class="group-btn" data-group="mega" type="button">メガバンク・大手</button>
+    <button class="group-btn" data-group="net" type="button">ネット銀行</button>
+    <button class="group-btn" data-group="tokai" type="button">東海3県</button>
+  </div>
 
   {{SECTIONS}}
 
@@ -298,28 +323,29 @@
   const focusToggle = document.getElementById('focus-toggle');
   const hint = document.getElementById('filter-hint');
   const rows = Array.from(document.querySelectorAll('table[data-group] tbody tr'));
-  const sections = Array.from(document.querySelectorAll('section'));
-  const total = rows.length;
+  const groupBtns = Array.from(document.querySelectorAll('.group-btn'));
   let focusOnly = true;
+  let activeGroup = 'all';
 
   const applyFilter = () => {
     const q = filter.value.trim().toLowerCase();
     let shown = 0;
     rows.forEach(tr => {
       const focused = tr.dataset.focused === '1';
-      const hit = (!focusOnly || focused) && (!q || tr.textContent.toLowerCase().includes(q));
+      const inGroup = activeGroup === 'all' || tr.dataset.group === activeGroup;
+      const hit = inGroup && (!focusOnly || focused) && (!q || tr.textContent.toLowerCase().includes(q));
       tr.style.display = hit ? '' : 'none';
       if (hit) shown++;
-    });
-    sections.forEach(sec => {
-      const tbl = sec.querySelector('table[data-group]');
-      if (!tbl) return;
-      const anyVisible = Array.from(tbl.querySelectorAll('tbody tr')).some(tr => tr.style.display !== 'none');
-      sec.style.display = anyVisible ? '' : 'none';
     });
     const mode = focusOnly ? '注目のみ' : '全件';
     hint.textContent = q ? `${shown}件が該当 / ${mode}` : `${shown}行を表示中 / ${mode}`;
   };
+
+  groupBtns.forEach(btn => btn.addEventListener('click', () => {
+    activeGroup = btn.dataset.group;
+    groupBtns.forEach(b => b.classList.toggle('is-active', b === btn));
+    applyFilter();
+  }));
 
   focusToggle.addEventListener('click', () => {
     focusOnly = !focusOnly;

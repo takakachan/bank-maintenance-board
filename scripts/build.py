@@ -386,40 +386,38 @@ def render(results: list[dict]) -> str:
         for u in ups
     ) or '<p class="section-note">日付を特定できる今後の告知は現在ありません。各行の告知一覧をご確認ください。</p>'
 
-    sections = []
-    for gid, gname in GROUPS:
-        group_banks = [r for r in results if r["group"] == gid]
-        rows = []
-        for b in group_banks:
-            pref = f'<span class="pref">{esc(b["pref"])}</span>' if b.get("pref") else ""
-            note = (f'<p class="note">⚠ {esc(b["note"])}</p>' if b.get("note") else "")
-            if b["items"]:
-                lis = "".join(
-                    f'<li>{("<b>" + esc(it["date"]) + "</b> ") if it["date"] else ""}'
-                    f'<a href="{esc(it["url"])}" target="_blank" rel="noopener">{esc(it["title"])}</a>'
-                    + (f'<span class="when">停止期間：{esc(it["period"])}</span>' if it.get("period") else "")
-                    + "</li>"
-                    for it in b["items"]
-                )
-                notice = f'<ul class="notice-list">{lis}</ul>'
-            elif b["fetch_ok"]:
-                notice = '<span class="muted">キーワードに一致する告知は見つかりませんでした</span>'
-            else:
-                notice = '<span class="muted">自動取得に失敗しました。公式ページをご確認ください</span>'
-            focused = '1' if (b["items"] or not b["fetch_ok"]) else '0'
-            rows.append(
-                f'<tr class="bank-row" data-focused="{focused}">'
-                f'<td class="bank" data-label="銀行名">{esc(b["name"])}{pref}</td>'
-                f'<td class="period" data-label="メンテナンス関連の告知">{note}{notice}</td>'
-                f'<td class="regular" data-label="定例メンテナンス">{esc(b["regular"]) or "—"}</td>'
-                f'<td class="src" data-label="ソース"><a href="{esc(b["official"])}" target="_blank" rel="noopener">公式ページ</a></td></tr>'
+    group_names = dict(GROUPS)
+    rows = []
+    for b in results:
+        tag = group_names[b["group"]] + (f"・{b['pref']}" if b.get("pref") else "")
+        note = (f'<p class="note">⚠ {esc(b["note"])}</p>' if b.get("note") else "")
+        if b["items"]:
+            lis = "".join(
+                f'<li>{("<b>" + esc(it["date"]) + "</b> ") if it["date"] else ""}'
+                f'<a href="{esc(it["url"])}" target="_blank" rel="noopener">{esc(it["title"])}</a>'
+                + (f'<span class="when">停止期間：{esc(it["period"])}</span>' if it.get("period") else "")
+                + "</li>"
+                for it in b["items"]
             )
-        sections.append(
-            f'<section><h2>{gname}<span class="count">{len(group_banks)}行</span></h2>'
-            f'<div class="table-scroll"><table data-group><thead><tr>'
-            f'<th>銀行名</th><th>メンテナンス関連の告知（自動取得）</th><th>定例メンテナンス</th><th>ソース</th>'
-            f'</tr></thead><tbody>{"".join(rows)}</tbody></table></div></section>'
+            notice = f'<ul class="notice-list">{lis}</ul>'
+        elif b["fetch_ok"]:
+            notice = '<span class="muted">キーワードに一致する告知は見つかりませんでした</span>'
+        else:
+            notice = '<span class="muted">自動取得に失敗しました。公式ページをご確認ください</span>'
+        focused = '1' if (b["items"] or not b["fetch_ok"]) else '0'
+        rows.append(
+            f'<tr class="bank-row" data-focused="{focused}" data-group="{b["group"]}">'
+            f'<td class="bank" data-label="銀行名">{esc(b["name"])}<span class="pref">{esc(tag)}</span></td>'
+            f'<td class="period" data-label="メンテナンス関連の告知">{note}{notice}</td>'
+            f'<td class="regular" data-label="定例メンテナンス">{esc(b["regular"]) or "—"}</td>'
+            f'<td class="src" data-label="ソース"><a href="{esc(b["official"])}" target="_blank" rel="noopener">公式ページ</a></td></tr>'
         )
+    sections = [
+        f'<section><h2>銀行一覧<span class="count">{len(results)}行</span></h2>'
+        f'<div class="table-scroll"><table data-group><thead><tr>'
+        f'<th>銀行名</th><th>メンテナンス関連の告知（自動取得）</th><th>定例メンテナンス</th><th>ソース</th>'
+        f'</tr></thead><tbody>{"".join(rows)}</tbody></table></div></section>'
+    ]
 
     template = (Path(__file__).parent / "template.html").read_text(encoding="utf-8")
     return (template
