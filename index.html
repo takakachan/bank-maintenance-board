@@ -5,38 +5,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>銀行メンテナンス情報ボード</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏦</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper: #f7f9fb;
+    --paper: #fff9e9;
     --surface: #ffffff;
-    --surface-soft: #f3f6f9;
+    --surface-soft: #fef7e2;
     --surface-solid: #ffffff;
-    --ink: #18212b;
-    --muted: #64707c;
-    --line: #d8e0e8;
-    --accent: #2d5f8f;
-    --accent-soft: #e8f0f8;
-    --warn-ink: #4e6376;
-    --warn-bg: #f2f6f9;
-    --alert-ink: #7b3f3a;
-    --alert-bg: #f7ecea;
-    --ok-ink: #31664a;
+    --ink: #231815;
+    --muted: #6f665e;
+    --line: #eadfc8;
+    --accent: #ef8200;
+    --accent-strong: #d97600;
+    --accent-soft: #fef7e2;
+    --warn-ink: #a35b00;
+    --warn-bg: #fff2cc;
+    --alert-ink: #e10012;
+    --alert-bg: #fdeaea;
+    --ok-ink: #429765;
   }
   :root[data-theme="dark"] {
-    --paper: #0f141a;
-    --surface: #161d25;
-    --surface-soft: #121820;
-    --surface-solid: #161d25;
-    --ink: #e8edf3;
-    --muted: #9aa7b3;
-    --line: #26323d;
-    --accent: #8eb2d8;
-    --accent-soft: #1b2633;
-    --warn-ink: #a1b0bf;
-    --warn-bg: #16202a;
-    --alert-ink: #cf9a95;
-    --alert-bg: #251918;
-    --ok-ink: #7ab590;
+    --paper: #1b150e;
+    --surface: #251e15;
+    --surface-soft: #211a11;
+    --surface-solid: #251e15;
+    --ink: #f2ebe0;
+    --muted: #a99e90;
+    --line: #3c3222;
+    --accent: #f5a33c;
+    --accent-strong: #f5a33c;
+    --accent-soft: #33270f;
+    --warn-ink: #e8b45e;
+    --warn-bg: #33270f;
+    --alert-ink: #f08a8a;
+    --alert-bg: #3a1c1c;
+    --ok-ink: #7fc29b;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -44,7 +49,7 @@
     margin: 0;
     background: var(--paper);
     color: var(--ink);
-    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
     line-height: 1.65;
     font-size: 15px;
   }
@@ -52,15 +57,17 @@
   header.page {
     background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: 16px;
+    border-top: 4px solid var(--accent);
+    border-radius: 10px;
     padding: 20px 20px 18px;
     margin-bottom: 18px;
   }
   .eyebrow { font-size: 12px; letter-spacing: 0.18em; color: var(--accent); font-weight: 700; }
   h1 {
-    font-family: "Yu Mincho", "Hiragino Mincho ProN", "MS PMincho", serif;
-    font-size: clamp(28px, 4.4vw, 39px);
-    font-weight: 600;
+    font-family: inherit;
+    font-size: clamp(26px, 4.2vw, 36px);
+    font-weight: 900;
+    letter-spacing: 0.01em;
     margin: 8px 0 10px;
     text-wrap: balance;
   }
@@ -84,9 +91,16 @@
   .theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   section + section { margin-top: 18px; }
   h2 {
-    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
-    font-size: 19px; font-weight: 600; margin: 30px 0 10px;
-    display: flex; align-items: baseline; gap: 10px;
+    font-family: inherit;
+    font-size: 19px; font-weight: 700; margin: 30px 0 10px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  h2::before {
+    content: "";
+    width: 5px;
+    height: 1.1em;
+    border-radius: 3px;
+    background: var(--accent);
   }
   h2 .count { font-size: 13px; color: var(--muted); }
   .section-note { color: var(--muted); font-size: 13px; margin: 0 0 14px; }
@@ -99,7 +113,8 @@
   .up-card {
     background: var(--surface-solid);
     border: 1px solid var(--line);
-    border-radius: 12px;
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
     padding: 14px 16px;
     display: flex;
     flex-direction: column;
@@ -122,7 +137,7 @@
     max-width: 420px;
     padding: 11px 14px;
     border: 1px solid var(--line);
-    border-radius: 12px;
+    border-radius: 999px;
     background: var(--surface-solid);
     color: var(--ink);
     font-size: 14px;
@@ -152,7 +167,7 @@
   .table-scroll {
     overflow-x: auto;
     border: 1px solid var(--line);
-    border-radius: 14px;
+    border-radius: 10px;
     background: var(--surface);
   }
   table { border-collapse: collapse; width: 100%; min-width: 760px; font-size: 14px; }
@@ -228,7 +243,7 @@
     tbody tr {
       background: var(--surface-solid);
       border: 1px solid var(--line);
-      border-radius: 12px;
+      border-radius: 8px;
       padding: 10px 12px;
       margin-bottom: 12px;
     }
@@ -262,7 +277,7 @@
     <div class="eyebrow">BANK MAINTENANCE BOARD</div>
     <h1>銀行メンテナンス・サービス停止情報</h1>
     <div class="meta-row">
-      <span class="chip">最終自動更新：2026年07月29日 22:23（日本時間）</span>
+      <span class="chip">最終自動更新：2026年07月29日 22:36（日本時間）</span>
       <span>各行の公式ページから拾っています。詳細は必ずリンク先で確認してください。</span>
       <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">ダークに切り替え</button>
     </div>
