@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-30T22:33:48.187314+09:00",
+ "updated": "2026-07-31T05:32:03.329121+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -117,13 +117,6 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "【7月30日一部店舗営業再開】令和8年熊本地震による店舗の休止について",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002449.html",
-     "date": "2026-07-30",
-     "posted_date": null,
-     "event_date": "2026-07-30"
-    },
-    {
      "title": "「ゆうちょデビット」お申込みサイトのシステムメンテナンスのお知らせ",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002448.html",
      "date": "2026-08-04",
@@ -135,8 +128,8 @@
    "diag": {
     "status": "ok",
     "raw_count": 13,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -193,6 +186,13 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "銀行からのお知らせ ［臨時メンテナンス］振込サービス停止 7月31日（金）16:00～8月3日（月）08:00 詳細はこちら",
+     "url": "https://www.netbk.co.jp/contents/company/info/maintenance/",
+     "date": "2026-07-31",
+     "posted_date": null,
+     "event_date": "2026-07-31"
+    },
+    {
      "title": "振込サービスにかかる臨時メンテナンスのご案内",
      "url": "https://www.netbk.co.jp/contents/company/info/2026/0702_005979.html",
      "date": "2026-07-31",
@@ -203,21 +203,21 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 8,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "raw_count": 10,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
-     "none"
+     "text_block"
     ],
     "latest_seen": "2026-07-31",
     "sources": [
      {
       "url": "https://www.netbk.co.jp/contents/company/info/maintenance/",
       "ok": true,
-      "raw": 0,
-      "parser": "none"
+      "raw": 2,
+      "parser": "text_block"
      },
      {
       "url": "https://www.netbk.co.jp/contents/company/info/",
