@@ -39,6 +39,12 @@ HEADERS = {
 KEYWORD = re.compile(r"メンテナンス|休止|停止|システム更改|利用できません")
 EXCLUDE = re.compile(r"復旧|再開しました|解除|平成|完了|販売停止|受付停止|取り次ぎ停止|取扱停止|お問い合わせ|お客さまセンター|メンテナンス工業")
 
+# 銀行ごとの定義。必須キーは id / name / group / official / news_urls / regular。
+# 例外的なサイトには以下の任意キーを足す(取得方式と抽出方式の2軸だけで足りる):
+#   取得方式: pdf_probe … お知らせ一覧がJS描画で読めないサイト向け。
+#             日付規則で命名されたPDFを直接探す(probe_days で遡る日数)
+#   抽出方式: 指定不要。aタグ(link_list)→地の文(text_block)の順に自動で試す
+#   pref … 東海3県の県名表示 / note … 自動取得できない情報の手動補足
 BANKS = [
     # --- メガバンク・大手 ---
     dict(id="mizuho", name="みずほ銀行", group="mega",
@@ -102,7 +108,8 @@ BANKS = [
          regular=""),
     dict(id="juroku", name="十六銀行", group="tokai", pref="岐阜",
          official="https://www.juroku.co.jp/",
-         news_urls=["https://www.16fg.co.jp/news/16bank/"],
+         news_urls=["https://www.juroku.co.jp/oshirase_personal/",
+                    "https://www.16fg.co.jp/news/16bank/"],
          regular="インターネットバンキング：毎月第2・第3土曜 21:00–23:00／1月1日 21:00–23:00"),
     dict(id="gifushin", name="岐阜信用金庫", group="tokai", pref="岐阜",
          official="https://www.gifushin.co.jp/",
@@ -148,20 +155,40 @@ def resolve_url(url: str) -> str:
     return url.replace("{year}", str(NOW.year))
 
 
+CHARSET_RE = re.compile(rb'charset=["\']?([\w-]+)', re.I)
+
+
+def decode_html(raw: bytes) -> str:
+    """meta charsetを尊重してデコードする。
+    Shift-JISのページをUTF-8として読むと本文が全て文字化けするため必須。"""
+    m = CHARSET_RE.search(raw[:4096])
+    declared = m.group(1).decode("ascii", "ignore").lower() if m else None
+    candidates = [declared] if declared else []
+    candidates += ["utf-8", "cp932", "euc-jp"]
+    for enc in candidates:
+        if not enc:
+            continue
+        if enc in ("shift_jis", "shift-jis", "sjis", "x-sjis"):
+            enc = "cp932"  # cp932はShift_JISの上位互換
+        try:
+            return raw.decode(enc)
+        except (UnicodeDecodeError, LookupError):
+            continue
+    return raw.decode("utf-8", "replace")
+
+
 def fetch(url: str) -> str | None:
     if chrome_requests is not None:
         try:
             r = chrome_requests.get(url, impersonate="chrome", timeout=25)
             if r.status_code == 200:
-                return r.text
+                return decode_html(r.content)
         except Exception:
             pass  # 通常のrequestsで再試行
     try:
         r = requests.get(url, headers=HEADERS, timeout=25)
         r.raise_for_status()
-        if r.encoding in (None, "ISO-8859-1"):
-            r.encoding = r.apparent_encoding
-        return r.text
+        return decode_html(r.content)
     except Exception as e:
         print(f"  fetch NG: {url} ({e})", file=sys.stderr)
         return None
@@ -229,17 +256,26 @@ def deep_check(item: dict) -> bool:
         return True  # 読めない場合は除外しない(リンクは生きているため)
     today = NOW.strftime("%Y-%m-%d")
     # 期間表記(○月○日○時〜○月○日○時)のうち、終了が未来のものを探す
-    for m in RANGE_RE.finditer(text):
+    ranges = list(RANGE_RE.finditer(text))
+    for m in ranges:
         snippet = " ".join(m.group(0).split())
         dates = _dates_in(snippet)
         if dates and max(dates) + timedelta(days=1) > NOW:
             item["period"] = snippet[:110]
-            item["date"] = min(dates).strftime("%Y-%m-%d")
+            # 本文の期間表記は最も確実な停止日なのでタイトル推定より優先する
+            item["event_date"] = item["date"] = min(dates).strftime("%Y-%m-%d")
             return True
+    if ranges:
+        # 期間表記はあったが全て過去 = 終了済み。
+        # ここで打ち切らないと年末年始案内などの無関係な未来日を拾ってしまう
+        return False
     dates = [d for d in _dates_in(text) if abs((d - NOW).days) < 400]
     future = [d for d in dates if d + timedelta(days=1) > NOW]
     if future:
-        item.setdefault("date", min(future).strftime("%Y-%m-%d"))
+        if not item.get("event_date"):
+            item["event_date"] = min(future).strftime("%Y-%m-%d")
+        if not item.get("date"):
+            item["date"] = item["event_date"]
         return True
     if not dates:
         return True  # 日付が読み取れないページは除外しない
@@ -247,32 +283,64 @@ def deep_check(item: dict) -> bool:
     return bool(item.get("date")) and item["date"] >= today
 
 
-def guess_date(title: str):
-    """タイトル中の最初の日付を推定して返す（年省略時は前後関係から補完）"""
-    m1 = DATE_RE.search(title)   # 「7月27日」等(イベント日のことが多い)
-    m2 = DATE_RE2.search(title)  # 「2026.07.21」等(掲載日のことが多い)
+def _mk(year, month, day):
     try:
-        if m1 and m1.group(1):
-            return datetime(int(m1.group(1)), int(m1.group(2)), int(m1.group(3)), tzinfo=JST)
-        if m1 and m2:
-            # 掲載日の年を借りてイベント日を組み立てる(掲載日より前なら翌年とみなす)
-            base = datetime(int(m2.group(1)), int(m2.group(2)), int(m2.group(3)), tzinfo=JST)
-            d = datetime(base.year, int(m1.group(2)), int(m1.group(3)), tzinfo=JST)
-            if d < base:
-                d = d.replace(year=base.year + 1)
-            return d
-        if m1:
-            # 年の記載がない場合、30日以上過去に見える日付は信用しない
-            d = datetime(NOW.year, int(m1.group(2)), int(m1.group(3)), tzinfo=JST)
-            return d if (NOW - d).days <= 30 else None
-        if m2:
-            return datetime(int(m2.group(1)), int(m2.group(2)), int(m2.group(3)), tzinfo=JST)
+        return datetime(int(year), int(month), int(day), tzinfo=JST)
     except ValueError:
         return None
-    return None
 
 
-def extract_items(html: str, base_url: str) -> list[dict]:
+def read_dates(title: str) -> tuple[datetime | None, datetime | None]:
+    """タイトルから (掲載日, 停止日) を切り分ける。
+
+    一覧ページは行頭に掲載日を置く慣習なので、行頭の日付は掲載日、
+    文中の日付は停止日とみなす。年の記載がない停止日は掲載日の年を借りる。
+      例) 「2026.07.21 …サービス停止のお知らせ（7月27日…）」
+          → 掲載日 2026-07-21 / 停止日 2026-07-27
+    """
+    posted = event = None
+
+    m = DATE_RE2.search(title)  # 2026.07.21 / 2026/07/13 形式
+    if m:
+        d = _mk(m.group(1), m.group(2), m.group(3))
+        if d and m.start() <= 2:
+            posted = d
+        else:
+            event = event or d
+
+    for m in DATE_RE.finditer(title):  # 2026年7月27日 / 7月27日 形式
+        if m.group(1):
+            d = _mk(m.group(1), m.group(2), m.group(3))
+        else:
+            base = posted or NOW
+            d = _mk(base.year, m.group(2), m.group(3))
+            if d and d < base - timedelta(days=180):
+                d = d.replace(year=d.year + 1)  # 年跨ぎの告知
+        if d is None:
+            continue
+        if m.start() <= 2 and m.group(1) and posted is None:
+            posted = d
+        elif event is None:
+            event = d
+
+    return posted, event
+
+
+def make_item(title: str, url: str, posted, event) -> dict:
+    """表示用の date は停止日を優先し、無ければ掲載日で代用する"""
+    shown = event or posted
+    return {
+        "title": title[:120],
+        "url": url,
+        "date": shown.strftime("%Y-%m-%d") if shown else None,
+        "posted_date": posted.strftime("%Y-%m-%d") if posted else None,
+        "event_date": event.strftime("%Y-%m-%d") if event else None,
+    }
+
+
+def extract_items(html: str, base_url: str) -> tuple[list[dict], str]:
+    """告知を抽出する。返り値は (告知リスト, 使用したパーサ名)。
+    link_list(aタグ) を優先し、取れなければ text_block(リスト/表の地の文) に落とす。"""
     soup = BeautifulSoup(html, "html.parser")
     items, seen = [], set()
     for a in soup.find_all("a", href=True):
@@ -286,17 +354,14 @@ def extract_items(html: str, base_url: str) -> list[dict]:
         href = urljoin(base_url, a["href"])
         if not href.startswith("http") or href in seen:
             continue
-        d = guess_date(text)
+        posted, event = read_dates(text)
+        d = event or posted
         if d and d.year < NOW.year:  # 過去年の古い告知は除外
             continue
         seen.add(href)
-        items.append({
-            "title": text[:120],
-            "url": href,
-            "date": d.strftime("%Y-%m-%d") if d else None,
-        })
+        items.append(make_item(text, href, posted, event))
     if items:
-        return items
+        return items, "link_list"
     # リンク化されていない告知(リスト・表のテキスト)へのフォールバック
     seen_text = set()
     for el in soup.find_all(["li", "dt", "dd", "tr", "td", "p", "div"]):
@@ -305,18 +370,17 @@ def extract_items(html: str, base_url: str) -> list[dict]:
             continue
         if not KEYWORD.search(text) or EXCLUDE.search(text):
             continue
-        d = guess_date(text)
+        if re.search(r"毎日|毎週|毎月|毎年", text):
+            continue  # 定例スケジュール表は告知ではない(定例メンテ欄で扱う)
+        posted, event = read_dates(text)
+        d = event or posted
         if d is None or d.year < NOW.year:
             continue
         seen_text.add(text)
-        items.append({
-            "title": text[:120],
-            "url": base_url,
-            "date": d.strftime("%Y-%m-%d"),
-        })
+        items.append(make_item(text, base_url, posted, event))
         if len(items) >= 3:
             break
-    return items
+    return items, ("text_block" if items else "none")
 
 
 def probe_pdf_items(bank: dict) -> tuple[list[dict], bool]:
@@ -350,53 +414,108 @@ def probe_pdf_items(bank: dict) -> tuple[list[dict], bool]:
         head = re.sub(r"^.{0,20}?(?:信用金庫|銀行)", "", head, count=1)
         m = re.search(r"(.{0,25}?(?:臨時休止|休止|停止|メンテナンス|システム更改).{0,25}?お知らせ(?:（[^）]{1,15}）)?)", head)
         title = m.group(1) if m else head[:60]
-        items.append({"title": title[:120], "url": url, "date": d.strftime("%Y-%m-%d")})
+        items.append(make_item(title, url, posted=d, event=None))
         time.sleep(0.1)
     return items, found_any
+
+
+def collect_bank(bank: dict) -> dict:
+    """1行分を収集する。診断情報(sources / raw_count / parser / drop理由)も併せて返す。"""
+    items, ok, sources, parsers = [], False, [], []
+
+    for url in bank["news_urls"]:
+        u = resolve_url(url)
+        html = fetch(u)
+        if html is None:
+            sources.append({"url": u, "ok": False, "raw": 0, "parser": "fetch_failed"})
+            continue
+        ok = True
+        found, parser = extract_items(html, u)
+        items.extend(found)
+        parsers.append(parser)
+        sources.append({"url": u, "ok": True, "raw": len(found), "parser": parser})
+
+    if bank.get("pdf_probe"):
+        pdf_items, pdf_found = probe_pdf_items(bank)
+        ok = ok or pdf_found
+        items.extend(pdf_items)
+        if pdf_items:
+            parsers.append("pdf_probe")
+        sources.append({"url": bank["pdf_probe"], "ok": pdf_found,
+                        "raw": len(pdf_items), "parser": "pdf_probe"})
+
+    raw_count = len(items)
+
+    # URL重複を除き、日付の新しい順に並べる
+    uniq, seen = [], set()
+    for it in sorted(items, key=lambda x: x["date"] or "", reverse=True):
+        if it["url"] in seen:
+            continue
+        seen.add(it["url"])
+        uniq.append(it)
+
+    # リンク先の本文を読み、終了済みを除外して停止期間を抽出
+    # (タイトルの日付が未来の告知は、リンク先の判定に関わらず残す)
+    today = NOW.strftime("%Y-%m-%d")
+    kept, dropped_past = [], 0
+    for it in uniq[:5]:
+        time.sleep(0.2)
+        title_future = bool(it.get("date")) and it["date"] >= today
+        if deep_check(it) or title_future:
+            kept.append(it)
+        else:
+            dropped_past += 1
+
+    # 期間を特定できず、日付が30日以上前の告知は古いものとして落とす
+    cutoff = (NOW - timedelta(days=30)).strftime("%Y-%m-%d")
+    fresh = [it for it in kept
+             if it.get("period") or not it.get("date") or it["date"] >= cutoff]
+    dropped_past += len(kept) - len(fresh)
+
+    # タイトルにも本文にも日付が無い告知は「今後の予定」と断定できないため出さない
+    # (公式ページのリンクは常に残るので取りこぼしにはならない)
+    dated = [it for it in fresh if it.get("date")]
+    dropped_undated = len(fresh) - len(dated)
+    fresh = dated
+
+    # 0件の理由を区別する(UIで「取得失敗」と「終了済み」を出し分けるため)
+    if fresh:
+        status = "ok"
+    elif not ok:
+        status = "fetch_failed"
+    elif raw_count == 0:
+        status = "no_notice"      # 告知自体が見つからない
+    else:
+        status = "all_past"       # 拾えたが全て終了済み
+    latest_past = max((it["date"] for it in uniq if it.get("date")), default=None)
+
+    return {
+        "id": bank["id"], "name": bank["name"], "group": bank["group"],
+        "pref": bank.get("pref"), "official": resolve_url(bank["official"]),
+        "regular": bank["regular"], "note": bank.get("note"),
+        "fetch_ok": ok, "items": fresh[:5],
+        "diag": {
+            "status": status,
+            "raw_count": raw_count,
+            "kept_count": len(fresh),
+            "dropped_past": dropped_past,
+            "dropped_undated": dropped_undated,
+            "parsers": sorted(set(parsers)),
+            "latest_seen": latest_past,
+            "sources": sources,
+        },
+    }
 
 
 def collect() -> list[dict]:
     results = []
     for bank in BANKS:
-        print(f"* {bank['name']}")
-        items, ok = [], False
-        for url in bank["news_urls"]:
-            html = fetch(resolve_url(url))
-            if html is None:
-                continue
-            ok = True
-            items.extend(extract_items(html, resolve_url(url)))
-        pdf_items, pdf_found = probe_pdf_items(bank)
-        if bank.get("pdf_probe"):
-            ok = ok or pdf_found
-            items.extend(pdf_items)
-        # URL重複を除きつつ日付の新しい順に最大5件
-        uniq, seen = [], set()
-        for it in sorted(items, key=lambda x: x["date"] or "", reverse=True):
-            if it["url"] in seen:
-                continue
-            seen.add(it["url"])
-            uniq.append(it)
-        # リンク先の本文を読み、終了済みの告知を除外して停止期間を抽出
-        # (タイトルの日付が未来の告知は、リンク先の判定に関わらず残す)
-        today = NOW.strftime("%Y-%m-%d")
-        kept = []
-        for it in uniq[:5]:
-            time.sleep(0.2)
-            title_future = bool(it.get("date")) and it["date"] >= today
-            if deep_check(it) or title_future:
-                kept.append(it)
-        uniq = kept
-        # 期間を特定できず、日付が30日以上前の告知は古いものとして落とす
-        cutoff = (NOW - timedelta(days=30)).strftime("%Y-%m-%d")
-        uniq = [it for it in uniq
-                if it.get("period") or not it.get("date") or it["date"] >= cutoff]
-        results.append({
-            "id": bank["id"], "name": bank["name"], "group": bank["group"],
-            "pref": bank.get("pref"), "official": resolve_url(bank["official"]),
-            "regular": bank["regular"], "note": bank.get("note"),
-            "fetch_ok": ok, "items": uniq[:5],
-        })
+        r = collect_bank(bank)
+        d = r["diag"]
+        print(f"* {bank['name']:<12} {d['status']:<12} "
+              f"raw={d['raw_count']:<3} 表示={d['kept_count']:<3} "
+              f"parser={','.join(d['parsers']) or '-'}")
+        results.append(r)
     return results
 
 
@@ -440,10 +559,16 @@ def render(results: list[dict]) -> str:
                 for it in b["items"]
             )
             notice = f'<ul class="notice-list">{lis}</ul>'
-        elif b["fetch_ok"]:
-            notice = '<span class="muted">キーワードに一致する告知は見つかりませんでした</span>'
         else:
-            notice = '<span class="muted">自動取得に失敗しました。公式ページをご確認ください</span>'
+            status = b.get("diag", {}).get("status", "no_notice")
+            latest = b.get("diag", {}).get("latest_seen")
+            if status == "all_past":
+                seen = f"（直近の告知は {esc(latest)}）" if latest else ""
+                notice = f'<span class="muted">今後予定されている停止の告知はありません{seen}</span>'
+            elif status == "fetch_failed":
+                notice = '<span class="muted">自動取得に失敗しました。公式ページをご確認ください</span>'
+            else:
+                notice = '<span class="muted">メンテナンス関連の告知は見つかりませんでした</span>'
         focused = '1' if (b["items"] or not b["fetch_ok"]) else '0'
         rows.append(
             f'<tr class="bank-row" data-focused="{focused}" data-group="{b["group"]}">'
@@ -475,6 +600,11 @@ def main():
                    ensure_ascii=False, indent=1),
         encoding="utf-8")
     (docs / "index.html").write_text(render(results), encoding="utf-8")
+    by_status = {}
+    for r in results:
+        s = r["diag"]["status"]
+        by_status[s] = by_status.get(s, 0) + 1
+    print("内訳:", ", ".join(f"{k}={v}" for k, v in sorted(by_status.items())))
     ok = sum(1 for r in results if r["fetch_ok"])
     print(f"done: {ok}/{len(results)} 行の取得に成功")
 
