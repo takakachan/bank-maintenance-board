@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-30T07:04:30.089285+09:00",
+ "updated": "2026-07-30T19:58:53.815016+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -70,6 +70,12 @@
      "title": "システムメンテナンスによる振込（他の金融機関口座への送金）の休止について",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002436.html",
      "date": null
+    },
+    {
+     "title": "「ゆうちょデビット」お申込みサイトのシステムメンテナンスのお知らせ",
+     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002448.html",
+     "date": "2026-08-04",
+     "period": "2026年8月4日（火）1:00～6:00"
     }
    ]
   },
