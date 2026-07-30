@@ -4,7 +4,6 @@
 
 import json
 import re
-import subprocess
 import sys
 import time
 from datetime import datetime, timedelta, timezone
@@ -539,27 +538,21 @@ def upcoming_items(results: list[dict]) -> list[dict]:
     return sorted(ups, key=lambda x: x["date"])[:12]
 
 
-def git_history(limit: int = 40) -> list[dict]:
-    """サイト自体の更新履歴をgitのコミットログから作る。
-    git が使えない環境では空リストを返し、履歴ボタンを出さない。"""
-    try:
-        out = subprocess.run(
-            ["git", "log", f"-{limit}", "--date=short", "--pretty=format:%ad\t%s"],
-            cwd=Path(__file__).resolve().parent.parent,
-            capture_output=True, text=True, encoding="utf-8", timeout=20)
-        if out.returncode != 0:
-            return []
-    except Exception as e:
-        print(f"  git history NG: {e}", file=sys.stderr)
+def read_history(limit: int = 40) -> list[dict]:
+    """サイトに表示する更新履歴。CHANGELOG.md を読む。
+    見出し「## YYYY-MM-DD」とその下の「- 項目」という形式。"""
+    path = Path(__file__).resolve().parent.parent / "CHANGELOG.md"
+    if not path.exists():
         return []
-    rows = []
-    for line in out.stdout.splitlines():
-        if "\t" not in line:
-            continue
-        date, subject = line.split("\t", 1)
-        if not subject.strip():
-            continue
-        rows.append({"date": date, "subject": subject.strip()})
+    rows, date = [], None
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if line.startswith("## "):
+            date = line[3:].strip()
+        elif line.startswith("- ") and date:
+            rows.append({"date": date, "subject": line[2:].strip()})
+            if len(rows) >= limit:
+                break
     return rows
 
 
@@ -620,7 +613,7 @@ def render(results: list[dict]) -> str:
 
     # 更新履歴(同じ日の変更はまとめて1ブロックにする)
     history, last_date = [], None
-    for row in git_history():
+    for row in read_history():
         if row["date"] != last_date:
             if last_date is not None:
                 history.append("</ul>")
