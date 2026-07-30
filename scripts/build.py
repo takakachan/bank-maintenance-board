@@ -4,6 +4,7 @@
 
 import json
 import re
+import subprocess
 import sys
 import time
 from datetime import datetime, timedelta, timezone
@@ -92,8 +93,9 @@ BANKS = [
                     "https://www.aeonbank.co.jp/news/"],
          regular=""),
     dict(id="seven", name="セブン銀行", group="net",
-         official="https://www.sevenbank.co.jp/",
-         news_urls=["https://www.sevenbank.co.jp/"],
+         official="https://www.sevenbank.co.jp/support/important.html",
+         news_urls=["https://www.sevenbank.co.jp/support/important.html",
+                    "https://www.sevenbank.co.jp/"],
          regular=""),
     # --- 東海3県の地銀・信金 ---
     dict(id="okashin", name="岡崎信用金庫", group="tokai", pref="愛知",
@@ -144,7 +146,8 @@ DATE_RE = re.compile(r"(?:(\d{4})\s*年)?\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日")
 DATE_RE2 = re.compile(r"(\d{4})[./-](\d{1,2})[./-](\d{1,2})")
 
 # 「2026年8月8日（土曜日）22時00分～2026年8月9日（日曜日）11時00分」等の期間表記
-_WD = r"(?:\s*[（(][^）)]{1,8}[）)])?"
+# 曜日は括弧付き（土）だけでなく、みずほのような括弧なし「土曜日」表記も許容する
+_WD = r"(?:\s*[（(][^）)]{1,8}[）)]|\s*[月火水木金土日]曜日?)?"
 _TIME = r"(?:午前|午後)?\s*\d{1,2}\s*[:：時]\s*(?:\d{1,2})?\s*分?\s*(?:頃|ごろ)?"
 _D_FULL = rf"\d{{4}}\s*年\s*\d{{1,2}}\s*月\s*\d{{1,2}}\s*日{_WD}(?:\s*{_TIME})?"
 _D_PART = rf"(?:\d{{4}}\s*年\s*)?\d{{1,2}}\s*月\s*\d{{1,2}}\s*日{_WD}(?:\s*{_TIME})?"
@@ -257,14 +260,21 @@ def deep_check(item: dict) -> bool:
     today = NOW.strftime("%Y-%m-%d")
     # 期間表記(○月○日○時〜○月○日○時)のうち、終了が未来のものを探す
     ranges = list(RANGE_RE.finditer(text))
+    future_ranges = []
     for m in ranges:
         snippet = " ".join(m.group(0).split())
         dates = _dates_in(snippet)
         if dates and max(dates) + timedelta(days=1) > NOW:
-            item["period"] = snippet[:110]
-            # 本文の期間表記は最も確実な停止日なのでタイトル推定より優先する
-            item["event_date"] = item["date"] = min(dates).strftime("%Y-%m-%d")
-            return True
+            future_ranges.append((snippet, min(dates)))
+    if future_ranges:
+        # 同じ停止でも「8月8日～8月9日」と「8月8日22時～8月9日11時」の両方が
+        # 載っていることがあるため、時刻を含む具体的な表記を優先する
+        snippet, start = max(future_ranges,
+                             key=lambda x: bool(re.search(r"[:：]|\d\s*時", x[0])))
+        item["period"] = snippet[:110]
+        # 本文の期間表記は最も確実な停止日なのでタイトル推定より優先する
+        item["event_date"] = item["date"] = start.strftime("%Y-%m-%d")
+        return True
     if ranges:
         # 期間表記はあったが全て過去 = 終了済み。
         # ここで打ち切らないと年末年始案内などの無関係な未来日を拾ってしまう
@@ -529,6 +539,30 @@ def upcoming_items(results: list[dict]) -> list[dict]:
     return sorted(ups, key=lambda x: x["date"])[:12]
 
 
+def git_history(limit: int = 40) -> list[dict]:
+    """サイト自体の更新履歴をgitのコミットログから作る。
+    git が使えない環境では空リストを返し、履歴ボタンを出さない。"""
+    try:
+        out = subprocess.run(
+            ["git", "log", f"-{limit}", "--date=short", "--pretty=format:%ad\t%s"],
+            cwd=Path(__file__).resolve().parent.parent,
+            capture_output=True, text=True, encoding="utf-8", timeout=20)
+        if out.returncode != 0:
+            return []
+    except Exception as e:
+        print(f"  git history NG: {e}", file=sys.stderr)
+        return []
+    rows = []
+    for line in out.stdout.splitlines():
+        if "\t" not in line:
+            continue
+        date, subject = line.split("\t", 1)
+        if not subject.strip():
+            continue
+        rows.append({"date": date, "subject": subject.strip()})
+    return rows
+
+
 def esc(s: str) -> str:
     return (s.replace("&", "&amp;").replace("<", "&lt;")
              .replace(">", "&gt;").replace('"', "&quot;"))
@@ -584,11 +618,28 @@ def render(results: list[dict]) -> str:
         f'</tr></thead><tbody>{"".join(rows)}</tbody></table></div></section>'
     ]
 
+    # 更新履歴(同じ日の変更はまとめて1ブロックにする)
+    history, last_date = [], None
+    for row in git_history():
+        if row["date"] != last_date:
+            if last_date is not None:
+                history.append("</ul>")
+            history.append(f'<h3 class="hist-date">{esc(row["date"])}</h3><ul class="hist-list">')
+            last_date = row["date"]
+        history.append(f'<li>{esc(row["subject"])}</li>')
+    if history:
+        history.append("</ul>")
+    hist_html = "".join(history)
+    hist_btn = ('<button class="hist-btn" id="hist-open" type="button">更新履歴</button>'
+                if hist_html else "")
+
     template = (Path(__file__).parent / "template.html").read_text(encoding="utf-8")
     return (template
             .replace("{{UPDATED}}", NOW.strftime("%Y年%m月%d日 %H:%M"))
             .replace("{{UPCOMING}}", up_html)
-            .replace("{{SECTIONS}}", "".join(sections)))
+            .replace("{{SECTIONS}}", "".join(sections))
+            .replace("{{HISTORY_BUTTON}}", hist_btn)
+            .replace("{{HISTORY}}", hist_html))
 
 
 def main():

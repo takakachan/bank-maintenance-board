@@ -21,6 +21,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # 更新履歴をコミットログから作るため全履歴が必要
 
       - uses: actions/setup-python@v5
         with:

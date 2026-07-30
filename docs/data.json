@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-30T22:08:48.782635+09:00",
+ "updated": "2026-07-30T22:32:25.112175+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -16,7 +16,8 @@
      "url": "https://www.mizuhobank.co.jp/oshirase/maintenance_personal.html#pause",
      "date": "2026-08-08",
      "posted_date": null,
-     "event_date": "2026-08-08"
+     "event_date": "2026-08-08",
+     "period": "2026年8月8日 土曜日 22時00分～2026年8月9日 日曜日 11時00分"
     }
    ],
    "diag": {
@@ -376,22 +377,28 @@
    "name": "セブン銀行",
    "group": "net",
    "pref": null,
-   "official": "https://www.sevenbank.co.jp/",
+   "official": "https://www.sevenbank.co.jp/support/important.html",
    "regular": "",
    "note": null,
    "fetch_ok": true,
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 2,
+    "raw_count": 16,
     "kept_count": 0,
-    "dropped_past": 2,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
     "latest_seen": "2026-07-15",
     "sources": [
+     {
+      "url": "https://www.sevenbank.co.jp/support/important.html",
+      "ok": true,
+      "raw": 14,
+      "parser": "link_list"
+     },
      {
       "url": "https://www.sevenbank.co.jp/",
       "ok": true,

@@ -80,6 +80,67 @@
   }
   .theme-toggle:hover { border-color: var(--accent); }
   .theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  /* 更新履歴のボタンとモーダル */
+  .hist-btn {
+    border: 2px solid var(--ink);
+    background: var(--surface-solid);
+    color: var(--ink);
+    border-radius: 999px;
+    padding: 5px 14px;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 2px 2px 0 var(--shadow);
+  }
+  .hist-btn:hover { background: var(--btn); }
+  .hist-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  #hist-dialog {
+    width: min(620px, calc(100vw - 32px));
+    max-height: min(76vh, 640px);
+    padding: 0;
+    border: 2px solid var(--ink);
+    border-radius: 16px;
+    box-shadow: 6px 6px 0 var(--shadow);
+    background: var(--surface);
+    color: var(--ink);
+    overflow: hidden;
+  }
+  #hist-dialog::backdrop { background: rgba(35, 24, 21, 0.45); }
+  .hist-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 18px;
+    border-bottom: 2px solid var(--ink);
+    background: var(--surface-soft);
+  }
+  .hist-head h2 { margin: 0; font-size: 16px; font-weight: 700; }
+  .hist-head h2::before { display: none; }
+  .hist-close {
+    border: 2px solid var(--ink);
+    background: var(--surface-solid);
+    color: var(--ink);
+    border-radius: 999px;
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+    line-height: 1;
+    cursor: pointer;
+    flex: none;
+  }
+  .hist-close:hover { background: var(--btn); }
+  .hist-body { padding: 6px 18px 18px; overflow-y: auto; max-height: calc(76vh - 60px); }
+  .hist-date {
+    margin: 16px 0 6px;
+    font-size: 13px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--alert-ink);
+  }
+  .hist-list { margin: 0; padding-left: 20px; }
+  .hist-list li { margin: 5px 0; font-size: 13.5px; }
   section + section { margin-top: 18px; }
   h2 {
     font-family: inherit;
@@ -231,6 +292,8 @@
       overflow: visible;
       background: transparent;
       border: none;
+      border-radius: 0;
+      box-shadow: none;  /* カード側が影を持つので枠の影は消す(二重表示の防止) */
     }
     table { min-width: 0; }
     thead { display: none; }
@@ -274,8 +337,17 @@
     <div class="meta-row">
       <span class="chip">最終自動更新：{{UPDATED}}（日本時間）</span>
       <span>各行の公式ページから拾っています。詳細は必ずリンク先で確認してください。</span>
+      {{HISTORY_BUTTON}}
     </div>
   </header>
+
+  <dialog id="hist-dialog" aria-labelledby="hist-title">
+    <div class="hist-head">
+      <h2 id="hist-title">このサイトの更新履歴</h2>
+      <button class="hist-close" id="hist-close" type="button" aria-label="閉じる">✕</button>
+    </div>
+    <div class="hist-body">{{HISTORY}}</div>
+  </dialog>
 
   <section>
     <h2>日付が近い告知<span class="count">自動抽出・日付順</span></h2>
@@ -308,6 +380,17 @@
 </div>
 
 <script>
+  const histDialog = document.getElementById('hist-dialog');
+  const histOpen = document.getElementById('hist-open');
+  if (histOpen && histDialog) {
+    histOpen.addEventListener('click', () => histDialog.showModal());
+    document.getElementById('hist-close').addEventListener('click', () => histDialog.close());
+    // 背景(バックドロップ)のクリックでも閉じる
+    histDialog.addEventListener('click', (e) => {
+      if (e.target === histDialog) histDialog.close();
+    });
+  }
+
   const filter = document.getElementById('filter');
   const focusToggle = document.getElementById('focus-toggle');
   const hint = document.getElementById('filter-hint');
