@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-01T19:26:32.266011+09:00",
+ "updated": "2026-08-02T07:00:12.871663+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -244,21 +244,12 @@
    "regular": "1・4・7・10月の最終火曜 1:00–6:00（全体）／日曜未明に一部機能停止あり",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "スポーツくじ（toto・BIG）販売の一時休止について（6月25日～）",
-     "url": "https://www.paypay-bank.co.jp/news/2026/0623.html",
-     "date": "2026-06-25",
-     "posted_date": null,
-     "event_date": "2026-06-25",
-     "period": "2026年6月25日（木曜日）19時～8月1日（土曜日）8時"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 10,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -313,21 +304,12 @@
    "regular": "毎月第2土曜の翌日曜 0:00–7:00／カードローン：毎週月曜 1:00–5:00",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "じぶん銀行FX メンテナンス日時 2026年8月1日（土）5：50 ～ 18：30 じぶん銀行FXのシステムメンテナンス時間を通常よりも延長し、サービスを停止いたします。 ※ 終了時間は前後する場合があります。あらかじめご了承ください。 ※",
-     "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-08-01",
-     "posted_date": null,
-     "event_date": "2026-08-01",
-     "period": "2026年8月1日（土）5：50 ～ 18：30"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 2,
-    "kept_count": 1,
-    "dropped_past": 0,
+    "kept_count": 0,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "text_block"
