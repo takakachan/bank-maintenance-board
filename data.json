@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-03T21:12:40.783234+09:00",
+ "updated": "2026-08-03T21:36:33.154631+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -117,13 +117,6 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "【営業再開】令和8年熊本地震による休止店舗の営業再開について",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002449.html",
-     "date": "2026-08-04",
-     "posted_date": null,
-     "event_date": "2026-08-04"
-    },
-    {
      "title": "「ゆうちょデビット」お申込みサイトのシステムメンテナンスのお知らせ",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002448.html",
      "date": "2026-08-04",
@@ -134,9 +127,9 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 13,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "raw_count": 12,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -146,7 +139,7 @@
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
       "ok": true,
-      "raw": 13,
+      "raw": 12,
       "parser": "link_list"
      }
     ]
