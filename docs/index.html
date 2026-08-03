@@ -167,32 +167,32 @@
     border: 2px solid var(--ink);
     border-radius: 10px;
     box-shadow: 3px 3px 0 var(--shadow);
-    padding: 9px 12px;
+    padding: 11px 14px;
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 4px;
   }
   .up-line {
     display: flex;
     align-items: baseline;
     flex-wrap: wrap;
     gap: 8px;
-    line-height: 1.35;
+    line-height: 1.4;
   }
   .up-date {
     font-weight: 900;
     font-variant-numeric: tabular-nums;
-    font-size: 13px;
+    font-size: 14px;
     background: var(--btn);
     color: var(--btn-ink);
     border-radius: 5px;
-    padding: 0 6px;
+    padding: 1px 7px;
     flex: none;
   }
-  .up-bank { font-weight: 700; font-size: 13.5px; }
+  .up-bank { font-weight: 700; font-size: 15px; }
   .up-time {
     margin-left: auto;
-    font-size: 12.5px;
+    font-size: 14px;
     font-weight: 700;
     font-variant-numeric: tabular-nums;
     color: var(--alert-ink);
@@ -200,8 +200,8 @@
   }
   .up-title {
     color: var(--muted);
-    font-size: 12.5px;
-    line-height: 1.4;
+    font-size: 13.5px;
+    line-height: 1.45;
     text-decoration-color: var(--line);
   }
   .filter-row {
@@ -252,7 +252,7 @@
     box-shadow: 6px 6px 0 var(--shadow);
     background: var(--surface);
   }
-  table { border-collapse: collapse; width: 100%; min-width: 760px; font-size: 14px; }
+  table { border-collapse: collapse; width: 100%; min-width: 760px; font-size: 14.5px; }
   th {
     text-align: left;
     font-size: 12px;
@@ -270,7 +270,7 @@
   }
   tr:last-child td { border-bottom: none; }
   td.bank { white-space: nowrap; font-weight: 700; }
-  td.bank .pref { display: block; font-size: 11px; color: var(--muted); font-weight: 500; }
+  td.bank .pref { display: block; font-size: 12.5px; color: var(--muted); font-weight: 500; }
   td.period { min-width: 150px; }
   td.regular { color: var(--muted); font-size: 13px; min-width: 180px; }
   td.src { white-space: nowrap; }
@@ -292,16 +292,16 @@
     background: var(--alert-bg);
     color: var(--alert-ink);
     font-weight: 700;
-    font-size: 12.5px;
+    font-size: 13.5px;
     border-radius: 5px;
-    padding: 1px 8px;
+    padding: 1px 9px;
   }
   .cnt-days {
     display: block;
     color: var(--muted);
-    font-size: 12px;
+    font-size: 13px;
     font-variant-numeric: tabular-nums;
-    margin-top: 3px;
+    margin-top: 4px;
   }
   .note {
     margin: 0 0 8px;
@@ -352,22 +352,22 @@
       border: 2px solid var(--ink);
       border-radius: 10px;
       box-shadow: 3px 3px 0 var(--shadow);
-      padding: 10px 12px;
-      margin-bottom: 10px;
+      padding: 12px 14px;
+      margin-bottom: 11px;
     }
     td { display: block; padding: 0; border: none; }
     td::before { display: none; }
-    td.bank { grid-column: 1; white-space: normal; font-size: 14.5px; }
+    td.bank { grid-column: 1; white-space: normal; font-size: 15.5px; }
     td.bank .pref { display: inline; margin-left: 6px; }
     td.period { grid-column: 2; text-align: right; min-width: 0; }
     td.period .cnt-days { text-align: right; }
     td.regular {
       grid-column: 1 / -1;
-      margin-top: 7px;
-      padding-top: 7px;
+      margin-top: 8px;
+      padding-top: 8px;
       border-top: 1px solid var(--line);
-      font-size: 12px;
-      line-height: 1.5;
+      font-size: 13px;
+      line-height: 1.55;
     }
     td.regular::before {
       display: inline;
@@ -375,7 +375,7 @@
       font-weight: 700;
       color: var(--ink);
     }
-    td.src { grid-column: 1 / -1; margin-top: 6px; font-size: 12.5px; white-space: normal; }
+    td.src { grid-column: 1 / -1; margin-top: 7px; font-size: 13.5px; white-space: normal; }
     footer.page { margin-top: 36px; }
   }
 </style>
@@ -385,7 +385,7 @@
   <header class="page">
     <h1>銀行メンテナンス・サービス停止情報</h1>
     <div class="meta-row">
-      <span class="chip">最終自動更新：2026年08月03日 21:50（日本時間）</span>
+      <span class="chip">最終自動更新：2026年08月03日 22:27（日本時間）</span>
       <span>各行の公式ページから拾っています。詳細は必ずリンク先で確認してください。</span>
       <button class="hist-btn" id="hist-open" type="button">更新履歴</button>
     </div>
