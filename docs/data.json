@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-03T20:58:55.001893+09:00",
+ "updated": "2026-08-03T21:07:26.328213+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -177,6 +177,36 @@
       "url": "https://www.resonabank.co.jp/kojin/oshirase/",
       "ok": true,
       "raw": 6,
+      "parser": "link_list"
+     }
+    ]
+   }
+  },
+  {
+   "id": "saitamaresona",
+   "name": "埼玉りそな銀行",
+   "group": "mega",
+   "pref": "埼玉",
+   "official": "https://www.saitamaresona.co.jp/kojin/oshirase/",
+   "regular": "マイゲート・アプリ：毎月第1月曜 2:00–6:00／第2土曜 23:00–翌日曜 6:00",
+   "note": null,
+   "fetch_ok": true,
+   "items": [],
+   "diag": {
+    "status": "all_past",
+    "raw_count": 1,
+    "kept_count": 0,
+    "dropped_past": 1,
+    "dropped_undated": 0,
+    "parsers": [
+     "link_list"
+    ],
+    "latest_seen": "2026-06-27",
+    "sources": [
+     {
+      "url": "https://www.saitamaresona.co.jp/kojin/oshirase/",
+      "ok": true,
+      "raw": 1,
       "parser": "link_list"
      }
     ]
@@ -695,6 +725,398 @@
     "sources": [
      {
       "url": "https://www.33bank.co.jp/",
+      "ok": true,
+      "raw": 1,
+      "parser": "link_list"
+     }
+    ]
+   }
+  },
+  {
+   "id": "hekishin",
+   "name": "碧海信用金庫",
+   "group": "tokai",
+   "pref": "愛知",
+   "official": "https://www.hekishin.jp/news/",
+   "regular": "",
+   "note": null,
+   "fetch_ok": true,
+   "items": [],
+   "diag": {
+    "status": "all_past",
+    "raw_count": 12,
+    "kept_count": 0,
+    "dropped_past": 3,
+    "dropped_undated": 2,
+    "parsers": [
+     "link_list"
+    ],
+    "latest_seen": null,
+    "sources": [
+     {
+      "url": "https://www.hekishin.jp/news/",
+      "ok": true,
+      "raw": 7,
+      "parser": "link_list"
+     },
+     {
+      "url": "https://www.hekishin.jp/news/important/",
+      "ok": true,
+      "raw": 5,
+      "parser": "link_list"
+     }
+    ]
+   }
+  },
+  {
+   "id": "shizuoka",
+   "name": "静岡銀行",
+   "group": "other",
+   "pref": "静岡",
+   "official": "https://www.shizuokabank.co.jp/notice/",
+   "regular": "しずぎんダイレクト・アプリ：毎月第1・第3月曜 2:00–6:00",
+   "note": null,
+   "fetch_ok": true,
+   "items": [],
+   "diag": {
+    "status": "all_past",
+    "raw_count": 1,
+    "kept_count": 0,
+    "dropped_past": 1,
+    "dropped_undated": 0,
+    "parsers": [
+     "json"
+    ],
+    "latest_seen": "2026-03-23",
+    "sources": [
+     {
+      "url": "https://www.shizuokabank.co.jp/common/components/info.json",
+      "ok": true,
+      "raw": 1,
+      "parser": "json"
+     }
+    ]
+   }
+  },
+  {
+   "id": "chiba",
+   "name": "千葉銀行",
+   "group": "other",
+   "pref": "千葉",
+   "official": "https://www.chibabank.co.jp/notices/",
+   "regular": "インターネット支店：毎月第2・第3日曜 23:00–翌7:00",
+   "note": null,
+   "fetch_ok": true,
+   "items": [
+    {
+     "title": "【重要】ちばぎんアプリ投資信託機能の臨時休止について",
+     "url": "https://www.chibabank.co.jp/notices/notices20260724_01",
+     "date": "2026-08-08",
+     "posted_date": "2026-07-24",
+     "event_date": "2026-08-08",
+     "period": "2026年8月8日（土）0:00～8月10日（月）7:00"
+    }
+   ],
+   "diag": {
+    "status": "ok",
+    "raw_count": 1,
+    "kept_count": 1,
+    "dropped_past": 0,
+    "dropped_undated": 0,
+    "parsers": [
+     "sitemap"
+    ],
+    "latest_seen": "2026-08-08",
+    "sources": [
+     {
+      "url": "https://www.chibabank.co.jp/sitemap/www.chibabank.co.jp/sitemap_notices_0.xml",
+      "ok": true,
+      "raw": 1,
+      "parser": "sitemap"
+     }
+    ]
+   }
+  },
+  {
+   "id": "boy",
+   "name": "横浜銀行",
+   "group": "other",
+   "pref": "神奈川",
+   "official": "https://www.boy.co.jp/kojin/myd/mainte.html",
+   "regular": "はまぎん365・マイダイレクト：毎月第1・第3月曜 2:00–6:00／1月1日 0:00–3日 24:00／年数回の全面メンテあり",
+   "note": null,
+   "fetch_ok": true,
+   "items": [],
+   "diag": {
+    "status": "no_notice",
+    "raw_count": 0,
+    "kept_count": 0,
+    "dropped_past": 0,
+    "dropped_undated": 0,
+    "parsers": [
+     "none"
+    ],
+    "latest_seen": null,
+    "sources": [
+     {
+      "url": "https://www.boy.co.jp/news/",
+      "ok": true,
+      "raw": 0,
+      "parser": "none"
+     }
+    ]
+   }
+  },
+  {
+   "id": "gunma",
+   "name": "群馬銀行",
+   "group": "other",
+   "pref": "群馬",
+   "official": "https://www.gunmabank.co.jp/info/gbnotice/",
+   "regular": "",
+   "note": null,
+   "fetch_ok": true,
+   "items": [
+    {
+     "title": "2026年07月31日 システムメンテナンスによる「ぐんぎんアプリ 投信取引サービス」休止について",
+     "url": "https://www.gunmabank.co.jp/info/gbnotice/gbnotice20260731c.html",
+     "date": "2026-08-08",
+     "posted_date": "2026-07-31",
+     "event_date": "2026-08-08",
+     "period": "2026年8月8日（土）0：00～2026年8月9日（日）24：00"
+    }
+   ],
+   "diag": {
+    "status": "ok",
+    "raw_count": 2,
+    "kept_count": 1,
+    "dropped_past": 1,
+    "dropped_undated": 0,
+    "parsers": [
+     "link_list"
+    ],
+    "latest_seen": "2026-08-08",
+    "sources": [
+     {
+      "url": "https://www.gunmabank.co.jp/info/gbnotice/",
+      "ok": true,
+      "raw": 2,
+      "parser": "link_list"
+     }
+    ]
+   }
+  },
+  {
+   "id": "82",
+   "name": "八十二長野銀行",
+   "group": "other",
+   "pref": "長野",
+   "official": "https://bank.82group.jp/news/",
+   "regular": "インターネットバンキング：毎週日曜 0:00–6:00",
+   "note": null,
+   "fetch_ok": true,
+   "items": [],
+   "diag": {
+    "status": "no_notice",
+    "raw_count": 0,
+    "kept_count": 0,
+    "dropped_past": 0,
+    "dropped_undated": 0,
+    "parsers": [
+     "none"
+    ],
+    "latest_seen": null,
+    "sources": [
+     {
+      "url": "https://bank.82group.jp/news/2026/index.html",
+      "ok": true,
+      "raw": 0,
+      "parser": "none"
+     }
+    ]
+   }
+  },
+  {
+   "id": "dhbk",
+   "name": "第四北越銀行",
+   "group": "other",
+   "pref": "新潟",
+   "official": "https://www.dhbk.co.jp/information/",
+   "regular": "",
+   "note": null,
+   "fetch_ok": true,
+   "items": [],
+   "diag": {
+    "status": "all_past",
+    "raw_count": 2,
+    "kept_count": 0,
+    "dropped_past": 2,
+    "dropped_undated": 0,
+    "parsers": [
+     "link_list"
+    ],
+    "latest_seen": null,
+    "sources": [
+     {
+      "url": "https://www.dhbk.co.jp/information/",
+      "ok": true,
+      "raw": 2,
+      "parser": "link_list"
+     }
+    ]
+   }
+  },
+  {
+   "id": "hokugin",
+   "name": "北陸銀行",
+   "group": "other",
+   "pref": "富山",
+   "official": "https://www.hokugin.co.jp/info/",
+   "regular": "",
+   "note": null,
+   "fetch_ok": true,
+   "items": [],
+   "diag": {
+    "status": "all_past",
+    "raw_count": 2,
+    "kept_count": 0,
+    "dropped_past": 2,
+    "dropped_undated": 0,
+    "parsers": [
+     "link_list"
+    ],
+    "latest_seen": "2026-05-29",
+    "sources": [
+     {
+      "url": "https://www.hokugin.co.jp/info/",
+      "ok": true,
+      "raw": 2,
+      "parser": "link_list"
+     }
+    ]
+   }
+  },
+  {
+   "id": "hokkoku",
+   "name": "北國銀行",
+   "group": "other",
+   "pref": "石川",
+   "official": "https://www.hokkokubank.co.jp/other/news/",
+   "regular": "",
+   "note": null,
+   "fetch_ok": true,
+   "items": [],
+   "diag": {
+    "status": "all_past",
+    "raw_count": 2,
+    "kept_count": 0,
+    "dropped_past": 2,
+    "dropped_undated": 0,
+    "parsers": [
+     "link_list"
+    ],
+    "latest_seen": "2026-03-05",
+    "sources": [
+     {
+      "url": "https://www.hokkokubank.co.jp/other/news/",
+      "ok": true,
+      "raw": 2,
+      "parser": "link_list"
+     }
+    ]
+   }
+  },
+  {
+   "id": "fukui",
+   "name": "福井銀行",
+   "group": "other",
+   "pref": "福井",
+   "official": "https://www.fukuibank.co.jp/info/",
+   "regular": "",
+   "note": null,
+   "fetch_ok": true,
+   "items": [],
+   "diag": {
+    "status": "all_past",
+    "raw_count": 6,
+    "kept_count": 0,
+    "dropped_past": 5,
+    "dropped_undated": 0,
+    "parsers": [
+     "link_list"
+    ],
+    "latest_seen": "2026-05-18",
+    "sources": [
+     {
+      "url": "https://www.fukuibank.co.jp/info/",
+      "ok": true,
+      "raw": 6,
+      "parser": "link_list"
+     }
+    ]
+   }
+  },
+  {
+   "id": "fukuoka",
+   "name": "福岡銀行",
+   "group": "other",
+   "pref": "福岡",
+   "official": "https://www.fukuokabank.co.jp/announcement/important/",
+   "regular": "",
+   "note": null,
+   "fetch_ok": true,
+   "items": [
+    {
+     "title": "他行宛振込の即時入金停止のお知らせ",
+     "url": "https://www.fukuokabank.co.jp/announcement/important/y2026/service-suspension_3.html",
+     "date": "2026-09-20",
+     "posted_date": null,
+     "event_date": "2026-09-20"
+    }
+   ],
+   "diag": {
+    "status": "ok",
+    "raw_count": 2,
+    "kept_count": 1,
+    "dropped_past": 1,
+    "dropped_undated": 0,
+    "parsers": [
+     "link_list"
+    ],
+    "latest_seen": "2026-09-20",
+    "sources": [
+     {
+      "url": "https://www.fukuokabank.co.jp/announcement/important/",
+      "ok": true,
+      "raw": 2,
+      "parser": "link_list"
+     }
+    ]
+   }
+  },
+  {
+   "id": "ncbank",
+   "name": "西日本シティ銀行",
+   "group": "other",
+   "pref": "福岡",
+   "official": "https://www.ncbank.co.jp/benri/direct/internet/news.html",
+   "regular": "",
+   "note": null,
+   "fetch_ok": true,
+   "items": [],
+   "diag": {
+    "status": "all_past",
+    "raw_count": 1,
+    "kept_count": 0,
+    "dropped_past": 1,
+    "dropped_undated": 0,
+    "parsers": [
+     "link_list"
+    ],
+    "latest_seen": null,
+    "sources": [
+     {
+      "url": "https://www.ncbank.co.jp/benri/direct/internet/news.html",
       "ok": true,
       "raw": 1,
       "parser": "link_list"

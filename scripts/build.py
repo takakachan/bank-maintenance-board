@@ -38,14 +38,20 @@ HEADERS = {
 }
 
 KEYWORD = re.compile(r"メンテナンス|休止|停止|システム更改|利用できません")
-EXCLUDE = re.compile(r"復旧|再開しました|解除|平成|完了|販売停止|受付停止|取り次ぎ停止|取扱停止|お問い合わせ|お客さまセンター|メンテナンス工業")
+EXCLUDE = re.compile(
+    r"復旧|再開しました|解除|平成|完了|販売停止|受付停止|取り次ぎ停止|取扱停止"
+    r"|お問い合わせ|お客さまセンター|メンテナンス工業"
+    # 「有限会社○○メンテナンス」など社名に含まれるケース(融資先の紹介記事など)
+    r"|(?:株式会社|有限会社|合同会社|合資会社)[^\s。、]{0,12}メンテナンス")
 
 # 銀行ごとの定義。必須キーは id / name / group / official / news_urls / regular。
 # 例外的なサイトには以下の任意キーを足す(取得方式と抽出方式の2軸だけで足りる):
-#   取得方式: pdf_probe … お知らせ一覧がJS描画で読めないサイト向け。
-#             日付規則で命名されたPDFを直接探す(probe_days で遡る日数)
+#   取得方式: pdf_probe     … 日付規則で命名されたPDFを総当たりで探す(岡崎信金)
+#             json_source   … お知らせ一覧をJSONで配信しているサイト(静岡)
+#             sitemap_probe … サイトマップのURLに日付が入っているサイト(千葉)
+#             ※いずれもお知らせ一覧がJS描画でHTMLから読めない場合の代替手段
 #   抽出方式: 指定不要。aタグ(link_list)→地の文(text_block)の順に自動で試す
-#   pref … 東海3県の県名表示 / note … 自動取得できない情報の手動補足
+#   pref … 県名表示 / note … 自動取得できない情報の手動補足
 BANKS = [
     # --- メガバンク・大手 ---
     dict(id="mizuho", name="みずほ銀行", group="mega",
@@ -68,6 +74,10 @@ BANKS = [
     dict(id="resona", name="りそな銀行", group="mega",
          official="https://www.resonabank.co.jp/direct/service/",
          news_urls=["https://www.resonabank.co.jp/kojin/oshirase/"],
+         regular="マイゲート・アプリ：毎月第1月曜 2:00–6:00／第2土曜 23:00–翌日曜 6:00"),
+    dict(id="saitamaresona", name="埼玉りそな銀行", group="mega", pref="埼玉",
+         official="https://www.saitamaresona.co.jp/kojin/oshirase/",
+         news_urls=["https://www.saitamaresona.co.jp/kojin/oshirase/"],
          regular="マイゲート・アプリ：毎月第1月曜 2:00–6:00／第2土曜 23:00–翌日曜 6:00"),
     # --- ネット銀行 ---
     dict(id="netbk", name="住信SBIネット銀行", group="net",
@@ -134,16 +144,84 @@ BANKS = [
          official="https://www.33bank.co.jp/",
          news_urls=["https://www.33bank.co.jp/"],
          regular=""),
+    dict(id="hekishin", name="碧海信用金庫", group="tokai", pref="愛知",
+         official="https://www.hekishin.jp/news/",
+         news_urls=["https://www.hekishin.jp/news/",
+                    "https://www.hekishin.jp/news/important/"],
+         regular=""),
+    # --- その他の地銀 ---
+    dict(id="shizuoka", name="静岡銀行", group="other", pref="静岡",
+         official="https://www.shizuokabank.co.jp/notice/",
+         news_urls=[],
+         # お知らせ一覧はJS描画。同じ内容を配信しているJSONを直接読む
+         json_source={"url": "https://www.shizuokabank.co.jp/common/components/info.json",
+                      "id": "id", "title": "displaytitle", "date": "releasedate",
+                      "link": "https://www.shizuokabank.co.jp/notice/detail/{id}/"},
+         regular="しずぎんダイレクト・アプリ：毎月第1・第3月曜 2:00–6:00"),
+    dict(id="chiba", name="千葉銀行", group="other", pref="千葉",
+         official="https://www.chibabank.co.jp/notices/",
+         news_urls=[],
+         # お知らせ一覧はJS描画。サイトマップのURLに日付が入っているのでそこから辿る
+         sitemap_probe={"url": "https://www.chibabank.co.jp/sitemap/www.chibabank.co.jp/sitemap_notices_0.xml",
+                        "pattern": r"/notices(\d{8})_\d+", "days": 60, "limit": 15},
+         regular="インターネット支店：毎月第2・第3日曜 23:00–翌7:00"),
+    # mainte.htmlは年間スケジュール表(個別告知ではない)ので定例欄に回し、告知は/news/から拾う
+    dict(id="boy", name="横浜銀行", group="other", pref="神奈川",
+         official="https://www.boy.co.jp/kojin/myd/mainte.html",
+         news_urls=["https://www.boy.co.jp/news/"],
+         regular="はまぎん365・マイダイレクト：毎月第1・第3月曜 2:00–6:00／1月1日 0:00–3日 24:00／年数回の全面メンテあり"),
+    dict(id="gunma", name="群馬銀行", group="other", pref="群馬",
+         official="https://www.gunmabank.co.jp/info/gbnotice/",
+         news_urls=["https://www.gunmabank.co.jp/info/gbnotice/"],
+         regular=""),
+    dict(id="82", name="八十二長野銀行", group="other", pref="長野",
+         official="https://bank.82group.jp/news/",
+         news_urls=["https://bank.82group.jp/news/{year}/index.html"],
+         regular="インターネットバンキング：毎週日曜 0:00–6:00"),
+    dict(id="dhbk", name="第四北越銀行", group="other", pref="新潟",
+         official="https://www.dhbk.co.jp/information/",
+         news_urls=["https://www.dhbk.co.jp/information/"],
+         regular=""),
+    dict(id="hokugin", name="北陸銀行", group="other", pref="富山",
+         official="https://www.hokugin.co.jp/info/",
+         news_urls=["https://www.hokugin.co.jp/info/"],
+         regular=""),
+    dict(id="hokkoku", name="北國銀行", group="other", pref="石川",
+         official="https://www.hokkokubank.co.jp/other/news/",
+         news_urls=["https://www.hokkokubank.co.jp/other/news/"],
+         regular=""),
+    dict(id="fukui", name="福井銀行", group="other", pref="福井",
+         official="https://www.fukuibank.co.jp/info/",
+         news_urls=["https://www.fukuibank.co.jp/info/"],
+         regular=""),
+    dict(id="fukuoka", name="福岡銀行", group="other", pref="福岡",
+         official="https://www.fukuokabank.co.jp/announcement/important/",
+         news_urls=["https://www.fukuokabank.co.jp/announcement/important/"],
+         regular=""),
+    dict(id="ncbank", name="西日本シティ銀行", group="other", pref="福岡",
+         official="https://www.ncbank.co.jp/benri/direct/internet/news.html",
+         news_urls=["https://www.ncbank.co.jp/benri/direct/internet/news.html"],
+         regular=""),
 ]
 
-GROUPS = [
-    ("mega", "メガバンク・大手"),
-    ("net", "ネット銀行"),
-    ("tokai", "東海3県の地銀・信金"),
+GROUPS = [  # (id, 一覧の区分タグ, 絞り込みボタンの短い名前)
+    ("mega", "メガバンク・大手", "メガバンク・大手"),
+    ("net", "ネット銀行", "ネット銀行"),
+    ("tokai", "東海3県", "東海3県"),
+    ("other", "その他の地銀", "その他の地銀"),
 ]
 
 DATE_RE = re.compile(r"(?:(\d{4})\s*年)?\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日")
 DATE_RE2 = re.compile(r"(\d{4})[./-](\d{1,2})[./-](\d{1,2})")
+
+# 信用金庫の告知は和暦のことがあるため西暦に直してから日付解析する
+WAREKI_RE = re.compile(r"令和\s*(元|\d{1,2})\s*年")
+
+
+def to_seireki(text: str) -> str:
+    """「令和8年」→「2026年」(令和元年=2019年)"""
+    return WAREKI_RE.sub(
+        lambda m: f"{2018 + (1 if m.group(1) == '元' else int(m.group(1)))}年", text)
 
 # 「2026年8月8日（土曜日）22時00分～2026年8月9日（日曜日）11時00分」等の期間表記
 # 曜日は括弧付き（土）だけでなく、みずほのような括弧なし「土曜日」表記も許容する
@@ -229,6 +307,7 @@ def linked_page_text(url: str) -> str | None:
 
 def _dates_in(text: str) -> list[datetime]:
     """テキスト中の年付き日付をすべて返す(年なしは直前の年を引き継ぐ)"""
+    text = to_seireki(text)
     dates, last_year = [], None
     for m in DATE_RE.finditer(text):
         y = m.group(1) or last_year
@@ -308,6 +387,7 @@ def read_dates(title: str) -> tuple[datetime | None, datetime | None]:
       例) 「2026.07.21 …サービス停止のお知らせ（7月27日…）」
           → 掲載日 2026-07-21 / 停止日 2026-07-27
     """
+    title = to_seireki(title)
     posted = event = None
 
     m = DATE_RE2.search(title)  # 2026.07.21 / 2026/07/13 形式
@@ -433,6 +513,74 @@ def probe_pdf_items(bank: dict) -> tuple[list[dict], bool]:
     return items, found_any
 
 
+def probe_json_items(bank: dict) -> tuple[list[dict], bool]:
+    """お知らせ一覧をJSONで配信しているサイト向け(静岡)"""
+    cfg = bank.get("json_source")
+    if not cfg:
+        return [], False
+    raw = fetch(cfg["url"])
+    if not raw:
+        return [], False
+    try:
+        data = json.loads(raw)
+    except ValueError as e:
+        print(f"  json NG: {cfg['url']} ({e})", file=sys.stderr)
+        return [], False
+    rows = data if isinstance(data, list) else (data.get("items") or data.get("data") or [])
+    items = []
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        title = str(row.get(cfg["title"], "")).strip()
+        if not title or not KEYWORD.search(title) or EXCLUDE.search(title):
+            continue
+        # 「配信日 + タイトル」の順に並べると掲載日と停止日を切り分けられる
+        posted, event = read_dates(f"{row.get(cfg['date'], '')} {title}")
+        d = event or posted
+        if d and d.year < NOW.year:
+            continue
+        items.append(make_item(title, cfg["link"].format(id=row.get(cfg["id"], "")),
+                               posted, event))
+    return items, True
+
+
+def probe_sitemap_items(bank: dict) -> tuple[list[dict], bool]:
+    """サイトマップのURLに日付が入っているサイト向け(千葉)。
+    一覧がJS描画でも、URLの日付で新しいものだけ開けば安く済む。"""
+    cfg = bank.get("sitemap_probe")
+    if not cfg:
+        return [], False
+    raw = fetch(cfg["url"])
+    if not raw:
+        return [], False
+    pat = re.compile(cfg["pattern"])
+    cutoff = NOW - timedelta(days=cfg.get("days", 60))
+    targets = []
+    for loc in re.findall(r"<loc>(.*?)</loc>", raw):
+        m = pat.search(loc)
+        if not m:
+            continue
+        try:
+            d = datetime.strptime(m.group(1), "%Y%m%d").replace(tzinfo=JST)
+        except ValueError:
+            continue
+        if d >= cutoff:
+            targets.append((d, loc))
+    targets.sort(reverse=True)
+
+    items = []
+    for d, url in targets[:cfg.get("limit", 15)]:
+        text = linked_page_text(url)
+        if not text:
+            continue
+        head = text[:300]
+        if not KEYWORD.search(head) or EXCLUDE.search(head[:100]):
+            continue
+        title = head.split("｜")[0].strip() or head[:60]
+        items.append(make_item(title, url, posted=d, event=None))
+    return items, bool(targets)
+
+
 def collect_bank(bank: dict) -> dict:
     """1行分を収集する。診断情報(sources / raw_count / parser / drop理由)も併せて返す。"""
     items, ok, sources, parsers = [], False, [], []
@@ -449,14 +597,19 @@ def collect_bank(bank: dict) -> dict:
         parsers.append(parser)
         sources.append({"url": u, "ok": True, "raw": len(found), "parser": parser})
 
-    if bank.get("pdf_probe"):
-        pdf_items, pdf_found = probe_pdf_items(bank)
-        ok = ok or pdf_found
-        items.extend(pdf_items)
-        if pdf_items:
-            parsers.append("pdf_probe")
-        sources.append({"url": bank["pdf_probe"], "ok": pdf_found,
-                        "raw": len(pdf_items), "parser": "pdf_probe"})
+    # HTMLから読めないサイト向けの代替手段(いずれも該当行だけ動く)
+    for key, label, probe in (("pdf_probe", "pdf_probe", probe_pdf_items),
+                              ("json_source", "json", probe_json_items),
+                              ("sitemap_probe", "sitemap", probe_sitemap_items)):
+        if not bank.get(key):
+            continue
+        found, reached = probe(bank)
+        ok = ok or reached
+        items.extend(found)
+        if found:
+            parsers.append(label)
+        src = bank[key] if isinstance(bank[key], str) else bank[key]["url"]
+        sources.append({"url": src, "ok": reached, "raw": len(found), "parser": label})
 
     raw_count = len(items)
 
@@ -577,7 +730,7 @@ def render(results: list[dict]) -> str:
         for u in ups
     ) or '<p class="section-note">日付を特定できる今後の告知は現在ありません。各行の告知一覧をご確認ください。</p>'
 
-    group_names = dict(GROUPS)
+    group_names = {gid: label for gid, label, _ in GROUPS}
     rows = []
     for b in results:
         tag = group_names[b["group"]] + (f"・{b['pref']}" if b.get("pref") else "")
@@ -631,13 +784,20 @@ def render(results: list[dict]) -> str:
     hist_btn = ('<button class="hist-btn" id="hist-open" type="button">更新履歴</button>'
                 if hist_html else "")
 
+    # 区分の絞り込みボタンはGROUPSから生成する(銀行を足しても勝手に増える)
+    group_btns = '<button class="group-btn is-active" data-group="all" type="button">すべて</button>'
+    group_btns += "".join(
+        f'<button class="group-btn" data-group="{gid}" type="button">{esc(short)}</button>'
+        for gid, _, short in GROUPS)
+
     template = (Path(__file__).parent / "template.html").read_text(encoding="utf-8")
     return (template
             .replace("{{UPDATED}}", NOW.strftime("%Y年%m月%d日 %H:%M"))
             .replace("{{UPCOMING}}", up_html)
             .replace("{{SECTIONS}}", "".join(sections))
             .replace("{{HISTORY_BUTTON}}", hist_btn)
-            .replace("{{HISTORY}}", hist_html))
+            .replace("{{HISTORY}}", hist_html)
+            .replace("{{GROUP_BUTTONS}}", group_btns))
 
 
 def main():
