@@ -158,24 +158,52 @@
   .section-note { color: var(--muted); font-size: 13px; margin: 0 0 14px; }
   .upcoming {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 12px;
-    margin-top: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 8px;
+    margin-top: 12px;
   }
   .up-card {
     background: var(--surface-solid);
     border: 2px solid var(--ink);
-    border-radius: 14px;
-    box-shadow: 4px 4px 0 var(--shadow);
-    padding: 14px 16px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 var(--shadow);
+    padding: 9px 12px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 2px;
   }
-  .up-date { font-weight: 900; font-variant-numeric: tabular-nums; font-size: 17px; color: var(--ink); }
-  .up-bank { color: var(--ink); font-weight: 900; font-size: 14px; }
-  .up-desc { color: var(--muted); font-size: 13px; }
-  .up-desc a { color: inherit; }
+  .up-line {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    line-height: 1.35;
+  }
+  .up-date {
+    font-weight: 900;
+    font-variant-numeric: tabular-nums;
+    font-size: 13px;
+    background: var(--btn);
+    color: var(--btn-ink);
+    border-radius: 5px;
+    padding: 0 6px;
+    flex: none;
+  }
+  .up-bank { font-weight: 700; font-size: 13.5px; }
+  .up-time {
+    margin-left: auto;
+    font-size: 12.5px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--alert-ink);
+    white-space: nowrap;
+  }
+  .up-title {
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1.4;
+    text-decoration-color: var(--line);
+  }
   .filter-row {
     margin: 28px 0 0;
     display: flex;
@@ -243,7 +271,7 @@
   tr:last-child td { border-bottom: none; }
   td.bank { white-space: nowrap; font-weight: 700; }
   td.bank .pref { display: block; font-size: 11px; color: var(--muted); font-weight: 500; }
-  td.period { min-width: 320px; }
+  td.period { min-width: 150px; }
   td.regular { color: var(--muted); font-size: 13px; min-width: 180px; }
   td.src { white-space: nowrap; }
   .notice-list { margin: 0; padding-left: 18px; }
@@ -259,6 +287,22 @@
   }
   .notice-list b { color: var(--ink); }
   .muted { color: var(--muted); font-size: 13px; }
+  .cnt {
+    display: inline-block;
+    background: var(--alert-bg);
+    color: var(--alert-ink);
+    font-weight: 700;
+    font-size: 12.5px;
+    border-radius: 5px;
+    padding: 1px 8px;
+  }
+  .cnt-days {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+    margin-top: 3px;
+  }
   .note {
     margin: 0 0 8px;
     padding: 7px 11px;
@@ -350,8 +394,8 @@
   </dialog>
 
   <section>
-    <h2>日付が近い告知<span class="count">自動抽出・日付順</span></h2>
-    <p class="section-note">告知タイトルから日付を読み取れたものを今日以降・日付順に表示しています。詳細は必ずリンク先で確認してください。</p>
+    <h2>今後の停止予定<span class="count">日付順</span></h2>
+    <p class="section-note">各行の公式告知から停止日時を読み取って並べています。詳細は必ずリンク先で確認してください。</p>
     <div class="upcoming">{{UPCOMING}}</div>
   </section>
 

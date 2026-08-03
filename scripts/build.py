@@ -39,7 +39,7 @@ HEADERS = {
 
 KEYWORD = re.compile(r"メンテナンス|休止|停止|システム更改|利用できません")
 EXCLUDE = re.compile(
-    r"復旧|再開しました|解除|平成|完了|販売停止|受付停止|取り次ぎ停止|取扱停止"
+    r"復旧|再開しました|営業再開|解除|平成|完了|販売停止|受付停止|取り次ぎ停止|取扱停止"
     r"|お問い合わせ|お客さまセンター|メンテナンス工業"
     # 「有限会社○○メンテナンス」など社名に含まれるケース(融資先の紹介記事など)
     r"|(?:株式会社|有限会社|合同会社|合資会社)[^\s。、]{0,12}メンテナンス")
@@ -687,13 +687,80 @@ def collect() -> list[dict]:
 
 
 def upcoming_items(results: list[dict]) -> list[dict]:
-    today = NOW.strftime("%Y-%m-%d")
+    """表示対象の告知を日付順に並べる(開始が過去でも実施中のものは含む)"""
     ups = []
     for bank in results:
         for it in bank["items"]:
-            if it["date"] and it["date"] >= today:
+            if it.get("date"):
                 ups.append({**it, "bank": bank["name"]})
-    return sorted(ups, key=lambda x: x["date"])[:12]
+    return sorted(ups, key=lambda x: x["date"])
+
+
+WEEKDAYS = "月火水木金土日"
+# 「1:00」「午前1時」「22時00分」に対応。分は区切り直後か「分」付きのみ拾う
+# (「6時 20」のように後続の数字を分と誤認しないため)
+TIME_RE = re.compile(r"(午前|午後)?\s*(\d{1,2})\s*(?:[:：]\s*(\d{1,2})|時(?:\s*(\d{1,2})\s*分)?)")
+
+
+def _side_info(part: str):
+    """期間表記の片側から (日付, 時刻文字列) を取り出す"""
+    d = None
+    m = DATE_RE.search(to_seireki(part))
+    if m:
+        d = _mk(m.group(1) or NOW.year, m.group(2), m.group(3))
+    t = None
+    mt = TIME_RE.search(part)
+    if mt:
+        hour = int(mt.group(2))
+        if mt.group(1) == "午後" and hour < 12:
+            hour += 12
+        t = f"{hour}:{int(mt.group(3) or mt.group(4) or 0):02d}"
+    return d, t
+
+
+def compact_period(period: str) -> str:
+    """カード用に期間を短くする。
+      「2026年8月4日（火）1:00～6:00」          → 1:00–6:00
+      「2026年8月8日 土曜日 22時00分～翌 11時」 → 22:00–翌11:00
+      「2026年10月10日(土)～10月12日(月祝)」    → 10/10–10/12 終日
+    """
+    if not period:
+        return ""
+    parts = re.split(r"[〜～~－]|から", period, maxsplit=1)
+    if len(parts) < 2:
+        return ""
+    d1, t1 = _side_info(parts[0])
+    d2, t2 = _side_info(parts[1])
+    if not t1 and not t2:  # 時刻がなく日付だけ = 終日の休止
+        return f"{d1.month}/{d1.day}–{d2.month}/{d2.day} 終日" if d1 and d2 else ""
+    if not t2:
+        return t1 or ""
+    if not t1:
+        return t2
+    if d1 and d2 and d1.date() != d2.date():
+        gap = (d2.date() - d1.date()).days
+        return f"{t1}–翌{t2}" if gap == 1 else f"{t1}–{d2.month}/{d2.day} {t2}"
+    return f"{t1}–{t2}"
+
+
+def short_title(title: str) -> str:
+    """先頭の掲載日やラベルを削ってカードで読みやすくする"""
+    t = re.sub(r"^\d{4}\s*[年./-]\s*\d{1,2}\s*[月./-]\s*\d{1,2}\s*日?\s*", "", title)
+    for _ in range(3):  # 「お知らせ」「重要」などが重なることがある
+        t = re.sub(r"^(?:お知らせ|重要|個人|法人|New)\s*", "", t).strip()
+    # 日時はカード右側に別途出しているので本文からは省く
+    t = re.sub(r"\s*メンテナンス日時.*$", "", t).strip()
+    t = re.sub(r"[（(]\s*\d{4}\s*年\s*\d{1,2}\s*月\s*[）)]$", "", t).strip()
+    t = re.sub(r"(?:のお知らせ|のご案内|について)$", "", t).strip()
+    return t or title
+
+
+def card_date(date_str: str) -> str:
+    """2026-08-08 → 8/8(土)。実施中のものは「実施中」と出す"""
+    d = datetime.strptime(date_str, "%Y-%m-%d")
+    if date_str < NOW.strftime("%Y-%m-%d"):
+        return "実施中"
+    return f"{d.month}/{d.day}({WEEKDAYS[d.weekday()]})"
 
 
 def read_history(limit: int = 40) -> list[dict]:
@@ -722,11 +789,15 @@ def esc(s: str) -> str:
 def render(results: list[dict]) -> str:
     ups = upcoming_items(results)
     up_html = "".join(
-        f'<div class="up-card"><span class="up-date">{esc(u["date"])}</span>'
+        f'<div class="up-card">'
+        f'<div class="up-line">'
+        f'<span class="up-date">{esc(card_date(u["date"]))}</span>'
         f'<span class="up-bank">{esc(u["bank"])}</span>'
-        f'<span class="up-desc"><a href="{esc(u["url"])}" target="_blank" rel="noopener">{esc(u["title"])}</a>'
-        + (f'<span class="when">【停止期間】{esc(u["period"])}</span>' if u.get("period") else "")
-        + "</span></div>"
+        f'<span class="up-time">{esc(compact_period(u.get("period", "")) or "時間未定")}</span>'
+        f'</div>'
+        f'<a class="up-title" href="{esc(u["url"])}" target="_blank" rel="noopener">'
+        f'{esc(short_title(u["title"]))}</a>'
+        f'</div>'
         for u in ups
     ) or '<p class="section-note">日付を特定できる今後の告知は現在ありません。各行の告知一覧をご確認ください。</p>'
 
@@ -735,37 +806,33 @@ def render(results: list[dict]) -> str:
     for b in results:
         tag = group_names[b["group"]] + (f"・{b['pref']}" if b.get("pref") else "")
         note = (f'<p class="note">⚠ {esc(b["note"])}</p>' if b.get("note") else "")
+        # 告知の中身は上部カードに出しているので、ここでは件数と状態だけ示す
         if b["items"]:
-            lis = "".join(
-                f'<li>{("<b>" + esc(it["date"]) + "</b> ") if it["date"] else ""}'
-                f'<a href="{esc(it["url"])}" target="_blank" rel="noopener">{esc(it["title"])}</a>'
-                + (f'<span class="when">【停止期間】{esc(it["period"])}</span>' if it.get("period") else "")
-                + "</li>"
-                for it in b["items"]
-            )
-            notice = f'<ul class="notice-list">{lis}</ul>'
+            days = "・".join(card_date(it["date"]) for it in b["items"] if it.get("date"))
+            notice = (f'<span class="cnt">{len(b["items"])}件</span>'
+                      f'<span class="cnt-days">{esc(days)}</span>')
         else:
             status = b.get("diag", {}).get("status", "no_notice")
             latest = b.get("diag", {}).get("latest_seen")
             if status == "all_past":
-                seen = f"（直近の告知は {esc(latest)}）" if latest else ""
-                notice = f'<span class="muted">今後予定されている停止の告知はありません{seen}</span>'
+                seen = f'<span class="cnt-days">直近の告知 {esc(latest)}</span>' if latest else ""
+                notice = f'<span class="muted">予定なし</span>{seen}'
             elif status == "fetch_failed":
-                notice = '<span class="muted">自動取得に失敗しました。公式ページをご確認ください</span>'
+                notice = '<span class="muted">取得失敗（公式ページをご確認ください）</span>'
             else:
-                notice = '<span class="muted">メンテナンス関連の告知は見つかりませんでした</span>'
+                notice = '<span class="muted">告知なし</span>'
         focused = '1' if (b["items"] or not b["fetch_ok"]) else '0'
         rows.append(
             f'<tr class="bank-row" data-focused="{focused}" data-group="{b["group"]}">'
             f'<td class="bank" data-label="銀行名">{esc(b["name"])}<span class="pref">{esc(tag)}</span></td>'
-            f'<td class="period" data-label="メンテナンス関連の告知">{note}{notice}</td>'
+            f'<td class="period" data-label="今後の停止予定">{note}{notice}</td>'
             f'<td class="regular" data-label="定例メンテナンス">{esc(b["regular"]) or "—"}</td>'
             f'<td class="src" data-label="ソース"><a href="{esc(b["official"])}" target="_blank" rel="noopener">公式ページ</a></td></tr>'
         )
     sections = [
         f'<section><h2>銀行一覧<span class="count">{len(results)}行</span></h2>'
         f'<div class="table-scroll"><table data-group><thead><tr>'
-        f'<th>銀行名</th><th>メンテナンス関連の告知（自動取得）</th><th>定例メンテナンス</th><th>ソース</th>'
+        f'<th>銀行名</th><th>今後の停止予定</th><th>定例メンテナンス</th><th>ソース</th>'
         f'</tr></thead><tbody>{"".join(rows)}</tbody></table></div></section>'
     ]
 
