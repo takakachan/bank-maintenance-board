@@ -808,7 +808,9 @@ def render(results: list[dict]) -> str:
         note = (f'<p class="note">⚠ {esc(b["note"])}</p>' if b.get("note") else "")
         # 告知の中身は上部カードに出しているので、ここでは件数と状態だけ示す
         if b["items"]:
-            days = "・".join(card_date(it["date"]) for it in b["items"] if it.get("date"))
+            # 同じ日に複数件ある行(ゆうちょ等)は日付を重複表示しない
+            days = "・".join(dict.fromkeys(
+                card_date(it["date"]) for it in b["items"] if it.get("date")))
             notice = (f'<span class="cnt">{len(b["items"])}件</span>'
                       f'<span class="cnt-days">{esc(days)}</span>')
         else:

@@ -341,35 +341,41 @@
     }
     table { min-width: 0; }
     thead { display: none; }
-    tbody, tr, td { display: block; width: 100%; }
+    tbody { display: block; width: 100%; }
+    /* 銀行名と状況を1行に並べ、繰り返しラベルは出さない(32行ぶんの縦伸びを抑える) */
     tbody tr {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: baseline;
+      gap: 2px 10px;
       background: var(--surface-solid);
       border: 2px solid var(--ink);
-      border-radius: 12px;
-      box-shadow: 4px 4px 0 var(--shadow);
+      border-radius: 10px;
+      box-shadow: 3px 3px 0 var(--shadow);
       padding: 10px 12px;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
     }
-    td {
-      display: grid;
-      grid-template-columns: 6.5rem 1fr;
-      gap: 10px;
-      padding: 8px 0;
-      border: none;
+    td { display: block; padding: 0; border: none; }
+    td::before { display: none; }
+    td.bank { grid-column: 1; white-space: normal; font-size: 14.5px; }
+    td.bank .pref { display: inline; margin-left: 6px; }
+    td.period { grid-column: 2; text-align: right; min-width: 0; }
+    td.period .cnt-days { text-align: right; }
+    td.regular {
+      grid-column: 1 / -1;
+      margin-top: 7px;
+      padding-top: 7px;
+      border-top: 1px solid var(--line);
+      font-size: 12px;
+      line-height: 1.5;
     }
-    td::before {
-      content: attr(data-label);
-      color: var(--muted);
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      line-height: 1.3;
-      padding-top: 2px;
+    td.regular::before {
+      display: inline;
+      content: "定例 ";
+      font-weight: 700;
+      color: var(--ink);
     }
-    td.bank { white-space: normal; }
-    td.bank .pref { display: inline-block; margin-left: 6px; }
-    td.src { white-space: normal; }
-    .notice-list { padding-left: 18px; }
+    td.src { grid-column: 1 / -1; margin-top: 6px; font-size: 12.5px; white-space: normal; }
     footer.page { margin-top: 36px; }
   }
 </style>
