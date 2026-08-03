@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-03T22:28:23.642778+09:00",
+ "updated": "2026-08-04T07:11:56.762021+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -214,34 +214,18 @@
    "regular": "毎週日曜 0:00–5:00 各種手続き停止ほか",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "振込サービスにかかる臨時メンテナンスのご案内",
-     "url": "https://www.netbk.co.jp/contents/company/info/2026/0702_005979.html",
-     "date": "2026-07-31",
-     "posted_date": null,
-     "event_date": "2026-07-31",
-     "period": "2026年7月31日(金)16:00 ～ 8月3日(月)8:00"
-    },
-    {
-     "title": "【重要】QRコードログインの一時停止について",
-     "url": "https://www.netbk.co.jp/contents/company/info/2026/0408_005642.html",
-     "date": "2026-08-03",
-     "posted_date": null,
-     "event_date": "2026-08-03"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 8,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
      "none"
     ],
-    "latest_seen": "2026-08-03",
+    "latest_seen": null,
     "sources": [
      {
       "url": "https://www.netbk.co.jp/contents/company/info/maintenance/",
