@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-31T05:30:15.290652+09:00",
+ "updated": "2026-08-03T20:58:55.001893+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -117,6 +117,13 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "【営業再開】令和8年熊本地震による休止店舗の営業再開について",
+     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002449.html",
+     "date": "2026-08-04",
+     "posted_date": null,
+     "event_date": "2026-08-04"
+    },
+    {
      "title": "「ゆうちょデビット」お申込みサイトのシステムメンテナンスのお知らせ",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002448.html",
      "date": "2026-08-04",
@@ -128,8 +135,8 @@
    "diag": {
     "status": "ok",
     "raw_count": 13,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -186,38 +193,38 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "銀行からのお知らせ ［臨時メンテナンス］振込サービス停止 7月31日（金）16:00～8月3日（月）08:00 詳細はこちら",
-     "url": "https://www.netbk.co.jp/contents/company/info/maintenance/",
-     "date": "2026-07-31",
-     "posted_date": null,
-     "event_date": "2026-07-31"
-    },
-    {
      "title": "振込サービスにかかる臨時メンテナンスのご案内",
      "url": "https://www.netbk.co.jp/contents/company/info/2026/0702_005979.html",
      "date": "2026-07-31",
      "posted_date": null,
      "event_date": "2026-07-31",
      "period": "2026年7月31日(金)16:00 ～ 8月3日(月)8:00"
+    },
+    {
+     "title": "【重要】QRコードログインの一時停止について",
+     "url": "https://www.netbk.co.jp/contents/company/info/2026/0408_005642.html",
+     "date": "2026-08-03",
+     "posted_date": null,
+     "event_date": "2026-08-03"
     }
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 10,
+    "raw_count": 8,
     "kept_count": 2,
     "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
-     "text_block"
+     "none"
     ],
-    "latest_seen": "2026-07-31",
+    "latest_seen": "2026-08-03",
     "sources": [
      {
       "url": "https://www.netbk.co.jp/contents/company/info/maintenance/",
       "ok": true,
-      "raw": 2,
-      "parser": "text_block"
+      "raw": 0,
+      "parser": "none"
      },
      {
       "url": "https://www.netbk.co.jp/contents/company/info/",
@@ -237,21 +244,12 @@
    "regular": "1・4・7・10月の最終火曜 1:00–6:00（全体）／日曜未明に一部機能停止あり",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "スポーツくじ（toto・BIG）販売の一時休止について（6月25日～）",
-     "url": "https://www.paypay-bank.co.jp/news/2026/0623.html",
-     "date": "2026-06-25",
-     "posted_date": null,
-     "event_date": "2026-06-25",
-     "period": "2026年6月25日（木曜日）19時～8月1日（土曜日）8時"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 10,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -308,29 +306,29 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "じぶん銀行FX メンテナンス日時 2026年8月1日（土）5：50 ～ 18：30 じぶん銀行FXのシステムメンテナンス時間を通常よりも延長し、サービスを停止いたします。 ※ 終了時間は前後する場合があります。あらかじめご了承ください。 ※",
+     "title": "ネット口座振替 メンテナンス日時 2026年8月4日（火）1：00 ～ 6：00",
      "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-08-01",
+     "date": "2026-08-04",
      "posted_date": null,
-     "event_date": "2026-08-01",
-     "period": "2026年8月1日（土）5：50 ～ 18：30"
+     "event_date": "2026-08-04",
+     "period": "2026年8月4日（火）1：00 ～ 6：00"
     }
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 2,
+    "raw_count": 3,
     "kept_count": 1,
     "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
      "text_block"
     ],
-    "latest_seen": "2026-08-01",
+    "latest_seen": "2026-08-04",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
       "ok": true,
-      "raw": 2,
+      "raw": 3,
       "parser": "text_block"
      }
     ]
