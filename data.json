@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-04T20:15:37.899315+09:00",
+ "updated": "2026-08-05T07:17:25.654267+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -115,26 +115,17 @@
    "regular": "夜間（23:55前後–翌朝）に振込・アプリの休止が入ることが多い",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "「ゆうちょデビット」お申込みサイトのシステムメンテナンスのお知らせ",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002448.html",
-     "date": "2026-08-04",
-     "posted_date": null,
-     "event_date": "2026-08-04",
-     "period": "2026年8月4日（火）1:00～6:00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 12,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-04",
+    "latest_seen": null,
     "sources": [
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
@@ -311,21 +302,12 @@
    "regular": "毎月第2土曜の翌日曜 0:00–7:00／カードローン：毎週月曜 1:00–5:00",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "ネット口座振替 メンテナンス日時 2026年8月4日（火）1：00 ～ 6：00",
-     "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-08-04",
-     "posted_date": null,
-     "event_date": "2026-08-04",
-     "period": "2026年8月4日（火）1：00 ～ 6：00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 3,
-    "kept_count": 1,
-    "dropped_past": 0,
+    "kept_count": 0,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "text_block"
