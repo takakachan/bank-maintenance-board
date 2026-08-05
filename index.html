@@ -204,6 +204,23 @@
     line-height: 1.45;
     text-decoration-color: var(--line);
   }
+  /* 止まるサービスのタグ。影響が大きいATM・振込だけ色を強めて見分けられるようにする */
+  .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 3px; }
+  .tag {
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 1px 7px;
+    border: 1px solid transparent;
+    white-space: nowrap;
+  }
+  .tag-atm { background: var(--alert-bg); color: var(--alert-ink); border-color: var(--alert-ink); }
+  .tag-furikomi { background: var(--warn-bg); color: var(--warn-ink); border-color: var(--warn-ink); }
+  .tag-app, .tag-toshin, .tag-card, .tag-etc {
+    background: var(--surface-soft);
+    color: var(--muted);
+    border-color: var(--line);
+  }
   .filter-row {
     margin: 28px 0 0;
     display: flex;
@@ -385,8 +402,9 @@
   <header class="page">
     <h1>銀行メンテナンス・サービス停止情報</h1>
     <div class="meta-row">
-      <span class="chip">最終自動更新：2026年08月05日 20:11（日本時間）</span>
+      <span class="chip">最終自動更新：2026年08月05日 21:00（日本時間）</span>
       <span>各行の公式ページから拾っています。詳細は必ずリンク先で確認してください。</span>
+      <a class="hist-btn" href="calendar.ics" download>カレンダーに追加</a>
       <button class="hist-btn" id="hist-open" type="button">更新履歴</button>
     </div>
   </header>
@@ -396,13 +414,13 @@
       <h2 id="hist-title">このサイトの更新履歴</h2>
       <button class="hist-close" id="hist-close" type="button" aria-label="閉じる">✕</button>
     </div>
-    <div class="hist-body"><h3 class="hist-date">2026-08-03</h3><ul class="hist-list"><li>上部の一覧を見やすく整理し、停止時間を短い表記に変更</li><li>同じ告知が上下で重複していたのを解消（下の表は件数のみ表示）</li><li>対象を32行に拡大（静岡・千葉・横浜・群馬・埼玉りそな・八十二長野・第四北越・北陸・北國・福井・福岡・西日本シティ・碧海信金を追加）</li><li>区分に「その他の地銀」を追加</li><li>和暦（令和）表記の日付に対応</li><li>情報の取得を高速化</li></ul><h3 class="hist-date">2026-07-30</h3><ul class="hist-list"><li>更新履歴を追加</li><li>一部の銀行で文字化けにより告知を取得できていなかった不具合を修正</li><li>停止期間の時刻が表示されない不具合を修正</li><li>スマホ表示で枠の影が二重に見える不具合を修正</li><li>告知が無い場合に理由を表示するように変更</li></ul><h3 class="hist-date">2026-07-29</h3><ul class="hist-list"><li>デザインを刷新</li><li>銀行を1つの一覧にまとめ、区分で絞り込めるように変更</li><li>告知のリンク先を読んで停止期間を表示するように変更</li><li>終了済みの告知を表示しないように変更</li><li>信用金庫のPDF告知に対応</li></ul><h3 class="hist-date">2026-07-27</h3><ul class="hist-list"><li>表示する告知を今後の予定のみに変更</li></ul><h3 class="hist-date">2026-07-26</h3><ul class="hist-list"><li>スマホ表示を改善</li><li>配色を調整</li></ul><h3 class="hist-date">2026-07-25</h3><ul class="hist-list"><li>一部の銀行で告知を取得できない不具合を修正</li></ul><h3 class="hist-date">2026-07-24</h3><ul class="hist-list"><li>公開開始</li></ul></div>
+    <div class="hist-body"><h3 class="hist-date">2026-08-05</h3><ul class="hist-list"><li>止まるサービス（ATM・振込・アプリ・投信・カード）をタグで表示</li><li>カレンダーに取り込めるファイルを追加（ヘッダーの「カレンダーに追加」）</li></ul><h3 class="hist-date">2026-08-03</h3><ul class="hist-list"><li>上部の一覧を見やすく整理し、停止時間を短い表記に変更</li><li>同じ告知が上下で重複していたのを解消（下の表は件数のみ表示）</li><li>対象を32行に拡大（静岡・千葉・横浜・群馬・埼玉りそな・八十二長野・第四北越・北陸・北國・福井・福岡・西日本シティ・碧海信金を追加）</li><li>区分に「その他の地銀」を追加</li><li>和暦（令和）表記の日付に対応</li><li>情報の取得を高速化</li></ul><h3 class="hist-date">2026-07-30</h3><ul class="hist-list"><li>更新履歴を追加</li><li>一部の銀行で文字化けにより告知を取得できていなかった不具合を修正</li><li>停止期間の時刻が表示されない不具合を修正</li><li>スマホ表示で枠の影が二重に見える不具合を修正</li><li>告知が無い場合に理由を表示するように変更</li></ul><h3 class="hist-date">2026-07-29</h3><ul class="hist-list"><li>デザインを刷新</li><li>銀行を1つの一覧にまとめ、区分で絞り込めるように変更</li><li>告知のリンク先を読んで停止期間を表示するように変更</li><li>終了済みの告知を表示しないように変更</li><li>信用金庫のPDF告知に対応</li></ul><h3 class="hist-date">2026-07-27</h3><ul class="hist-list"><li>表示する告知を今後の予定のみに変更</li></ul><h3 class="hist-date">2026-07-26</h3><ul class="hist-list"><li>スマホ表示を改善</li><li>配色を調整</li></ul><h3 class="hist-date">2026-07-25</h3><ul class="hist-list"><li>一部の銀行で告知を取得できない不具合を修正</li></ul><h3 class="hist-date">2026-07-24</h3><ul class="hist-list"><li>公開開始</li></ul></div>
   </dialog>
 
   <section>
     <h2>今後の停止予定<span class="count">日付順</span></h2>
     <p class="section-note">各行の公式告知から停止日時を読み取って並べています。詳細は必ずリンク先で確認してください。</p>
-    <div class="upcoming"><div class="up-card"><div class="up-line"><span class="up-date">実施中</span><span class="up-bank">大垣共立銀行</span><span class="up-time">時間未定</span></div><a class="up-title" href="https://www.okb.co.jp/archive/2026/20260715-01.html" target="_blank" rel="noopener">システムメンテナンスによるサービス一時休止</a></div><div class="up-card"><div class="up-line"><span class="up-date">実施中</span><span class="up-bank">あいち銀行</span><span class="up-time">18:00–翌8:00</span></div><a class="up-title" href="https://www.aichibank.co.jp/important_infomation/details/20260713.html" target="_blank" rel="noopener">システムメンテナンスに伴う一部ATMサービス休止</a></div><div class="up-card"><div class="up-line"><span class="up-date">8/8(土)</span><span class="up-bank">みずほ銀行</span><span class="up-time">22:00–翌11:00</span></div><a class="up-title" href="https://www.mizuhobank.co.jp/oshirase/maintenance_personal.html#pause" target="_blank" rel="noopener">休止する商品・サービス一覧</a></div><div class="up-card"><div class="up-line"><span class="up-date">8/8(土)</span><span class="up-bank">千葉銀行</span><span class="up-time">0:00–8/10 7:00</span></div><a class="up-title" href="https://www.chibabank.co.jp/notices/notices20260724_01" target="_blank" rel="noopener">【重要】ちばぎんアプリ投資信託機能の臨時休止</a></div><div class="up-card"><div class="up-line"><span class="up-date">8/8(土)</span><span class="up-bank">群馬銀行</span><span class="up-time">0:00–翌24:00</span></div><a class="up-title" href="https://www.gunmabank.co.jp/info/gbnotice/gbnotice20260731c.html" target="_blank" rel="noopener">システムメンテナンスによる「ぐんぎんアプリ 投信取引サービス」休止</a></div><div class="up-card"><div class="up-line"><span class="up-date">8/22(土)</span><span class="up-bank">百五銀行</span><span class="up-time">19:00–翌10:00</span></div><a class="up-title" href="https://www.hyakugo.co.jp/whats_new/20260626_01.html" target="_blank" rel="noopener">「105スマホ投信」投信口座開設・投信取引機能の臨時停止</a></div><div class="up-card"><div class="up-line"><span class="up-date">9/20(日)</span><span class="up-bank">福岡銀行</span><span class="up-time">時間未定</span></div><a class="up-title" href="https://www.fukuokabank.co.jp/announcement/important/y2026/service-suspension_3.html" target="_blank" rel="noopener">他行宛振込の即時入金停止</a></div><div class="up-card"><div class="up-line"><span class="up-date">10/10(土)</span><span class="up-bank">岡崎信用金庫</span><span class="up-time">10/10–10/12 終日</span></div><a class="up-title" href="https://www.okashin.co.jp/system/data/20260525_info.pdf" target="_blank" rel="noopener">ATM等のオンラインサービス臨時休止</a></div></div>
+    <div class="upcoming"><div class="up-card"><div class="up-line"><span class="up-date">実施中</span><span class="up-bank">大垣共立銀行</span><span class="up-time">時間未定</span></div><a class="up-title" href="https://www.okb.co.jp/archive/2026/20260715-01.html" target="_blank" rel="noopener">システムメンテナンスによるサービス一時休止</a><div class="tags"><span class="tag tag-atm">ATM</span><span class="tag tag-furikomi">振込</span><span class="tag tag-app">アプリ</span></div></div><div class="up-card"><div class="up-line"><span class="up-date">実施中</span><span class="up-bank">あいち銀行</span><span class="up-time">18:00–翌8:00</span></div><a class="up-title" href="https://www.aichibank.co.jp/important_infomation/details/20260713.html" target="_blank" rel="noopener">システムメンテナンスに伴う一部ATMサービス休止</a><div class="tags"><span class="tag tag-atm">ATM</span></div></div><div class="up-card"><div class="up-line"><span class="up-date">8/8(土)</span><span class="up-bank">みずほ銀行</span><span class="up-time">22:00–翌11:00</span></div><a class="up-title" href="https://www.mizuhobank.co.jp/oshirase/maintenance_personal.html#pause" target="_blank" rel="noopener">休止する商品・サービス一覧</a><div class="tags"><span class="tag tag-atm">ATM</span><span class="tag tag-furikomi">振込</span><span class="tag tag-app">アプリ</span></div></div><div class="up-card"><div class="up-line"><span class="up-date">8/8(土)</span><span class="up-bank">千葉銀行</span><span class="up-time">0:00–8/10 7:00</span></div><a class="up-title" href="https://www.chibabank.co.jp/notices/notices20260724_01" target="_blank" rel="noopener">【重要】ちばぎんアプリ投資信託機能の臨時休止</a><div class="tags"><span class="tag tag-app">アプリ</span><span class="tag tag-toshin">投信</span></div></div><div class="up-card"><div class="up-line"><span class="up-date">8/8(土)</span><span class="up-bank">群馬銀行</span><span class="up-time">0:00–翌24:00</span></div><a class="up-title" href="https://www.gunmabank.co.jp/info/gbnotice/gbnotice20260731c.html" target="_blank" rel="noopener">システムメンテナンスによる「ぐんぎんアプリ 投信取引サービス」休止</a><div class="tags"><span class="tag tag-app">アプリ</span><span class="tag tag-toshin">投信</span></div></div><div class="up-card"><div class="up-line"><span class="up-date">8/22(土)</span><span class="up-bank">百五銀行</span><span class="up-time">19:00–翌10:00</span></div><a class="up-title" href="https://www.hyakugo.co.jp/whats_new/20260626_01.html" target="_blank" rel="noopener">「105スマホ投信」投信口座開設・投信取引機能の臨時停止</a><div class="tags"><span class="tag tag-app">アプリ</span><span class="tag tag-toshin">投信</span></div></div><div class="up-card"><div class="up-line"><span class="up-date">9/20(日)</span><span class="up-bank">福岡銀行</span><span class="up-time">時間未定</span></div><a class="up-title" href="https://www.fukuokabank.co.jp/announcement/important/y2026/service-suspension_3.html" target="_blank" rel="noopener">他行宛振込の即時入金停止</a><div class="tags"><span class="tag tag-furikomi">振込</span></div></div><div class="up-card"><div class="up-line"><span class="up-date">10/10(土)</span><span class="up-bank">岡崎信用金庫</span><span class="up-time">10/10–10/12 終日</span></div><a class="up-title" href="https://www.okashin.co.jp/system/data/20260525_info.pdf" target="_blank" rel="noopener">ATM等のオンラインサービス臨時休止</a><div class="tags"><span class="tag tag-atm">ATM</span><span class="tag tag-app">アプリ</span></div></div></div>
   </section>
 
   <div class="filter-row">

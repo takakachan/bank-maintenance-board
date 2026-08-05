@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-05T20:11:50.837695+09:00",
+ "updated": "2026-08-05T21:00:07.251863+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -17,6 +17,11 @@
      "date": "2026-08-08",
      "posted_date": null,
      "event_date": "2026-08-08",
+     "services": [
+      "ATM",
+      "振込",
+      "アプリ"
+     ],
      "period": "2026年8月8日 土曜日 22時00分～2026年8月9日 日曜日 11時00分"
     }
    ],
@@ -411,6 +416,10 @@
      "date": "2026-10-10",
      "posted_date": "2026-05-25",
      "event_date": "2026-10-10",
+     "services": [
+      "ATM",
+      "アプリ"
+     ],
      "period": "2026 年 10 月 10 日(土)～10 月 12 日(月祝)"
     }
    ],
@@ -449,7 +458,12 @@
      "url": "https://www.okb.co.jp/archive/2026/20260715-01.html",
      "date": "2026-07-15",
      "posted_date": "2026-07-15",
-     "event_date": null
+     "event_date": null,
+     "services": [
+      "ATM",
+      "振込",
+      "アプリ"
+     ]
     }
    ],
    "diag": {
@@ -555,6 +569,9 @@
      "date": "2026-08-04",
      "posted_date": "2026-07-13",
      "event_date": "2026-08-04",
+     "services": [
+      "ATM"
+     ],
      "period": "2026年8月4日（火）18時～2026年8月5日（水）8時"
     }
    ],
@@ -630,6 +647,10 @@
      "date": "2026-08-22",
      "posted_date": "2026-06-26",
      "event_date": "2026-08-22",
+     "services": [
+      "アプリ",
+      "投信"
+     ],
      "period": "2026年8月22日（土）19:00 ～ 8月23日（日）10:00"
     }
    ],
@@ -765,6 +786,10 @@
      "date": "2026-08-08",
      "posted_date": "2026-07-24",
      "event_date": "2026-08-08",
+     "services": [
+      "アプリ",
+      "投信"
+     ],
      "period": "2026年8月8日（土）0:00～8月10日（月）7:00"
     }
    ],
@@ -834,6 +859,10 @@
      "date": "2026-08-08",
      "posted_date": "2026-07-31",
      "event_date": "2026-08-08",
+     "services": [
+      "アプリ",
+      "投信"
+     ],
      "period": "2026年8月8日（土）0：00～2026年8月9日（日）24：00"
     }
    ],
@@ -1022,7 +1051,10 @@
      "url": "https://www.fukuokabank.co.jp/announcement/important/y2026/service-suspension_3.html",
      "date": "2026-09-20",
      "posted_date": null,
-     "event_date": "2026-09-20"
+     "event_date": "2026-09-20",
+     "services": [
+      "振込"
+     ]
     }
    ],
    "diag": {
