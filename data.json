@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-05T07:17:25.654267+09:00",
+ "updated": "2026-08-05T20:11:50.837695+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -305,19 +305,19 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 3,
+    "raw_count": 2,
     "kept_count": 0,
     "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "text_block"
     ],
-    "latest_seen": "2026-08-04",
+    "latest_seen": "2026-08-01",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
       "ok": true,
-      "raw": 3,
+      "raw": 2,
       "parser": "text_block"
      }
     ]
@@ -898,21 +898,21 @@
    "fetch_ok": true,
    "items": [],
    "diag": {
-    "status": "all_past",
-    "raw_count": 2,
+    "status": "no_notice",
+    "raw_count": 0,
     "kept_count": 0,
-    "dropped_past": 2,
+    "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
-     "link_list"
+     "none"
     ],
     "latest_seen": null,
     "sources": [
      {
       "url": "https://www.dhbk.co.jp/information/",
       "ok": true,
-      "raw": 2,
-      "parser": "link_list"
+      "raw": 0,
+      "parser": "none"
      }
     ]
    }
