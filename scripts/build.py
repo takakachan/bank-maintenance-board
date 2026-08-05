@@ -2,6 +2,7 @@
 """銀行の公式お知らせページからメンテナンス関連の告知を収集し、
 静的HTML (docs/index.html) と docs/data.json を生成する。"""
 
+import hashlib
 import json
 import re
 import sys
@@ -336,6 +337,7 @@ def deep_check(item: dict) -> bool:
     text = linked_page_text(item["url"])
     if not text:
         return True  # 読めない場合は除外しない(リンクは生きているため)
+    item["services"] = detect_services(item["title"], text)
     today = NOW.strftime("%Y-%m-%d")
     # 期間表記(○月○日○時〜○月○日○時)のうち、終了が未来のものを探す
     ranges = list(RANGE_RE.finditer(text))
@@ -358,6 +360,7 @@ def deep_check(item: dict) -> bool:
         # 期間表記はあったが全て過去 = 終了済み。
         # ここで打ち切らないと年末年始案内などの無関係な未来日を拾ってしまう
         return False
+
     dates = [d for d in _dates_in(text) if abs((d - NOW).days) < 400]
     future = [d for d in dates if d + timedelta(days=1) > NOW]
     if future:
@@ -702,8 +705,28 @@ WEEKDAYS = "月火水木金土日"
 TIME_RE = re.compile(r"(午前|午後)?\s*(\d{1,2})\s*(?:[:：]\s*(\d{1,2})|時(?:\s*(\d{1,2})\s*分)?)")
 
 
+# 止まるサービスの分類。上から順に見て最大3つまで付ける
+SERVICE_TAGS = [
+    ("ATM", r"ATM|現金自動|キャッシュコーナー|CD機"),
+    ("振込", r"振込|送金|口振|口座振替|ペイジー|Pay-?easy|即時入金"),
+    ("アプリ", r"アプリ|スマホ|スマート|ログイン|インターネットバンキング|ネットバンキング"
+              r"|ダイレクト|オンラインサービス|[WwＷ][EeＥ][BbＢ]サービス"),
+    ("投信", r"投信|投資信託|ファンド|ラップ|NISA"),
+    ("カード", r"デビット|クレジット|カードローン|キャッシュカード"),
+]
+
+
+def detect_services(title: str, body: str | None) -> list[str]:
+    """告知タイトル(足りなければ本文冒頭)から止まるサービスを判定する"""
+    found = [name for name, pat in SERVICE_TAGS if re.search(pat, title)]
+    if not found and body:
+        # タイトルが「サービス一時休止について」等で内容が分からない場合だけ本文を見る
+        found = [name for name, pat in SERVICE_TAGS if re.search(pat, body[:900])]
+    return found[:3]
+
+
 def _side_info(part: str):
-    """期間表記の片側から (日付, 時刻文字列) を取り出す"""
+    """期間表記の片側から (日付, (時, 分)) を取り出す"""
     d = None
     m = DATE_RE.search(to_seireki(part))
     if m:
@@ -714,8 +737,32 @@ def _side_info(part: str):
         hour = int(mt.group(2))
         if mt.group(1) == "午後" and hour < 12:
             hour += 12
-        t = f"{hour}:{int(mt.group(3) or mt.group(4) or 0):02d}"
+        t = (hour, int(mt.group(3) or mt.group(4) or 0))
     return d, t
+
+
+def _hhmm(t) -> str:
+    return f"{t[0]}:{t[1]:02d}"
+
+
+def period_range(period: str, date_str: str):
+    """期間表記から (開始, 終了, 終日か) を返す。読めない場合は日付だけの終日予定。
+    24時表記や日をまたぐ表記(22:00～翌11:00)にも対応する。"""
+    base = _mk(*date_str.split("-"))
+    parts = re.split(r"[〜～~－]|から", period or "", maxsplit=1)
+    if len(parts) == 2:
+        d1, t1 = _side_info(parts[0])
+        d2, t2 = _side_info(parts[1])
+        start_d, end_d = d1 or base, d2 or d1 or base
+        if t1 and t2:
+            start = start_d + timedelta(hours=t1[0], minutes=t1[1])
+            end = end_d + timedelta(hours=t2[0], minutes=t2[1])
+            if end <= start:  # 「22:00～翌6:00」のように日付が省略されている
+                end += timedelta(days=1)
+            return start, end, False
+        if d1 and d2 and d1 != d2:
+            return start_d, end_d + timedelta(days=1), True  # 終日(終了は翌日0時)
+    return base, base + timedelta(days=1), True
 
 
 def compact_period(period: str) -> str:
@@ -734,13 +781,14 @@ def compact_period(period: str) -> str:
     if not t1 and not t2:  # 時刻がなく日付だけ = 終日の休止
         return f"{d1.month}/{d1.day}–{d2.month}/{d2.day} 終日" if d1 and d2 else ""
     if not t2:
-        return t1 or ""
+        return _hhmm(t1) if t1 else ""
     if not t1:
-        return t2
+        return _hhmm(t2)
     if d1 and d2 and d1.date() != d2.date():
         gap = (d2.date() - d1.date()).days
-        return f"{t1}–翌{t2}" if gap == 1 else f"{t1}–{d2.month}/{d2.day} {t2}"
-    return f"{t1}–{t2}"
+        return (f"{_hhmm(t1)}–翌{_hhmm(t2)}" if gap == 1
+                else f"{_hhmm(t1)}–{d2.month}/{d2.day} {_hhmm(t2)}")
+    return f"{_hhmm(t1)}–{_hhmm(t2)}"
 
 
 def short_title(title: str) -> str:
@@ -761,6 +809,64 @@ def card_date(date_str: str) -> str:
     if date_str < NOW.strftime("%Y-%m-%d"):
         return "実施中"
     return f"{d.month}/{d.day}({WEEKDAYS[d.weekday()]})"
+
+
+def _ics_escape(s: str) -> str:
+    return (s.replace("\\", "\\\\").replace(";", "\\;")
+             .replace(",", "\\,").replace("\n", "\\n"))
+
+
+def _ics_fold(line: str) -> str:
+    """ICSは1行75オクテット以内。日本語が途中で壊れないようバイト単位で折る"""
+    raw = line.encode("utf-8")
+    if len(raw) <= 73:
+        return line
+    out, cur = [], b""
+    for ch in line:
+        b = ch.encode("utf-8")
+        if len(cur) + len(b) > 73:
+            out.append(cur.decode("utf-8"))
+            cur = b" " + b  # 継続行は先頭に空白
+        else:
+            cur += b
+    out.append(cur.decode("utf-8"))
+    return "\r\n".join(out)
+
+
+def build_ics(ups: list[dict]) -> str:
+    """カレンダー購読用のiCalendarを作る(時刻はUTCに変換して環境差をなくす)"""
+    stamp = NOW.astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    lines = [
+        "BEGIN:VCALENDAR", "VERSION:2.0",
+        "PRODID:-//bank-maintenance-board//JP", "CALSCALE:GREGORIAN",
+        "METHOD:PUBLISH", "X-WR-CALNAME:銀行メンテナンス情報",
+        "X-WR-TIMEZONE:Asia/Tokyo",
+        "X-WR-CALDESC:銀行のシステムメンテナンス・サービス停止予定",
+    ]
+    for u in ups:
+        start, end, allday = period_range(u.get("period", ""), u["date"])
+        uid = hashlib.md5(f"{u['bank']}{u['url']}{u['date']}".encode()).hexdigest()
+        tags = "・".join(u.get("services") or [])
+        summary = f"{u['bank']} 停止" + (f"（{tags}）" if tags else "")
+        desc = short_title(u["title"])
+        if u.get("period"):
+            desc += f"\n停止期間: {u['period']}"
+        desc += f"\n{u['url']}"
+        lines += ["BEGIN:VEVENT", f"UID:{uid}@bank-maintenance-board", f"DTSTAMP:{stamp}"]
+        if allday:
+            lines += [f"DTSTART;VALUE=DATE:{start:%Y%m%d}", f"DTEND;VALUE=DATE:{end:%Y%m%d}"]
+        else:
+            lines += [f"DTSTART:{start.astimezone(timezone.utc):%Y%m%dT%H%M%SZ}",
+                      f"DTEND:{end.astimezone(timezone.utc):%Y%m%dT%H%M%SZ}"]
+        lines += [
+            f"SUMMARY:{_ics_escape(summary)}",
+            f"DESCRIPTION:{_ics_escape(desc)}",
+            f"URL:{u['url']}",
+            "END:VEVENT",
+        ]
+    lines.append("END:VCALENDAR")
+    # ヘッダー行にも日本語が入るので最後にまとめて折り返す
+    return "\r\n".join(_ics_fold(l) for l in lines) + "\r\n"
 
 
 def read_history(limit: int = 40) -> list[dict]:
@@ -786,20 +892,37 @@ def esc(s: str) -> str:
              .replace(">", "&gt;").replace('"', "&quot;"))
 
 
-def render(results: list[dict]) -> str:
-    ups = upcoming_items(results)
-    up_html = "".join(
-        f'<div class="up-card">'
-        f'<div class="up-line">'
+TAG_CLASS = {"ATM": "atm", "振込": "furikomi", "アプリ": "app", "投信": "toshin", "カード": "card"}
+
+
+def render_tags(services) -> str:
+    if not services:
+        return ""
+    chips = "".join(f'<span class="tag tag-{TAG_CLASS.get(s, "etc")}">{esc(s)}</span>'
+                    for s in services)
+    return f'<div class="tags">{chips}</div>'
+
+
+def render_card(u: dict) -> str:
+    return (
+        '<div class="up-card">'
+        '<div class="up-line">'
         f'<span class="up-date">{esc(card_date(u["date"]))}</span>'
         f'<span class="up-bank">{esc(u["bank"])}</span>'
         f'<span class="up-time">{esc(compact_period(u.get("period", "")) or "時間未定")}</span>'
-        f'</div>'
+        '</div>'
         f'<a class="up-title" href="{esc(u["url"])}" target="_blank" rel="noopener">'
         f'{esc(short_title(u["title"]))}</a>'
-        f'</div>'
-        for u in ups
-    ) or '<p class="section-note">日付を特定できる今後の告知は現在ありません。各行の告知一覧をご確認ください。</p>'
+        f'{render_tags(u.get("services"))}'
+        '</div>'
+    )
+
+
+def render(results: list[dict]) -> str:
+    ups = upcoming_items(results)
+    up_html = "".join(render_card(u) for u in ups) or (
+        '<p class="section-note">日付を特定できる今後の告知は現在ありません。'
+        '各行の告知一覧をご確認ください。</p>')
 
     group_names = {gid: label for gid, label, _ in GROUPS}
     rows = []
@@ -878,6 +1001,9 @@ def main():
                    ensure_ascii=False, indent=1),
         encoding="utf-8")
     (docs / "index.html").write_text(render(results), encoding="utf-8")
+    ups = upcoming_items(results)
+    (docs / "calendar.ics").write_text(build_ics(ups), encoding="utf-8", newline="")
+    print(f"カレンダー: {len(ups)}件を calendar.ics に出力")
     by_status = {}
     for r in results:
         s = r["diag"]["status"]

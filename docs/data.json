@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-03T22:27:03.189240+09:00",
+ "updated": "2026-08-05T20:59:12.350728+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -17,6 +17,11 @@
      "date": "2026-08-08",
      "posted_date": null,
      "event_date": "2026-08-08",
+     "services": [
+      "ATM",
+      "振込",
+      "アプリ"
+     ],
      "period": "2026年8月8日 土曜日 22時00分～2026年8月9日 日曜日 11時00分"
     }
    ],
@@ -115,26 +120,17 @@
    "regular": "夜間（23:55前後–翌朝）に振込・アプリの休止が入ることが多い",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "「ゆうちょデビット」お申込みサイトのシステムメンテナンスのお知らせ",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002448.html",
-     "date": "2026-08-04",
-     "posted_date": null,
-     "event_date": "2026-08-04",
-     "period": "2026年8月4日（火）1:00～6:00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 12,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-04",
+    "latest_seen": null,
     "sources": [
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
@@ -214,34 +210,18 @@
    "regular": "毎週日曜 0:00–5:00 各種手続き停止ほか",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "振込サービスにかかる臨時メンテナンスのご案内",
-     "url": "https://www.netbk.co.jp/contents/company/info/2026/0702_005979.html",
-     "date": "2026-07-31",
-     "posted_date": null,
-     "event_date": "2026-07-31",
-     "period": "2026年7月31日(金)16:00 ～ 8月3日(月)8:00"
-    },
-    {
-     "title": "【重要】QRコードログインの一時停止について",
-     "url": "https://www.netbk.co.jp/contents/company/info/2026/0408_005642.html",
-     "date": "2026-08-03",
-     "posted_date": null,
-     "event_date": "2026-08-03"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 8,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
      "none"
     ],
-    "latest_seen": "2026-08-03",
+    "latest_seen": null,
     "sources": [
      {
       "url": "https://www.netbk.co.jp/contents/company/info/maintenance/",
@@ -300,7 +280,7 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 32,
+    "raw_count": 33,
     "kept_count": 0,
     "dropped_past": 5,
     "dropped_undated": 0,
@@ -312,7 +292,7 @@
      {
       "url": "https://www.rakuten-bank.co.jp/info/2026/",
       "ok": true,
-      "raw": 32,
+      "raw": 33,
       "parser": "link_list"
      }
     ]
@@ -327,31 +307,22 @@
    "regular": "毎月第2土曜の翌日曜 0:00–7:00／カードローン：毎週月曜 1:00–5:00",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "ネット口座振替 メンテナンス日時 2026年8月4日（火）1：00 ～ 6：00",
-     "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-08-04",
-     "posted_date": null,
-     "event_date": "2026-08-04",
-     "period": "2026年8月4日（火）1：00 ～ 6：00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
-    "raw_count": 3,
-    "kept_count": 1,
-    "dropped_past": 0,
+    "status": "all_past",
+    "raw_count": 2,
+    "kept_count": 0,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "text_block"
     ],
-    "latest_seen": "2026-08-04",
+    "latest_seen": "2026-08-01",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
       "ok": true,
-      "raw": 3,
+      "raw": 2,
       "parser": "text_block"
      }
     ]
@@ -445,6 +416,10 @@
      "date": "2026-10-10",
      "posted_date": "2026-05-25",
      "event_date": "2026-10-10",
+     "services": [
+      "ATM",
+      "アプリ"
+     ],
      "period": "2026 年 10 月 10 日(土)～10 月 12 日(月祝)"
     }
    ],
@@ -483,7 +458,12 @@
      "url": "https://www.okb.co.jp/archive/2026/20260715-01.html",
      "date": "2026-07-15",
      "posted_date": "2026-07-15",
-     "event_date": null
+     "event_date": null,
+     "services": [
+      "ATM",
+      "振込",
+      "アプリ"
+     ]
     }
    ],
    "diag": {
@@ -584,26 +564,21 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "2026年07月23日 お知らせ メンテナンスに伴うWeb口振サービスの休止について",
-     "url": "https://www.aichibank.co.jp/important_infomation/details/260723.html",
-     "date": "2026-08-04",
-     "posted_date": "2026-07-23",
-     "event_date": "2026-08-04",
-     "period": "2026年8月4日（火）午前1時～午前6時 20"
-    },
-    {
      "title": "2026年07月13日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/20260713.html",
      "date": "2026-08-04",
      "posted_date": "2026-07-13",
      "event_date": "2026-08-04",
+     "services": [
+      "ATM"
+     ],
      "period": "2026年8月4日（火）18時～2026年8月5日（水）8時"
     }
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 2,
-    "kept_count": 2,
+    "raw_count": 1,
+    "kept_count": 1,
     "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
@@ -614,7 +589,7 @@
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
       "ok": true,
-      "raw": 2,
+      "raw": 1,
       "parser": "link_list"
      }
     ]
@@ -672,6 +647,10 @@
      "date": "2026-08-22",
      "posted_date": "2026-06-26",
      "event_date": "2026-08-22",
+     "services": [
+      "アプリ",
+      "投信"
+     ],
      "period": "2026年8月22日（土）19:00 ～ 8月23日（日）10:00"
     }
    ],
@@ -807,6 +786,10 @@
      "date": "2026-08-08",
      "posted_date": "2026-07-24",
      "event_date": "2026-08-08",
+     "services": [
+      "アプリ",
+      "投信"
+     ],
      "period": "2026年8月8日（土）0:00～8月10日（月）7:00"
     }
    ],
@@ -876,6 +859,10 @@
      "date": "2026-08-08",
      "posted_date": "2026-07-31",
      "event_date": "2026-08-08",
+     "services": [
+      "アプリ",
+      "投信"
+     ],
      "period": "2026年8月8日（土）0：00～2026年8月9日（日）24：00"
     }
    ],
@@ -940,21 +927,21 @@
    "fetch_ok": true,
    "items": [],
    "diag": {
-    "status": "all_past",
-    "raw_count": 2,
+    "status": "no_notice",
+    "raw_count": 0,
     "kept_count": 0,
-    "dropped_past": 2,
+    "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
-     "link_list"
+     "none"
     ],
     "latest_seen": null,
     "sources": [
      {
       "url": "https://www.dhbk.co.jp/information/",
       "ok": true,
-      "raw": 2,
-      "parser": "link_list"
+      "raw": 0,
+      "parser": "none"
      }
     ]
    }
@@ -1064,7 +1051,10 @@
      "url": "https://www.fukuokabank.co.jp/announcement/important/y2026/service-suspension_3.html",
      "date": "2026-09-20",
      "posted_date": null,
-     "event_date": "2026-09-20"
+     "event_date": "2026-09-20",
+     "services": [
+      "振込"
+     ]
     }
    ],
    "diag": {

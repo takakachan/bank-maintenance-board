@@ -6,7 +6,8 @@
 
 - `scripts/build.py` — 収集とHTML生成のすべて。銀行リストは `BANKS`(group: mega/net/tokai)
 - `scripts/template.html` — ページテンプレート(`{{UPDATED}}` `{{UPCOMING}}` `{{SECTIONS}}` を置換)
-- `docs/` — 生成物(index.html / data.json)。GitHub Pagesのデプロイ対象
+- `docs/` — 生成物(index.html / data.json / calendar.ics)。GitHub Pagesのデプロイ対象
+- `CHANGELOG.md` — サイトに表示する更新履歴。利用者向けに簡潔に書く(社名・実装用語は出さない)
 - `.github/workflows/update.yml` — 毎日 6:00 / 18:00 JST に自動実行 + push時 + 手動実行
 
 ## 開発メモ
