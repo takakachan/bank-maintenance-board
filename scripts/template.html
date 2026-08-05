@@ -62,12 +62,15 @@
     margin: 8px 0 10px;
     text-wrap: balance;
   }
-  .meta-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; color: var(--muted); font-size: 13px; }
+  .meta-row {
+    display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+    color: var(--muted); font-size: 13px; margin-top: 14px;
+  }
   .chip {
     display: inline-block; padding: 4px 12px; border-radius: 999px;
     background: var(--surface-soft); color: var(--ink); font-weight: 700; font-size: 12px;
   }
-  .theme-toggle {
+  .toggle-btn {
     border: 1px solid var(--line);
     background: var(--surface-solid);
     color: var(--ink);
@@ -78,23 +81,38 @@
     font-weight: 700;
     cursor: pointer;
   }
-  .theme-toggle:hover { border-color: var(--accent); }
-  .theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-  /* 更新履歴のボタンとモーダル */
-  .hist-btn {
+  .toggle-btn:hover { border-color: var(--accent); }
+  .toggle-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  /* ヘッダーの操作ボタン(カレンダー追加・更新履歴) */
+  .head-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px 20px;
+    flex-wrap: wrap;
+  }
+  .head-actions { display: flex; gap: 8px; flex: none; padding-top: 6px; }
+  .head-top h1 { margin: 0; }
+  .btn {
+    display: inline-block;
     border: 2px solid var(--ink);
     background: var(--surface-solid);
     color: var(--ink);
     border-radius: 999px;
-    padding: 5px 14px;
+    padding: 6px 15px;
     font: inherit;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
+    line-height: 1.4;
+    text-decoration: none;
+    white-space: nowrap;
     cursor: pointer;
     box-shadow: 2px 2px 0 var(--shadow);
   }
-  .hist-btn:hover { background: var(--btn); }
-  .hist-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .btn-main { background: var(--btn); }
+  .btn:hover { background: var(--btn); }
+  .btn:active { transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--shadow); }
+  .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   #hist-dialog {
     width: min(620px, calc(100vw - 32px));
     max-height: min(76vh, 640px);
@@ -345,7 +363,10 @@
   @media (max-width: 860px) {
     .wrap { padding: 14px 12px 40px; }
     header.page { padding: 18px 16px 16px; border-radius: 14px; }
-    .meta-row { gap: 8px; }
+    .meta-row { gap: 8px; margin-top: 12px; }
+    /* 幅が足りないのでボタンはタイトルの下に横並びで置く */
+    .head-actions { width: 100%; padding-top: 12px; }
+    .head-actions .btn { flex: 1; text-align: center; }
     h2 { margin-top: 26px; }
     .filter-row { margin-top: 22px; }
     .upcoming { grid-template-columns: 1fr; }
@@ -400,12 +421,16 @@
 <body>
 <div class="wrap">
   <header class="page">
-    <h1>銀行メンテナンス・サービス停止情報</h1>
+    <div class="head-top">
+      <h1>銀行メンテナンス・サービス停止情報</h1>
+      <div class="head-actions">
+        <a class="btn btn-main" href="calendar.ics" download>カレンダーに追加</a>
+        {{HISTORY_BUTTON}}
+      </div>
+    </div>
     <div class="meta-row">
       <span class="chip">最終自動更新：{{UPDATED}}（日本時間）</span>
       <span>各行の公式ページから拾っています。詳細は必ずリンク先で確認してください。</span>
-      <a class="hist-btn" href="calendar.ics" download>カレンダーに追加</a>
-      {{HISTORY_BUTTON}}
     </div>
   </header>
 
@@ -425,7 +450,7 @@
 
   <div class="filter-row">
     <input id="filter" type="search" placeholder="銀行名で絞り込み（例：みずほ、信用金庫）" aria-label="銀行名で絞り込み">
-    <button class="theme-toggle" id="focus-toggle" type="button" aria-pressed="true">注目のみ</button>
+    <button class="toggle-btn" id="focus-toggle" type="button" aria-pressed="true">注目のみ</button>
     <span class="filter-hint" id="filter-hint"></span>
   </div>
   <div class="group-row" role="group" aria-label="区分で絞り込み">{{GROUP_BUTTONS}}</div>

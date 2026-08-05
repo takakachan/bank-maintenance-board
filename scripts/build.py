@@ -973,7 +973,7 @@ def render(results: list[dict]) -> str:
     if history:
         history.append("</ul>")
     hist_html = "".join(history)
-    hist_btn = ('<button class="hist-btn" id="hist-open" type="button">更新履歴</button>'
+    hist_btn = ('<button class="btn" id="hist-open" type="button">更新履歴</button>'
                 if hist_html else "")
 
     # 区分の絞り込みボタンはGROUPSから生成する(銀行を足しても勝手に増える)
