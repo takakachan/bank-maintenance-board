@@ -197,15 +197,19 @@
     gap: 8px;
     line-height: 1.4;
   }
+  /* 日付は文字として扱う(チップはタグだけに絞って賑やかさを抑える) */
   .up-date {
     font-weight: 900;
     font-variant-numeric: tabular-nums;
-    font-size: 14px;
-    background: var(--btn);
-    color: var(--btn-ink);
-    border-radius: 5px;
-    padding: 1px 7px;
+    font-size: 15.5px;
     flex: none;
+  }
+  .up-date.is-now {
+    font-size: 13px;
+    background: var(--alert-bg);
+    color: var(--alert-ink);
+    border-radius: 5px;
+    padding: 1px 9px;
   }
   .up-bank { font-weight: 700; font-size: 15px; }
   .up-time {

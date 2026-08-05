@@ -904,10 +904,13 @@ def render_tags(services) -> str:
 
 
 def render_card(u: dict) -> str:
+    label = card_date(u["date"])
+    # 「実施中」は日付ではなく状態なので、そこだけバッジで目立たせる
+    date_cls = "up-date is-now" if label == "実施中" else "up-date"
     return (
         '<div class="up-card">'
         '<div class="up-line">'
-        f'<span class="up-date">{esc(card_date(u["date"]))}</span>'
+        f'<span class="{date_cls}">{esc(label)}</span>'
         f'<span class="up-bank">{esc(u["bank"])}</span>'
         f'<span class="up-time">{esc(compact_period(u.get("period", "")) or "時間未定")}</span>'
         '</div>'
