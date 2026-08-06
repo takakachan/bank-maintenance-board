@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-06T20:12:24.817511+09:00",
+ "updated": "2026-08-06T22:31:09.646365+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -247,31 +247,22 @@
    "regular": "1・4・7・10月の最終火曜 1:00–6:00（全体）／日曜未明に一部機能停止あり",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "【再開】FXサービスの停止のお知らせ（2月7日）",
-     "url": "https://www.paypay-bank.co.jp/news/2026/0202.html",
-     "date": "2027-02-07",
-     "posted_date": null,
-     "event_date": "2027-02-07",
-     "services": []
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
-    "raw_count": 10,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "status": "all_past",
+    "raw_count": 3,
+    "kept_count": 0,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2027-02-07",
+    "latest_seen": "2026-06-25",
     "sources": [
      {
       "url": "https://www.paypay-bank.co.jp/news/index.html",
       "ok": true,
-      "raw": 10,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
@@ -461,25 +452,12 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026年07月15日 システムメンテナンスによるサービス一時休止について",
-     "url": "https://www.okb.co.jp/archive/2026/20260715-01.html",
-     "date": "2026-07-15",
-     "posted_date": "2026-07-15",
-     "event_date": null,
-     "services": [
-      "ATM",
-      "振込",
-      "アプリ"
-     ]
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 1,
-    "kept_count": 1,
-    "dropped_past": 0,
+    "kept_count": 0,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
