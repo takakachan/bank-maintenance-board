@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-05T21:28:47.404352+09:00",
+ "updated": "2026-08-06T22:28:40.514193+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -250,19 +250,19 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 10,
+    "raw_count": 3,
     "kept_count": 0,
-    "dropped_past": 5,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-07-18",
+    "latest_seen": "2026-06-25",
     "sources": [
      {
       "url": "https://www.paypay-bank.co.jp/news/index.html",
       "ok": true,
-      "raw": 10,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
@@ -452,25 +452,12 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026年07月15日 システムメンテナンスによるサービス一時休止について",
-     "url": "https://www.okb.co.jp/archive/2026/20260715-01.html",
-     "date": "2026-07-15",
-     "posted_date": "2026-07-15",
-     "event_date": null,
-     "services": [
-      "ATM",
-      "振込",
-      "アプリ"
-     ]
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 1,
-    "kept_count": 1,
-    "dropped_past": 0,
+    "kept_count": 0,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -566,13 +553,13 @@
     {
      "title": "2026年07月13日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/20260713.html",
-     "date": "2026-08-04",
+     "date": "2026-08-06",
      "posted_date": "2026-07-13",
-     "event_date": "2026-08-04",
+     "event_date": "2026-08-06",
      "services": [
       "ATM"
      ],
-     "period": "2026年8月4日（火）18時～2026年8月5日（水）8時"
+     "period": "2026年8月6日（木）18時～2026年8月7日（金）8時"
     }
    ],
    "diag": {
@@ -584,7 +571,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-04",
+    "latest_seen": "2026-08-06",
     "sources": [
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",

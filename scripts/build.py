@@ -40,7 +40,7 @@ HEADERS = {
 
 KEYWORD = re.compile(r"メンテナンス|休止|停止|システム更改|利用できません")
 EXCLUDE = re.compile(
-    r"復旧|再開しました|営業再開|解除|平成|完了|販売停止|受付停止|取り次ぎ停止|取扱停止"
+    r"復旧|再開しました|営業再開|【再開】|解除|平成|完了|販売停止|受付停止|取り次ぎ停止|取扱停止"
     r"|お問い合わせ|お客さまセンター|メンテナンス工業"
     # 「有限会社○○メンテナンス」など社名に含まれるケース(融資先の紹介記事など)
     r"|(?:株式会社|有限会社|合同会社|合資会社)[^\s。、]{0,12}メンテナンス")
@@ -331,13 +331,25 @@ def _dates_in(text: str) -> list[datetime]:
     return dates
 
 
-def deep_check(item: dict) -> bool:
-    """リンク先本文から停止期間を読み取り、item に period / date を設定する。
-    終了日時が過去と判定できた告知は False (=除外) を返す。"""
-    text = linked_page_text(item["url"])
-    if not text:
-        return True  # 読めない場合は除外しない(リンクは生きているため)
-    item["services"] = detect_services(item["title"], text)
+def find_detail_pdf(page_url: str) -> str | None:
+    """告知ページ本文に日付が無い場合、同じ名前のPDFに本文が載っていることが多い。
+    無関係な資料PDFを拾わないよう、ページと同名のものだけを対象にする。"""
+    html = fetch(page_url)
+    if not html:
+        return None
+    stem = re.sub(r"\.\w+$", "", page_url.rsplit("/", 1)[-1].split("?")[0])
+    if not stem:
+        return None
+    soup = BeautifulSoup(html, "html.parser")
+    for a in soup.find_all("a", href=True):
+        href = urljoin(page_url, a["href"])
+        if ".pdf" in href.lower() and stem in href:
+            return href
+    return None
+
+
+def _judge_text(item: dict, text: str) -> bool | None:
+    """本文から停止期間を読み取る。True=残す / False=終了済み / None=日付が読めない"""
     today = NOW.strftime("%Y-%m-%d")
     # 期間表記(○月○日○時〜○月○日○時)のうち、終了が未来のものを探す
     ranges = list(RANGE_RE.finditer(text))
@@ -370,9 +382,28 @@ def deep_check(item: dict) -> bool:
             item["date"] = item["event_date"]
         return True
     if not dates:
-        return True  # 日付が読み取れないページは除外しない
+        return None  # 日付が読み取れない
     # 本文の日付は全て過去。ただしタイトル側の日付が未来なら信じて残す
-    return bool(item.get("date")) and item["date"] >= today
+    return bool(item.get("event_date")) and item["event_date"] >= today
+
+
+def deep_check(item: dict) -> bool:
+    """リンク先本文から停止期間を読み取り、item に period / date を設定する。
+    終了日時が過去と判定できた告知は False (=除外) を返す。"""
+    text = linked_page_text(item["url"])
+    if not text:
+        return True  # 読めない場合は除外しない(リンクは生きているため)
+    item["services"] = detect_services(item["title"], text)
+    verdict = _judge_text(item, text)
+    if verdict is None:
+        # 本文がPDFに分かれている告知(大垣共立など)は日程がHTML側に無い
+        pdf = find_detail_pdf(item["url"])
+        pdf_text = linked_page_text(pdf) if pdf else None
+        if pdf_text:
+            if not item.get("services"):
+                item["services"] = detect_services(item["title"], pdf_text)
+            verdict = _judge_text(item, pdf_text)
+    return True if verdict is None else verdict
 
 
 def _mk(year, month, day):
@@ -380,6 +411,31 @@ def _mk(year, month, day):
         return datetime(int(year), int(month), int(day), tzinfo=JST)
     except ValueError:
         return None
+
+
+def _shift_year(d: datetime, years: int):
+    try:
+        return d.replace(year=d.year + years)
+    except ValueError:
+        return None  # 2月29日など存在しない日付になる場合
+
+
+def _fix_year(d, base):
+    """年の記載がない日付の年を補正する。
+    年末年始をまたぐ告知(12月に見る「1月5日」など)を正しく解釈しつつ、
+    送った先が遠すぎる場合は単なる過去のアーカイブとみなして動かさない。"""
+    if d is None:
+        return None
+    near = timedelta(days=120)
+    if d < base - timedelta(days=180):          # 大きく過去 → 翌年の告知か
+        rolled = _shift_year(d, 1)
+        if rolled and rolled < NOW + near:
+            return rolled
+    elif d > base + timedelta(days=180):        # 大きく未来 → 前年の告知か
+        rolled = _shift_year(d, -1)
+        if rolled and rolled > NOW - near:
+            return rolled
+    return d
 
 
 def read_dates(title: str) -> tuple[datetime | None, datetime | None]:
@@ -407,8 +463,7 @@ def read_dates(title: str) -> tuple[datetime | None, datetime | None]:
         else:
             base = posted or NOW
             d = _mk(base.year, m.group(2), m.group(3))
-            if d and d < base - timedelta(days=180):
-                d = d.replace(year=d.year + 1)  # 年跨ぎの告知
+            d = _fix_year(d, base)
         if d is None:
             continue
         if m.start() <= 2 and m.group(1) and posted is None:
@@ -803,12 +858,20 @@ def short_title(title: str) -> str:
     return t or title
 
 
-def card_date(date_str: str) -> str:
-    """2026-08-08 → 8/8(土)。実施中のものは「実施中」と出す"""
+def card_date(item: dict) -> str:
+    """カード左の日付ラベル。
+    「実施中」と言えるのは停止期間が実際に今をまたいでいる場合だけ。
+    掲載日しか分からない告知を実施中と呼ばないよう区別する。"""
+    date_str = item["date"]
     d = datetime.strptime(date_str, "%Y-%m-%d")
-    if date_str < NOW.strftime("%Y-%m-%d"):
-        return "実施中"
-    return f"{d.month}/{d.day}({WEEKDAYS[d.weekday()]})"
+    if date_str >= NOW.strftime("%Y-%m-%d"):
+        return f"{d.month}/{d.day}({WEEKDAYS[d.weekday()]})"
+    if item.get("period"):
+        start, end, _ = period_range(item["period"], date_str)
+        if start <= NOW < end:
+            return "実施中"
+        return f"{d.month}/{d.day}({WEEKDAYS[d.weekday()]})"
+    return "日時未確認"  # 掲載日しか読み取れなかった告知
 
 
 def _ics_escape(s: str) -> str:
@@ -904,7 +967,7 @@ def render_tags(services) -> str:
 
 
 def render_card(u: dict) -> str:
-    label = card_date(u["date"])
+    label = card_date(u)
     # 「実施中」は日付ではなく状態なので、そこだけバッジで目立たせる
     date_cls = "up-date is-now" if label == "実施中" else "up-date"
     return (
@@ -936,7 +999,7 @@ def render(results: list[dict]) -> str:
         if b["items"]:
             # 同じ日に複数件ある行(ゆうちょ等)は日付を重複表示しない
             days = "・".join(dict.fromkeys(
-                card_date(it["date"]) for it in b["items"] if it.get("date")))
+                card_date(it) for it in b["items"] if it.get("date")))
             notice = (f'<span class="cnt">{len(b["items"])}件</span>'
                       f'<span class="cnt-days">{esc(days)}</span>')
         else:
