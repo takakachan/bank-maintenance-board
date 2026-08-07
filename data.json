@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-06T22:46:53.363962+09:00",
+ "updated": "2026-08-07T10:01:21.405306+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -309,21 +309,21 @@
    "fetch_ok": true,
    "items": [],
    "diag": {
-    "status": "all_past",
-    "raw_count": 2,
+    "status": "no_notice",
+    "raw_count": 0,
     "kept_count": 0,
-    "dropped_past": 1,
+    "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
-     "text_block"
+     "none"
     ],
-    "latest_seen": "2026-08-01",
+    "latest_seen": null,
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
       "ok": true,
-      "raw": 2,
-      "parser": "text_block"
+      "raw": 0,
+      "parser": "none"
      }
     ]
    }
@@ -454,21 +454,21 @@
    "fetch_ok": true,
    "items": [],
    "diag": {
-    "status": "all_past",
-    "raw_count": 1,
+    "status": "no_notice",
+    "raw_count": 0,
     "kept_count": 0,
-    "dropped_past": 1,
+    "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
-     "link_list"
+     "none"
     ],
-    "latest_seen": "2026-07-15",
+    "latest_seen": null,
     "sources": [
      {
       "url": "https://www.okb.co.jp/",
       "ok": true,
-      "raw": 1,
-      "parser": "link_list"
+      "raw": 0,
+      "parser": "none"
      }
     ]
    }
@@ -551,6 +551,17 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "2026年08月07日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
+     "url": "https://www.aichibank.co.jp/important_infomation/details/260807.html",
+     "date": "2026-08-07",
+     "posted_date": "2026-08-07",
+     "event_date": "2026-08-07",
+     "services": [
+      "ATM"
+     ],
+     "period": "2026年8月7日（金）18時～2026年8月8日（土）8時"
+    },
+    {
      "title": "2026年07月13日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/20260713.html",
      "date": "2026-08-06",
@@ -564,19 +575,19 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 1,
-    "kept_count": 1,
+    "raw_count": 2,
+    "kept_count": 2,
     "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-06",
+    "latest_seen": "2026-08-07",
     "sources": [
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
       "ok": true,
-      "raw": 1,
+      "raw": 2,
       "parser": "link_list"
      }
     ]
