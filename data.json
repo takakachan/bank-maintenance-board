@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-08T00:20:32.267922+09:00",
+ "updated": "2026-08-08T06:44:29.497132+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -768,6 +768,17 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "【重要】ちばぎんアプリ一部機能の臨時休止について",
+     "url": "https://www.chibabank.co.jp/notices/notices20260807_01",
+     "date": "2026-08-22",
+     "posted_date": "2026-08-07",
+     "event_date": "2026-08-22",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026年8月22日（土）20:00 ～8月23日（日）8:00"
+    },
+    {
      "title": "【重要】ちばぎんアプリ投資信託機能の臨時休止について",
      "url": "https://www.chibabank.co.jp/notices/notices20260724_01",
      "date": "2026-08-08",
@@ -782,19 +793,19 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 1,
-    "kept_count": 1,
+    "raw_count": 2,
+    "kept_count": 2,
     "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
      "sitemap"
     ],
-    "latest_seen": "2026-08-08",
+    "latest_seen": "2026-08-22",
     "sources": [
      {
       "url": "https://www.chibabank.co.jp/sitemap/www.chibabank.co.jp/sitemap_notices_0.xml",
       "ok": true,
-      "raw": 1,
+      "raw": 2,
       "parser": "sitemap"
      }
     ]
