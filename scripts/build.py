@@ -357,7 +357,11 @@ def _judge_text(item: dict, text: str) -> bool | None:
     for m in ranges:
         snippet = " ".join(m.group(0).split())
         dates = _dates_in(snippet)
-        if dates and max(dates) + timedelta(days=1) > NOW:
+        if not dates:
+            continue
+        # 終了を時刻まで見て判定する(日付単位だと終わった告知が半日以上残る)
+        _, end, _allday = period_range(snippet, min(dates).strftime("%Y-%m-%d"))
+        if end > NOW:
             future_ranges.append((snippet, min(dates)))
     if future_ranges:
         # 同じ停止でも「8月8日～8月9日」と「8月8日22時～8月9日11時」の両方が
@@ -695,6 +699,17 @@ def collect_bank(bank: dict) -> dict:
     cutoff = (NOW - timedelta(days=30)).strftime("%Y-%m-%d")
     fresh = [it for it in kept
              if it.get("period") or not it.get("date") or it["date"] >= cutoff]
+
+    # 事前告知と当日告知のように、同じ停止を指す告知が並ぶことがあるためまとめる
+    # (期間が完全に一致する場合のみ。掲載が新しい方を残す)
+    seen_slot, uniq_slot = set(), []
+    for it in fresh:
+        slot = (it.get("date"), it.get("period"))
+        if it.get("period") and slot in seen_slot:
+            continue
+        seen_slot.add(slot)
+        uniq_slot.append(it)
+    fresh = uniq_slot
     dropped_past += len(kept) - len(fresh)
 
     # タイトルにも本文にも日付が無い告知は「今後の予定」と断定できないため出さない
@@ -864,14 +879,14 @@ def card_date(item: dict) -> str:
     掲載日しか分からない告知を実施中と呼ばないよう区別する。"""
     date_str = item["date"]
     d = datetime.strptime(date_str, "%Y-%m-%d")
-    if date_str >= NOW.strftime("%Y-%m-%d"):
-        return f"{d.month}/{d.day}({WEEKDAYS[d.weekday()]})"
+    label = f"{d.month}/{d.day}({WEEKDAYS[d.weekday()]})"
     if item.get("period"):
+        # 当日でも開始時刻を過ぎていれば実施中と出す
         start, end, _ = period_range(item["period"], date_str)
-        if start <= NOW < end:
-            return "実施中"
-        return f"{d.month}/{d.day}({WEEKDAYS[d.weekday()]})"
-    return "日時未確認"  # 掲載日しか読み取れなかった告知
+        return "実施中" if start <= NOW < end else label
+    if date_str < NOW.strftime("%Y-%m-%d"):
+        return "日時未確認"  # 掲載日しか読み取れなかった告知
+    return label
 
 
 def _ics_escape(s: str) -> str:
