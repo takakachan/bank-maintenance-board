@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-09T06:35:00.631684+09:00",
+ "updated": "2026-08-09T18:29:15.187523+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -14,15 +14,15 @@
     {
      "title": "休止する商品・サービス一覧",
      "url": "https://www.mizuhobank.co.jp/oshirase/maintenance_personal.html#pause",
-     "date": "2026-08-08",
+     "date": "2026-09-12",
      "posted_date": null,
-     "event_date": "2026-08-08",
+     "event_date": "2026-09-12",
      "services": [
       "ATM",
       "振込",
       "アプリ"
      ],
-     "period": "2026年8月8日 土曜日 22時00分～2026年8月9日 日曜日 11時00分"
+     "period": "2026年9月12日 土曜日 22時00分～2026年9月13日 日曜日 11時00分"
     }
    ],
    "diag": {
@@ -34,7 +34,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-08",
+    "latest_seen": "2026-09-12",
     "sources": [
      {
       "url": "https://www.mizuhobank.co.jp/direct/info/index.html",
