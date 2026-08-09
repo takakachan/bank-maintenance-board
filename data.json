@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-09T18:29:15.187523+09:00",
+ "updated": "2026-08-10T06:37:47.881259+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -60,22 +60,34 @@
    "regular": "三菱UFJダイレクト：毎月第2土曜 21:00–翌日曜 7:00／ペイジー：毎日 23:30–0:30",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "個人向けインターネットサービス臨時休止のお知らせ（8月20日～21日）",
+     "url": "https://www.bk.mufg.jp/info/20260810_kojin_kyuushi.html",
+     "date": "2026-08-20",
+     "posted_date": null,
+     "event_date": "2026-08-20",
+     "services": [
+      "アプリ",
+      "投信"
+     ]
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 2,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 3,
+    "kept_count": 1,
     "dropped_past": 1,
     "dropped_undated": 1,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-08-20",
     "sources": [
      {
       "url": "https://www.bk.mufg.jp/info/index.html",
       "ok": true,
-      "raw": 2,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
@@ -307,23 +319,36 @@
    "regular": "毎月第2土曜の翌日曜 0:00–7:00／カードローン：毎週月曜 1:00–5:00",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "【じぶん銀行スマホデビット】システムメンテナンスのお知らせ メンテナンス日時 2026年8月16日（日）0：50 ～ 6：10",
+     "url": "https://www.jibunbank.co.jp/maintenance/",
+     "date": "2026-08-16",
+     "posted_date": null,
+     "event_date": "2026-08-16",
+     "services": [
+      "アプリ",
+      "カード"
+     ],
+     "period": "2026年8月16日（日）0：50 ～ 6：10"
+    }
+   ],
    "diag": {
-    "status": "no_notice",
-    "raw_count": 0,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 1,
+    "kept_count": 1,
     "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
-     "none"
+     "text_block"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-08-16",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
       "ok": true,
-      "raw": 0,
-      "parser": "none"
+      "raw": 1,
+      "parser": "text_block"
      }
     ]
    }
@@ -425,9 +450,9 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 2,
+    "raw_count": 1,
     "kept_count": 1,
-    "dropped_past": 1,
+    "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
      "pdf_probe"
@@ -437,7 +462,7 @@
      {
       "url": "https://www.okashin.co.jp/system/data/{date}_info.pdf",
       "ok": true,
-      "raw": 2,
+      "raw": 1,
       "parser": "pdf_probe"
      }
     ]
@@ -854,14 +879,14 @@
     {
      "title": "2026年07月31日 システムメンテナンスによる「ぐんぎんアプリ 投信取引サービス」休止について",
      "url": "https://www.gunmabank.co.jp/info/gbnotice/gbnotice20260731c.html",
-     "date": "2026-08-08",
+     "date": "2026-08-29",
      "posted_date": "2026-07-31",
-     "event_date": "2026-08-08",
+     "event_date": "2026-08-29",
      "services": [
       "アプリ",
       "投信"
      ],
-     "period": "2026年8月8日（土）0：00～2026年8月9日（日）24：00"
+     "period": "2026年8月29日（土）0：00～2026年8月30日（日）24：00"
     }
    ],
    "diag": {
@@ -873,7 +898,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-08",
+    "latest_seen": "2026-08-29",
     "sources": [
      {
       "url": "https://www.gunmabank.co.jp/info/gbnotice/",
