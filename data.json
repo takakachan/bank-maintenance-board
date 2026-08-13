@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-13T06:52:23.033760+09:00",
+ "updated": "2026-08-13T18:53:31.215545+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -364,6 +364,15 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "2026.08.13 システムメンテナンスに伴う、サービス停止のお知らせ（2026年8月30日（日）0:00～7:00）",
+     "url": "https://www.aeonbank.co.jp/news/2026/0813_01/",
+     "date": "2026-08-30",
+     "posted_date": "2026-08-13",
+     "event_date": "2026-08-30",
+     "services": [],
+     "period": "2026年8月30日（日）0:00～7:00"
+    },
+    {
      "title": "2026.08.12 マネックス証券のシステムメンテナンスに伴う投資信託（金融商品仲介）受付業務休止について（8月15日（土）9:00～21:00）",
      "url": "https://www.aeonbank.co.jp/news/2026/0812_01/",
      "date": "2026-08-15",
@@ -377,14 +386,14 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 22,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "raw_count": 23,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-15",
+    "latest_seen": "2026-08-30",
     "sources": [
      {
       "url": "https://www.aeonbank.co.jp/maintenance/",
@@ -395,7 +404,7 @@
      {
       "url": "https://www.aeonbank.co.jp/news/",
       "ok": true,
-      "raw": 21,
+      "raw": 22,
       "parser": "link_list"
      }
     ]
@@ -750,6 +759,16 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "【9/6】ホームページ利用休止のお知らせ",
+     "url": "https://www.hekishin.jp/news/files/20260813.pdf",
+     "date": "2026-08-13",
+     "posted_date": null,
+     "event_date": "2026-08-13",
+     "services": [
+      "アプリ"
+     ]
+    },
+    {
      "title": "【へきしんアプリ】「ことら送金」のメンテナンスに伴うサービスの利用休止のお知らせ",
      "url": "https://www.hekishin.jp/news/files/20260810.pdf",
      "date": "2026-08-17",
@@ -763,9 +782,9 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 13,
-    "kept_count": 1,
-    "dropped_past": 2,
+    "raw_count": 14,
+    "kept_count": 2,
+    "dropped_past": 1,
     "dropped_undated": 2,
     "parsers": [
      "link_list"
@@ -775,7 +794,7 @@
      {
       "url": "https://www.hekishin.jp/news/",
       "ok": true,
-      "raw": 8,
+      "raw": 9,
       "parser": "link_list"
      },
      {
