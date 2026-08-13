@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-13T18:53:31.215545+09:00",
+ "updated": "2026-08-14T06:52:18.120077+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -761,9 +761,9 @@
     {
      "title": "【9/6】ホームページ利用休止のお知らせ",
      "url": "https://www.hekishin.jp/news/files/20260813.pdf",
-     "date": "2026-08-13",
+     "date": "2026-09-06",
      "posted_date": null,
-     "event_date": "2026-08-13",
+     "event_date": "2026-09-06",
      "services": [
       "アプリ"
      ]
@@ -789,7 +789,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-17",
+    "latest_seen": "2026-09-06",
     "sources": [
      {
       "url": "https://www.hekishin.jp/news/",
