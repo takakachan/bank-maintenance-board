@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-14T06:52:18.120077+09:00",
+ "updated": "2026-08-14T18:51:25.255582+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -132,22 +132,33 @@
    "regular": "夜間（23:55前後–翌朝）に振込・アプリの休止が入ることが多い",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "ゆうちょダイレクトおよびゆうちょ通帳アプリでの国債取り扱いの一時休止について",
+     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002458.html",
+     "date": "2026-08-14",
+     "posted_date": null,
+     "event_date": "2026-08-14",
+     "services": [
+      "アプリ"
+     ]
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 13,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "status": "ok",
+    "raw_count": 14,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-08-14",
     "sources": [
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
       "ok": true,
-      "raw": 13,
+      "raw": 14,
       "parser": "link_list"
      }
     ]
@@ -599,13 +610,13 @@
     {
      "title": "2026年08月07日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/260807.html",
-     "date": "2026-08-13",
+     "date": "2026-08-18",
      "posted_date": "2026-08-07",
-     "event_date": "2026-08-13",
+     "event_date": "2026-08-18",
      "services": [
       "ATM"
      ],
-     "period": "2026年8月13日（木）18時～2026年8月14日（金）8時"
+     "period": "2026年8月18日（火）18時～2026年8月19日（水）8時"
     }
    ],
    "diag": {
@@ -617,7 +628,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-13",
+    "latest_seen": "2026-08-18",
     "sources": [
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
