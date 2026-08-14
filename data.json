@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-14T18:51:25.255582+09:00",
+ "updated": "2026-08-15T06:29:53.668040+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -136,9 +136,9 @@
     {
      "title": "ゆうちょダイレクトおよびゆうちょ通帳アプリでの国債取り扱いの一時休止について",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002458.html",
-     "date": "2026-08-14",
+     "date": "2026-08-22",
      "posted_date": null,
-     "event_date": "2026-08-14",
+     "event_date": "2026-08-22",
      "services": [
       "アプリ"
      ]
@@ -153,7 +153,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-14",
+    "latest_seen": "2026-08-22",
     "sources": [
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
@@ -858,6 +858,18 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "【重要】ちばぎんアプリ投資信託機能の臨時休止について",
+     "url": "https://www.chibabank.co.jp/notices/notices20260814_01",
+     "date": "2026-08-29",
+     "posted_date": "2026-08-14",
+     "event_date": "2026-08-29",
+     "services": [
+      "アプリ",
+      "投信"
+     ],
+     "period": "2026年8月29日（土）0:00～8月31日（月）7:00"
+    },
+    {
      "title": "【重要】ちばぎんアプリ一部機能の臨時休止について",
      "url": "https://www.chibabank.co.jp/notices/notices20260807_01",
      "date": "2026-08-22",
@@ -871,19 +883,19 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 1,
-    "kept_count": 1,
+    "raw_count": 2,
+    "kept_count": 2,
     "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
      "sitemap"
     ],
-    "latest_seen": "2026-08-22",
+    "latest_seen": "2026-08-29",
     "sources": [
      {
       "url": "https://www.chibabank.co.jp/sitemap/www.chibabank.co.jp/sitemap_notices_0.xml",
       "ok": true,
-      "raw": 1,
+      "raw": 2,
       "parser": "sitemap"
      }
     ]
