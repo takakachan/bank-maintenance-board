@@ -227,10 +227,13 @@ def to_seireki(text: str) -> str:
 # 「2026年8月8日（土曜日）22時00分～2026年8月9日（日曜日）11時00分」等の期間表記
 # 曜日は括弧付き（土）だけでなく、みずほのような括弧なし「土曜日」表記も許容する
 _WD = r"(?:\s*[（(][^）)]{1,8}[）)]|\s*[月火水木金土日]曜日?)?"
-_TIME = r"(?:午前|午後)?\s*\d{1,2}\s*[:：時]\s*(?:\d{1,2})?\s*分?\s*(?:頃|ごろ)?"
-_D_FULL = rf"\d{{4}}\s*年\s*\d{{1,2}}\s*月\s*\d{{1,2}}\s*日{_WD}(?:\s*{_TIME})?"
-_D_PART = rf"(?:\d{{4}}\s*年\s*)?\d{{1,2}}\s*月\s*\d{{1,2}}\s*日{_WD}(?:\s*{_TIME})?"
-RANGE_RE = re.compile(rf"{_D_FULL}\s*[〜～~－\-から]{{1,4}}\s*(?:{_D_PART}|{_TIME})")
+# 時刻は「午前9時」「9:00」「AM 2：00」に対応
+_TIME = r"(?:午前|午後|[AaPp][Mm])?\s*\d{1,2}\s*[:：時]\s*(?:\d{1,2})?\s*分?\s*(?:頃|ごろ)?"
+# 開始側は年を省略することがある(「8月22日（土）21:00～」)
+_D_START = rf"(?:\d{{4}}\s*年\s*)?\d{{1,2}}\s*月\s*\d{{1,2}}\s*日{_WD}(?:\s*{_TIME})?"
+# 終了側は月まで省略することがある(「～21日（金）10:00」)
+_D_END = rf"(?:(?:\d{{4}}\s*年\s*)?\d{{1,2}}\s*月\s*)?\d{{1,2}}\s*日{_WD}(?:\s*{_TIME})?"
+RANGE_RE = re.compile(rf"{_D_START}\s*[〜～~－\-から]{{1,4}}\s*(?:{_D_END}|{_TIME})")
 
 
 def resolve_url(url: str) -> str:
@@ -312,17 +315,18 @@ def _dates_in(text: str) -> list[datetime]:
     dates, last_year = [], None
     for m in DATE_RE.finditer(text):
         y = m.group(1) or last_year
-        if not y:
-            continue
-        last_year = y
-        try:
-            d = datetime(int(y), int(m.group(2)), int(m.group(3)), tzinfo=JST)
-        except ValueError:
-            continue
-        # 年なし日付が前の日付より過去に見える場合は年跨ぎとみなす
-        if not m.group(1) and dates and d < dates[-1]:
-            d = d.replace(year=d.year + 1)
-        dates.append(d)
+        if y:
+            last_year = y
+            d = _mk(y, m.group(2), m.group(3))
+            # 年なし日付が前の日付より過去に見える場合は年跨ぎとみなす
+            if d and not m.group(1) and dates and d < dates[-1]:
+                d = _shift_year(d, 1) or d
+        else:
+            # 文中に年が一度も出てこない場合(「8月22日～8月23日」など)は
+            # 今日を基準に補う。ここで捨てると期間表記ごと無効になってしまう
+            d = _fix_year(_mk(NOW.year, m.group(2), m.group(3)), NOW)
+        if d:
+            dates.append(d)
     for m in DATE_RE2.finditer(text):
         try:
             dates.append(datetime(int(m.group(1)), int(m.group(2)), int(m.group(3)), tzinfo=JST))
@@ -353,6 +357,10 @@ def _judge_text(item: dict, text: str) -> bool | None:
     today = NOW.strftime("%Y-%m-%d")
     # 期間表記(○月○日○時〜○月○日○時)のうち、終了が未来のものを探す
     ranges = list(RANGE_RE.finditer(text))
+    # 告知本体は年まで明記するのに対し、末尾の年末年始・GW案内は年を省く。
+    # 年つきの期間があるページでは年なしの記載を無視して誤検出を防ぐ
+    dated = [m for m in ranges if re.search(r"\d{4}\s*年", m.group(0))]
+    ranges = dated or ranges
     future_ranges = []
     for m in ranges:
         snippet = " ".join(m.group(0).split())
@@ -858,6 +866,9 @@ def compact_period(period: str) -> str:
         gap = (d2.date() - d1.date()).days
         return (f"{_hhmm(t1)}–翌{_hhmm(t2)}" if gap == 1
                 else f"{_hhmm(t1)}–{d2.month}/{d2.day} {_hhmm(t2)}")
+    # 同じ日付に見えても終了が開始より前なら日をまたいでいる
+    if t2 <= t1:
+        return f"{_hhmm(t1)}–翌{_hhmm(t2)}"
     return f"{_hhmm(t1)}–{_hhmm(t2)}"
 
 

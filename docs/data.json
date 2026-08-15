@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-08T00:19:37.710057+09:00",
+ "updated": "2026-08-15T14:23:30.622285+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -14,15 +14,15 @@
     {
      "title": "休止する商品・サービス一覧",
      "url": "https://www.mizuhobank.co.jp/oshirase/maintenance_personal.html#pause",
-     "date": "2026-08-08",
+     "date": "2026-09-12",
      "posted_date": null,
-     "event_date": "2026-08-08",
+     "event_date": "2026-09-12",
      "services": [
       "ATM",
       "振込",
       "アプリ"
      ],
-     "period": "2026年8月8日 土曜日 22時00分～2026年8月9日 日曜日 11時00分"
+     "period": "2026年9月12日 土曜日 22時00分～2026年9月13日 日曜日 11時00分"
     }
    ],
    "diag": {
@@ -34,7 +34,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-08",
+    "latest_seen": "2026-09-12",
     "sources": [
      {
       "url": "https://www.mizuhobank.co.jp/direct/info/index.html",
@@ -60,22 +60,35 @@
    "regular": "三菱UFJダイレクト：毎月第2土曜 21:00–翌日曜 7:00／ペイジー：毎日 23:30–0:30",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "個人向けインターネットサービス臨時休止のお知らせ（8月20日～21日）",
+     "url": "https://www.bk.mufg.jp/info/20260810_kojin_kyuushi.html",
+     "date": "2026-08-20",
+     "posted_date": null,
+     "event_date": "2026-08-20",
+     "services": [
+      "アプリ",
+      "投信"
+     ],
+     "period": "2026年8月20日（木）17:00～21日（金）10:00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 2,
-    "kept_count": 0,
-    "dropped_past": 1,
-    "dropped_undated": 1,
+    "status": "ok",
+    "raw_count": 3,
+    "kept_count": 1,
+    "dropped_past": 2,
+    "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-08-20",
     "sources": [
      {
       "url": "https://www.bk.mufg.jp/info/index.html",
       "ok": true,
-      "raw": 2,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
@@ -120,22 +133,34 @@
    "regular": "夜間（23:55前後–翌朝）に振込・アプリの休止が入ることが多い",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "ゆうちょダイレクトおよびゆうちょ通帳アプリでの国債取り扱いの一時休止について",
+     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002458.html",
+     "date": "2026-08-22",
+     "posted_date": null,
+     "event_date": "2026-08-22",
+     "services": [
+      "アプリ"
+     ],
+     "period": "8月22日（土）午後9：00 ～ 8月23日（日）午前8：00 頃"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 12,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "status": "ok",
+    "raw_count": 14,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-08-22",
     "sources": [
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
       "ok": true,
-      "raw": 12,
+      "raw": 14,
       "parser": "link_list"
      }
     ]
@@ -307,23 +332,36 @@
    "regular": "毎月第2土曜の翌日曜 0:00–7:00／カードローン：毎週月曜 1:00–5:00",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "【じぶん銀行スマホデビット】システムメンテナンスのお知らせ メンテナンス日時 2026年8月16日（日）0：50 ～ 6：10",
+     "url": "https://www.jibunbank.co.jp/maintenance/",
+     "date": "2026-08-15",
+     "posted_date": null,
+     "event_date": "2026-08-15",
+     "services": [
+      "アプリ",
+      "カード"
+     ],
+     "period": "2026年8月15日（土）5:50 ～ 16:00"
+    }
+   ],
    "diag": {
-    "status": "no_notice",
-    "raw_count": 0,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 3,
+    "kept_count": 1,
     "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
-     "none"
+     "text_block"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-08-15",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
       "ok": true,
-      "raw": 0,
-      "parser": "none"
+      "raw": 3,
+      "parser": "text_block"
      }
     ]
    }
@@ -337,17 +375,38 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026.08.13 システムメンテナンスに伴う、サービス停止のお知らせ（2026年8月30日（日）0:00～7:00）",
+     "url": "https://www.aeonbank.co.jp/news/2026/0813_01/",
+     "date": "2026-08-30",
+     "posted_date": "2026-08-13",
+     "event_date": "2026-08-30",
+     "services": [],
+     "period": "2026年8月30日（日）0:00～7:00"
+    },
+    {
+     "title": "2026.08.12 マネックス証券のシステムメンテナンスに伴う投資信託（金融商品仲介）受付業務休止について（8月15日（土）9:00～21:00）",
+     "url": "https://www.aeonbank.co.jp/news/2026/0812_01/",
+     "date": "2026-08-15",
+     "posted_date": "2026-08-12",
+     "event_date": "2026-08-15",
+     "services": [
+      "投信"
+     ],
+     "period": "2026年8月15日（土）9:00～21:00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 21,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "status": "ok",
+    "raw_count": 23,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-07-27",
+    "latest_seen": "2026-08-30",
     "sources": [
      {
       "url": "https://www.aeonbank.co.jp/maintenance/",
@@ -358,7 +417,7 @@
      {
       "url": "https://www.aeonbank.co.jp/news/",
       "ok": true,
-      "raw": 20,
+      "raw": 22,
       "parser": "link_list"
      }
     ]
@@ -425,9 +484,9 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 2,
+    "raw_count": 1,
     "kept_count": 1,
-    "dropped_past": 1,
+    "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
      "pdf_probe"
@@ -437,7 +496,7 @@
      {
       "url": "https://www.okashin.co.jp/system/data/{date}_info.pdf",
       "ok": true,
-      "raw": 2,
+      "raw": 1,
       "parser": "pdf_probe"
      }
     ]
@@ -553,13 +612,13 @@
     {
      "title": "2026年08月07日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/260807.html",
-     "date": "2026-08-07",
+     "date": "2026-08-18",
      "posted_date": "2026-08-07",
-     "event_date": "2026-08-07",
+     "event_date": "2026-08-18",
      "services": [
       "ATM"
      ],
-     "period": "2026年8月7日（金）18時～2026年8月8日（土）8時"
+     "period": "2026年8月18日（火）18時～2026年8月19日（水）8時"
     }
    ],
    "diag": {
@@ -571,7 +630,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-07",
+    "latest_seen": "2026-08-18",
     "sources": [
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
@@ -670,22 +729,33 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026/08/10 お知らせ コスモスBASIC島崎店の店舗改修工事に伴う当行ATMの休止について",
+     "url": "https://www.33bank.co.jp/news/oshirase20260810.html",
+     "date": "2026-08-10",
+     "posted_date": "2026-08-10",
+     "event_date": "2026-08-17",
+     "services": [
+      "ATM"
+     ]
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 1,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 2,
+    "kept_count": 1,
     "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-03-17",
+    "latest_seen": "2026-08-10",
     "sources": [
      {
       "url": "https://www.33bank.co.jp/",
       "ok": true,
-      "raw": 1,
+      "raw": 2,
       "parser": "link_list"
      }
     ]
@@ -700,22 +770,46 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "【9/6】ホームページ利用休止のお知らせ",
+     "url": "https://www.hekishin.jp/news/files/20260813.pdf",
+     "date": "2026-09-06",
+     "posted_date": null,
+     "event_date": "2026-09-06",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026 年9 月6 日(日) AM 2：00 ～ AM 3：00"
+    },
+    {
+     "title": "【へきしんアプリ】「ことら送金」のメンテナンスに伴うサービスの利用休止のお知らせ",
+     "url": "https://www.hekishin.jp/news/files/20260810.pdf",
+     "date": "2026-08-17",
+     "posted_date": null,
+     "event_date": "2026-08-17",
+     "services": [
+      "振込",
+      "アプリ"
+     ],
+     "period": "2026 年8 月17 日（月） AM 2:00 ～ AM 6:00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 12,
-    "kept_count": 0,
-    "dropped_past": 3,
+    "status": "ok",
+    "raw_count": 14,
+    "kept_count": 2,
+    "dropped_past": 1,
     "dropped_undated": 2,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-09-06",
     "sources": [
      {
       "url": "https://www.hekishin.jp/news/",
       "ok": true,
-      "raw": 7,
+      "raw": 9,
       "parser": "link_list"
      },
      {
@@ -769,32 +863,43 @@
    "items": [
     {
      "title": "【重要】ちばぎんアプリ投資信託機能の臨時休止について",
-     "url": "https://www.chibabank.co.jp/notices/notices20260724_01",
-     "date": "2026-08-08",
-     "posted_date": "2026-07-24",
-     "event_date": "2026-08-08",
+     "url": "https://www.chibabank.co.jp/notices/notices20260814_01",
+     "date": "2026-08-29",
+     "posted_date": "2026-08-14",
+     "event_date": "2026-08-29",
      "services": [
       "アプリ",
       "投信"
      ],
-     "period": "2026年8月8日（土）0:00～8月10日（月）7:00"
+     "period": "2026年8月29日（土）0:00～8月31日（月）7:00"
+    },
+    {
+     "title": "【重要】ちばぎんアプリ一部機能の臨時休止について",
+     "url": "https://www.chibabank.co.jp/notices/notices20260807_01",
+     "date": "2026-08-22",
+     "posted_date": "2026-08-07",
+     "event_date": "2026-08-22",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026年8月22日（土）20:00 ～8月23日（日）8:00"
     }
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 1,
-    "kept_count": 1,
+    "raw_count": 2,
+    "kept_count": 2,
     "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
      "sitemap"
     ],
-    "latest_seen": "2026-08-08",
+    "latest_seen": "2026-08-29",
     "sources": [
      {
       "url": "https://www.chibabank.co.jp/sitemap/www.chibabank.co.jp/sitemap_notices_0.xml",
       "ok": true,
-      "raw": 1,
+      "raw": 2,
       "parser": "sitemap"
      }
     ]
@@ -843,14 +948,14 @@
     {
      "title": "2026年07月31日 システムメンテナンスによる「ぐんぎんアプリ 投信取引サービス」休止について",
      "url": "https://www.gunmabank.co.jp/info/gbnotice/gbnotice20260731c.html",
-     "date": "2026-08-08",
+     "date": "2026-08-29",
      "posted_date": "2026-07-31",
-     "event_date": "2026-08-08",
+     "event_date": "2026-08-29",
      "services": [
       "アプリ",
       "投信"
      ],
-     "period": "2026年8月8日（土）0：00～2026年8月9日（日）24：00"
+     "period": "2026年8月29日（土）0：00～2026年8月30日（日）24：00"
     }
    ],
    "diag": {
@@ -862,7 +967,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-08",
+    "latest_seen": "2026-08-29",
     "sources": [
      {
       "url": "https://www.gunmabank.co.jp/info/gbnotice/",
