@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-15T14:24:25.775197+09:00",
+ "updated": "2026-08-15T18:16:43.507427+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -336,14 +336,14 @@
     {
      "title": "【じぶん銀行スマホデビット】システムメンテナンスのお知らせ メンテナンス日時 2026年8月16日（日）0：50 ～ 6：10",
      "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-08-15",
+     "date": "2026-08-16",
      "posted_date": null,
-     "event_date": "2026-08-15",
+     "event_date": "2026-08-16",
      "services": [
       "アプリ",
       "カード"
      ],
-     "period": "2026年8月15日（土）5:50 ～ 16:00"
+     "period": "2026年8月16日（日）0：50 ～ 6：10"
     }
    ],
    "diag": {
@@ -355,7 +355,7 @@
     "parsers": [
      "text_block"
     ],
-    "latest_seen": "2026-08-15",
+    "latest_seen": "2026-08-16",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
