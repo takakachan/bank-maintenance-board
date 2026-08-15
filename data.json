@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-15T18:16:43.507427+09:00",
+ "updated": "2026-08-16T06:25:25.368046+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -336,14 +336,14 @@
     {
      "title": "【じぶん銀行スマホデビット】システムメンテナンスのお知らせ メンテナンス日時 2026年8月16日（日）0：50 ～ 6：10",
      "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-08-16",
+     "date": "2026-08-18",
      "posted_date": null,
-     "event_date": "2026-08-16",
+     "event_date": "2026-08-18",
      "services": [
       "アプリ",
       "カード"
      ],
-     "period": "2026年8月16日（日）0：50 ～ 6：10"
+     "period": "2026年8月18日（火）0：00 ～ 7：00"
     }
    ],
    "diag": {
@@ -355,7 +355,7 @@
     "parsers": [
      "text_block"
     ],
-    "latest_seen": "2026-08-16",
+    "latest_seen": "2026-08-18",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
@@ -384,24 +384,13 @@
      "event_date": "2026-08-30",
      "services": [],
      "period": "2026年8月30日（日）0:00～7:00"
-    },
-    {
-     "title": "2026.08.12 マネックス証券のシステムメンテナンスに伴う投資信託（金融商品仲介）受付業務休止について（8月15日（土）9:00～21:00）",
-     "url": "https://www.aeonbank.co.jp/news/2026/0812_01/",
-     "date": "2026-08-15",
-     "posted_date": "2026-08-12",
-     "event_date": "2026-08-15",
-     "services": [
-      "投信"
-     ],
-     "period": "2026年8月15日（土）9:00～21:00"
     }
    ],
    "diag": {
     "status": "ok",
     "raw_count": 23,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
