@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-16T18:17:38.267666+09:00",
+ "updated": "2026-08-17T06:25:07.629458+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -770,25 +770,13 @@
       "アプリ"
      ],
      "period": "2026 年9 月6 日(日) AM 2：00 ～ AM 3：00"
-    },
-    {
-     "title": "【へきしんアプリ】「ことら送金」のメンテナンスに伴うサービスの利用休止のお知らせ",
-     "url": "https://www.hekishin.jp/news/files/20260810.pdf",
-     "date": "2026-08-17",
-     "posted_date": null,
-     "event_date": "2026-08-17",
-     "services": [
-      "振込",
-      "アプリ"
-     ],
-     "period": "2026 年8 月17 日（月） AM 2:00 ～ AM 6:00"
     }
    ],
    "diag": {
     "status": "ok",
     "raw_count": 14,
-    "kept_count": 2,
-    "dropped_past": 1,
+    "kept_count": 1,
+    "dropped_past": 2,
     "dropped_undated": 2,
     "parsers": [
      "link_list"
