@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-17T18:30:21.112339+09:00",
+ "updated": "2026-08-18T06:30:19.503793+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -525,17 +525,31 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "システムメンテナンスによるサービス一時休止について",
+     "url": "https://www.okb.co.jp/archive/2026/20260817-01.html",
+     "date": "2026-08-24",
+     "posted_date": null,
+     "event_date": "2026-08-24",
+     "services": [
+      "ATM",
+      "振込",
+      "アプリ"
+     ],
+     "period": "２０２６年８月２４日（月） 午前０時～午前７時 ３"
+    }
+   ],
    "diag": {
-    "status": "all_past",
+    "status": "ok",
     "raw_count": 1,
-    "kept_count": 0,
+    "kept_count": 1,
     "dropped_past": 0,
-    "dropped_undated": 1,
+    "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-08-24",
     "sources": [
      {
       "url": "https://www.okb.co.jp/",
@@ -743,23 +757,12 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026/08/10 お知らせ コスモスBASIC島崎店の店舗改修工事に伴う当行ATMの休止について",
-     "url": "https://www.33bank.co.jp/news/oshirase20260810.html",
-     "date": "2026-08-10",
-     "posted_date": "2026-08-10",
-     "event_date": "2026-08-17",
-     "services": [
-      "ATM"
-     ]
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 2,
-    "kept_count": 1,
-    "dropped_past": 1,
+    "kept_count": 0,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
