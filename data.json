@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-19T06:28:57.235593+09:00",
+ "updated": "2026-08-19T18:23:08.179885+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -135,6 +135,16 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "「ゆうちょ手続きアプリ」システムメンテナンスのお知らせ",
+     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002463.html",
+     "date": "2026-08-19",
+     "posted_date": null,
+     "event_date": "2026-08-19",
+     "services": [
+      "アプリ"
+     ]
+    },
+    {
      "title": "ゆうちょダイレクトおよびゆうちょ通帳アプリでの国債取り扱いの一時休止について",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002458.html",
      "date": "2026-08-22",
@@ -148,9 +158,9 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 14,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "raw_count": 15,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -160,7 +170,7 @@
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
       "ok": true,
-      "raw": 14,
+      "raw": 15,
       "parser": "link_list"
      }
     ]
@@ -663,13 +673,13 @@
     {
      "title": "2026年08月07日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/260807.html",
-     "date": "2026-08-18",
+     "date": "2026-08-21",
      "posted_date": "2026-08-07",
-     "event_date": "2026-08-18",
+     "event_date": "2026-08-21",
      "services": [
       "ATM"
      ],
-     "period": "2026年8月18日（火）18時～2026年8月19日（水）8時"
+     "period": "2026年8月21日（金）15時～2026年8月24日（月）8時"
     }
    ],
    "diag": {
@@ -681,7 +691,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-18",
+    "latest_seen": "2026-08-21",
     "sources": [
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
@@ -753,9 +763,9 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 1,
+    "raw_count": 2,
     "kept_count": 1,
-    "dropped_past": 0,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -765,7 +775,7 @@
      {
       "url": "https://www.hyakugo.co.jp/whats_new/",
       "ok": true,
-      "raw": 1,
+      "raw": 2,
       "parser": "link_list"
      }
     ]
