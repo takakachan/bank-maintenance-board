@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-19T18:23:08.179885+09:00",
+ "updated": "2026-08-20T06:30:04.524714+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -137,9 +137,9 @@
     {
      "title": "「ゆうちょ手続きアプリ」システムメンテナンスのお知らせ",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002463.html",
-     "date": "2026-08-19",
+     "date": "2026-08-26",
      "posted_date": null,
-     "event_date": "2026-08-19",
+     "event_date": "2026-08-26",
      "services": [
       "アプリ"
      ]
@@ -165,7 +165,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-22",
+    "latest_seen": "2026-08-26",
     "sources": [
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
