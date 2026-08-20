@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-20T06:30:04.524714+09:00",
+ "updated": "2026-08-20T18:23:48.964651+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -284,30 +284,32 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "スポーツくじ会員登録停止のお知らせ（8月19日～20日）",
-     "url": "https://www.paypay-bank.co.jp/news/2026/0818.html",
-     "date": "2026-08-19",
+     "title": "FXサービスの停止のお知らせ（8月22日）",
+     "url": "https://www.paypay-bank.co.jp/news/2026/0820.html",
+     "date": "2026-08-22",
      "posted_date": null,
-     "event_date": "2026-08-19",
-     "services": [],
-     "period": "2026年8月19日（水曜日）23時30分～8月20日（木曜日）13時30分"
+     "event_date": "2026-08-22",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026年8月22日（土曜日）11時～19時10分"
     }
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 4,
+    "raw_count": 5,
     "kept_count": 1,
-    "dropped_past": 3,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-19",
+    "latest_seen": "2026-08-22",
     "sources": [
      {
       "url": "https://www.paypay-bank.co.jp/news/index.html",
       "ok": true,
-      "raw": 4,
+      "raw": 5,
       "parser": "link_list"
      }
     ]
@@ -337,7 +339,7 @@
      "period": "2026年8月25日（火）午前1:00～午前8:00"
     },
     {
-     "title": "証券担保ローンメンテナンス（2026年8月22日（土）午後6:00～ 8月23日（日）午前5:00）のお知らせ",
+     "title": "証券担保ローンメンテナンス（2026年8月22日（土）午後6:00～ 8月23日（日）午前8:00）のお知らせ",
      "url": "https://www.rakuten-bank.co.jp/info/2026/260817-2.html",
      "date": "2026-08-22",
      "posted_date": null,
@@ -347,7 +349,7 @@
       "振込",
       "アプリ"
      ],
-     "period": "2026年8月22日（土）午後6:00～ 8月23日（日）午前5:00"
+     "period": "2026年8月22日（土）午後6:00～ 8月23日（日）午前8:00"
     }
    ],
    "diag": {
@@ -383,14 +385,14 @@
     {
      "title": "【じぶん銀行スマホデビット】システムメンテナンスのお知らせ メンテナンス日時 2026年8月16日（日）0：50 ～ 6：10",
      "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-08-19",
+     "date": "2026-08-22",
      "posted_date": null,
-     "event_date": "2026-08-19",
+     "event_date": "2026-08-22",
      "services": [
       "アプリ",
       "カード"
      ],
-     "period": "2026年8月19日（水）23：30 ～ 2026年8月20日（木）13：30"
+     "period": "2026年8月22日（土）5:50 ～ 21:30"
     }
    ],
    "diag": {
@@ -402,7 +404,7 @@
     "parsers": [
      "text_block"
     ],
-    "latest_seen": "2026-08-19",
+    "latest_seen": "2026-08-22",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
@@ -433,6 +435,18 @@
      "period": "2026年8月30日（日）0:00～7:00"
     },
     {
+     "title": "2026.08.20 システムメンテナンスに伴う、サービス停止のお知らせ（8月24日（月）0:00～4:00）",
+     "url": "https://www.aeonbank.co.jp/news/2026/0820_01/",
+     "date": "2026-08-24",
+     "posted_date": "2026-08-20",
+     "event_date": "2026-08-24",
+     "services": [
+      "振込",
+      "アプリ"
+     ],
+     "period": "2026年8月24日（月）0:00～4:00"
+    },
+    {
      "title": "2026.08.17 マネックス証券のシステムメンテナンスに伴う投資信託（金融商品仲介）受付業務休止について（8月22日（土）12:00～24:00）",
      "url": "https://www.aeonbank.co.jp/news/2026/0817_02/",
      "date": "2026-08-22",
@@ -446,9 +460,9 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 24,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "raw_count": 25,
+    "kept_count": 3,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -464,7 +478,7 @@
      {
       "url": "https://www.aeonbank.co.jp/news/",
       "ok": true,
-      "raw": 23,
+      "raw": 24,
       "parser": "link_list"
      }
     ]
