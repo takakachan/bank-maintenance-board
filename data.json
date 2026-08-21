@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-21T06:32:52.789247+09:00",
+ "updated": "2026-08-21T18:25:54.041635+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -60,25 +60,12 @@
    "regular": "三菱UFJダイレクト：毎月第2土曜 21:00–翌日曜 7:00／ペイジー：毎日 23:30–0:30",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "個人向けインターネットサービス臨時休止のお知らせ（8月20日～21日）",
-     "url": "https://www.bk.mufg.jp/info/20260810_kojin_kyuushi.html",
-     "date": "2026-08-20",
-     "posted_date": null,
-     "event_date": "2026-08-20",
-     "services": [
-      "アプリ",
-      "投信"
-     ],
-     "period": "2026年8月20日（木）17:00～21日（金）10:00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 3,
-    "kept_count": 1,
-    "dropped_past": 2,
+    "kept_count": 0,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -383,7 +370,7 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "【じぶん銀行スマホデビット】システムメンテナンスのお知らせ メンテナンス日時 2026年8月16日（日）0：50 ～ 6：10",
+     "title": "＜更新＞2026年08月20日 16:50時点 スポーツくじ販売システムのシステムメンテナンスにつきまして、16時に作業終了いたしました。 お客さまにご迷惑をおかけしたことを深くお詫び申し上げます。 スポーツくじ販売システムのシステムメンテ",
      "url": "https://www.jibunbank.co.jp/maintenance/",
      "date": "2026-08-22",
      "posted_date": null,
@@ -1145,13 +1132,13 @@
     {
      "title": "2026/8/17 お知らせ システムメンテナンスに伴うお振込の取扱いについて",
      "url": "https://www.hokkokubank.co.jp/other/news/2026/20260817.html",
-     "date": "2026-09-12",
+     "date": "2026-11-03",
      "posted_date": "2026-08-17",
-     "event_date": "2026-09-12",
+     "event_date": "2026-11-03",
      "services": [
       "振込"
      ],
-     "period": "2026年9月12日（土）5:00～21:00"
+     "period": "2026年11月3日（火・祝）5:00～21:00"
     }
    ],
    "diag": {
@@ -1163,7 +1150,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-09-12",
+    "latest_seen": "2026-11-03",
     "sources": [
      {
       "url": "https://www.hokkokubank.co.jp/other/news/",
