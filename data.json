@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-22T18:17:31.055493+09:00",
+ "updated": "2026-08-23T06:26:27.986733+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -269,24 +269,12 @@
    "regular": "1・4・7・10月の最終火曜 1:00–6:00（全体）／日曜未明に一部機能停止あり",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "FXサービスの停止のお知らせ（8月22日）",
-     "url": "https://www.paypay-bank.co.jp/news/2026/0820.html",
-     "date": "2026-08-22",
-     "posted_date": null,
-     "event_date": "2026-08-22",
-     "services": [
-      "アプリ"
-     ],
-     "period": "2026年8月22日（土曜日）11時～19時10分"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 5,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -368,30 +356,17 @@
    "regular": "毎月第2土曜の翌日曜 0:00–7:00／カードローン：毎週月曜 1:00–5:00",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "＜更新＞2026年08月20日 16:50時点 スポーツくじ販売システムのシステムメンテナンスにつきまして、16時に作業終了いたしました。 お客さまにご迷惑をおかけしたことを深くお詫び申し上げます。 スポーツくじ販売システムのシステムメンテ",
-     "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-08-22",
-     "posted_date": null,
-     "event_date": "2026-08-22",
-     "services": [
-      "アプリ",
-      "カード"
-     ],
-     "period": "2026年8月22日（土）5:50 ～ 21:30"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 3,
-    "kept_count": 1,
-    "dropped_past": 0,
+    "kept_count": 0,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "text_block"
     ],
-    "latest_seen": "2026-08-22",
+    "latest_seen": "2026-08-20",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
@@ -432,24 +407,13 @@
       "アプリ"
      ],
      "period": "2026年8月24日（月）0:00～4:00"
-    },
-    {
-     "title": "2026.08.17 マネックス証券のシステムメンテナンスに伴う投資信託（金融商品仲介）受付業務休止について（8月22日（土）12:00～24:00）",
-     "url": "https://www.aeonbank.co.jp/news/2026/0817_02/",
-     "date": "2026-08-22",
-     "posted_date": "2026-08-17",
-     "event_date": "2026-08-22",
-     "services": [
-      "投信"
-     ],
-     "period": "2026年8月22日（土）12:00～24:00"
     }
    ],
    "diag": {
     "status": "ok",
     "raw_count": 25,
-    "kept_count": 3,
-    "dropped_past": 2,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -516,35 +480,20 @@
    "regular": "臨時休止はPDFで随時告知",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "ATM等のオンラインサービス臨時休止のお知らせ（2026年7月）",
-     "url": "https://www.okashin.co.jp/system/data/20260525_info.pdf",
-     "date": "2026-10-10",
-     "posted_date": "2026-05-25",
-     "event_date": "2026-10-10",
-     "services": [
-      "ATM",
-      "アプリ"
-     ],
-     "period": "2026 年 10 月 10 日(土)～10 月 12 日(月祝)"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
-    "raw_count": 1,
-    "kept_count": 1,
+    "status": "no_notice",
+    "raw_count": 0,
+    "kept_count": 0,
     "dropped_past": 0,
     "dropped_undated": 0,
-    "parsers": [
-     "pdf_probe"
-    ],
-    "latest_seen": "2026-10-10",
+    "parsers": [],
+    "latest_seen": null,
     "sources": [
      {
       "url": "https://www.okashin.co.jp/system/data/{date}_info.pdf",
       "ok": true,
-      "raw": 1,
+      "raw": 0,
       "parser": "pdf_probe"
      }
     ]
