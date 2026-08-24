@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-24T06:26:54.229141+09:00",
+ "updated": "2026-08-24T18:36:41.811538+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -122,6 +122,17 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "「ゆうちょレコ」システムメンテナンスのお知らせ",
+     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002465.html",
+     "date": "2026-08-27",
+     "posted_date": null,
+     "event_date": "2026-08-27",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026年8月27日（木）15:00～17:00"
+    },
+    {
      "title": "「ゆうちょ手続きアプリ」システムメンテナンスのお知らせ",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002463.html",
      "date": "2026-08-26",
@@ -134,19 +145,19 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 15,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "raw_count": 16,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-26",
+    "latest_seen": "2026-08-27",
     "sources": [
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
       "ok": true,
-      "raw": 15,
+      "raw": 16,
       "parser": "link_list"
      }
     ]
@@ -261,19 +272,19 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 5,
+    "raw_count": 3,
     "kept_count": 0,
-    "dropped_past": 5,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-22",
+    "latest_seen": "2026-06-25",
     "sources": [
      {
       "url": "https://www.paypay-bank.co.jp/news/index.html",
       "ok": true,
-      "raw": 5,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
@@ -483,31 +494,17 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "システムメンテナンスによるサービス一時休止について",
-     "url": "https://www.okb.co.jp/archive/2026/20260817-01.html",
-     "date": "2026-08-24",
-     "posted_date": null,
-     "event_date": "2026-08-24",
-     "services": [
-      "ATM",
-      "振込",
-      "アプリ"
-     ],
-     "period": "２０２６年８月２４日（月） 午前０時～午前７時 ３"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 1,
-    "kept_count": 1,
-    "dropped_past": 0,
+    "kept_count": 0,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-24",
+    "latest_seen": "2026-08-17",
     "sources": [
      {
       "url": "https://www.okb.co.jp/",
@@ -598,13 +595,13 @@
     {
      "title": "2026年08月07日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/260807.html",
-     "date": "2026-08-21",
+     "date": "2026-08-25",
      "posted_date": "2026-08-07",
-     "event_date": "2026-08-21",
+     "event_date": "2026-08-25",
      "services": [
       "ATM"
      ],
-     "period": "2026年8月21日（金）15時～2026年8月24日（月）8時"
+     "period": "2026年8月25日（火）18時～2026年8月26日（水）8時"
     }
    ],
    "diag": {
@@ -616,7 +613,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-21",
+    "latest_seen": "2026-08-25",
     "sources": [
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
@@ -851,9 +848,9 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 2,
+    "raw_count": 1,
     "kept_count": 1,
-    "dropped_past": 1,
+    "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
      "sitemap"
@@ -863,7 +860,7 @@
      {
       "url": "https://www.chibabank.co.jp/sitemap/www.chibabank.co.jp/sitemap_notices_0.xml",
       "ok": true,
-      "raw": 2,
+      "raw": 1,
       "parser": "sitemap"
      }
     ]
