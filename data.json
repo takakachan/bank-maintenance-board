@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-25T06:34:21.970097+09:00",
+ "updated": "2026-08-25T18:24:52.533260+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -122,6 +122,17 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "「JP BANK カード」および「ゆうちょデビット」お申し込みサイトのシステムメンテナンスのお知らせ",
+     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002466.html",
+     "date": "2026-08-27",
+     "posted_date": null,
+     "event_date": "2026-08-27",
+     "services": [
+      "カード"
+     ],
+     "period": "2026年8月27日（木） 17:30～19:30"
+    },
+    {
      "title": "「ゆうちょレコ」システムメンテナンスのお知らせ",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002465.html",
      "date": "2026-08-27",
@@ -145,9 +156,9 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 16,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "raw_count": 17,
+    "kept_count": 3,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -157,7 +168,7 @@
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
       "ok": true,
-      "raw": 16,
+      "raw": 17,
       "parser": "link_list"
      }
     ]
@@ -310,8 +321,7 @@
       "ATM",
       "振込",
       "アプリ"
-     ],
-     "period": "2026年8月25日（火）午前1:00～午前8:00"
+     ]
     }
    ],
    "diag": {
