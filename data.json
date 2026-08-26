@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-26T06:33:16.836878+09:00",
+ "updated": "2026-08-26T18:30:48.968173+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -243,18 +243,30 @@
    "regular": "毎週日曜 0:00–5:00 各種手続き停止ほか",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "振込サービスにかかる臨時メンテナンスのご案内",
+     "url": "https://www.netbk.co.jp/contents/company/info/2026/0826_006267.html",
+     "date": "2026-09-06",
+     "posted_date": null,
+     "event_date": "2026-09-06",
+     "services": [
+      "振込"
+     ],
+     "period": "2026年9月6日(日) 8:00 ～ 9月6日(日) 22:00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 8,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "status": "ok",
+    "raw_count": 9,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
      "none"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-09-06",
     "sources": [
      {
       "url": "https://www.netbk.co.jp/contents/company/info/maintenance/",
@@ -265,7 +277,7 @@
      {
       "url": "https://www.netbk.co.jp/contents/company/info/",
       "ok": true,
-      "raw": 8,
+      "raw": 9,
       "parser": "link_list"
      }
     ]
@@ -581,13 +593,13 @@
     {
      "title": "2026年08月07日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/260807.html",
-     "date": "2026-08-25",
+     "date": "2026-08-27",
      "posted_date": "2026-08-07",
-     "event_date": "2026-08-25",
+     "event_date": "2026-08-27",
      "services": [
       "ATM"
      ],
-     "period": "2026年8月25日（火）18時～2026年8月26日（水）8時"
+     "period": "2026年8月27日（木）18時～2026年8月28日（金）8時"
     }
    ],
    "diag": {
@@ -599,7 +611,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-25",
+    "latest_seen": "2026-08-27",
     "sources": [
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
@@ -698,22 +710,32 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026/08/26 メンテナンス 「来店予約サービス」のシステムメンテナンスに伴うサービスの休止について",
+     "url": "https://www.33bank.co.jp/news/oshirase20260826.html",
+     "date": "2026-08-31",
+     "posted_date": "2026-08-26",
+     "event_date": "2026-08-31",
+     "services": [],
+     "period": "２０２６年８月３１日（月） １７：００～１９：００"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 2,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 3,
+    "kept_count": 1,
     "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-10",
+    "latest_seen": "2026-08-31",
     "sources": [
      {
       "url": "https://www.33bank.co.jp/",
       "ok": true,
-      "raw": 2,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
@@ -893,6 +915,17 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "2026年08月26日 フリーローン「おまとめ太郎」WEB完結サービス一時停止のお知らせ",
+     "url": "https://www.gunmabank.co.jp/info/gbnotice/gbnotice20260826b.html",
+     "date": "2026-08-26",
+     "posted_date": "2026-08-26",
+     "event_date": "2026-08-26",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026年8月26日（水）21:00 ～ 2026年8月27日（木）8:00"
+    },
+    {
      "title": "2026年07月31日 システムメンテナンスによる「ぐんぎんアプリ 投信取引サービス」休止について",
      "url": "https://www.gunmabank.co.jp/info/gbnotice/gbnotice20260731c.html",
      "date": "2026-08-29",
@@ -907,8 +940,8 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 2,
-    "kept_count": 1,
+    "raw_count": 3,
+    "kept_count": 2,
     "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
@@ -919,7 +952,7 @@
      {
       "url": "https://www.gunmabank.co.jp/info/gbnotice/",
       "ok": true,
-      "raw": 2,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
