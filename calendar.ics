@@ -8,30 +8,8 @@ X-WR-TIMEZONE:Asia/Tokyo
 X-WR-CALDESC:銀行のシステムメンテナンス・サービス停止
  予定
 BEGIN:VEVENT
-UID:25787f904e8aef80ed840abd96b94425@bank-maintenance-board
-DTSTAMP:20260826T093048Z
-DTSTART;VALUE=DATE:20260826
-DTEND;VALUE=DATE:20260827
-SUMMARY:ゆうちょ銀行 停止（アプリ）
-DESCRIPTION:「ゆうちょ手続きアプリ」システムメンテナ
- ンス\nhttps://www.jp-bank.japanpost.jp/news/2026/news_id002463.html
-URL:https://www.jp-bank.japanpost.jp/news/2026/news_id002463.html
-END:VEVENT
-BEGIN:VEVENT
-UID:19d50ccf2bf9c9b55214519caaba2a76@bank-maintenance-board
-DTSTAMP:20260826T093048Z
-DTSTART:20260826T120000Z
-DTEND:20260826T230000Z
-SUMMARY:群馬銀行 停止（アプリ）
-DESCRIPTION:フリーローン「おまとめ太郎」WEB完結サービ
- ス一時停止\n停止期間: 2026年8月26日（水）21:00 ～ 2026
- 年8月27日（木）8:00\nhttps://www.gunmabank.co.jp/info/gbnotice/gbn
- otice20260826b.html
-URL:https://www.gunmabank.co.jp/info/gbnotice/gbnotice20260826b.html
-END:VEVENT
-BEGIN:VEVENT
 UID:f9f9369e31652e8d9ecd2d103097e48d@bank-maintenance-board
-DTSTAMP:20260826T093048Z
+DTSTAMP:20260827T003522Z
 DTSTART:20260827T083000Z
 DTEND:20260827T103000Z
 SUMMARY:ゆうちょ銀行 停止（カード）
@@ -43,7 +21,7 @@ URL:https://www.jp-bank.japanpost.jp/news/2026/news_id002466.html
 END:VEVENT
 BEGIN:VEVENT
 UID:3a352c1783c30a25899c86388bf7c5d5@bank-maintenance-board
-DTSTAMP:20260826T093048Z
+DTSTAMP:20260827T003522Z
 DTSTART:20260827T060000Z
 DTEND:20260827T080000Z
 SUMMARY:ゆうちょ銀行 停止（アプリ）
@@ -54,7 +32,7 @@ URL:https://www.jp-bank.japanpost.jp/news/2026/news_id002465.html
 END:VEVENT
 BEGIN:VEVENT
 UID:8e0dd80d32d9bd858914348cd4fb7d8e@bank-maintenance-board
-DTSTAMP:20260826T093048Z
+DTSTAMP:20260827T003522Z
 DTSTART:20260827T090000Z
 DTEND:20260827T230000Z
 SUMMARY:あいち銀行 停止（ATM）
@@ -66,7 +44,7 @@ URL:https://www.aichibank.co.jp/important_infomation/details/260807.html
 END:VEVENT
 BEGIN:VEVENT
 UID:1e960b64361cd37c8879fb1b28cfd46d@bank-maintenance-board
-DTSTAMP:20260826T093048Z
+DTSTAMP:20260827T003522Z
 DTSTART:20260829T100000Z
 DTEND:20260830T010000Z
 SUMMARY:百五銀行 停止（アプリ・投信）
@@ -78,7 +56,7 @@ URL:https://www.hyakugo.co.jp/whats_new/20260626_01.html
 END:VEVENT
 BEGIN:VEVENT
 UID:44a2ed17a242eeb5670dd63e51c1152d@bank-maintenance-board
-DTSTAMP:20260826T093048Z
+DTSTAMP:20260827T003522Z
 DTSTART:20260828T150000Z
 DTEND:20260830T220000Z
 SUMMARY:千葉銀行 停止（アプリ・投信）
@@ -89,7 +67,7 @@ URL:https://www.chibabank.co.jp/notices/notices20260814_01
 END:VEVENT
 BEGIN:VEVENT
 UID:28fae5f689e2b7207ba7eb39c417fbb0@bank-maintenance-board
-DTSTAMP:20260826T093048Z
+DTSTAMP:20260827T003522Z
 DTSTART:20260828T150000Z
 DTEND:20260830T150000Z
 SUMMARY:群馬銀行 停止（アプリ・投信）
@@ -101,7 +79,7 @@ URL:https://www.gunmabank.co.jp/info/gbnotice/gbnotice20260731c.html
 END:VEVENT
 BEGIN:VEVENT
 UID:52fabce7b669f02093b145dd880cce57@bank-maintenance-board
-DTSTAMP:20260826T093048Z
+DTSTAMP:20260827T003522Z
 DTSTART:20260829T150000Z
 DTEND:20260829T220000Z
 SUMMARY:イオン銀行 停止
@@ -113,7 +91,7 @@ URL:https://www.aeonbank.co.jp/news/2026/0813_01/
 END:VEVENT
 BEGIN:VEVENT
 UID:e9ac4ad7ec6212dac80d77a844a16ee8@bank-maintenance-board
-DTSTAMP:20260826T093048Z
+DTSTAMP:20260827T003522Z
 DTSTART:20260831T080000Z
 DTEND:20260831T100000Z
 SUMMARY:三十三銀行 停止
@@ -125,7 +103,7 @@ URL:https://www.33bank.co.jp/news/oshirase20260826.html
 END:VEVENT
 BEGIN:VEVENT
 UID:08fb1e80da1d16d139eaa3ed24921cee@bank-maintenance-board
-DTSTAMP:20260826T093048Z
+DTSTAMP:20260827T003522Z
 DTSTART;VALUE=DATE:20260901
 DTEND;VALUE=DATE:20261019
 SUMMARY:静岡銀行 停止（カード）
@@ -136,8 +114,21 @@ DESCRIPTION:教育ローン（カードタイプ）とカードローン
 URL:https://www.shizuokabank.co.jp/notice/detail/20260818_VmZ/
 END:VEVENT
 BEGIN:VEVENT
+UID:3d3ed2c2a92bb6bcdc1a406f16a8a7aa@bank-maintenance-board
+DTSTAMP:20260827T003522Z
+DTSTART:20260905T110000Z
+DTEND:20260905T230000Z
+SUMMARY:北陸銀行 停止（アプリ）
+DESCRIPTION:のお客様 法人向けインターネットバンキング
+ 臨時メンテナンスのお知らせ（2026年9月5日～9月6日）\
+ n停止期間: 2026年9月5日（土）20:00 ～ 9月6日（日）8:00\n
+ https://www.hokugin.co.jp/info/important/archives/corp/2026/post_64.html
+URL:https://www.hokugin.co.jp/info/important/archives/corp/2026/post_64.h
+ tml
+END:VEVENT
+BEGIN:VEVENT
 UID:cc303282ebcefc8d6866e8e0326b93ef@bank-maintenance-board
-DTSTAMP:20260826T093048Z
+DTSTAMP:20260827T003522Z
 DTSTART:20260905T230000Z
 DTEND:20260906T130000Z
 SUMMARY:住信SBIネット銀行 停止（振込）
@@ -148,7 +139,7 @@ URL:https://www.netbk.co.jp/contents/company/info/2026/0826_006267.html
 END:VEVENT
 BEGIN:VEVENT
 UID:590602ddd24989fe26a40dad1c2e4000@bank-maintenance-board
-DTSTAMP:20260826T093048Z
+DTSTAMP:20260827T003522Z
 DTSTART:20260905T170000Z
 DTEND:20260905T180000Z
 SUMMARY:碧海信用金庫 停止（アプリ）
@@ -159,7 +150,7 @@ URL:https://www.hekishin.jp/news/files/20260813.pdf
 END:VEVENT
 BEGIN:VEVENT
 UID:b0471c0bbd9659ab98243c16d684ba58@bank-maintenance-board
-DTSTAMP:20260826T093048Z
+DTSTAMP:20260827T003522Z
 DTSTART:20260912T130000Z
 DTEND:20260913T020000Z
 SUMMARY:みずほ銀行 停止（ATM・振込・アプリ）
@@ -170,8 +161,20 @@ DESCRIPTION:休止する商品・サービス一覧\n停止期間: 2026
 URL:https://www.mizuhobank.co.jp/oshirase/maintenance_personal.html#pause
 END:VEVENT
 BEGIN:VEVENT
+UID:cbc37091570a673f4a3614ffd368feba@bank-maintenance-board
+DTSTAMP:20260827T003522Z
+DTSTART:20260919T114500Z
+DTEND:20260920T000000Z
+SUMMARY:千葉銀行 停止
+DESCRIPTION:【重要】ちばぎんマイアクセスのシステムメ
+ ンテナンスのお知らせ（サービス臨時休止）\n停止期
+ 間: 2026年9月19日（土）20:45～9月20日（日）9:00\nhttps://ww
+ w.chibabank.co.jp/notices/notices20260826_01
+URL:https://www.chibabank.co.jp/notices/notices20260826_01
+END:VEVENT
+BEGIN:VEVENT
 UID:1fac1a41f10b9d8523ed33fca12f4b3a@bank-maintenance-board
-DTSTAMP:20260826T093048Z
+DTSTAMP:20260827T003522Z
 DTSTART;VALUE=DATE:20260920
 DTEND;VALUE=DATE:20260921
 SUMMARY:福岡銀行 停止（振込）
@@ -182,7 +185,7 @@ URL:https://www.fukuokabank.co.jp/announcement/important/y2026/service-su
 END:VEVENT
 BEGIN:VEVENT
 UID:b5a250cad5a9beef42e072476631a7f9@bank-maintenance-board
-DTSTAMP:20260826T093048Z
+DTSTAMP:20260827T003522Z
 DTSTART:20261102T200000Z
 DTEND:20261103T120000Z
 SUMMARY:北國銀行 停止（振込）

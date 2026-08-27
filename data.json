@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-26T18:30:48.968173+09:00",
+ "updated": "2026-08-27T09:35:22.152426+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -142,23 +142,13 @@
       "アプリ"
      ],
      "period": "2026年8月27日（木）15:00～17:00"
-    },
-    {
-     "title": "「ゆうちょ手続きアプリ」システムメンテナンスのお知らせ",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002463.html",
-     "date": "2026-08-26",
-     "posted_date": null,
-     "event_date": "2026-08-26",
-     "services": [
-      "アプリ"
-     ]
     }
    ],
    "diag": {
     "status": "ok",
     "raw_count": 17,
-    "kept_count": 3,
-    "dropped_past": 2,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -355,19 +345,19 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 3,
+    "raw_count": 2,
     "kept_count": 0,
     "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "text_block"
     ],
-    "latest_seen": "2026-08-20",
+    "latest_seen": "2026-08-22",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
       "ok": true,
-      "raw": 3,
+      "raw": 2,
       "parser": "text_block"
      }
     ]
@@ -842,6 +832,15 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "【重要】ちばぎんマイアクセスのシステムメンテナンスのお知らせ（サービス臨時休止）",
+     "url": "https://www.chibabank.co.jp/notices/notices20260826_01",
+     "date": "2026-09-19",
+     "posted_date": "2026-08-26",
+     "event_date": "2026-09-19",
+     "services": [],
+     "period": "2026年9月19日（土）20:45～9月20日（日）9:00"
+    },
+    {
      "title": "【重要】ちばぎんアプリ投資信託機能の臨時休止について",
      "url": "https://www.chibabank.co.jp/notices/notices20260814_01",
      "date": "2026-08-29",
@@ -856,19 +855,19 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 1,
-    "kept_count": 1,
+    "raw_count": 2,
+    "kept_count": 2,
     "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
      "sitemap"
     ],
-    "latest_seen": "2026-08-29",
+    "latest_seen": "2026-09-19",
     "sources": [
      {
       "url": "https://www.chibabank.co.jp/sitemap/www.chibabank.co.jp/sitemap_notices_0.xml",
       "ok": true,
-      "raw": 1,
+      "raw": 2,
       "parser": "sitemap"
      }
     ]
@@ -915,17 +914,6 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "2026年08月26日 フリーローン「おまとめ太郎」WEB完結サービス一時停止のお知らせ",
-     "url": "https://www.gunmabank.co.jp/info/gbnotice/gbnotice20260826b.html",
-     "date": "2026-08-26",
-     "posted_date": "2026-08-26",
-     "event_date": "2026-08-26",
-     "services": [
-      "アプリ"
-     ],
-     "period": "2026年8月26日（水）21:00 ～ 2026年8月27日（木）8:00"
-    },
-    {
      "title": "2026年07月31日 システムメンテナンスによる「ぐんぎんアプリ 投信取引サービス」休止について",
      "url": "https://www.gunmabank.co.jp/info/gbnotice/gbnotice20260731c.html",
      "date": "2026-08-29",
@@ -941,8 +929,8 @@
    "diag": {
     "status": "ok",
     "raw_count": 3,
-    "kept_count": 2,
-    "dropped_past": 1,
+    "kept_count": 1,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -1027,22 +1015,34 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026.08.27 法人のお客様 法人向けインターネットバンキング臨時メンテナンスのお知らせ（2026年9月5日～9月6日）",
+     "url": "https://www.hokugin.co.jp/info/important/archives/corp/2026/post_64.html",
+     "date": "2026-09-05",
+     "posted_date": "2026-08-27",
+     "event_date": "2026-09-05",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026年9月5日（土）20:00 ～ 9月6日（日）8:00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 2,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 3,
+    "kept_count": 1,
     "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-05-29",
+    "latest_seen": "2026-09-05",
     "sources": [
      {
       "url": "https://www.hokugin.co.jp/info/",
       "ok": true,
-      "raw": 2,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
