@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-27T09:35:22.152426+09:00",
+ "updated": "2026-08-28T04:19:43.182083+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -120,40 +120,17 @@
    "regular": "夜間（23:55前後–翌朝）に振込・アプリの休止が入ることが多い",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "「JP BANK カード」および「ゆうちょデビット」お申し込みサイトのシステムメンテナンスのお知らせ",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002466.html",
-     "date": "2026-08-27",
-     "posted_date": null,
-     "event_date": "2026-08-27",
-     "services": [
-      "カード"
-     ],
-     "period": "2026年8月27日（木） 17:30～19:30"
-    },
-    {
-     "title": "「ゆうちょレコ」システムメンテナンスのお知らせ",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002465.html",
-     "date": "2026-08-27",
-     "posted_date": null,
-     "event_date": "2026-08-27",
-     "services": [
-      "アプリ"
-     ],
-     "period": "2026年8月27日（木）15:00～17:00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 17,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-27",
+    "latest_seen": null,
     "sources": [
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
@@ -344,21 +321,21 @@
    "fetch_ok": true,
    "items": [],
    "diag": {
-    "status": "all_past",
-    "raw_count": 2,
+    "status": "no_notice",
+    "raw_count": 0,
     "kept_count": 0,
-    "dropped_past": 1,
+    "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
-     "text_block"
+     "none"
     ],
-    "latest_seen": "2026-08-22",
+    "latest_seen": null,
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
       "ok": true,
-      "raw": 2,
-      "parser": "text_block"
+      "raw": 0,
+      "parser": "none"
      }
     ]
    }
