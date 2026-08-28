@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-28T04:19:43.182083+09:00",
+ "updated": "2026-08-28T14:09:54.941382+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -120,22 +120,34 @@
    "regular": "夜間（23:55前後–翌朝）に振込・アプリの休止が入ることが多い",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "「ゆうちょ通帳アプリ」システムメンテナンスのお知らせ",
+     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002470.html",
+     "date": "2026-09-01",
+     "posted_date": null,
+     "event_date": "2026-09-01",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026年9月1日（火）23:55 ～ 9月2日（水）0:05"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 17,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "status": "ok",
+    "raw_count": 18,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-09-01",
     "sources": [
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
       "ok": true,
-      "raw": 17,
+      "raw": 18,
       "parser": "link_list"
      }
     ]
@@ -180,22 +192,35 @@
    "regular": "マイゲート・アプリ：毎月第1月曜 2:00–6:00／第2土曜 23:00–翌日曜 6:00",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "【指扇支店】駐車場（全車室）利用停止期間のお知らせ",
+     "url": "https://www.saitamaresona.co.jp/kojin/oshirase_s/2026/detail/oshirase_9986.html",
+     "date": "2026-08-28",
+     "posted_date": null,
+     "event_date": "2026-08-28",
+     "services": [
+      "ATM",
+      "アプリ"
+     ],
+     "period": "2026年8月28日（金）18:00 ～ 8月30日（日）15:00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 1,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 2,
+    "kept_count": 1,
     "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-06-27",
+    "latest_seen": "2026-08-28",
     "sources": [
      {
       "url": "https://www.saitamaresona.co.jp/kojin/oshirase/",
       "ok": true,
-      "raw": 1,
+      "raw": 2,
       "parser": "link_list"
      }
     ]
@@ -560,13 +585,13 @@
     {
      "title": "2026年08月07日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/260807.html",
-     "date": "2026-08-27",
+     "date": "2026-09-03",
      "posted_date": "2026-08-07",
-     "event_date": "2026-08-27",
+     "event_date": "2026-09-03",
      "services": [
       "ATM"
      ],
-     "period": "2026年8月27日（木）18時～2026年8月28日（金）8時"
+     "period": "2026年9月3日（木）18時～2026年9月4日（金）8時"
     }
    ],
    "diag": {
@@ -578,7 +603,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-27",
+    "latest_seen": "2026-09-03",
     "sources": [
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
