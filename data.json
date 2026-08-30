@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-30T08:09:27.583124+09:00",
+ "updated": "2026-08-30T23:05:15.657851+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -196,14 +196,14 @@
     {
      "title": "【指扇支店】駐車場（全車室）利用停止期間のお知らせ",
      "url": "https://www.saitamaresona.co.jp/kojin/oshirase_s/2026/detail/oshirase_9986.html",
-     "date": "2026-08-28",
+     "date": "2026-09-04",
      "posted_date": null,
-     "event_date": "2026-08-28",
+     "event_date": "2026-09-04",
      "services": [
       "ATM",
       "アプリ"
      ],
-     "period": "2026年8月28日（金）18:00 ～ 8月30日（日）15:00"
+     "period": "2026年9月4日（金）18:00 ～ 9月5日（土）17:00"
     }
    ],
    "diag": {
@@ -215,7 +215,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-28",
+    "latest_seen": "2026-09-04",
     "sources": [
      {
       "url": "https://www.saitamaresona.co.jp/kojin/oshirase/",
@@ -669,7 +669,7 @@
       "アプリ",
       "投信"
      ],
-     "period": "2026年8月29日（土）19:00 ～ 8月30日（日）10:00"
+     "period": "2026年8月29日（土）0:00 ～ 8月30日（日）24:00"
     }
    ],
    "diag": {
