@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-30T23:05:15.657851+09:00",
+ "updated": "2026-08-31T08:18:54.888720+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -374,21 +374,12 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026.08.13 システムメンテナンスに伴う、サービス停止のお知らせ（2026年8月30日（日）0:00～7:00）",
-     "url": "https://www.aeonbank.co.jp/news/2026/0813_01/",
-     "date": "2026-08-30",
-     "posted_date": "2026-08-13",
-     "event_date": "2026-08-30",
-     "services": []
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 25,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -658,30 +649,17 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026年06月26日 お知らせ 「105スマホ投信」投信口座開設・投信取引機能の臨時停止について",
-     "url": "https://www.hyakugo.co.jp/whats_new/20260626_01.html",
-     "date": "2026-08-29",
-     "posted_date": "2026-06-26",
-     "event_date": "2026-08-29",
-     "services": [
-      "アプリ",
-      "投信"
-     ],
-     "period": "2026年8月29日（土）0:00 ～ 8月30日（日）24:00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 2,
-    "kept_count": 1,
-    "dropped_past": 1,
+    "kept_count": 0,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-29",
+    "latest_seen": "2026-06-26",
     "sources": [
      {
       "url": "https://www.hyakugo.co.jp/whats_new/",
@@ -852,25 +830,13 @@
      "event_date": "2026-09-19",
      "services": [],
      "period": "2026年9月19日（土）20:45～9月20日（日）9:00"
-    },
-    {
-     "title": "【重要】ちばぎんアプリ投資信託機能の臨時休止について",
-     "url": "https://www.chibabank.co.jp/notices/notices20260814_01",
-     "date": "2026-08-29",
-     "posted_date": "2026-08-14",
-     "event_date": "2026-08-29",
-     "services": [
-      "アプリ",
-      "投信"
-     ],
-     "period": "2026年8月29日（土）0:00～8月31日（月）7:00"
     }
    ],
    "diag": {
     "status": "ok",
     "raw_count": 3,
-    "kept_count": 3,
-    "dropped_past": 0,
+    "kept_count": 2,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "sitemap"
@@ -936,25 +902,13 @@
       "アプリ"
      ],
      "period": "2026年8月31日（月） 21：00 ～ 2026年9月1日（火） 9：00"
-    },
-    {
-     "title": "2026年07月31日 システムメンテナンスによる「ぐんぎんアプリ 投信取引サービス」休止について",
-     "url": "https://www.gunmabank.co.jp/info/gbnotice/gbnotice20260731c.html",
-     "date": "2026-08-29",
-     "posted_date": "2026-07-31",
-     "event_date": "2026-08-29",
-     "services": [
-      "アプリ",
-      "投信"
-     ],
-     "period": "2026年8月29日（土）0：00～2026年8月30日（日）24：00"
     }
    ],
    "diag": {
     "status": "ok",
     "raw_count": 3,
-    "kept_count": 2,
-    "dropped_past": 1,
+    "kept_count": 1,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
