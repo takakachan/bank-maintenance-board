@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-31T08:18:54.888720+09:00",
+ "updated": "2026-09-01T01:31:05.851140+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -586,9 +586,9 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 2,
+    "raw_count": 1,
     "kept_count": 1,
-    "dropped_past": 1,
+    "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -598,7 +598,7 @@
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
       "ok": true,
-      "raw": 2,
+      "raw": 1,
       "parser": "link_list"
      }
     ]
@@ -679,32 +679,22 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026/08/26 メンテナンス 「来店予約サービス」のシステムメンテナンスに伴うサービスの休止について",
-     "url": "https://www.33bank.co.jp/news/oshirase20260826.html",
-     "date": "2026-08-31",
-     "posted_date": "2026-08-26",
-     "event_date": "2026-08-31",
-     "services": [],
-     "period": "２０２６年８月３１日（月） １７：００～１９：００"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
-    "raw_count": 3,
-    "kept_count": 1,
+    "status": "all_past",
+    "raw_count": 2,
+    "kept_count": 0,
     "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-31",
+    "latest_seen": "2026-08-10",
     "sources": [
      {
       "url": "https://www.33bank.co.jp/",
       "ok": true,
-      "raw": 3,
+      "raw": 2,
       "parser": "link_list"
      }
     ]
@@ -834,9 +824,9 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 3,
+    "raw_count": 2,
     "kept_count": 2,
-    "dropped_past": 1,
+    "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
      "sitemap"
@@ -846,7 +836,7 @@
      {
       "url": "https://www.chibabank.co.jp/sitemap/www.chibabank.co.jp/sitemap_notices_0.xml",
       "ok": true,
-      "raw": 3,
+      "raw": 2,
       "parser": "sitemap"
      }
     ]
