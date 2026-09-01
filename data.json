@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-01T22:47:49.700789+09:00",
+ "updated": "2026-09-02T08:10:59.840091+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -124,13 +124,13 @@
     {
      "title": "「ゆうちょ通帳アプリ」システムメンテナンスのお知らせ",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002470.html",
-     "date": "2026-09-01",
+     "date": "2026-09-06",
      "posted_date": null,
-     "event_date": "2026-09-01",
+     "event_date": "2026-09-06",
      "services": [
       "アプリ"
      ],
-     "period": "2026年9月1日（火）23:55 ～ 9月2日（水）0:05"
+     "period": "2026年9月6日（日）23:55 ～ 9月7日（月）0:05"
     }
    ],
    "diag": {
@@ -142,7 +142,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-09-01",
+    "latest_seen": "2026-09-06",
     "sources": [
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
@@ -853,6 +853,17 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "【重要】ちばぎんアプリ（QRコードでの税金・料金支払機能）の臨時休止について",
+     "url": "https://www.chibabank.co.jp/notices/notices20260901_01",
+     "date": "2026-09-19",
+     "posted_date": "2026-09-01",
+     "event_date": "2026-09-19",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026年9月19日（土）0:00 ～9月24日（木）8:30"
+    },
+    {
      "title": "【重要】ちばぎんアプリ（投資信託口座開設・投資信託取引）の臨時休止について",
      "url": "https://www.chibabank.co.jp/notices/notices20260828_01",
      "date": "2026-09-13",
@@ -876,8 +887,8 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 2,
-    "kept_count": 2,
+    "raw_count": 3,
+    "kept_count": 3,
     "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
@@ -888,7 +899,7 @@
      {
       "url": "https://www.chibabank.co.jp/sitemap/www.chibabank.co.jp/sitemap_notices_0.xml",
       "ok": true,
-      "raw": 2,
+      "raw": 3,
       "parser": "sitemap"
      }
     ]
