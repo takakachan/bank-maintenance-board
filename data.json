@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-01T01:31:05.851140+09:00",
+ "updated": "2026-09-01T09:29:28.366779+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -374,17 +374,31 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026.09.01 システムメンテナンスに伴う、サービス停止のお知らせ（9月7日（月）、14日（月）0:00～7:00）",
+     "url": "https://www.aeonbank.co.jp/news/2026/0901_01/",
+     "date": "2026-09-07",
+     "posted_date": "2026-09-01",
+     "event_date": "2026-09-07",
+     "services": [
+      "アプリ",
+      "投信",
+      "カード"
+     ],
+     "period": "2026年9月7日（月）0:00～7:00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 25,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "status": "ok",
+    "raw_count": 26,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-30",
+    "latest_seen": "2026-09-07",
     "sources": [
      {
       "url": "https://www.aeonbank.co.jp/maintenance/",
@@ -395,7 +409,7 @@
      {
       "url": "https://www.aeonbank.co.jp/news/",
       "ok": true,
-      "raw": 24,
+      "raw": 25,
       "parser": "link_list"
      }
     ]
@@ -474,22 +488,36 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026年09月01日 システムメンテナンスによる当社サービスの一時休止について",
+     "url": "https://www.okb.co.jp/archive/2026/20260901-01.html",
+     "date": "2026-09-09",
+     "posted_date": "2026-09-01",
+     "event_date": "2026-09-09",
+     "services": [
+      "ATM",
+      "振込",
+      "アプリ"
+     ],
+     "period": "２０２６年９月９日（水） １７時～２０時"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 1,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 2,
+    "kept_count": 1,
     "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-17",
+    "latest_seen": "2026-09-09",
     "sources": [
      {
       "url": "https://www.okb.co.jp/",
       "ok": true,
-      "raw": 1,
+      "raw": 2,
       "parser": "link_list"
      }
     ]
@@ -679,22 +707,34 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026/09/01 メンテナンス 【三十三銀行アプリ】普通預金口座開設等における本人確認サービスのメンテナンス実施について",
+     "url": "https://www.33bank.co.jp/news/oshirase20260901.html",
+     "date": "2026-09-18",
+     "posted_date": "2026-09-01",
+     "event_date": "2026-09-18",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026年9月18日（金）0:00 ～ 5:00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 2,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 3,
+    "kept_count": 1,
     "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-10",
+    "latest_seen": "2026-09-18",
     "sources": [
      {
       "url": "https://www.33bank.co.jp/",
       "ok": true,
-      "raw": 2,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
@@ -885,13 +925,13 @@
     {
      "title": "2026年08月28日 フリーローン「おまとめ太郎」WEB完結サービス一時停止のお知らせ",
      "url": "https://www.gunmabank.co.jp/info/gbnotice/gbnotice20260828.html",
-     "date": "2026-08-31",
+     "date": "2026-09-14",
      "posted_date": "2026-08-28",
-     "event_date": "2026-08-31",
+     "event_date": "2026-09-14",
      "services": [
       "アプリ"
      ],
-     "period": "2026年8月31日（月） 21：00 ～ 2026年9月1日（火） 9：00"
+     "period": "2026年9月14日（月） 21：00 ～ 2026年9月15日（火） 9：00"
     }
    ],
    "diag": {
@@ -903,7 +943,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-08-31",
+    "latest_seen": "2026-09-14",
     "sources": [
      {
       "url": "https://www.gunmabank.co.jp/info/gbnotice/",
