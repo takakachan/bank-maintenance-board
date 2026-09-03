@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-03T22:06:34.926320+09:00",
+ "updated": "2026-09-04T08:07:53.955387+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -628,13 +628,13 @@
     {
      "title": "2026年08月07日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/260807.html",
-     "date": "2026-09-03",
+     "date": "2026-09-04",
      "posted_date": "2026-08-07",
-     "event_date": "2026-09-03",
+     "event_date": "2026-09-04",
      "services": [
       "ATM"
      ],
-     "period": "2026年9月3日（木）18時～2026年9月4日（金）8時"
+     "period": "2026年9月4日（金）15時～2026年9月7日（月）8時"
     }
    ],
    "diag": {
@@ -646,7 +646,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-09-03",
+    "latest_seen": "2026-09-04",
     "sources": [
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
