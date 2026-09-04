@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-04T08:07:53.955387+09:00",
+ "updated": "2026-09-04T22:00:45.909916+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -122,6 +122,18 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "ゆうちょ通帳アプリおよびゆうちょダイレクトでの投資信託・国債取り扱いの一時休止について",
+     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002473.html",
+     "date": "2026-09-13",
+     "posted_date": null,
+     "event_date": "2026-09-13",
+     "services": [
+      "アプリ",
+      "投信"
+     ],
+     "period": "9月13日（日）0：00 ～ 14：00"
+    },
+    {
      "title": "「ゆうちょ通帳アプリ」システムメンテナンスのお知らせ",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002470.html",
      "date": "2026-09-06",
@@ -135,19 +147,19 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 18,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "raw_count": 19,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-09-06",
+    "latest_seen": "2026-09-13",
     "sources": [
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
       "ok": true,
-      "raw": 18,
+      "raw": 19,
       "parser": "link_list"
      }
     ]
