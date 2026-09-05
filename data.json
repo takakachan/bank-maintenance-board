@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-05T07:54:53.590554+09:00",
+ "updated": "2026-09-05T21:12:55.553245+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -204,30 +204,17 @@
    "regular": "マイゲート・アプリ：毎月第1月曜 2:00–6:00／第2土曜 23:00–翌日曜 6:00",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "【指扇支店】駐車場（全車室）利用停止期間のお知らせ",
-     "url": "https://www.saitamaresona.co.jp/kojin/oshirase_s/2026/detail/oshirase_9986.html",
-     "date": "2026-09-04",
-     "posted_date": null,
-     "event_date": "2026-09-04",
-     "services": [
-      "ATM",
-      "アプリ"
-     ],
-     "period": "2026年9月4日（金）18:00 ～ 9月5日（土）17:00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 2,
-    "kept_count": 1,
-    "dropped_past": 1,
+    "kept_count": 0,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-09-04",
+    "latest_seen": "2026-06-27",
     "sources": [
      {
       "url": "https://www.saitamaresona.co.jp/kojin/oshirase/",
