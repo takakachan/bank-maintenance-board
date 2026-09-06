@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-06T21:27:43.589156+09:00",
+ "updated": "2026-09-07T07:49:06.178746+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -136,13 +136,13 @@
     {
      "title": "「ゆうちょ通帳アプリ」システムメンテナンスのお知らせ",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002470.html",
-     "date": "2026-09-06",
+     "date": "2026-09-20",
      "posted_date": null,
-     "event_date": "2026-09-06",
+     "event_date": "2026-09-20",
      "services": [
       "アプリ"
      ],
-     "period": "2026年9月6日（日）23:55 ～ 9月7日（月）0:05"
+     "period": "2026年9月20日（日）3:15 ～ 3:25"
     }
    ],
    "diag": {
@@ -154,7 +154,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-09-13",
+    "latest_seen": "2026-09-20",
     "sources": [
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
@@ -234,47 +234,24 @@
    "regular": "毎週日曜 0:00–5:00 各種手続き停止ほか",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "銀行からのお知らせ ［臨時メンテナンス］振込サービス停止 9月6日（日）8:00 ～ 9月6日（日）22:00 詳細はこちら",
-     "url": "https://www.netbk.co.jp/contents/company/info/maintenance/",
-     "date": "2026-09-06",
-     "posted_date": null,
-     "event_date": "2026-09-06",
-     "services": [
-      "振込"
-     ],
-     "period": "9月6日（日）8:00 ～ 9月6日（日）22:00"
-    },
-    {
-     "title": "振込サービスにかかる臨時メンテナンスのご案内",
-     "url": "https://www.netbk.co.jp/contents/company/info/2026/0826_006267.html",
-     "date": "2026-09-06",
-     "posted_date": null,
-     "event_date": "2026-09-06",
-     "services": [
-      "振込"
-     ],
-     "period": "2026年9月6日(日) 8:00 ～ 9月6日(日) 22:00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
-    "raw_count": 11,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "status": "all_past",
+    "raw_count": 9,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
-     "text_block"
+     "none"
     ],
-    "latest_seen": "2026-09-06",
+    "latest_seen": null,
     "sources": [
      {
       "url": "https://www.netbk.co.jp/contents/company/info/maintenance/",
       "ok": true,
-      "raw": 2,
-      "parser": "text_block"
+      "raw": 0,
+      "parser": "none"
      },
      {
       "url": "https://www.netbk.co.jp/contents/company/info/",
@@ -411,17 +388,15 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "2026.09.01 システムメンテナンスに伴う、サービス停止のお知らせ（9月7日（月）、14日（月）0:00～7:00）",
-     "url": "https://www.aeonbank.co.jp/news/2026/0901_01/",
-     "date": "2026-09-07",
-     "posted_date": "2026-09-01",
-     "event_date": "2026-09-07",
+     "title": "口座開設申込（キャッシュ＋デビット・キャッシュカード）（停止日時は2026年9月7日（月）0:00～7:00のみ）",
+     "url": "https://www.aeonbank.co.jp/maintenance/",
+     "date": "2026-09-14",
+     "posted_date": null,
+     "event_date": "2026-09-14",
      "services": [
-      "アプリ",
-      "投信",
       "カード"
      ],
-     "period": "2026年9月7日（月）0:00～7:00"
+     "period": "2026年9月14日（月）0:00～7:00"
     }
    ],
    "diag": {
@@ -431,15 +406,16 @@
     "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
-     "link_list"
+     "link_list",
+     "text_block"
     ],
-    "latest_seen": "2026-09-07",
+    "latest_seen": "2026-09-14",
     "sources": [
      {
       "url": "https://www.aeonbank.co.jp/maintenance/",
       "ok": true,
       "raw": 1,
-      "parser": "link_list"
+      "parser": "text_block"
      },
      {
       "url": "https://www.aeonbank.co.jp/news/",
@@ -1057,24 +1033,12 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026.08.27 法人のお客様 法人向けインターネットバンキング臨時メンテナンスのお知らせ（2026年9月5日～9月6日）",
-     "url": "https://www.hokugin.co.jp/info/important/archives/corp/2026/post_64.html",
-     "date": "2026-09-05",
-     "posted_date": "2026-08-27",
-     "event_date": "2026-09-05",
-     "services": [
-      "アプリ"
-     ],
-     "period": "2026年9月5日～9月6日"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 3,
-    "kept_count": 1,
-    "dropped_past": 2,
+    "kept_count": 0,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
