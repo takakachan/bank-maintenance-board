@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-07T07:49:06.178746+09:00",
+ "updated": "2026-09-07T23:35:17.527710+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -614,13 +614,13 @@
     {
      "title": "2026年08月07日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/260807.html",
-     "date": "2026-09-04",
+     "date": "2026-09-08",
      "posted_date": "2026-08-07",
-     "event_date": "2026-09-04",
+     "event_date": "2026-09-08",
      "services": [
       "ATM"
      ],
-     "period": "2026年9月4日（金）15時～2026年9月7日（月）8時"
+     "period": "2026年9月8日（火）18時～2026年9月9日（水）8時"
     }
    ],
    "diag": {
@@ -632,7 +632,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-09-04",
+    "latest_seen": "2026-09-08",
     "sources": [
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
@@ -720,6 +720,18 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "2026/09/07 メンテナンス eL-QRを活用した地方公金収納開始に伴うシステムメンテナンスの実施について",
+     "url": "https://www.33bank.co.jp/news/oshirase20260907.html",
+     "date": "2026-09-19",
+     "posted_date": "2026-09-07",
+     "event_date": "2026-09-19",
+     "services": [
+      "振込",
+      "アプリ"
+     ],
+     "period": "2026年9月19日（土）0：00 ～ 24日（木）8：30"
+    },
+    {
      "title": "2026/09/01 メンテナンス 【三十三銀行アプリ】普通預金口座開設等における本人確認サービスのメンテナンス実施について",
      "url": "https://www.33bank.co.jp/news/oshirase20260901.html",
      "date": "2026-09-18",
@@ -733,19 +745,19 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 3,
-    "kept_count": 1,
+    "raw_count": 4,
+    "kept_count": 2,
     "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-09-18",
+    "latest_seen": "2026-09-19",
     "sources": [
      {
       "url": "https://www.33bank.co.jp/",
       "ok": true,
-      "raw": 3,
+      "raw": 4,
       "parser": "link_list"
      }
     ]
@@ -933,6 +945,18 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "2026年09月07日 システムメンテナンスによる「ぐんぎんアプリ 投信取引サービス」休止について",
+     "url": "https://www.gunmabank.co.jp/info/gbnotice/gbnotice20260907.html",
+     "date": "2026-09-13",
+     "posted_date": "2026-09-07",
+     "event_date": "2026-09-13",
+     "services": [
+      "アプリ",
+      "投信"
+     ],
+     "period": "2026年9月13日（日）0：00～14：00"
+    },
+    {
      "title": "2026年08月28日 フリーローン「おまとめ太郎」WEB完結サービス一時停止のお知らせ",
      "url": "https://www.gunmabank.co.jp/info/gbnotice/gbnotice20260828.html",
      "date": "2026-09-14",
@@ -946,8 +970,8 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 2,
-    "kept_count": 1,
+    "raw_count": 3,
+    "kept_count": 2,
     "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
@@ -958,7 +982,7 @@
      {
       "url": "https://www.gunmabank.co.jp/info/gbnotice/",
       "ok": true,
-      "raw": 2,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
@@ -1033,12 +1057,20 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026.08.27 法人のお客様 法人向けインターネットバンキング臨時メンテナンスのお知らせ（2026年9月5日～9月6日）",
+     "url": "https://www.hokugin.co.jp/info/important/archives/corp/2026/post_64.html",
+     "date": "2026-09-05",
+     "posted_date": "2026-08-27",
+     "event_date": "2026-09-05"
+    }
+   ],
    "diag": {
-    "status": "all_past",
+    "status": "ok",
     "raw_count": 3,
-    "kept_count": 0,
-    "dropped_past": 3,
+    "kept_count": 1,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -1176,17 +1208,29 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "システムの定期メンテナンスに伴うオンラインサービスの一時休止について",
+     "url": "https://www.ncbank.co.jp/oshirase/2026/20260907-maintenance/",
+     "date": "2026-09-20",
+     "posted_date": null,
+     "event_date": "2026-09-20",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026年9月20日（日）21:00 ～ 2026年9月21日（月・祝）6:00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
+    "status": "ok",
     "raw_count": 1,
-    "kept_count": 0,
-    "dropped_past": 1,
+    "kept_count": 1,
+    "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-09-20",
     "sources": [
      {
       "url": "https://www.ncbank.co.jp/benri/direct/internet/news.html",
