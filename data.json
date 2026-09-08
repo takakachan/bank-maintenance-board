@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-08T08:21:46.924231+09:00",
+ "updated": "2026-09-08T22:10:05.004339+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -355,23 +355,37 @@
    "regular": "毎月第2土曜の翌日曜 0:00–7:00／カードローン：毎週月曜 1:00–5:00",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "【au PAY 残高チャージ等】システムメンテナンスのお知らせ メンテナンス日時 2026年9月10日（木）1：00 ～ 7：00",
+     "url": "https://www.jibunbank.co.jp/maintenance/",
+     "date": "2026-09-10",
+     "posted_date": null,
+     "event_date": "2026-09-10",
+     "services": [
+      "ATM",
+      "振込",
+      "アプリ"
+     ],
+     "period": "2026年9月10日（木）1：00 ～ 7：00"
+    }
+   ],
    "diag": {
-    "status": "no_notice",
-    "raw_count": 0,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 1,
+    "kept_count": 1,
     "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
-     "none"
+     "text_block"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-09-10",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
       "ok": true,
-      "raw": 0,
-      "parser": "none"
+      "raw": 1,
+      "parser": "text_block"
      }
     ]
    }
