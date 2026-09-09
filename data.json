@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-09T22:15:01.928617+09:00",
+ "updated": "2026-09-10T08:06:05.644252+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -354,8 +354,7 @@
       "ATM",
       "振込",
       "アプリ"
-     ],
-     "period": "2026年9月10日（木）1：00 ～ 7：00"
+     ]
     }
    ],
    "diag": {
@@ -690,7 +689,7 @@
      "url": "https://www.hyakugo.co.jp/whats_new/20260909_01.html",
      "date": "2026-09-09",
      "posted_date": "2026-09-09",
-     "event_date": "2026-09-09",
+     "event_date": "2026-09-13",
      "services": [
       "アプリ"
      ]
@@ -731,7 +730,7 @@
      "url": "https://www.33bank.co.jp/news/oshirase20260909.html",
      "date": "2026-09-09",
      "posted_date": "2026-09-09",
-     "event_date": "2026-09-09",
+     "event_date": "2027-09-08",
      "services": [
       "ATM"
      ]
@@ -869,6 +868,15 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "【重要】WEB口座開設サービス システムメンテナンスのお知らせ",
+     "url": "https://www.chibabank.co.jp/notices/notices20260909_01",
+     "date": "2026-09-15",
+     "posted_date": "2026-09-09",
+     "event_date": "2026-09-15",
+     "services": [],
+     "period": "2026年9月15日（火）3：00～6：00"
+    },
+    {
      "title": "【重要】ちばぎんアプリ（QRコードでの税金・料金支払機能）の臨時休止について",
      "url": "https://www.chibabank.co.jp/notices/notices20260901_01",
      "date": "2026-09-19",
@@ -903,8 +911,8 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 3,
-    "kept_count": 3,
+    "raw_count": 4,
+    "kept_count": 4,
     "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
@@ -915,7 +923,7 @@
      {
       "url": "https://www.chibabank.co.jp/sitemap/www.chibabank.co.jp/sitemap_notices_0.xml",
       "ok": true,
-      "raw": 3,
+      "raw": 4,
       "parser": "sitemap"
      }
     ]
