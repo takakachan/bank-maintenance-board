@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-09T08:16:26.857439+09:00",
+ "updated": "2026-09-09T22:15:01.928617+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -389,6 +389,15 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "2026.09.09 システムメンテナンスに伴う、サービス停止のお知らせ（2026年9月13日（日）0:00～7:00）",
+     "url": "https://www.aeonbank.co.jp/news/2026/0909_01/",
+     "date": "2026-09-13",
+     "posted_date": "2026-09-09",
+     "event_date": "2026-09-13",
+     "services": [],
+     "period": "2026年9月13日（日）0:00～7:00"
+    },
+    {
      "title": "口座開設申込（キャッシュ＋デビット・キャッシュカード）（停止日時は2026年9月7日（月）0:00～7:00のみ）",
      "url": "https://www.aeonbank.co.jp/maintenance/",
      "date": "2026-09-14",
@@ -402,9 +411,9 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 26,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "raw_count": 27,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
@@ -421,7 +430,7 @@
      {
       "url": "https://www.aeonbank.co.jp/news/",
       "ok": true,
-      "raw": 25,
+      "raw": 26,
       "parser": "link_list"
      }
     ]
@@ -500,31 +509,17 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026年09月01日 システムメンテナンスによる当社サービスの一時休止について",
-     "url": "https://www.okb.co.jp/archive/2026/20260901-01.html",
-     "date": "2026-09-09",
-     "posted_date": "2026-09-01",
-     "event_date": "2026-09-09",
-     "services": [
-      "ATM",
-      "振込",
-      "アプリ"
-     ],
-     "period": "２０２６年９月９日（水） １７時～２０時"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 2,
-    "kept_count": 1,
-    "dropped_past": 1,
+    "kept_count": 0,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-09-09",
+    "latest_seen": "2026-09-01",
     "sources": [
      {
       "url": "https://www.okb.co.jp/",
@@ -613,10 +608,10 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "2026年08月07日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
-     "url": "https://www.aichibank.co.jp/important_infomation/details/260807.html",
+     "title": "2026年09月09日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
+     "url": "https://www.aichibank.co.jp/important_infomation/details/260909.html",
      "date": "2026-09-10",
-     "posted_date": "2026-08-07",
+     "posted_date": "2026-09-09",
      "event_date": "2026-09-10",
      "services": [
       "ATM"
@@ -626,9 +621,9 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 1,
+    "raw_count": 2,
     "kept_count": 1,
-    "dropped_past": 0,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -638,7 +633,7 @@
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
       "ok": true,
-      "raw": 1,
+      "raw": 2,
       "parser": "link_list"
      }
     ]
@@ -689,22 +684,33 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026年09月09日 お知らせ 個人向けインターネットバンキングのサービス臨時停止のお知らせ",
+     "url": "https://www.hyakugo.co.jp/whats_new/20260909_01.html",
+     "date": "2026-09-09",
+     "posted_date": "2026-09-09",
+     "event_date": "2026-09-09",
+     "services": [
+      "アプリ"
+     ]
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 2,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 3,
+    "kept_count": 1,
     "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-06-26",
+    "latest_seen": "2026-09-09",
     "sources": [
      {
       "url": "https://www.hyakugo.co.jp/whats_new/",
       "ok": true,
-      "raw": 2,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
@@ -720,6 +726,16 @@
    "note": null,
    "fetch_ok": true,
    "items": [
+    {
+     "title": "2026/09/09 大雨の影響による広路支店の一部お取引停止について",
+     "url": "https://www.33bank.co.jp/news/oshirase20260909.html",
+     "date": "2026-09-09",
+     "posted_date": "2026-09-09",
+     "event_date": "2026-09-09",
+     "services": [
+      "ATM"
+     ]
+    },
     {
      "title": "2026/09/07 メンテナンス eL-QRを活用した地方公金収納開始に伴うシステムメンテナンスの実施について",
      "url": "https://www.33bank.co.jp/news/oshirase20260907.html",
@@ -746,8 +762,8 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 4,
-    "kept_count": 2,
+    "raw_count": 5,
+    "kept_count": 3,
     "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
@@ -758,7 +774,7 @@
      {
       "url": "https://www.33bank.co.jp/",
       "ok": true,
-      "raw": 4,
+      "raw": 5,
       "parser": "link_list"
      }
     ]
