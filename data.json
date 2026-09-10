@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-10T22:12:44.260608+09:00",
+ "updated": "2026-09-11T08:01:47.257895+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -367,25 +367,12 @@
    "regular": "毎月第2土曜の翌日曜 0:00–7:00／カードローン：毎週月曜 1:00–5:00",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "【au PAY 残高チャージ等】システムメンテナンスのお知らせ メンテナンス日時 2026年9月10日（木）1：00 ～ 7：00",
-     "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-09-10",
-     "posted_date": null,
-     "event_date": "2026-09-10",
-     "services": [
-      "ATM",
-      "振込",
-      "アプリ"
-     ]
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 1,
-    "kept_count": 1,
-    "dropped_past": 0,
+    "kept_count": 0,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "text_block"
@@ -633,13 +620,13 @@
     {
      "title": "2026年09月09日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/260909.html",
-     "date": "2026-09-10",
+     "date": "2026-09-11",
      "posted_date": "2026-09-09",
-     "event_date": "2026-09-10",
+     "event_date": "2026-09-11",
      "services": [
       "ATM"
      ],
-     "period": "2026年9月10日（木）18時～2026年9月11日（金）8時"
+     "period": "2026年9月11日（金）18時～2026年9月12日（土）8時"
     }
    ],
    "diag": {
@@ -651,7 +638,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-09-10",
+    "latest_seen": "2026-09-11",
     "sources": [
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
