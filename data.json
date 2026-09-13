@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-13T22:32:00.678004+09:00",
+ "updated": "2026-09-14T08:02:13.512810+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -353,22 +353,35 @@
    "regular": "毎月第2土曜の翌日曜 0:00–7:00／カードローン：毎週月曜 1:00–5:00",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "【じぶん銀行スマホデビット】システムメンテナンスのお知らせ メンテナンス日時 2026年9月20日（日）0：50 ～ 6：10",
+     "url": "https://www.jibunbank.co.jp/maintenance/",
+     "date": "2026-09-20",
+     "posted_date": null,
+     "event_date": "2026-09-20",
+     "services": [
+      "アプリ",
+      "カード"
+     ],
+     "period": "2026年9月20日（日）0：50 ～ 6：10"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 1,
-    "kept_count": 0,
-    "dropped_past": 1,
+    "status": "ok",
+    "raw_count": 2,
+    "kept_count": 1,
+    "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
      "text_block"
     ],
-    "latest_seen": "2026-09-10",
+    "latest_seen": "2026-09-20",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
       "ok": true,
-      "raw": 1,
+      "raw": 2,
       "parser": "text_block"
      }
     ]
@@ -383,38 +396,18 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026.09.09 システムメンテナンスに伴う、サービス停止のお知らせ（2026年9月13日（日）0:00～7:00）",
-     "url": "https://www.aeonbank.co.jp/news/2026/0909_01/",
-     "date": "2026-09-13",
-     "posted_date": "2026-09-09",
-     "event_date": "2026-09-13",
-     "services": []
-    },
-    {
-     "title": "口座開設申込（キャッシュ＋デビット・キャッシュカード）（停止日時は2026年9月7日（月）0:00～7:00のみ）",
-     "url": "https://www.aeonbank.co.jp/maintenance/",
-     "date": "2026-09-14",
-     "posted_date": null,
-     "event_date": "2026-09-14",
-     "services": [
-      "カード"
-     ],
-     "period": "2026年9月14日（月）0:00～7:00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 27,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
      "text_block"
     ],
-    "latest_seen": "2026-09-14",
+    "latest_seen": "2026-09-13",
     "sources": [
      {
       "url": "https://www.aeonbank.co.jp/maintenance/",
@@ -605,13 +598,13 @@
     {
      "title": "2026年09月09日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/260909.html",
-     "date": "2026-09-11",
+     "date": "2026-09-15",
      "posted_date": "2026-09-09",
-     "event_date": "2026-09-11",
+     "event_date": "2026-09-15",
      "services": [
       "ATM"
      ],
-     "period": "2026年9月11日（金）15時～2026年9月14日（月）8時"
+     "period": "2026年9月15日（火）18時～2026年9月16日（水）8時"
     }
    ],
    "diag": {
@@ -623,7 +616,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-09-11",
+    "latest_seen": "2026-09-15",
     "sources": [
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
@@ -697,7 +690,7 @@
      "url": "https://www.hyakugo.co.jp/whats_new/20260909_01.html",
      "date": "2026-09-09",
      "posted_date": "2026-09-09",
-     "event_date": "2026-09-13",
+     "event_date": "2026-09-16",
      "services": [
       "アプリ"
      ]
