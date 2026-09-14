@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-14T08:02:13.512810+09:00",
+ "updated": "2026-09-15T00:25:50.301074+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -396,29 +396,39 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026.09.14 システムメンテナンスに伴う、サービス停止のお知らせ（2026年9月28日（月）0:00～7:00）",
+     "url": "https://www.aeonbank.co.jp/news/2026/0914_01/",
+     "date": "2026-09-28",
+     "posted_date": "2026-09-14",
+     "event_date": "2026-09-28",
+     "services": [],
+     "period": "2026年9月28日（月）0:00～7:00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
+    "status": "ok",
     "raw_count": 27,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
-     "text_block"
+     "none"
     ],
-    "latest_seen": "2026-09-13",
+    "latest_seen": "2026-09-28",
     "sources": [
      {
       "url": "https://www.aeonbank.co.jp/maintenance/",
       "ok": true,
-      "raw": 1,
-      "parser": "text_block"
+      "raw": 0,
+      "parser": "none"
      },
      {
       "url": "https://www.aeonbank.co.jp/news/",
       "ok": true,
-      "raw": 26,
+      "raw": 27,
       "parser": "link_list"
      }
     ]
@@ -890,9 +900,9 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 4,
+    "raw_count": 3,
     "kept_count": 3,
-    "dropped_past": 1,
+    "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
      "sitemap"
@@ -902,7 +912,7 @@
      {
       "url": "https://www.chibabank.co.jp/sitemap/www.chibabank.co.jp/sitemap_notices_0.xml",
       "ok": true,
-      "raw": 4,
+      "raw": 3,
       "parser": "sitemap"
      }
     ]
