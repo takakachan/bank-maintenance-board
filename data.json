@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-15T00:25:50.301074+09:00",
+ "updated": "2026-09-15T08:46:38.020816+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -827,6 +827,15 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "住宅ローン審査システム更改に伴うご案内",
+     "url": "https://www.shizuokabank.co.jp/notice/detail/20260915_Kv0/",
+     "date": "2026-10-10",
+     "posted_date": "2026-09-15",
+     "event_date": "2026-10-10",
+     "services": [],
+     "period": "10月10日（土）から10月18日（日）"
+    },
+    {
      "title": "教育ローン（カードタイプ）とカードローンの極度額変更の申込一時停止のお知らせ",
      "url": "https://www.shizuokabank.co.jp/notice/detail/20260818_VmZ/",
      "date": "2026-09-01",
@@ -840,19 +849,19 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 2,
-    "kept_count": 1,
+    "raw_count": 3,
+    "kept_count": 2,
     "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "json"
     ],
-    "latest_seen": "2026-09-01",
+    "latest_seen": "2026-10-10",
     "sources": [
      {
       "url": "https://www.shizuokabank.co.jp/common/components/info.json",
       "ok": true,
-      "raw": 2,
+      "raw": 3,
       "parser": "json"
      }
     ]
@@ -868,15 +877,6 @@
    "note": null,
    "fetch_ok": true,
    "items": [
-    {
-     "title": "【重要】WEB口座開設サービス システムメンテナンスのお知らせ",
-     "url": "https://www.chibabank.co.jp/notices/notices20260909_01",
-     "date": "2026-09-15",
-     "posted_date": "2026-09-09",
-     "event_date": "2026-09-15",
-     "services": [],
-     "period": "2026年9月15日（火）3：00～6：00"
-    },
     {
      "title": "【重要】ちばぎんアプリ（QRコードでの税金・料金支払機能）の臨時休止について",
      "url": "https://www.chibabank.co.jp/notices/notices20260901_01",
@@ -901,8 +901,8 @@
    "diag": {
     "status": "ok",
     "raw_count": 3,
-    "kept_count": 3,
-    "dropped_past": 0,
+    "kept_count": 2,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "sitemap"
