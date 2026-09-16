@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-16T08:28:12.173177+09:00",
+ "updated": "2026-09-16T22:52:12.403798+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -244,18 +244,30 @@
    "regular": "毎週日曜 0:00–5:00 各種手続き停止ほか",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "振込サービスにかかる臨時メンテナンスのご案内",
+     "url": "https://www.netbk.co.jp/contents/company/info/2026/0916_006314.html",
+     "date": "2026-10-09",
+     "posted_date": null,
+     "event_date": "2026-10-09",
+     "services": [
+      "振込"
+     ],
+     "period": "2026年10月9日(金) 15:00 ～ 10月13日(火) 8:00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 9,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "status": "ok",
+    "raw_count": 10,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
      "none"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-10-09",
     "sources": [
      {
       "url": "https://www.netbk.co.jp/contents/company/info/maintenance/",
@@ -266,7 +278,7 @@
      {
       "url": "https://www.netbk.co.jp/contents/company/info/",
       "ok": true,
-      "raw": 9,
+      "raw": 10,
       "parser": "link_list"
      }
     ]
@@ -355,33 +367,34 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "【じぶん銀行スマホデビット】システムメンテナンスのお知らせ メンテナンス日時 2026年9月20日（日）0：50 ～ 6：10",
+     "title": "じぶん銀行FX メンテナンス日時 2026年9月19日（土）5：50 ～ 15：00 じぶん銀行FXのシステムメンテナンス時間を通常よりも延長し、サービスを停止いたします。 ※ 終了時間は前後する場合があります。あらかじめご了承ください。 ",
      "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-09-20",
+     "date": "2026-09-19",
      "posted_date": null,
-     "event_date": "2026-09-20",
+     "event_date": "2026-09-19",
      "services": [
+      "振込",
       "アプリ",
       "カード"
      ],
-     "period": "2026年9月20日（日）0：50 ～ 6：10"
+     "period": "2026年9月19日（土）5：50 ～ 15：00"
     }
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 2,
+    "raw_count": 3,
     "kept_count": 1,
     "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
      "text_block"
     ],
-    "latest_seen": "2026-09-20",
+    "latest_seen": "2026-09-19",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
       "ok": true,
-      "raw": 2,
+      "raw": 3,
       "parser": "text_block"
      }
     ]
@@ -660,9 +673,9 @@
     "sources": [
      {
       "url": "https://www.meigin.com/kojin/bankstage/news/",
-      "ok": true,
+      "ok": false,
       "raw": 0,
-      "parser": "none"
+      "parser": "fetch_failed"
      },
      {
       "url": "https://www.meigin.com/",
@@ -960,19 +973,19 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 2,
+    "raw_count": 1,
     "kept_count": 0,
-    "dropped_past": 2,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-09-07",
+    "latest_seen": "2026-05-22",
     "sources": [
      {
       "url": "https://www.gunmabank.co.jp/info/gbnotice/",
       "ok": true,
-      "raw": 2,
+      "raw": 1,
       "parser": "link_list"
      }
     ]
