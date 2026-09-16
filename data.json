@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-16T22:52:12.403798+09:00",
+ "updated": "2026-09-17T08:35:39.989713+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -707,23 +707,13 @@
       "投信"
      ],
      "period": "2026年10月31日（土）0:00 ～ 11月1日（日）24:00"
-    },
-    {
-     "title": "2026年09月09日 お知らせ 個人向けインターネットバンキングのサービス臨時停止のお知らせ",
-     "url": "https://www.hyakugo.co.jp/whats_new/20260909_01.html",
-     "date": "2026-09-09",
-     "posted_date": "2026-09-09",
-     "event_date": "2026-09-16",
-     "services": [
-      "アプリ"
-     ]
     }
    ],
    "diag": {
     "status": "ok",
     "raw_count": 4,
-    "kept_count": 2,
-    "dropped_past": 2,
+    "kept_count": 1,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
