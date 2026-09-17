@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-17T08:35:39.989713+09:00",
+ "updated": "2026-09-17T22:56:16.367352+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -411,26 +411,39 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "2026.09.14 システムメンテナンスに伴う、サービス停止のお知らせ（2026年9月28日（月）0:00～7:00）",
+     "title": "2026.09.17 システムメンテナンスに伴う、サービス停止のお知らせ（2026年10月4日（日）0:00～7:00）",
+     "url": "https://www.aeonbank.co.jp/news/2026/0917_02/",
+     "date": "2026-10-04",
+     "posted_date": "2026-09-17",
+     "event_date": "2026-10-04",
+     "services": [],
+     "period": "2026年10月4日（日）0:00～7:00"
+    },
+    {
+     "title": "2026.09.17 システムメンテナンスに伴う、サービス停止のお知らせ（2026年9月28日（月）0:00～7:00）",
      "url": "https://www.aeonbank.co.jp/news/2026/0914_01/",
      "date": "2026-09-28",
-     "posted_date": "2026-09-14",
+     "posted_date": "2026-09-17",
      "event_date": "2026-09-28",
-     "services": [],
+     "services": [
+      "アプリ",
+      "投信",
+      "カード"
+     ],
      "period": "2026年9月28日（月）0:00～7:00"
     }
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 27,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "raw_count": 28,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
      "none"
     ],
-    "latest_seen": "2026-09-28",
+    "latest_seen": "2026-10-04",
     "sources": [
      {
       "url": "https://www.aeonbank.co.jp/maintenance/",
@@ -441,7 +454,7 @@
      {
       "url": "https://www.aeonbank.co.jp/news/",
       "ok": true,
-      "raw": 27,
+      "raw": 28,
       "parser": "link_list"
      }
     ]
@@ -792,22 +805,34 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "eLTAX 更改に伴う一部サービスの停止",
+     "url": "https://www.hekishin.jp/news/files/20260917.pdf",
+     "date": "2026-09-19",
+     "posted_date": null,
+     "event_date": "2026-09-19",
+     "services": [
+      "アプリ"
+     ],
+     "period": "９月１９日（土）０時～９月２４日（木）８時３０分"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 14,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 15,
+    "kept_count": 1,
     "dropped_past": 3,
-    "dropped_undated": 2,
+    "dropped_undated": 1,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-09-19",
     "sources": [
      {
       "url": "https://www.hekishin.jp/news/",
       "ok": true,
-      "raw": 9,
+      "raw": 10,
       "parser": "link_list"
      },
      {
