@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-17T22:56:16.367352+09:00",
+ "updated": "2026-09-18T08:27:31.608000+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -634,13 +634,13 @@
     {
      "title": "2026年09月09日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/260909.html",
-     "date": "2026-09-17",
+     "date": "2026-09-24",
      "posted_date": "2026-09-09",
-     "event_date": "2026-09-17",
+     "event_date": "2026-09-24",
      "services": [
       "ATM"
      ],
-     "period": "2026年9月17日（木）18時～2026年9月18日（金）8時"
+     "period": "2026年9月24日（木）18時～2026年9月25日（金）8時"
     }
    ],
    "diag": {
@@ -652,7 +652,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-09-17",
+    "latest_seen": "2026-09-24",
     "sources": [
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
@@ -763,23 +763,12 @@
       "アプリ"
      ],
      "period": "2026年9月19日（土）0：00 ～ 24日（木）8：30"
-    },
-    {
-     "title": "2026/09/01 メンテナンス 【三十三銀行アプリ】普通預金口座開設等における本人確認サービスのメンテナンス実施について",
-     "url": "https://www.33bank.co.jp/news/oshirase20260901.html",
-     "date": "2026-09-18",
-     "posted_date": "2026-09-01",
-     "event_date": "2026-09-18",
-     "services": [
-      "アプリ"
-     ],
-     "period": "2026年9月18日（金）0:00 ～ 5:00"
     }
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 4,
-    "kept_count": 2,
+    "raw_count": 3,
+    "kept_count": 1,
     "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
@@ -790,7 +779,7 @@
      {
       "url": "https://www.33bank.co.jp/",
       "ok": true,
-      "raw": 4,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
