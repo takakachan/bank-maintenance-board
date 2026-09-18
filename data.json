@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-18T08:27:31.608000+09:00",
+ "updated": "2026-09-18T22:15:05.954037+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -122,6 +122,18 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "ゆうちょダイレクトによる投資信託・NISA口座開設申し込みサービスの一部仕様変更およびシステムメンテナンスのお知らせ",
+     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002480.html",
+     "date": "2026-10-05",
+     "posted_date": null,
+     "event_date": "2026-10-05",
+     "services": [
+      "アプリ",
+      "投信"
+     ],
+     "period": "2026年10月5日（月）20:00 ～ 24:00頃"
+    },
+    {
      "title": "「ゆうちょの国際送金」webサイトのシステムメンテナンスのお知らせ",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002478.html",
      "date": "2026-09-19",
@@ -157,19 +169,19 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 22,
-    "kept_count": 3,
-    "dropped_past": 2,
+    "raw_count": 23,
+    "kept_count": 4,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-09-20",
+    "latest_seen": "2026-10-05",
     "sources": [
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
       "ok": true,
-      "raw": 22,
+      "raw": 23,
       "parser": "link_list"
      }
     ]
@@ -431,13 +443,24 @@
       "カード"
      ],
      "period": "2026年9月28日（月）0:00～7:00"
+    },
+    {
+     "title": "2026.09.18 マネックス証券のシステムメンテナンスに伴う投資信託（金融商品仲介）受付業務休止について（9月26日（土）12:00～22:00）",
+     "url": "https://www.aeonbank.co.jp/news/2026/0918_01/",
+     "date": "2026-09-26",
+     "posted_date": "2026-09-18",
+     "event_date": "2026-09-26",
+     "services": [
+      "投信"
+     ],
+     "period": "2026年9月26日（土）12:00～22:00"
     }
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 28,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "raw_count": 29,
+    "kept_count": 3,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
@@ -454,7 +477,7 @@
      {
       "url": "https://www.aeonbank.co.jp/news/",
       "ok": true,
-      "raw": 28,
+      "raw": 29,
       "parser": "link_list"
      }
     ]
