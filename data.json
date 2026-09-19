@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-19T21:46:02.400706+09:00",
+ "updated": "2026-09-20T07:48:07.954291+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -136,35 +136,35 @@
     {
      "title": "「ゆうちょの国際送金」webサイトのシステムメンテナンスのお知らせ",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002478.html",
-     "date": "2026-09-19",
+     "date": "2026-09-21",
      "posted_date": null,
-     "event_date": "2026-09-19",
+     "event_date": "2026-09-21",
      "services": [
       "振込"
      ],
-     "period": "2026年9月19日（土）23:55 ～ 2026年9月20日（日）5:20"
+     "period": "2026年9月21日（月・祝）2:40 ～ 2:55"
     },
     {
      "title": "「口座貸越サービス」お申し込みサイトのシステムメンテナンスのお知らせ",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002468.html",
-     "date": "2026-09-20",
+     "date": "2026-09-21",
      "posted_date": null,
-     "event_date": "2026-09-20",
+     "event_date": "2026-09-21",
      "services": [
       "アプリ"
      ],
-     "period": "2026年9月20日（日） 3:15～3:25"
+     "period": "2026年9月21日（月・祝）2:45～2:55"
     },
     {
      "title": "「ゆうちょ手続きアプリ」システムメンテナンスのお知らせ",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002475.html",
-     "date": "2026-09-20",
+     "date": "2026-09-21",
      "posted_date": null,
-     "event_date": "2026-09-20",
+     "event_date": "2026-09-21",
      "services": [
       "アプリ"
      ],
-     "period": "2026年9月20日（日）3時10分～3時25分"
+     "period": "2026年9月21日（月）2時40分～2時55分"
     }
    ],
    "diag": {
@@ -377,31 +377,17 @@
    "regular": "毎月第2土曜の翌日曜 0:00–7:00／カードローン：毎週月曜 1:00–5:00",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "じぶん銀行FX メンテナンス日時 2026年9月19日（土）5：50 ～ 15：00 じぶん銀行FXのシステムメンテナンス時間を通常よりも延長し、サービスを停止いたします。 ※ 終了時間は前後する場合があります。あらかじめご了承ください。 ",
-     "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-09-20",
-     "posted_date": null,
-     "event_date": "2026-09-20",
-     "services": [
-      "振込",
-      "アプリ",
-      "カード"
-     ],
-     "period": "2026年9月20日（日）0：50 ～ 6：10"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 3,
-    "kept_count": 1,
-    "dropped_past": 0,
+    "kept_count": 0,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "text_block"
     ],
-    "latest_seen": "2026-09-20",
+    "latest_seen": "2026-09-19",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
