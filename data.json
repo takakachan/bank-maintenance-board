@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-20T22:18:50.671479+09:00",
+ "updated": "2026-09-21T08:05:48.737116+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -132,46 +132,13 @@
       "投信"
      ],
      "period": "2026年10月5日（月）20:00 ～ 24:00頃"
-    },
-    {
-     "title": "「ゆうちょの国際送金」webサイトのシステムメンテナンスのお知らせ",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002478.html",
-     "date": "2026-09-21",
-     "posted_date": null,
-     "event_date": "2026-09-21",
-     "services": [
-      "振込"
-     ],
-     "period": "2026年9月21日（月・祝）2:40 ～ 2:55"
-    },
-    {
-     "title": "「口座貸越サービス」お申し込みサイトのシステムメンテナンスのお知らせ",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002468.html",
-     "date": "2026-09-21",
-     "posted_date": null,
-     "event_date": "2026-09-21",
-     "services": [
-      "アプリ"
-     ],
-     "period": "2026年9月21日（月・祝）2:45～2:55"
-    },
-    {
-     "title": "「ゆうちょ手続きアプリ」システムメンテナンスのお知らせ",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002475.html",
-     "date": "2026-09-21",
-     "posted_date": null,
-     "event_date": "2026-09-21",
-     "services": [
-      "アプリ"
-     ],
-     "period": "2026年9月21日（月）2時40分～2時55分"
     }
    ],
    "diag": {
     "status": "ok",
     "raw_count": 23,
-    "kept_count": 4,
-    "dropped_past": 1,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -1153,9 +1120,9 @@
     {
      "title": "他行宛振込の即時入金停止のお知らせ",
      "url": "https://www.fukuokabank.co.jp/announcement/important/y2026/service-suspension_3.html",
-     "date": "2026-09-20",
+     "date": "2026-09-24",
      "posted_date": null,
-     "event_date": "2026-09-20",
+     "event_date": "2026-09-24",
      "services": [
       "振込"
      ]
@@ -1170,7 +1137,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-09-20",
+    "latest_seen": "2026-09-24",
     "sources": [
      {
       "url": "https://www.fukuokabank.co.jp/announcement/important/",
@@ -1190,29 +1157,17 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "システムの定期メンテナンスに伴うオンラインサービスの一時休止について",
-     "url": "https://www.ncbank.co.jp/oshirase/2026/20260907-maintenance/",
-     "date": "2026-09-20",
-     "posted_date": null,
-     "event_date": "2026-09-20",
-     "services": [
-      "アプリ"
-     ],
-     "period": "2026年9月20日（日）21:00 ～ 2026年9月21日（月・祝）6:00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 1,
-    "kept_count": 1,
-    "dropped_past": 0,
+    "kept_count": 0,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-09-20",
+    "latest_seen": null,
     "sources": [
      {
       "url": "https://www.ncbank.co.jp/benri/direct/internet/news.html",
