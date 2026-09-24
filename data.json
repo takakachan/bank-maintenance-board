@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-24T22:54:06.340170+09:00",
+ "updated": "2026-09-25T08:48:30.669029+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -344,7 +344,7 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "じぶん銀行FX メンテナンス日時 2026年9月19日（土）5：50 ～ 15：00 じぶん銀行FXのシステムメンテナンス時間を通常よりも延長し、サービスを停止いたします。 ※ 終了時間は前後する場合があります。あらかじめご了承ください。 ",
+     "title": "じぶん銀行FX メンテナンス日時 2026年9月26日（土）5：50 ～ 15：00 じぶん銀行FXのシステムメンテナンス時間を通常よりも延長し、サービスを停止いたします。 ※ 終了時間は前後する場合があります。あらかじめご了承ください。 ",
      "url": "https://www.jibunbank.co.jp/maintenance/",
      "date": "2026-09-26",
      "posted_date": null,
@@ -622,13 +622,13 @@
     {
      "title": "2026年09月09日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/260909.html",
-     "date": "2026-09-24",
+     "date": "2026-10-06",
      "posted_date": "2026-09-09",
-     "event_date": "2026-09-24",
+     "event_date": "2026-10-06",
      "services": [
       "ATM"
      ],
-     "period": "2026年9月24日（木）18時～2026年9月25日（金）8時"
+     "period": "2026年10月6日（火）18時～2026年10月7日（水）8時"
     }
    ],
    "diag": {
@@ -640,7 +640,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-09-24",
+    "latest_seen": "2026-10-06",
     "sources": [
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
@@ -859,19 +859,19 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 1,
+    "raw_count": 2,
     "kept_count": 0,
-    "dropped_past": 1,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "sitemap"
     ],
-    "latest_seen": "2026-09-01",
+    "latest_seen": "2026-09-24",
     "sources": [
      {
       "url": "https://www.chibabank.co.jp/sitemap/www.chibabank.co.jp/sitemap_notices_0.xml",
       "ok": true,
-      "raw": 1,
+      "raw": 2,
       "parser": "sitemap"
      }
     ]
@@ -1120,9 +1120,9 @@
     {
      "title": "他行宛振込の即時入金停止のお知らせ",
      "url": "https://www.fukuokabank.co.jp/announcement/important/y2026/service-suspension_3.html",
-     "date": "2026-09-24",
+     "date": "2027-09-19",
      "posted_date": null,
-     "event_date": "2026-09-24",
+     "event_date": "2027-09-19",
      "services": [
       "振込"
      ]
@@ -1137,7 +1137,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-09-24",
+    "latest_seen": "2027-09-19",
     "sources": [
      {
       "url": "https://www.fukuokabank.co.jp/announcement/important/",
