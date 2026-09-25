@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-25T08:48:30.669029+09:00",
+ "updated": "2026-09-25T23:17:58.600195+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -859,9 +859,9 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 2,
+    "raw_count": 1,
     "kept_count": 0,
-    "dropped_past": 2,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "sitemap"
@@ -871,7 +871,7 @@
      {
       "url": "https://www.chibabank.co.jp/sitemap/www.chibabank.co.jp/sitemap_notices_0.xml",
       "ok": true,
-      "raw": 2,
+      "raw": 1,
       "parser": "sitemap"
      }
     ]
