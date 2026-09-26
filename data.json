@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-26T22:28:37.811451+09:00",
+ "updated": "2026-09-27T08:26:58.330771+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -342,31 +342,17 @@
    "regular": "毎月第2土曜の翌日曜 0:00–7:00／カードローン：毎週月曜 1:00–5:00",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "じぶん銀行FX メンテナンス日時 2026年9月26日（土）5：50 ～ 15：00 じぶん銀行FXのシステムメンテナンス時間を通常よりも延長し、サービスを停止いたします。 ※ 終了時間は前後する場合があります。あらかじめご了承ください。 ",
-     "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-09-27",
-     "posted_date": null,
-     "event_date": "2026-09-27",
-     "services": [
-      "振込",
-      "アプリ",
-      "カード"
-     ],
-     "period": "2026年9月27日（日）2：00 ～ 5：30"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 3,
-    "kept_count": 1,
-    "dropped_past": 0,
+    "kept_count": 0,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "text_block"
     ],
-    "latest_seen": "2026-09-27",
+    "latest_seen": "2026-09-26",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
@@ -408,23 +394,13 @@
       "カード"
      ],
      "period": "2026年9月28日（月）0:00～7:00"
-    },
-    {
-     "title": "2026.09.18 マネックス証券のシステムメンテナンスに伴う投資信託（金融商品仲介）受付業務休止について（9月26日（土）12:00～22:00）",
-     "url": "https://www.aeonbank.co.jp/news/2026/0918_01/",
-     "date": "2026-09-26",
-     "posted_date": "2026-09-18",
-     "event_date": "2026-09-26",
-     "services": [
-      "投信"
-     ]
     }
    ],
    "diag": {
     "status": "ok",
     "raw_count": 29,
-    "kept_count": 3,
-    "dropped_past": 2,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
