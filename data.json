@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-29T09:53:21.150279+09:00",
+ "updated": "2026-09-30T00:13:30.234589+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -193,22 +193,34 @@
    "regular": "マイゲート・アプリ：毎月第1月曜 2:00–6:00／第2土曜 23:00–翌日曜 6:00",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "【重要なお知らせ】 りそなグループアプリ・マイゲートのサービス利用休止等に関するご案内",
+     "url": "https://www.saitamaresona.co.jp/kojin/oshirase_s/2026/detail/oshirase_10093.html",
+     "date": "2026-11-14",
+     "posted_date": null,
+     "event_date": "2026-11-14",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026年11月14日(土)21時～11月15日(日)6時 20"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 2,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 3,
+    "kept_count": 1,
     "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-06-27",
+    "latest_seen": "2026-11-14",
     "sources": [
      {
       "url": "https://www.saitamaresona.co.jp/kojin/oshirase/",
       "ok": true,
-      "raw": 2,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
