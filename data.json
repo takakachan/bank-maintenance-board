@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-30T09:13:06.543460+09:00",
+ "updated": "2026-10-01T00:27:59.569229+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -356,17 +356,30 @@
    "regular": "毎月第2土曜の翌日曜 0:00–7:00／カードローン：毎週月曜 1:00–5:00",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "【じぶん銀行スマホデビット】システムメンテナンスのお知らせ メンテナンス日時 2026年9月27日（日）2：00 ～ 5：30",
+     "url": "https://www.jibunbank.co.jp/maintenance/",
+     "date": "2026-10-03",
+     "posted_date": null,
+     "event_date": "2026-10-03",
+     "services": [
+      "アプリ",
+      "カード"
+     ],
+     "period": "2026年10月3日（土）5：50 ～ 15：00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
+    "status": "ok",
     "raw_count": 3,
-    "kept_count": 0,
-    "dropped_past": 1,
+    "kept_count": 1,
+    "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
      "text_block"
     ],
-    "latest_seen": "2026-09-26",
+    "latest_seen": "2026-10-03",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
@@ -500,9 +513,9 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 2,
+    "raw_count": 1,
     "kept_count": 0,
-    "dropped_past": 2,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -512,7 +525,7 @@
      {
       "url": "https://www.okb.co.jp/",
       "ok": true,
-      "raw": 2,
+      "raw": 1,
       "parser": "link_list"
      }
     ]
@@ -609,9 +622,9 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 3,
+    "raw_count": 2,
     "kept_count": 1,
-    "dropped_past": 2,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -621,7 +634,7 @@
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
       "ok": true,
-      "raw": 3,
+      "raw": 2,
       "parser": "link_list"
      }
     ]
