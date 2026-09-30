@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-30T00:13:30.234589+09:00",
+ "updated": "2026-09-30T09:13:06.543460+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -596,10 +596,10 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "2026年09月09日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
-     "url": "https://www.aichibank.co.jp/important_infomation/details/260909.html",
+     "title": "2026年09月30日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
+     "url": "https://www.aichibank.co.jp/important_infomation/details/260930.html",
      "date": "2026-10-06",
-     "posted_date": "2026-09-09",
+     "posted_date": "2026-09-30",
      "event_date": "2026-10-06",
      "services": [
       "ATM"
@@ -609,9 +609,9 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 2,
+    "raw_count": 3,
     "kept_count": 1,
-    "dropped_past": 1,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -621,7 +621,7 @@
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
       "ok": true,
-      "raw": 2,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
@@ -846,22 +846,34 @@
    "regular": "インターネット支店：毎月第2・第3日曜 23:00–翌7:00",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "ちばぎんアプリ・ちばぎんビジネスポータル等のサービス臨時休止について",
+     "url": "https://www.chibabank.co.jp/notices/notices20260929_01",
+     "date": "2026-10-05",
+     "posted_date": "2026-09-29",
+     "event_date": "2026-10-05",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026年10月5日（月） 1:00～3:00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 1,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 2,
+    "kept_count": 1,
     "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "sitemap"
     ],
-    "latest_seen": "2026-09-24",
+    "latest_seen": "2026-10-05",
     "sources": [
      {
       "url": "https://www.chibabank.co.jp/sitemap/www.chibabank.co.jp/sitemap_notices_0.xml",
       "ok": true,
-      "raw": 1,
+      "raw": 2,
       "parser": "sitemap"
      }
     ]
