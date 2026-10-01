@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-01T09:26:11.466995+09:00",
+ "updated": "2026-10-02T00:49:29.025284+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -177,7 +177,7 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 6,
+    "raw_count": 7,
     "kept_count": 0,
     "dropped_past": 5,
     "dropped_undated": 0,
@@ -189,7 +189,7 @@
      {
       "url": "https://www.resonabank.co.jp/kojin/oshirase/",
       "ok": true,
-      "raw": 6,
+      "raw": 7,
       "parser": "link_list"
      }
     ]
@@ -369,12 +369,13 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "【じぶん銀行スマホデビット】システムメンテナンスのお知らせ メンテナンス日時 2026年9月27日（日）2：00 ～ 5：30",
+     "title": "じぶん銀行FX メンテナンス日時 2026年10月3日（土）5：50 ～ 15：00 じぶん銀行FXのシステムメンテナンス時間を通常よりも延長し、サービスを停止いたします。 ※ 終了時間は前後する場合があります。あらかじめご了承ください。 ",
      "url": "https://www.jibunbank.co.jp/maintenance/",
      "date": "2026-10-03",
      "posted_date": null,
      "event_date": "2026-10-03",
      "services": [
+      "ATM",
       "アプリ",
       "カード"
      ],
@@ -523,21 +524,21 @@
    "fetch_ok": true,
    "items": [],
    "diag": {
-    "status": "all_past",
-    "raw_count": 1,
+    "status": "no_notice",
+    "raw_count": 0,
     "kept_count": 0,
-    "dropped_past": 1,
+    "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
-     "link_list"
+     "none"
     ],
-    "latest_seen": "2026-09-01",
+    "latest_seen": null,
     "sources": [
      {
       "url": "https://www.okb.co.jp/",
       "ok": true,
-      "raw": 1,
-      "parser": "link_list"
+      "raw": 0,
+      "parser": "none"
      }
     ]
    }
