@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-01T00:27:59.569229+09:00",
+ "updated": "2026-10-01T09:26:11.466995+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -132,13 +132,24 @@
       "投信"
      ],
      "period": "2026年10月5日（月）20:00 ～ 24:00頃"
+    },
+    {
+     "title": "「ゆうちょ通帳アプリ」システムメンテナンスのお知らせ",
+     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002489.html",
+     "date": "2026-10-05",
+     "posted_date": null,
+     "event_date": "2026-10-05",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026年10月5日（月）23:55 ～ 10月6日（火）0:05"
     }
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 23,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "raw_count": 24,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -148,7 +159,7 @@
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
       "ok": true,
-      "raw": 23,
+      "raw": 24,
       "parser": "link_list"
      }
     ]
