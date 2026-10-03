@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-03T09:18:35.558432+09:00",
+ "updated": "2026-10-03T23:04:03.598179+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -371,15 +371,15 @@
     {
      "title": "じぶん銀行FX メンテナンス日時 2026年10月3日（土）5：50 ～ 15：00 じぶん銀行FXのシステムメンテナンス時間を通常よりも延長し、サービスを停止いたします。 ※ 終了時間は前後する場合があります。あらかじめご了承ください。 ",
      "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-10-03",
+     "date": "2026-10-07",
      "posted_date": null,
-     "event_date": "2026-10-03",
+     "event_date": "2026-10-07",
      "services": [
       "ATM",
       "アプリ",
       "カード"
      ],
-     "period": "2026年10月3日（土）5：50 ～ 15：00"
+     "period": "2026年10月7日（水）2：00 ～ 4：00"
     }
    ],
    "diag": {
@@ -391,7 +391,7 @@
     "parsers": [
      "text_block"
     ],
-    "latest_seen": "2026-10-03",
+    "latest_seen": "2026-10-07",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
