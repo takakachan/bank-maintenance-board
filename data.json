@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-04T23:30:13.256193+09:00",
+ "updated": "2026-10-05T08:53:34.314672+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -304,8 +304,7 @@
      "event_date": "2026-10-05",
      "services": [
       "ATM"
-     ],
-     "period": "2026年10月5日（月曜日）1時30分～5時"
+     ]
     }
    ],
    "diag": {
@@ -410,21 +409,12 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026.09.17 システムメンテナンスに伴う、サービス停止のお知らせ（2026年10月4日（日）0:00～7:00）",
-     "url": "https://www.aeonbank.co.jp/news/2026/0917_02/",
-     "date": "2026-10-04",
-     "posted_date": "2026-09-17",
-     "event_date": "2026-10-04",
-     "services": []
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 29,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
@@ -869,29 +859,17 @@
    "regular": "インターネット支店：毎月第2・第3日曜 23:00–翌7:00",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "ちばぎんアプリ・ちばぎんビジネスポータル等のサービス臨時休止について",
-     "url": "https://www.chibabank.co.jp/notices/notices20260929_01",
-     "date": "2026-10-05",
-     "posted_date": "2026-09-29",
-     "event_date": "2026-10-05",
-     "services": [
-      "アプリ"
-     ],
-     "period": "2026年10月5日（月） 1:00～3:00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 2,
-    "kept_count": 1,
-    "dropped_past": 1,
+    "kept_count": 0,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "sitemap"
     ],
-    "latest_seen": "2026-10-05",
+    "latest_seen": "2026-09-29",
     "sources": [
      {
       "url": "https://www.chibabank.co.jp/sitemap/www.chibabank.co.jp/sitemap_notices_0.xml",
