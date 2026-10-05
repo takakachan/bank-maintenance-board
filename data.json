@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-05T08:53:34.314672+09:00",
+ "updated": "2026-10-06T02:34:54.530045+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -122,39 +122,27 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "ゆうちょダイレクトによる投資信託・NISA口座開設申し込みサービスの一部仕様変更およびシステムメンテナンスのお知らせ",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002480.html",
-     "date": "2026-10-05",
-     "posted_date": null,
-     "event_date": "2026-10-05",
-     "services": [
-      "アプリ",
-      "投信"
-     ],
-     "period": "2026年10月5日（月）20:00 ～ 24:00頃"
-    },
-    {
      "title": "「ゆうちょ通帳アプリ」システムメンテナンスのお知らせ",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002489.html",
-     "date": "2026-10-05",
+     "date": "2026-10-11",
      "posted_date": null,
-     "event_date": "2026-10-05",
+     "event_date": "2026-10-11",
      "services": [
       "アプリ"
      ],
-     "period": "2026年10月5日（月）23:55 ～ 10月6日（火）0:05"
+     "period": "2026年10月11日（日）23:55 ～ 10月12日（月・祝）0:05"
     }
    ],
    "diag": {
     "status": "ok",
     "raw_count": 24,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-05",
+    "latest_seen": "2026-10-11",
     "sources": [
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
@@ -295,33 +283,22 @@
    "regular": "1・4・7・10月の最終火曜 1:00–6:00（全体）／日曜未明に一部機能停止あり",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "提携ATMシステムメンテナンスのお知らせ（10月5日）",
-     "url": "https://help.paypay-bank.co.jp/hc/ja/articles/900001838266",
-     "date": "2026-10-05",
-     "posted_date": null,
-     "event_date": "2026-10-05",
-     "services": [
-      "ATM"
-     ]
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
-    "raw_count": 4,
-    "kept_count": 1,
+    "status": "all_past",
+    "raw_count": 3,
+    "kept_count": 0,
     "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-05",
+    "latest_seen": "2026-06-25",
     "sources": [
      {
       "url": "https://www.paypay-bank.co.jp/news/index.html",
       "ok": true,
-      "raw": 4,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
@@ -336,22 +313,36 @@
    "regular": "毎月1回・月曜未明 1:00–7:00 が通例",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "住宅ローンおよび関連サービスのメンテナンス（2026年10月11日（日）午前1:00～午前2:00）のお知らせ",
+     "url": "https://www.rakuten-bank.co.jp/info/2026/261005.html",
+     "date": "2026-10-11",
+     "posted_date": null,
+     "event_date": "2026-10-11",
+     "services": [
+      "ATM",
+      "振込",
+      "アプリ"
+     ],
+     "period": "2026年10月11日（日）午前1:00～午前2:00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 40,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "status": "ok",
+    "raw_count": 41,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-09-19",
+    "latest_seen": "2026-10-11",
     "sources": [
      {
       "url": "https://www.rakuten-bank.co.jp/info/2026/",
       "ok": true,
-      "raw": 40,
+      "raw": 41,
       "parser": "link_list"
      }
     ]
@@ -861,20 +852,18 @@
    "fetch_ok": true,
    "items": [],
    "diag": {
-    "status": "all_past",
-    "raw_count": 2,
+    "status": "no_notice",
+    "raw_count": 0,
     "kept_count": 0,
-    "dropped_past": 2,
+    "dropped_past": 0,
     "dropped_undated": 0,
-    "parsers": [
-     "sitemap"
-    ],
-    "latest_seen": "2026-09-29",
+    "parsers": [],
+    "latest_seen": null,
     "sources": [
      {
       "url": "https://www.chibabank.co.jp/sitemap/www.chibabank.co.jp/sitemap_notices_0.xml",
       "ok": true,
-      "raw": 2,
+      "raw": 0,
       "parser": "sitemap"
      }
     ]
@@ -1021,20 +1010,12 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026.08.27 法人のお客様 法人向けインターネットバンキング臨時メンテナンスのお知らせ（2026年9月5日～9月6日）",
-     "url": "https://www.hokugin.co.jp/info/important/archives/corp/2026/post_64.html",
-     "date": "2026-09-05",
-     "posted_date": "2026-08-27",
-     "event_date": "2026-09-05"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 3,
-    "kept_count": 1,
-    "dropped_past": 2,
+    "kept_count": 0,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -1101,22 +1082,35 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "個人 2026年10月05日 当行ホームページリニューアルに伴うシステムメンテナンスについて",
+     "url": "https://www.fukuibank.co.jp/info/2026/maintenance20261005.html",
+     "date": "2026-10-11",
+     "posted_date": null,
+     "event_date": "2026-10-11",
+     "services": [
+      "ATM",
+      "アプリ"
+     ],
+     "period": "2026年10月11日（日）21:00 ～ 2026年10月12日（月）6:00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 6,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "status": "ok",
+    "raw_count": 7,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-05-18",
+    "latest_seen": "2026-10-11",
     "sources": [
      {
       "url": "https://www.fukuibank.co.jp/info/",
       "ok": true,
-      "raw": 6,
+      "raw": 7,
       "parser": "link_list"
      }
     ]
