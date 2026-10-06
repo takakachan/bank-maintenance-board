@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-06T02:34:54.530045+09:00",
+ "updated": "2026-10-06T10:41:59.153774+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -912,13 +912,13 @@
     {
      "title": "2026年09月28日 フリーローン「おまとめ太郎」WEB完結サービス一時停止のお知らせ",
      "url": "https://www.gunmabank.co.jp/info/gbnotice/gbnotice20260928.html",
-     "date": "2026-10-05",
+     "date": "2026-10-08",
      "posted_date": "2026-09-28",
-     "event_date": "2026-10-05",
+     "event_date": "2026-10-08",
      "services": [
       "アプリ"
      ],
-     "period": "2026年10月5日（月） 21：00 ～ 2026年10月6日（火） 9：00"
+     "period": "2026年10月8日（木） 22：00 ～ 2026年10月9日（金） 8：00"
     }
    ],
    "diag": {
@@ -930,7 +930,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-05",
+    "latest_seen": "2026-10-08",
     "sources": [
      {
       "url": "https://www.gunmabank.co.jp/info/gbnotice/",
