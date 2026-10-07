@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-07T00:33:01.131397+09:00",
+ "updated": "2026-10-07T09:30:43.547931+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -361,14 +361,14 @@
     {
      "title": "【スマホデビット】Google Payシステムメンテナンスのお知らせ メンテナンス日時 2026年10月7日（水）2：00 ～ 4：00",
      "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-10-07",
+     "date": "2026-10-12",
      "posted_date": null,
-     "event_date": "2026-10-07",
+     "event_date": "2026-10-12",
      "services": [
       "アプリ",
       "カード"
      ],
-     "period": "2026年10月7日（水）2：00 ～ 4：00"
+     "period": "2026年10月12日（月）1：30 ～ 7：00"
     }
    ],
    "diag": {
@@ -380,7 +380,7 @@
     "parsers": [
      "text_block"
     ],
-    "latest_seen": "2026-10-07",
+    "latest_seen": "2026-10-12",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
@@ -602,13 +602,13 @@
     {
      "title": "2026年09月30日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/260930.html",
-     "date": "2026-10-06",
+     "date": "2026-10-08",
      "posted_date": "2026-09-30",
-     "event_date": "2026-10-06",
+     "event_date": "2026-10-08",
      "services": [
       "ATM"
      ],
-     "period": "2026年10月6日（火）18時～2026年10月7日（水）8時"
+     "period": "2026年10月8日（木）18時～2026年10月9日（金）8時"
     }
    ],
    "diag": {
@@ -620,7 +620,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-06",
+    "latest_seen": "2026-10-08",
     "sources": [
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
@@ -692,6 +692,17 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "2026年10月07日 お知らせ 個人向けインターネットバンキングのサービス臨時停止のお知らせ",
+     "url": "https://www.hyakugo.co.jp/whats_new/20261007_01.html",
+     "date": "2026-10-12",
+     "posted_date": "2026-10-07",
+     "event_date": "2026-10-12",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026年10月12日（月・祝） 0:00 ～ 5:00"
+    },
+    {
      "title": "2026年09月10日 お知らせ 「105スマホ投信」投信口座開設・投信取引機能の臨時停止について",
      "url": "https://www.hyakugo.co.jp/whats_new/20260910_01.html",
      "date": "2026-10-31",
@@ -706,8 +717,8 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 4,
-    "kept_count": 1,
+    "raw_count": 5,
+    "kept_count": 2,
     "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
@@ -718,7 +729,7 @@
      {
       "url": "https://www.hyakugo.co.jp/whats_new/",
       "ok": true,
-      "raw": 4,
+      "raw": 5,
       "parser": "link_list"
      }
     ]
