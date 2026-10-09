@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09T10:05:14.346499+09:00",
+ "updated": "2026-10-10T00:39:37.806915+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -393,7 +393,7 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "【スマホデビット】Google Payシステムメンテナンスのお知らせ メンテナンス日時 2026年10月7日（水）2：00 ～ 4：00",
+     "title": "【じぶん銀行スマホデビット】システムメンテナンスのお知らせ メンテナンス日時 2026年10月18日（日）0:50 ～ 6:10",
      "url": "https://www.jibunbank.co.jp/maintenance/",
      "date": "2026-10-12",
      "posted_date": null,
@@ -1063,22 +1063,34 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "サムズウオロク巻店出張所ATM一時休止のお知らせ（PDF：216 KB）",
+     "url": "https://www.dhbk.co.jp/information/__icsFiles/afieldfile/2026/10/09/20261009.pdf",
+     "date": "2026-10-19",
+     "posted_date": null,
+     "event_date": "2026-10-19",
+     "services": [
+      "ATM"
+     ],
+     "period": "10 月 19 日（月）18:00 ～ 11 月 19 日（木）"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 1,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 2,
+    "kept_count": 1,
     "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-10-19",
     "sources": [
      {
       "url": "https://www.dhbk.co.jp/information/",
       "ok": true,
-      "raw": 1,
+      "raw": 2,
       "parser": "link_list"
      }
     ]
