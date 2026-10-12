@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12T00:11:23.475555+09:00",
+ "updated": "2026-10-12T09:21:47.126233+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -381,14 +381,14 @@
     {
      "title": "【じぶん銀行スマホデビット】システムメンテナンスのお知らせ メンテナンス日時 2026年10月18日（日）0:50 ～ 6:10",
      "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-10-12",
+     "date": "2026-10-18",
      "posted_date": null,
-     "event_date": "2026-10-12",
+     "event_date": "2026-10-18",
      "services": [
       "アプリ",
       "カード"
      ],
-     "period": "2026年10月12日（月）1：30 ～ 7：00"
+     "period": "2026年10月18日（日）0:50 ～ 6:10"
     }
    ],
    "diag": {
@@ -400,7 +400,7 @@
     "parsers": [
      "text_block"
     ],
-    "latest_seen": "2026-10-12",
+    "latest_seen": "2026-10-18",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
@@ -442,8 +442,7 @@
       "ATM",
       "振込",
       "アプリ"
-     ],
-     "period": "2026年10月12日（月）01:30～07:00"
+     ]
     }
    ],
    "diag": {
@@ -738,13 +737,13 @@
     {
      "title": "2026年10月07日 お知らせ 個人向けインターネットバンキングのサービス臨時停止のお知らせ",
      "url": "https://www.hyakugo.co.jp/whats_new/20261007_01.html",
-     "date": "2026-10-12",
+     "date": "2026-10-18",
      "posted_date": "2026-10-07",
-     "event_date": "2026-10-12",
+     "event_date": "2026-10-18",
      "services": [
       "アプリ"
      ],
-     "period": "2026年10月12日（月・祝） 0:00 ～ 5:00"
+     "period": "2026年10月18日（日）0:00 ～ 5:00"
     },
     {
      "title": "2026年09月10日 お知らせ 「105スマホ投信」投信口座開設・投信取引機能の臨時停止について",
@@ -1149,35 +1148,23 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "各種ログイン・お申込みは以下よりお手続きくださいますようお願い申し上げます。 ※ インターネットバンキング『ふくぎんネット』および『快速ねっと』は2026年10月11日（日）21:00～10月12日（月）6:00まで、 メンテナンスのためサ",
-     "url": "https://www.fukuibank.co.jp/info/",
-     "date": "2026-10-11",
-     "posted_date": null,
-     "event_date": "2026-10-11",
-     "services": [
-      "アプリ"
-     ],
-     "period": "2026年10月11日（日）21:00～10月12日（月）6:00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
-    "raw_count": 2,
-    "kept_count": 1,
-    "dropped_past": 0,
+    "status": "all_past",
+    "raw_count": 7,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
-     "text_block"
+     "link_list"
     ],
-    "latest_seen": "2026-10-11",
+    "latest_seen": "2026-10-05",
     "sources": [
      {
       "url": "https://www.fukuibank.co.jp/info/",
       "ok": true,
-      "raw": 2,
-      "parser": "text_block"
+      "raw": 7,
+      "parser": "link_list"
      }
     ]
    }
