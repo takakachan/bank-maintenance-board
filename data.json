@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12T09:21:47.126233+09:00",
+ "updated": "2026-10-13T03:21:29.688524+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -431,25 +431,13 @@
       "投信"
      ],
      "period": "2026年10月17日（土）12:00～23:00"
-    },
-    {
-     "title": "2026.10.08 システムメンテナンスに伴う、サービス停止のお知らせ（10月12日（月））",
-     "url": "https://www.aeonbank.co.jp/news/2026/1007_01/",
-     "date": "2026-10-12",
-     "posted_date": "2026-10-08",
-     "event_date": "2026-10-12",
-     "services": [
-      "ATM",
-      "振込",
-      "アプリ"
-     ]
     }
    ],
    "diag": {
     "status": "ok",
     "raw_count": 31,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
