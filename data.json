@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T01:34:59.656357+09:00",
+ "updated": "2026-10-14T09:12:26.848943+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -776,22 +776,32 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026/10/14 メンテナンス ホームページのシステムメンテナンス実施について",
+     "url": "https://www.33bank.co.jp/news/oshirase20261014.html",
+     "date": "2026-10-21",
+     "posted_date": "2026-10-14",
+     "event_date": "2026-10-21",
+     "services": [],
+     "period": "2026年10月21日（水）19：00 ～ 24：00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 3,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 4,
+    "kept_count": 1,
     "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-09-07",
+    "latest_seen": "2026-10-21",
     "sources": [
      {
       "url": "https://www.33bank.co.jp/",
       "ok": true,
-      "raw": 3,
+      "raw": 4,
       "parser": "link_list"
      }
     ]
