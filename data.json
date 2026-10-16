@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T08:36:40.720236+09:00",
+ "updated": "2026-10-16T22:37:25.929623+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -122,6 +122,18 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "ゆうちょダイレクトによる投資信託・NISA口座開設申し込みサービスの一部仕様変更およびシステムメンテナンスのお知らせ（延期後のリリース日のお知らせ）（2026年10月16日更新）",
+     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002480.html",
+     "date": "2026-10-19",
+     "posted_date": null,
+     "event_date": "2026-10-19",
+     "services": [
+      "アプリ",
+      "投信"
+     ],
+     "period": "2026年10月19日（月）20:00 ～ 24:00"
+    },
+    {
      "title": "「口座貸越サービス」お申し込みサイトのシステムメンテナンスのお知らせ",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002492.html",
      "date": "2026-10-20",
@@ -146,8 +158,8 @@
    "diag": {
     "status": "ok",
     "raw_count": 26,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 3,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -760,6 +772,16 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "2026年10月16日 お知らせ 百五銀行スマホバンキングでの券面撮影を用いた本人認証方法の停止について",
+     "url": "https://www.hyakugo.co.jp/whats_new/20261016_01.html",
+     "date": "2026-10-16",
+     "posted_date": "2026-10-16",
+     "event_date": "2026-10-16",
+     "services": [
+      "アプリ"
+     ]
+    },
+    {
      "title": "2026年10月07日 お知らせ 個人向けインターネットバンキングのサービス臨時停止のお知らせ",
      "url": "https://www.hyakugo.co.jp/whats_new/20261007_01.html",
      "date": "2026-10-18",
@@ -785,9 +807,9 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 5,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "raw_count": 6,
+    "kept_count": 3,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -797,7 +819,7 @@
      {
       "url": "https://www.hyakugo.co.jp/whats_new/",
       "ok": true,
-      "raw": 5,
+      "raw": 6,
       "parser": "link_list"
      }
     ]
@@ -890,17 +912,6 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "個人向けローンのインターネット申し込み受付一時停止のお知らせ",
-     "url": "https://www.shizuokabank.co.jp/notice/detail/20261015_ZB1/",
-     "date": "2026-10-16",
-     "posted_date": "2026-10-15",
-     "event_date": "2026-10-16",
-     "services": [
-      "カード"
-     ],
-     "period": "2026年10月16日（金）21:00～22:00"
-    },
-    {
      "title": "住宅ローン審査システム更改に伴うご案内",
      "url": "https://www.shizuokabank.co.jp/notice/detail/20260915_Kv0/",
      "date": "2026-10-10",
@@ -924,13 +935,13 @@
    "diag": {
     "status": "ok",
     "raw_count": 4,
-    "kept_count": 3,
-    "dropped_past": 1,
+    "kept_count": 2,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "json"
     ],
-    "latest_seen": "2026-10-16",
+    "latest_seen": "2026-10-15",
     "sources": [
      {
       "url": "https://www.shizuokabank.co.jp/common/components/info.json",
