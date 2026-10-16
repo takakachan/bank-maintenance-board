@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T22:37:25.929623+09:00",
+ "updated": "2026-10-17T08:22:14.357606+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -468,25 +468,13 @@
       "投信"
      ],
      "period": "2026年10月17日（土）12:00～23:00"
-    },
-    {
-     "title": "2026.10.14 システムメンテナンスに伴う、サービス停止のお知らせ（10月16日（金）0:00～7:00）",
-     "url": "https://www.aeonbank.co.jp/news/2026/1013_01/",
-     "date": "2026-10-16",
-     "posted_date": "2026-10-14",
-     "event_date": "2026-10-16",
-     "services": [
-      "アプリ",
-      "投信",
-      "カード"
-     ]
     }
    ],
    "diag": {
     "status": "ok",
     "raw_count": 32,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
@@ -776,7 +764,7 @@
      "url": "https://www.hyakugo.co.jp/whats_new/20261016_01.html",
      "date": "2026-10-16",
      "posted_date": "2026-10-16",
-     "event_date": "2026-10-16",
+     "event_date": "2026-10-22",
      "services": [
       "アプリ"
      ]
