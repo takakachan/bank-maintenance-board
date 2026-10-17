@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T21:34:13.003581+09:00",
+ "updated": "2026-10-18T07:58:27.044577+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -327,23 +327,12 @@
    "regular": "1・4・7・10月の最終火曜 1:00–6:00（全体）／日曜未明に一部機能停止あり",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "FXサービスの停止のお知らせ（10月17日）",
-     "url": "https://www.paypay-bank.co.jp/news/2026/1014.html",
-     "date": "2026-10-17",
-     "posted_date": null,
-     "event_date": "2026-10-17",
-     "services": [
-      "アプリ"
-     ]
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 4,
-    "kept_count": 1,
-    "dropped_past": 3,
+    "kept_count": 0,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -412,31 +401,17 @@
    "regular": "毎月第2土曜の翌日曜 0:00–7:00／カードローン：毎週月曜 1:00–5:00",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "じぶん銀行FX メンテナンス日時 2026年10月17日（土）5：50 ～ 16：00 じぶん銀行FXのシステムメンテナンス時間を通常よりも延長し、サービスを停止いたします。 ※ 終了時間は前後する場合があります。あらかじめご了承ください。",
-     "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-10-18",
-     "posted_date": null,
-     "event_date": "2026-10-18",
-     "services": [
-      "ATM",
-      "アプリ",
-      "カード"
-     ],
-     "period": "2026年10月18日（日）0:50 ～ 6:10"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 3,
-    "kept_count": 1,
-    "dropped_past": 0,
+    "kept_count": 0,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "text_block"
     ],
-    "latest_seen": "2026-10-18",
+    "latest_seen": "2026-10-17",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
@@ -456,24 +431,12 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026.10.08 マネックス証券のシステムメンテナンスに伴う投資信託（金融商品仲介）受付業務休止について（10月17日（土）12:00～23:00）",
-     "url": "https://www.aeonbank.co.jp/news/2026/1008_01/",
-     "date": "2026-10-17",
-     "posted_date": "2026-10-08",
-     "event_date": "2026-10-17",
-     "services": [
-      "投信"
-     ],
-     "period": "2026年10月17日（土）12:00～23:00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 32,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
@@ -769,17 +732,6 @@
      ]
     },
     {
-     "title": "2026年10月07日 お知らせ 個人向けインターネットバンキングのサービス臨時停止のお知らせ",
-     "url": "https://www.hyakugo.co.jp/whats_new/20261007_01.html",
-     "date": "2026-10-18",
-     "posted_date": "2026-10-07",
-     "event_date": "2026-10-18",
-     "services": [
-      "アプリ"
-     ],
-     "period": "2026年10月18日（日）0:00 ～ 5:00"
-    },
-    {
      "title": "2026年09月10日 お知らせ 「105スマホ投信」投信口座開設・投信取引機能の臨時停止について",
      "url": "https://www.hyakugo.co.jp/whats_new/20260910_01.html",
      "date": "2026-10-31",
@@ -795,8 +747,8 @@
    "diag": {
     "status": "ok",
     "raw_count": 6,
-    "kept_count": 3,
-    "dropped_past": 2,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
