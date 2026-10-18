@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18T07:58:27.044577+09:00",
+ "updated": "2026-10-18T21:52:20.261515+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -10,31 +10,17 @@
    "regular": "臨時メンテナンスはお知らせページで随時告知",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "休止する商品・サービス一覧",
-     "url": "https://www.mizuhobank.co.jp/oshirase/maintenance_personal.html#pause",
-     "date": "2026-10-17",
-     "posted_date": null,
-     "event_date": "2026-10-17",
-     "services": [
-      "ATM",
-      "アプリ",
-      "カード"
-     ],
-     "period": "2026年10月17日 土曜日 22時00分～2026年10月18日 日曜日 11時00分"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
-    "raw_count": 3,
-    "kept_count": 1,
+    "status": "all_past",
+    "raw_count": 2,
+    "kept_count": 0,
     "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-17",
+    "latest_seen": "2026-03-15",
     "sources": [
      {
       "url": "https://www.mizuhobank.co.jp/direct/info/index.html",
@@ -44,9 +30,9 @@
      },
      {
       "url": "https://www.mizuhobank.co.jp/oshirase/maintenance_personal.html",
-      "ok": true,
-      "raw": 1,
-      "parser": "link_list"
+      "ok": false,
+      "raw": 0,
+      "parser": "fetch_failed"
      }
     ]
    }
