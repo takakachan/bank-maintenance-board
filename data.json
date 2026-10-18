@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18T21:52:20.261515+09:00",
+ "updated": "2026-10-19T07:54:29.629189+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -397,7 +397,7 @@
     "parsers": [
      "text_block"
     ],
-    "latest_seen": "2026-10-17",
+    "latest_seen": "2026-10-18",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
@@ -835,33 +835,12 @@
    "regular": "しずぎんダイレクト・アプリ：毎月第1・第3月曜 2:00–6:00",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "住宅ローン審査システム更改に伴うご案内",
-     "url": "https://www.shizuokabank.co.jp/notice/detail/20260915_Kv0/",
-     "date": "2026-10-10",
-     "posted_date": "2026-09-15",
-     "event_date": "2026-10-10",
-     "services": [],
-     "period": "10月10日（土）から10月18日（日）"
-    },
-    {
-     "title": "教育ローン（カードタイプ）とカードローンの極度額変更の申込一時停止のお知らせ",
-     "url": "https://www.shizuokabank.co.jp/notice/detail/20260818_VmZ/",
-     "date": "2026-09-01",
-     "posted_date": "2026-08-18",
-     "event_date": "2026-09-01",
-     "services": [
-      "カード"
-     ],
-     "period": "2026年9月1日(火)～10月18日(日)"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 4,
-    "kept_count": 2,
-    "dropped_past": 2,
+    "kept_count": 0,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "json"
