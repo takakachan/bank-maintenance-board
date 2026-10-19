@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T07:54:29.629189+09:00",
+ "updated": "2026-10-20T01:00:45.507608+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -108,54 +108,42 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "ゆうちょダイレクトによる投資信託・NISA口座開設申し込みサービスの一部仕様変更およびシステムメンテナンスのお知らせ（延期後のリリース日のお知らせ）（2026年10月16日更新）",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002480.html",
-     "date": "2026-10-19",
+     "title": "「ゆうちょの国際送金」webサイトのシステムメンテナンスのお知らせ",
+     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002504.html",
+     "date": "2026-10-23",
      "posted_date": null,
-     "event_date": "2026-10-19",
+     "event_date": "2026-10-23",
      "services": [
-      "アプリ",
-      "投信"
+      "振込"
      ],
-     "period": "2026年10月19日（月）20:00 ～ 24:00"
+     "period": "2026年 10月 23日（金）23:55 ～ 2026年 10月 24日（土） 1:00"
     },
     {
-     "title": "「口座貸越サービス」お申し込みサイトのシステムメンテナンスのお知らせ",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002492.html",
+     "title": "「JP BANK カード」および「ゆうちょデビット」お申し込みサイトのシステムメンテナンスのお知らせ",
+     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002503.html",
      "date": "2026-10-20",
      "posted_date": null,
      "event_date": "2026-10-20",
      "services": [
-      "アプリ"
+      "カード"
      ]
-    },
-    {
-     "title": "「ゆうちょ通帳アプリ」システムメンテナンスのお知らせ",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002489.html",
-     "date": "2026-10-24",
-     "posted_date": null,
-     "event_date": "2026-10-24",
-     "services": [
-      "アプリ"
-     ],
-     "period": "2026年10月24日（土）0:00 ～ 10月25日（日）23:59"
     }
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 26,
-    "kept_count": 3,
-    "dropped_past": 2,
+    "raw_count": 28,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-24",
+    "latest_seen": "2026-10-23",
     "sources": [
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
       "ok": true,
-      "raw": 26,
+      "raw": 28,
       "parser": "link_list"
      }
     ]
@@ -181,24 +169,13 @@
       "アプリ"
      ],
      "period": "2026年10月19日（月）午後10：00～2026年10月20日（火）午前3：00"
-    },
-    {
-     "title": "システムメンテナンスに伴うマイゲートからのファンドラップ増額申込み停止について（2026年10月16日20:00～2026年10月19日8:00）",
-     "url": "https://www.resonabank.co.jp/kojin/oshirase_s/2026/detail/oshirase_10116.html",
-     "date": "2026-10-16",
-     "posted_date": null,
-     "event_date": "2026-10-16",
-     "services": [
-      "投信"
-     ],
-     "period": "2026年10月16日20:00～2026年10月19日8:00"
     }
    ],
    "diag": {
     "status": "ok",
     "raw_count": 9,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -225,17 +202,6 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "システムメンテナンスに伴うマイゲートからのファンドラップ増額申込み停止について（2026年10月16日20：00～2026年10月19日8：00）",
-     "url": "https://www.saitamaresona.co.jp/kojin/oshirase_s/2026/detail/oshirase_10118.html",
-     "date": "2026-10-16",
-     "posted_date": null,
-     "event_date": "2026-10-16",
-     "services": [
-      "投信"
-     ],
-     "period": "2026年10月16日20：00～2026年10月19日8：00"
-    },
-    {
      "title": "【重要なお知らせ】 りそなグループアプリ・マイゲートのサービス利用休止等に関するご案内",
      "url": "https://www.saitamaresona.co.jp/kojin/oshirase_s/2026/detail/oshirase_10093.html",
      "date": "2026-11-14",
@@ -250,8 +216,8 @@
    "diag": {
     "status": "ok",
     "raw_count": 4,
-    "kept_count": 2,
-    "dropped_past": 2,
+    "kept_count": 1,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -313,17 +279,29 @@
    "regular": "1・4・7・10月の最終火曜 1:00–6:00（全体）／日曜未明に一部機能停止あり",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "FXサービスの停止のお知らせ（10月31日）",
+     "url": "https://www.paypay-bank.co.jp/news/2026/1019-03.html",
+     "date": "2026-10-31",
+     "posted_date": null,
+     "event_date": "2026-10-31",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026年10月31日（土曜日）14時30分～17時30分"
+    }
+   ],
    "diag": {
-    "status": "all_past",
+    "status": "ok",
     "raw_count": 4,
-    "kept_count": 0,
-    "dropped_past": 4,
+    "kept_count": 1,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-17",
+    "latest_seen": "2026-10-31",
     "sources": [
      {
       "url": "https://www.paypay-bank.co.jp/news/index.html",
@@ -345,6 +323,19 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "証券担保ローンメンテナンス（2026年10月24日（土）午後6:00～10月25日（日）午前5:00）のお知らせ",
+     "url": "https://www.rakuten-bank.co.jp/info/2026/261019-3.html",
+     "date": "2026-10-24",
+     "posted_date": null,
+     "event_date": "2026-10-24",
+     "services": [
+      "ATM",
+      "振込",
+      "アプリ"
+     ],
+     "period": "2026年10月24日（土）午後6:00～10月25日（日）午前5:00"
+    },
+    {
      "title": "オンライン住宅ローン相談サービスのシステムメンテナンス（2026年10月19日～10月20日）のお知らせ",
      "url": "https://www.rakuten-bank.co.jp/info/2026/261013.html",
      "date": "2026-10-19",
@@ -360,19 +351,19 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 43,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "raw_count": 44,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-19",
+    "latest_seen": "2026-10-24",
     "sources": [
      {
       "url": "https://www.rakuten-bank.co.jp/info/2026/",
       "ok": true,
-      "raw": 43,
+      "raw": 44,
       "parser": "link_list"
      }
     ]
@@ -420,7 +411,7 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 32,
+    "raw_count": 33,
     "kept_count": 0,
     "dropped_past": 5,
     "dropped_undated": 0,
@@ -428,7 +419,7 @@
      "link_list",
      "none"
     ],
-    "latest_seen": "2026-10-17",
+    "latest_seen": "2026-10-19",
     "sources": [
      {
       "url": "https://www.aeonbank.co.jp/maintenance/",
@@ -439,7 +430,7 @@
      {
       "url": "https://www.aeonbank.co.jp/news/",
       "ok": true,
-      "raw": 32,
+      "raw": 33,
       "parser": "link_list"
      }
     ]
@@ -630,32 +621,43 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "2026年10月19日 お知らせ メンテナンスに伴うWeb口振サービスの休止について",
+     "url": "https://www.aichibank.co.jp/important_infomation/details/261019.html",
+     "date": "2026-10-27",
+     "posted_date": "2026-10-19",
+     "event_date": "2026-10-27",
+     "services": [
+      "振込"
+     ],
+     "period": "2026年10月27日（火）午前1時～午前6時 3"
+    },
+    {
      "title": "2026年09月30日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/260930.html",
-     "date": "2026-10-16",
+     "date": "2026-10-22",
      "posted_date": "2026-09-30",
-     "event_date": "2026-10-16",
+     "event_date": "2026-10-22",
      "services": [
       "ATM"
      ],
-     "period": "2026年10月16日（金）15時～2026年10月19日（月）8時"
+     "period": "2026年10月22日（木）18時～2026年10月23日（金）8時"
     }
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 2,
-    "kept_count": 1,
+    "raw_count": 3,
+    "kept_count": 2,
     "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-16",
+    "latest_seen": "2026-10-27",
     "sources": [
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
       "ok": true,
-      "raw": 2,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
@@ -1069,6 +1071,19 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "2026/10/19 お知らせ 新システムへの移行に伴うサービス休止について (311KB)",
+     "url": "https://www.hokkokubank.co.jp/other/news/2026/pdf/20261019.pdf",
+     "date": "2026-12-30",
+     "posted_date": "2026-10-19",
+     "event_date": "2026-12-30",
+     "services": [
+      "ATM",
+      "アプリ",
+      "カード"
+     ],
+     "period": "2026 年 12 月 30 日（水）21 時～2027 年1 月 3 日（日）7 時"
+    },
+    {
      "title": "2026/8/17 お知らせ システムメンテナンスに伴うお振込の取扱いについて",
      "url": "https://www.hokkokubank.co.jp/other/news/2026/20260817.html",
      "date": "2026-11-03",
@@ -1082,19 +1097,19 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 3,
-    "kept_count": 1,
+    "raw_count": 4,
+    "kept_count": 2,
     "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-03",
+    "latest_seen": "2026-12-30",
     "sources": [
      {
       "url": "https://www.hokkokubank.co.jp/other/news/",
       "ok": true,
-      "raw": 3,
+      "raw": 4,
       "parser": "link_list"
      }
     ]
