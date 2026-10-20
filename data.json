@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20T01:00:45.507608+09:00",
+ "updated": "2026-10-20T09:10:10.185391+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -158,24 +158,12 @@
    "regular": "マイゲート・アプリ：毎月第1月曜 2:00–6:00／第2土曜 23:00–翌日曜 6:00",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "【お知らせ】システムメンテナンスに伴う来店予約サービスの一時利用停止について(2026年10月19日)",
-     "url": "https://www.resonabank.co.jp/kojin/oshirase_s/2026/detail/oshirase_10124.html",
-     "date": "2026-10-19",
-     "posted_date": null,
-     "event_date": "2026-10-19",
-     "services": [
-      "アプリ"
-     ],
-     "period": "2026年10月19日（月）午後10：00～2026年10月20日（火）午前3：00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 9,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -346,7 +334,7 @@
       "振込",
       "アプリ"
      ],
-     "period": "2026年10月19日（月）午後10:00～10月20日（火）午前3:00"
+     "period": "2026年10月19日～10月20日"
     }
    ],
    "diag": {
