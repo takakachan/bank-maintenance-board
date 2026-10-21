@@ -8,18 +8,8 @@ X-WR-TIMEZONE:Asia/Tokyo
 X-WR-CALDESC:銀行のシステムメンテナンス・サービス停止
  予定
 BEGIN:VEVENT
-UID:826db94460a945109fd8c5493a633dfa@bank-maintenance-board
-DTSTAMP:20261020T234206Z
-DTSTART;VALUE=DATE:20261009
-DTEND;VALUE=DATE:20261010
-SUMMARY:大垣共立銀行 停止（ATM・振込・アプリ）
-DESCRIPTION:中村支店ビル工事に伴う業務・サービスの休
- 止\nhttps://www.okb.co.jp/archive/2026/20261009-01.html
-URL:https://www.okb.co.jp/archive/2026/20261009-01.html
-END:VEVENT
-BEGIN:VEVENT
 UID:420d9d5fcc42419b35197eb44d3f43f0@bank-maintenance-board
-DTSTAMP:20261020T234206Z
+DTSTAMP:20261021T141332Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261017
 SUMMARY:百五銀行 停止（アプリ）
@@ -30,7 +20,7 @@ URL:https://www.hyakugo.co.jp/whats_new/20261016_01.html
 END:VEVENT
 BEGIN:VEVENT
 UID:87da9ef07c774bd8d0d7546b1d5f60e1@bank-maintenance-board
-DTSTAMP:20261020T234206Z
+DTSTAMP:20261021T141332Z
 DTSTART;VALUE=DATE:20261019
 DTEND;VALUE=DATE:20261120
 SUMMARY:第四北越銀行 停止（ATM）
@@ -42,8 +32,112 @@ URL:https://www.dhbk.co.jp/information/__icsFiles/afieldfile/2026/10/09/2
  0261009.pdf
 END:VEVENT
 BEGIN:VEVENT
+UID:16e8a3fbdc7f79838793021d82862be9@bank-maintenance-board
+DTSTAMP:20261021T141332Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:ゆうちょ銀行 停止（アプリ・カード）
+DESCRIPTION:一部サービスの緊急メンテナンス実施につい
+ て（10/21 20:00時点）\nhttps://www.jp-bank.japanpost.jp/news/2026/n
+ ews_id002508.html
+URL:https://www.jp-bank.japanpost.jp/news/2026/news_id002508.html
+END:VEVENT
+BEGIN:VEVENT
+UID:bf5a76a9008ba1e1f1a44be67cd3c5cb@bank-maintenance-board
+DTSTAMP:20261021T141332Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:りそな銀行 停止（アプリ）
+DESCRIPTION:【お知らせ】システムメンテナンスに伴う来
+ 店予約サービスの一時利用停止について(2026年10月21日
+ )\nhttps://www.resonabank.co.jp/kojin/oshirase_s/2026/detail/oshirase_10
+ 160.html
+URL:https://www.resonabank.co.jp/kojin/oshirase_s/2026/detail/oshirase_10
+ 160.html
+END:VEVENT
+BEGIN:VEVENT
+UID:842aa8f0ffac579cc5f35ead51cbdd27@bank-maintenance-board
+DTSTAMP:20261021T141332Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:埼玉りそな銀行 停止（アプリ）
+DESCRIPTION:【お知らせ】システムメンテナンスに伴う来
+ 店予約サービス（新規口座開設・相談手続き・セミナ
+ ー・相談会）の一時利用停止について(2026年10月21日)\n
+ https://www.saitamaresona.co.jp/kojin/oshirase_s/2026/detail/oshirase_10
+ 161.html
+URL:https://www.saitamaresona.co.jp/kojin/oshirase_s/2026/detail/oshirase
+ _10161.html
+END:VEVENT
+BEGIN:VEVENT
+UID:7ead33e4df29195ce49d48bd7c49e87c@bank-maintenance-board
+DTSTAMP:20261021T141332Z
+DTSTART:20261021T130000Z
+DTEND:20261022T010000Z
+SUMMARY:楽天銀行 停止（ATM・振込・アプリ）
+DESCRIPTION:団信WEB申込・告知手続サービスのシステムメ
+ ンテナンス（2026年10月21日）\n停止期間: 2026年10月21日
+ （水）午後10:00～2026年10月22日（木）午前10:00\nhttps://ww
+ w.rakuten-bank.co.jp/info/2026/261021-3.html
+URL:https://www.rakuten-bank.co.jp/info/2026/261021-3.html
+END:VEVENT
+BEGIN:VEVENT
+UID:fecd1ec893acf1ac4bf3d4979bd1113b@bank-maintenance-board
+DTSTAMP:20261021T141332Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:楽天銀行 停止（ATM・振込・アプリ）
+DESCRIPTION:オンライン住宅ローン相談サービスのシステ
+ ムメンテナンス（2026年10月21日～）\nhttps://www.rakuten-ban
+ k.co.jp/info/2026/261021.html
+URL:https://www.rakuten-bank.co.jp/info/2026/261021.html
+END:VEVENT
+BEGIN:VEVENT
+UID:33000f9d98aa7f789828b201f93993c8@bank-maintenance-board
+DTSTAMP:20261021T141332Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:あいち銀行 停止（アプリ）
+DESCRIPTION:【事前告知】臨時システムメンテナンスによ
+ る当行ホームページの一部サービスの利用停止\nhttps:/
+ /www.aichibank.co.jp/important_infomation/details/post_21.html
+URL:https://www.aichibank.co.jp/important_infomation/details/post_21.html
+END:VEVENT
+BEGIN:VEVENT
+UID:84b19b83f1e736a9d49bf07e26c65d3a@bank-maintenance-board
+DTSTAMP:20261021T141332Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:名古屋銀行 停止
+DESCRIPTION:臨時システムメンテナンスに伴う一部サービ
+ スの停止\nhttps://www.meigin.com/important/005945.html
+URL:https://www.meigin.com/important/005945.html
+END:VEVENT
+BEGIN:VEVENT
+UID:869bfe5ff8d1d904a68e2f6b67793486@bank-maintenance-board
+DTSTAMP:20261021T141332Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:百五銀行 停止
+DESCRIPTION:臨時システムメンテナンスにともなう来店予
+ 約サービスの一時利用休止\nhttps://www.hyakugo.co.jp/whats_ne
+ w/20261021_01.pdf
+URL:https://www.hyakugo.co.jp/whats_new/20261021_01.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:66a46262cfd3f3219d1ae39f8e59d3f5@bank-maintenance-board
+DTSTAMP:20261021T141332Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:百五銀行 停止
+DESCRIPTION:臨時システムメンテナンスによる当行グルー
+ プ会社ホームページの 一時利用休止\nhttps://www.hyakugo.c
+ o.jp/whats_new/20261021_02.pdf
+URL:https://www.hyakugo.co.jp/whats_new/20261021_02.pdf
+END:VEVENT
+BEGIN:VEVENT
 UID:8e29aa6e346633d7ff18411569c941bf@bank-maintenance-board
-DTSTAMP:20261020T234206Z
+DTSTAMP:20261021T141332Z
 DTSTART:20261021T100000Z
 DTEND:20261021T150000Z
 SUMMARY:三十三銀行 停止
@@ -53,8 +147,19 @@ DESCRIPTION:メンテナンス ホームページのシステムメンテ
 URL:https://www.33bank.co.jp/news/oshirase20261014.html
 END:VEVENT
 BEGIN:VEVENT
+UID:a26441968a2bcb56ef269d742b7c2e2a@bank-maintenance-board
+DTSTAMP:20261021T141332Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:福井銀行 停止（アプリ）
+DESCRIPTION:一部システムの緊急メンテナンスについて（2
+ 026年10月21日20:00）\nhttps://www.fukuibank.co.jp/info/docs/php20261
+ 021.html
+URL:https://www.fukuibank.co.jp/info/docs/php20261021.html
+END:VEVENT
+BEGIN:VEVENT
 UID:df78f5d17b01de3de6e79ff964bc0053@bank-maintenance-board
-DTSTAMP:20261020T234206Z
+DTSTAMP:20261021T141332Z
 DTSTART:20261022T090000Z
 DTEND:20261022T230000Z
 SUMMARY:あいち銀行 停止（ATM）
@@ -66,7 +171,7 @@ URL:https://www.aichibank.co.jp/important_infomation/details/260930.html
 END:VEVENT
 BEGIN:VEVENT
 UID:cca4e37525e49876a29987685fbda47e@bank-maintenance-board
-DTSTAMP:20261020T234206Z
+DTSTAMP:20261021T141332Z
 DTSTART:20261023T145500Z
 DTEND:20261023T160000Z
 SUMMARY:ゆうちょ銀行 停止（振込）
@@ -78,7 +183,7 @@ URL:https://www.jp-bank.japanpost.jp/news/2026/news_id002504.html
 END:VEVENT
 BEGIN:VEVENT
 UID:0630208a9d71b6b4c3881b9d0317a4c6@bank-maintenance-board
-DTSTAMP:20261020T234206Z
+DTSTAMP:20261021T141332Z
 DTSTART:20261024T090000Z
 DTEND:20261024T200000Z
 SUMMARY:楽天銀行 停止（ATM・振込・アプリ）
@@ -89,8 +194,20 @@ DESCRIPTION:証券担保ローンメンテナンス（2026年10月24日
 URL:https://www.rakuten-bank.co.jp/info/2026/261019-3.html
 END:VEVENT
 BEGIN:VEVENT
+UID:1b8e60710165b0fb40bfd388589fae18@bank-maintenance-board
+DTSTAMP:20261021T141332Z
+DTSTART:20261025T150000Z
+DTEND:20261025T220000Z
+SUMMARY:イオン銀行 停止（アプリ・投信・カード）
+DESCRIPTION:システムメンテナンスに伴う、サービス停止
+ のお知らせ（10月26日（月）0:00～7:00）\n停止期間: 2026
+ 年10月26日（月）0:00～7:00\nhttps://www.aeonbank.co.jp/news/2026/
+ 1021_01/
+URL:https://www.aeonbank.co.jp/news/2026/1021_01/
+END:VEVENT
+BEGIN:VEVENT
 UID:898ccf138f7ad78e53a6bf305c3e393e@bank-maintenance-board
-DTSTAMP:20261020T234206Z
+DTSTAMP:20261021T141332Z
 DTSTART:20261026T160000Z
 DTEND:20261026T210000Z
 SUMMARY:あいち銀行 停止（振込）
@@ -101,7 +218,7 @@ URL:https://www.aichibank.co.jp/important_infomation/details/261019.html
 END:VEVENT
 BEGIN:VEVENT
 UID:6f7c7b50a736de903721e1f7073e3d6b@bank-maintenance-board
-DTSTAMP:20261020T234206Z
+DTSTAMP:20261021T141332Z
 DTSTART:20261026T150000Z
 DTEND:20261026T230000Z
 SUMMARY:群馬銀行 停止（アプリ）
@@ -113,7 +230,7 @@ URL:https://www.gunmabank.co.jp/info/gbnotice/gbnotice20261009.html
 END:VEVENT
 BEGIN:VEVENT
 UID:8b446f68f6c858dd574ea7f262a5cf73@bank-maintenance-board
-DTSTAMP:20261020T234206Z
+DTSTAMP:20261021T141332Z
 DTSTART:20261031T053000Z
 DTEND:20261031T083000Z
 SUMMARY:PayPay銀行 停止（アプリ）
@@ -124,7 +241,7 @@ URL:https://www.paypay-bank.co.jp/news/2026/1019-03.html
 END:VEVENT
 BEGIN:VEVENT
 UID:9887d2517696cc0c2f4a15348e9a5d39@bank-maintenance-board
-DTSTAMP:20261020T234206Z
+DTSTAMP:20261021T141332Z
 DTSTART:20261030T150000Z
 DTEND:20261101T150000Z
 SUMMARY:百五銀行 停止（アプリ・投信）
@@ -135,19 +252,8 @@ DESCRIPTION:「105スマホ投信」投信口座開設・投信取引機
 URL:https://www.hyakugo.co.jp/whats_new/20260910_01.html
 END:VEVENT
 BEGIN:VEVENT
-UID:b5a250cad5a9beef42e072476631a7f9@bank-maintenance-board
-DTSTAMP:20261020T234206Z
-DTSTART:20261102T200000Z
-DTEND:20261103T120000Z
-SUMMARY:北國銀行 停止（振込）
-DESCRIPTION:システムメンテナンスに伴うお振込の取扱い\
- n停止期間: 2026年11月3日（火・祝）5:00～21:00\nhttps://www.
- hokkokubank.co.jp/other/news/2026/20260817.html
-URL:https://www.hokkokubank.co.jp/other/news/2026/20260817.html
-END:VEVENT
-BEGIN:VEVENT
 UID:2a3f1f6d728bfe075d53ae167096a84d@bank-maintenance-board
-DTSTAMP:20261020T234206Z
+DTSTAMP:20261021T141332Z
 DTSTART:20261114T120000Z
 DTEND:20261114T210000Z
 SUMMARY:埼玉りそな銀行 停止（アプリ）
@@ -160,20 +266,8 @@ URL:https://www.saitamaresona.co.jp/kojin/oshirase_s/2026/detail/oshirase
  _10093.html
 END:VEVENT
 BEGIN:VEVENT
-UID:2278f7a1768eba734179496d7cb81cba@bank-maintenance-board
-DTSTAMP:20261020T234206Z
-DTSTART:20261230T120000Z
-DTEND:20270102T220000Z
-SUMMARY:北國銀行 停止（ATM・アプリ・カード）
-DESCRIPTION:新システムへの移行に伴うサービス休止につ
- いて (311KB)\n停止期間: 2026 年 12 月 30 日（水）21 時～20
- 27 年1 月 3 日（日）7 時\nhttps://www.hokkokubank.co.jp/other/new
- s/2026/pdf/20261019.pdf
-URL:https://www.hokkokubank.co.jp/other/news/2026/pdf/20261019.pdf
-END:VEVENT
-BEGIN:VEVENT
 UID:7696cfc71cdfc29e904673720d84dedd@bank-maintenance-board
-DTSTAMP:20261020T234206Z
+DTSTAMP:20261021T141332Z
 DTSTART;VALUE=DATE:20270919
 DTEND;VALUE=DATE:20270920
 SUMMARY:福岡銀行 停止（振込）
