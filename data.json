@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22T08:56:20.342424+09:00",
+ "updated": "2026-10-22T23:13:31.483868+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -108,6 +108,18 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "一部サービスの緊急メンテナンス実施について（10/22 12:00時点）",
+     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002508.html",
+     "date": "2026-10-22",
+     "posted_date": null,
+     "event_date": "2026-10-22",
+     "services": [
+      "アプリ",
+      "投信",
+      "カード"
+     ]
+    },
+    {
      "title": "「ゆうちょの国際送金」webサイトのシステムメンテナンスのお知らせ",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002504.html",
      "date": "2026-10-23",
@@ -122,8 +134,8 @@
    "diag": {
     "status": "ok",
     "raw_count": 29,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -220,18 +232,30 @@
    "regular": "毎週日曜 0:00–5:00 各種手続き停止ほか",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "臨時メンテナンスのお知らせ",
+     "url": "https://www.netbk.co.jp/contents/company/info/2026/1022_006518.html",
+     "date": "2026-10-22",
+     "posted_date": null,
+     "event_date": "2026-10-22",
+     "services": [
+      "振込",
+      "アプリ"
+     ]
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 10,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "status": "ok",
+    "raw_count": 11,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
      "none"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-10-22",
     "sources": [
      {
       "url": "https://www.netbk.co.jp/contents/company/info/maintenance/",
@@ -242,7 +266,7 @@
      {
       "url": "https://www.netbk.co.jp/contents/company/info/",
       "ok": true,
-      "raw": 10,
+      "raw": 11,
       "parser": "link_list"
      }
     ]
@@ -314,7 +338,7 @@
      "period": "2026年10月24日（土）午後6:00～10月25日（日）午前5:00"
     },
     {
-     "title": "団信WEB申込・告知手続サービスのシステムメンテナンス（2026年10月21日）のお知らせ",
+     "title": "団信WEB申込・告知手続サービスのシステムメンテナンス（2026年10月21日～）のお知らせ",
      "url": "https://www.rakuten-bank.co.jp/info/2026/261021-3.html",
      "date": "2026-10-21",
      "posted_date": null,
@@ -323,8 +347,7 @@
       "ATM",
       "振込",
       "アプリ"
-     ],
-     "period": "2026年10月21日（水）午後10:00～2026年10月22日（木）午前10:00"
+     ]
     }
    ],
    "diag": {
@@ -359,7 +382,7 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 3,
+    "raw_count": 1,
     "kept_count": 0,
     "dropped_past": 1,
     "dropped_undated": 0,
@@ -371,7 +394,7 @@
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
       "ok": true,
-      "raw": 3,
+      "raw": 1,
       "parser": "text_block"
      }
     ]
@@ -501,22 +524,44 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026年10月21日 一部Webサービスの提供停止について",
+     "url": "https://www.okb.co.jp/archive/2026/20261021-00.html",
+     "date": "2026-10-21",
+     "posted_date": "2026-10-21",
+     "event_date": null,
+     "services": [
+      "アプリ"
+     ]
+    },
+    {
+     "title": "システムメンテナンスのため、スーパーOKダイレクトを･･･",
+     "url": "https://www.okb.co.jp/personal/okdirect/",
+     "date": "2026-10-26",
+     "posted_date": null,
+     "event_date": "2026-10-26",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026年10月26日（月） 午前0:00 ～ 午前7:00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 1,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 3,
+    "kept_count": 2,
     "dropped_past": 0,
     "dropped_undated": 1,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-10-26",
     "sources": [
      {
       "url": "https://www.okb.co.jp/",
       "ok": true,
-      "raw": 1,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
@@ -530,28 +575,31 @@
    "official": "https://www.juroku.co.jp/",
    "regular": "インターネットバンキング：毎月第2・第3土曜 21:00–23:00／1月1日 21:00–23:00",
    "note": null,
-   "fetch_ok": false,
+   "fetch_ok": true,
    "items": [],
    "diag": {
-    "status": "fetch_failed",
-    "raw_count": 0,
+    "status": "all_past",
+    "raw_count": 1,
     "kept_count": 0,
     "dropped_past": 0,
-    "dropped_undated": 0,
-    "parsers": [],
+    "dropped_undated": 1,
+    "parsers": [
+     "link_list",
+     "none"
+    ],
     "latest_seen": null,
     "sources": [
      {
       "url": "https://www.juroku.co.jp/oshirase_personal/",
-      "ok": false,
-      "raw": 0,
-      "parser": "fetch_failed"
+      "ok": true,
+      "raw": 1,
+      "parser": "link_list"
      },
      {
       "url": "https://www.16fg.co.jp/news/16bank/",
-      "ok": false,
+      "ok": true,
       "raw": 0,
-      "parser": "fetch_failed"
+      "parser": "none"
      }
     ]
    }
@@ -597,6 +645,17 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "2026年10月22日 お知らせ あいち銀行およびグループ会社ホームページの臨時システムメンテナンスによる一部サービスの利用停止について",
+     "url": "https://www.aichibank.co.jp/important_infomation/details/261022.html",
+     "date": "2026-10-22",
+     "posted_date": "2026-10-22",
+     "event_date": "2026-10-22",
+     "services": [
+      "アプリ",
+      "投信"
+     ]
+    },
+    {
      "title": "2026年10月19日 お知らせ メンテナンスに伴うWeb口振サービスの休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/261019.html",
      "date": "2026-10-27",
@@ -622,8 +681,8 @@
    "diag": {
     "status": "ok",
     "raw_count": 4,
-    "kept_count": 2,
-    "dropped_past": 2,
+    "kept_count": 3,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -655,7 +714,9 @@
      "date": "2026-10-22",
      "posted_date": null,
      "event_date": "2026-10-22",
-     "services": []
+     "services": [
+      "投信"
+     ]
     }
    ],
    "diag": {
@@ -695,6 +756,14 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "2026年10月22日 お知らせ 株式会社百五カードホームページの一時利用休止について",
+     "url": "https://www.hyakugo.co.jp/whats_new/20261022_01.pdf",
+     "date": "2026-10-22",
+     "posted_date": "2026-10-22",
+     "event_date": null,
+     "services": []
+    },
+    {
      "title": "2026年10月16日 お知らせ 百五銀行スマホバンキングでの券面撮影を用いた本人認証方法の停止について",
      "url": "https://www.hyakugo.co.jp/whats_new/20261016_01.html",
      "date": "2026-10-16",
@@ -703,35 +772,23 @@
      "services": [
       "アプリ"
      ]
-    },
-    {
-     "title": "2026年09月10日 お知らせ 「105スマホ投信」投信口座開設・投信取引機能の臨時停止について",
-     "url": "https://www.hyakugo.co.jp/whats_new/20260910_01.html",
-     "date": "2026-10-31",
-     "posted_date": "2026-09-10",
-     "event_date": "2026-10-31",
-     "services": [
-      "アプリ",
-      "投信"
-     ],
-     "period": "2026年10月31日（土）0:00 ～ 11月1日（日）24:00"
     }
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 8,
+    "raw_count": 9,
     "kept_count": 2,
     "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-31",
+    "latest_seen": "2026-10-22",
     "sources": [
      {
       "url": "https://www.hyakugo.co.jp/whats_new/",
       "ok": true,
-      "raw": 8,
+      "raw": 9,
       "parser": "link_list"
      }
     ]
@@ -746,17 +803,26 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026/10/22 臨時メンテナンスに伴う一部サービス停止のお知らせ",
+     "url": "https://www.33bank.co.jp/news/oshirase20261022.html",
+     "date": "2026-10-22",
+     "posted_date": "2026-10-22",
+     "event_date": "2026-10-22",
+     "services": []
+    }
+   ],
    "diag": {
-    "status": "all_past",
+    "status": "ok",
     "raw_count": 4,
-    "kept_count": 0,
-    "dropped_past": 4,
+    "kept_count": 1,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-14",
+    "latest_seen": "2026-10-22",
     "sources": [
      {
       "url": "https://www.33bank.co.jp/",
@@ -775,28 +841,30 @@
    "official": "https://www.hekishin.jp/news/",
    "regular": "",
    "note": null,
-   "fetch_ok": false,
+   "fetch_ok": true,
    "items": [],
    "diag": {
-    "status": "fetch_failed",
-    "raw_count": 0,
+    "status": "all_past",
+    "raw_count": 10,
     "kept_count": 0,
-    "dropped_past": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
-    "parsers": [],
+    "parsers": [
+     "link_list"
+    ],
     "latest_seen": null,
     "sources": [
      {
       "url": "https://www.hekishin.jp/news/",
-      "ok": false,
-      "raw": 0,
-      "parser": "fetch_failed"
+      "ok": true,
+      "raw": 7,
+      "parser": "link_list"
      },
      {
       "url": "https://www.hekishin.jp/news/important/",
-      "ok": false,
-      "raw": 0,
-      "parser": "fetch_failed"
+      "ok": true,
+      "raw": 3,
+      "parser": "link_list"
      }
     ]
    }
@@ -809,21 +877,23 @@
    "official": "https://www.shizuokabank.co.jp/notice/",
    "regular": "しずぎんダイレクト・アプリ：毎月第1・第3月曜 2:00–6:00",
    "note": null,
-   "fetch_ok": false,
+   "fetch_ok": true,
    "items": [],
    "diag": {
-    "status": "fetch_failed",
-    "raw_count": 0,
+    "status": "all_past",
+    "raw_count": 4,
     "kept_count": 0,
-    "dropped_past": 0,
+    "dropped_past": 4,
     "dropped_undated": 0,
-    "parsers": [],
-    "latest_seen": null,
+    "parsers": [
+     "json"
+    ],
+    "latest_seen": "2026-10-15",
     "sources": [
      {
       "url": "https://www.shizuokabank.co.jp/common/components/info.json",
-      "ok": false,
-      "raw": 0,
+      "ok": true,
+      "raw": 4,
       "parser": "json"
      }
     ]
@@ -895,22 +965,36 @@
    "official": "https://www.gunmabank.co.jp/info/gbnotice/",
    "regular": "",
    "note": null,
-   "fetch_ok": false,
-   "items": [],
+   "fetch_ok": true,
+   "items": [
+    {
+     "title": "2026年10月09日 フリーローン「おまとめ太郎」WEB完結サービス 定期メンテナンスのお知らせ",
+     "url": "https://www.gunmabank.co.jp/info/gbnotice/gbnotice20261009.html",
+     "date": "2026-10-27",
+     "posted_date": "2026-10-09",
+     "event_date": "2026-10-27",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026年10月27日(火) 0:00 ～ 8:00"
+    }
+   ],
    "diag": {
-    "status": "fetch_failed",
-    "raw_count": 0,
-    "kept_count": 0,
-    "dropped_past": 0,
+    "status": "ok",
+    "raw_count": 2,
+    "kept_count": 1,
+    "dropped_past": 1,
     "dropped_undated": 0,
-    "parsers": [],
-    "latest_seen": null,
+    "parsers": [
+     "link_list"
+    ],
+    "latest_seen": "2026-10-27",
     "sources": [
      {
       "url": "https://www.gunmabank.co.jp/info/gbnotice/",
-      "ok": false,
-      "raw": 0,
-      "parser": "fetch_failed"
+      "ok": true,
+      "raw": 2,
+      "parser": "link_list"
      }
     ]
    }
@@ -1026,23 +1110,48 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026/10/19 お知らせ 新システムへの移行に伴うサービス休止について (311KB)",
+     "url": "https://www.hokkokubank.co.jp/other/news/2026/pdf/20261019.pdf",
+     "date": "2026-12-30",
+     "posted_date": "2026-10-19",
+     "event_date": "2026-12-30",
+     "services": [
+      "ATM",
+      "アプリ",
+      "カード"
+     ],
+     "period": "2026 年 12 月 30 日（水）21 時～2027 年1 月 3 日（日）7 時"
+    },
+    {
+     "title": "2026/8/17 お知らせ システムメンテナンスに伴うお振込の取扱いについて",
+     "url": "https://www.hokkokubank.co.jp/other/news/2026/20260817.html",
+     "date": "2026-11-03",
+     "posted_date": "2026-08-17",
+     "event_date": "2026-11-03",
+     "services": [
+      "振込"
+     ],
+     "period": "2026年11月3日（火・祝）5:00～21:00"
+    }
+   ],
    "diag": {
-    "status": "no_notice",
-    "raw_count": 0,
-    "kept_count": 0,
-    "dropped_past": 0,
+    "status": "ok",
+    "raw_count": 4,
+    "kept_count": 2,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
-     "none"
+     "link_list"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-12-30",
     "sources": [
      {
       "url": "https://www.hokkokubank.co.jp/other/news/",
       "ok": true,
-      "raw": 0,
-      "parser": "none"
+      "raw": 4,
+      "parser": "link_list"
      }
     ]
    }
@@ -1056,17 +1165,28 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026年10月22日 【重要】PHP脆弱性対応のため一部サービスの提供を停止しております。（2026年10月22日 21:00）",
+     "url": "https://www.fukuibank.co.jp/info/docs/php20261021.html",
+     "date": "2026-10-22",
+     "posted_date": "2026-10-22",
+     "event_date": "2026-10-22",
+     "services": [
+      "アプリ"
+     ]
+    }
+   ],
    "diag": {
-    "status": "all_past",
+    "status": "ok",
     "raw_count": 8,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-21",
+    "latest_seen": "2026-10-22",
     "sources": [
      {
       "url": "https://www.fukuibank.co.jp/info/",
@@ -1102,8 +1222,8 @@
     "status": "ok",
     "raw_count": 3,
     "kept_count": 1,
-    "dropped_past": 1,
-    "dropped_undated": 1,
+    "dropped_past": 2,
+    "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
