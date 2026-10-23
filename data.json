@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T08:55:53.207221+09:00",
+ "updated": "2026-10-23T22:55:46.966138+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -108,6 +108,17 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "「JP BANK カード」および「ゆうちょデビット」お申し込みサイトのシステムメンテナンスのお知らせ",
+     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002506.html",
+     "date": "2026-10-27",
+     "posted_date": null,
+     "event_date": "2026-10-27",
+     "services": [
+      "カード"
+     ],
+     "period": "2026年10月27日（火）1:00～6:00"
+    },
+    {
      "title": "「ゆうちょの国際送金」webサイトのシステムメンテナンスのお知らせ",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002504.html",
      "date": "2026-10-23",
@@ -122,13 +133,13 @@
    "diag": {
     "status": "ok",
     "raw_count": 29,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-23",
+    "latest_seen": "2026-10-27",
     "sources": [
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
@@ -148,22 +159,33 @@
    "regular": "マイゲート・アプリ：毎月第1月曜 2:00–6:00／第2土曜 23:00–翌日曜 6:00",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "【お知らせ】iDeCoオンライン申込サイトの一時利用停止について(2026年10月23日（金）)",
+     "url": "https://www.resonabank.co.jp/kojin/oshirase_s/2026/detail/oshirase_10167.html",
+     "date": "2026-10-23",
+     "posted_date": null,
+     "event_date": "2026-10-23",
+     "services": [
+      "アプリ"
+     ]
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 10,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "status": "ok",
+    "raw_count": 11,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-21",
+    "latest_seen": "2026-10-23",
     "sources": [
      {
       "url": "https://www.resonabank.co.jp/kojin/oshirase/",
       "ok": true,
-      "raw": 10,
+      "raw": 11,
       "parser": "link_list"
      }
     ]
@@ -180,6 +202,16 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "【お知らせ】iDeCoオンライン申込サイトの一時利用停止について（2026年10月23日（金））",
+     "url": "https://www.saitamaresona.co.jp/kojin/oshirase_s/2026/detail/oshirase_10170.html",
+     "date": "2026-10-23",
+     "posted_date": null,
+     "event_date": "2026-10-23",
+     "services": [
+      "アプリ"
+     ]
+    },
+    {
      "title": "【重要なお知らせ】 りそなグループアプリ・マイゲートのサービス利用休止等に関するご案内",
      "url": "https://www.saitamaresona.co.jp/kojin/oshirase_s/2026/detail/oshirase_10093.html",
      "date": "2026-11-14",
@@ -193,9 +225,9 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 5,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "raw_count": 6,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -205,7 +237,7 @@
      {
       "url": "https://www.saitamaresona.co.jp/kojin/oshirase/",
       "ok": true,
-      "raw": 5,
+      "raw": 6,
       "parser": "link_list"
      }
     ]
@@ -316,7 +348,7 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 46,
+    "raw_count": 47,
     "kept_count": 1,
     "dropped_past": 4,
     "dropped_undated": 0,
@@ -328,7 +360,7 @@
      {
       "url": "https://www.rakuten-bank.co.jp/info/2026/",
       "ok": true,
-      "raw": 46,
+      "raw": 47,
       "parser": "link_list"
      }
     ]
@@ -386,13 +418,21 @@
       "カード"
      ],
      "period": "2026年10月26日（月）0:00～7:00"
+    },
+    {
+     "title": "2026.10.23 一部保険会社のインターネットでの保険お申込みサービス一時停止のお知らせ（再開時期未定）",
+     "url": "https://www.aeonbank.co.jp/news/2026/1023_01/",
+     "date": "2026-10-23",
+     "posted_date": "2026-10-23",
+     "event_date": "2026-10-23",
+     "services": []
     }
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 34,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "raw_count": 35,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
@@ -409,7 +449,7 @@
      {
       "url": "https://www.aeonbank.co.jp/news/",
       "ok": true,
-      "raw": 34,
+      "raw": 35,
       "parser": "link_list"
      }
     ]
@@ -609,6 +649,27 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "2026年10月23日 お知らせ 臨時システムメンテナンスによる一部サービスの利用停止について",
+     "url": "https://www.aichibank.co.jp/important_infomation/details/261022.html",
+     "date": "2026-10-23",
+     "posted_date": "2026-10-23",
+     "event_date": "2026-10-23",
+     "services": [
+      "アプリ",
+      "投信"
+     ]
+    },
+    {
+     "title": "2026年10月23日 お知らせ 臨時システムメンテナンスにより停止していた一部サービスの再開について",
+     "url": "https://www.aichibank.co.jp/important_infomation/details/261023.html",
+     "date": "2026-10-23",
+     "posted_date": "2026-10-23",
+     "event_date": "2026-10-23",
+     "services": [
+      "アプリ"
+     ]
+    },
+    {
      "title": "2026年10月19日 お知らせ メンテナンスに伴うWeb口振サービスの休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/261019.html",
      "date": "2026-10-27",
@@ -633,9 +694,9 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 4,
-    "kept_count": 2,
-    "dropped_past": 2,
+    "raw_count": 5,
+    "kept_count": 4,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -645,7 +706,7 @@
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
       "ok": true,
-      "raw": 4,
+      "raw": 5,
       "parser": "link_list"
      }
     ]
@@ -660,28 +721,17 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "臨時システムメンテナンスに伴う一部サービスの停止について",
-     "url": "https://www.meigin.com/important/005945.html",
-     "date": "2026-10-23",
-     "posted_date": null,
-     "event_date": "2026-10-23",
-     "services": [
-      "投信"
-     ]
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
-    "raw_count": 1,
-    "kept_count": 1,
+    "status": "no_notice",
+    "raw_count": 0,
+    "kept_count": 0,
     "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
-     "link_list"
+     "none"
     ],
-    "latest_seen": "2026-10-23",
+    "latest_seen": null,
     "sources": [
      {
       "url": "https://www.meigin.com/kojin/bankstage/news/",
@@ -692,8 +742,8 @@
      {
       "url": "https://www.meigin.com/",
       "ok": true,
-      "raw": 1,
-      "parser": "link_list"
+      "raw": 0,
+      "parser": "none"
      }
     ]
    }
@@ -737,17 +787,26 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026/10/23 臨時メンテナンスに伴う一部サービス停止のお知らせ",
+     "url": "https://www.33bank.co.jp/news/oshirase20261022.html",
+     "date": "2026-10-23",
+     "posted_date": "2026-10-23",
+     "event_date": "2026-10-23",
+     "services": []
+    }
+   ],
    "diag": {
-    "status": "all_past",
+    "status": "ok",
     "raw_count": 4,
-    "kept_count": 0,
-    "dropped_past": 4,
+    "kept_count": 1,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-22",
+    "latest_seen": "2026-10-23",
     "sources": [
      {
       "url": "https://www.33bank.co.jp/",
@@ -1133,6 +1192,18 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "（10/23 16:00現在）ホームページの臨時メンテナンスに伴う一部機能・サービス等の停止について",
+     "url": "https://www.fukuokabank.co.jp/announcement/important/y2026/1021.html",
+     "date": "2026-10-23",
+     "posted_date": null,
+     "event_date": "2026-10-23",
+     "services": [
+      "ATM",
+      "振込",
+      "投信"
+     ]
+    },
+    {
      "title": "他行宛振込の即時入金停止のお知らせ",
      "url": "https://www.fukuokabank.co.jp/announcement/important/y2026/service-suspension_3.html",
      "date": "2027-09-19",
@@ -1146,8 +1217,8 @@
    "diag": {
     "status": "ok",
     "raw_count": 3,
-    "kept_count": 1,
-    "dropped_past": 2,
+    "kept_count": 2,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -1174,21 +1245,21 @@
    "fetch_ok": true,
    "items": [],
    "diag": {
-    "status": "no_notice",
-    "raw_count": 0,
+    "status": "all_past",
+    "raw_count": 1,
     "kept_count": 0,
-    "dropped_past": 0,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
-     "none"
+     "link_list"
     ],
     "latest_seen": null,
     "sources": [
      {
       "url": "https://www.ncbank.co.jp/benri/direct/internet/news.html",
       "ok": true,
-      "raw": 0,
-      "parser": "none"
+      "raw": 1,
+      "parser": "link_list"
      }
     ]
    }
