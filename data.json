@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T22:55:46.966138+09:00",
+ "updated": "2026-10-24T08:47:26.688057+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -117,24 +117,13 @@
       "カード"
      ],
      "period": "2026年10月27日（火）1:00～6:00"
-    },
-    {
-     "title": "「ゆうちょの国際送金」webサイトのシステムメンテナンスのお知らせ",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002504.html",
-     "date": "2026-10-23",
-     "posted_date": null,
-     "event_date": "2026-10-23",
-     "services": [
-      "振込"
-     ],
-     "period": "2026年 10月 23日（金）23:55 ～ 2026年 10月 24日（土） 1:00"
     }
    ],
    "diag": {
     "status": "ok",
     "raw_count": 29,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -159,23 +148,12 @@
    "regular": "マイゲート・アプリ：毎月第1月曜 2:00–6:00／第2土曜 23:00–翌日曜 6:00",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "【お知らせ】iDeCoオンライン申込サイトの一時利用停止について(2026年10月23日（金）)",
-     "url": "https://www.resonabank.co.jp/kojin/oshirase_s/2026/detail/oshirase_10167.html",
-     "date": "2026-10-23",
-     "posted_date": null,
-     "event_date": "2026-10-23",
-     "services": [
-      "アプリ"
-     ]
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 11,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -202,16 +180,6 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "【お知らせ】iDeCoオンライン申込サイトの一時利用停止について（2026年10月23日（金））",
-     "url": "https://www.saitamaresona.co.jp/kojin/oshirase_s/2026/detail/oshirase_10170.html",
-     "date": "2026-10-23",
-     "posted_date": null,
-     "event_date": "2026-10-23",
-     "services": [
-      "アプリ"
-     ]
-    },
-    {
      "title": "【重要なお知らせ】 りそなグループアプリ・マイゲートのサービス利用休止等に関するご案内",
      "url": "https://www.saitamaresona.co.jp/kojin/oshirase_s/2026/detail/oshirase_10093.html",
      "date": "2026-11-14",
@@ -226,8 +194,8 @@
    "diag": {
     "status": "ok",
     "raw_count": 6,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -418,21 +386,13 @@
       "カード"
      ],
      "period": "2026年10月26日（月）0:00～7:00"
-    },
-    {
-     "title": "2026.10.23 一部保険会社のインターネットでの保険お申込みサービス一時停止のお知らせ（再開時期未定）",
-     "url": "https://www.aeonbank.co.jp/news/2026/1023_01/",
-     "date": "2026-10-23",
-     "posted_date": "2026-10-23",
-     "event_date": "2026-10-23",
-     "services": []
     }
    ],
    "diag": {
     "status": "ok",
     "raw_count": 35,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
@@ -649,27 +609,6 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "2026年10月23日 お知らせ 臨時システムメンテナンスによる一部サービスの利用停止について",
-     "url": "https://www.aichibank.co.jp/important_infomation/details/261022.html",
-     "date": "2026-10-23",
-     "posted_date": "2026-10-23",
-     "event_date": "2026-10-23",
-     "services": [
-      "アプリ",
-      "投信"
-     ]
-    },
-    {
-     "title": "2026年10月23日 お知らせ 臨時システムメンテナンスにより停止していた一部サービスの再開について",
-     "url": "https://www.aichibank.co.jp/important_infomation/details/261023.html",
-     "date": "2026-10-23",
-     "posted_date": "2026-10-23",
-     "event_date": "2026-10-23",
-     "services": [
-      "アプリ"
-     ]
-    },
-    {
      "title": "2026年10月19日 お知らせ メンテナンスに伴うWeb口振サービスの休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/261019.html",
      "date": "2026-10-27",
@@ -695,8 +634,8 @@
    "diag": {
     "status": "ok",
     "raw_count": 5,
-    "kept_count": 4,
-    "dropped_past": 1,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -787,21 +726,12 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026/10/23 臨時メンテナンスに伴う一部サービス停止のお知らせ",
-     "url": "https://www.33bank.co.jp/news/oshirase20261022.html",
-     "date": "2026-10-23",
-     "posted_date": "2026-10-23",
-     "event_date": "2026-10-23",
-     "services": []
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 4,
-    "kept_count": 1,
-    "dropped_past": 3,
+    "kept_count": 0,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -1149,23 +1079,12 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026年10月23日 【重要】PHP脆弱性対応のため一部サービスの提供を停止しております。（2026年10月23日 08:00）",
-     "url": "https://www.fukuibank.co.jp/info/docs/php20261021.html",
-     "date": "2026-10-23",
-     "posted_date": "2026-10-23",
-     "event_date": "2026-10-23",
-     "services": [
-      "アプリ"
-     ]
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 8,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -1192,18 +1111,6 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "（10/23 16:00現在）ホームページの臨時メンテナンスに伴う一部機能・サービス等の停止について",
-     "url": "https://www.fukuokabank.co.jp/announcement/important/y2026/1021.html",
-     "date": "2026-10-23",
-     "posted_date": null,
-     "event_date": "2026-10-23",
-     "services": [
-      "ATM",
-      "振込",
-      "投信"
-     ]
-    },
-    {
      "title": "他行宛振込の即時入金停止のお知らせ",
      "url": "https://www.fukuokabank.co.jp/announcement/important/y2026/service-suspension_3.html",
      "date": "2027-09-19",
@@ -1217,8 +1124,8 @@
    "diag": {
     "status": "ok",
     "raw_count": 3,
-    "kept_count": 2,
-    "dropped_past": 1,
+    "kept_count": 1,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
