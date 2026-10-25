@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T22:26:36.607154+09:00",
+ "updated": "2026-10-26T08:06:19.802449+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -108,16 +108,6 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "「郵便局・ATM・ポストをさがす」のメンテナンスについて",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002510.html",
-     "date": "2026-10-25",
-     "posted_date": null,
-     "event_date": "2026-10-25",
-     "services": [
-      "ATM"
-     ]
-    },
-    {
      "title": "「JP BANK カード」および「ゆうちょデビット」お申し込みサイトのシステムメンテナンスのお知らせ",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002506.html",
      "date": "2026-10-27",
@@ -132,8 +122,8 @@
    "diag": {
     "status": "ok",
     "raw_count": 30,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -380,8 +370,7 @@
       "アプリ",
       "投信",
       "カード"
-     ],
-     "period": "2026年10月26日（月）0:00～7:00"
+     ]
     }
    ],
    "diag": {
@@ -494,29 +483,18 @@
      "services": [
       "アプリ"
      ]
-    },
-    {
-     "title": "システムメンテナンスのため、スーパーOKダイレクトを･･･",
-     "url": "https://www.okb.co.jp/personal/okdirect/",
-     "date": "2026-10-26",
-     "posted_date": null,
-     "event_date": "2026-10-26",
-     "services": [
-      "アプリ"
-     ],
-     "period": "2026年10月26日（月） 午前0:00 ～ 午前7:00"
     }
    ],
    "diag": {
     "status": "ok",
     "raw_count": 3,
-    "kept_count": 2,
-    "dropped_past": 0,
+    "kept_count": 1,
+    "dropped_past": 1,
     "dropped_undated": 1,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-26",
+    "latest_seen": "2026-10-21",
     "sources": [
      {
       "url": "https://www.okb.co.jp/",
