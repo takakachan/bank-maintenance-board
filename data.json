@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26T08:06:19.802449+09:00",
+ "updated": "2026-10-27T00:37:13.002717+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -108,6 +108,17 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "「ゆうちょレコ」システムメンテナンスのお知らせ",
+     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002495.html",
+     "date": "2026-10-28",
+     "posted_date": null,
+     "event_date": "2026-10-28",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026年10月28日（水）15:00～17:00"
+    },
+    {
      "title": "「JP BANK カード」および「ゆうちょデビット」お申し込みサイトのシステムメンテナンスのお知らせ",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002506.html",
      "date": "2026-10-27",
@@ -121,19 +132,19 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 30,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "raw_count": 31,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-27",
+    "latest_seen": "2026-10-28",
     "sources": [
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
       "ok": true,
-      "raw": 30,
+      "raw": 31,
       "parser": "link_list"
      }
     ]
@@ -223,7 +234,7 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 11,
+    "raw_count": 12,
     "kept_count": 0,
     "dropped_past": 5,
     "dropped_undated": 0,
@@ -242,7 +253,7 @@
      {
       "url": "https://www.netbk.co.jp/contents/company/info/",
       "ok": true,
-      "raw": 11,
+      "raw": 12,
       "parser": "link_list"
      }
     ]
@@ -329,23 +340,36 @@
    "regular": "毎月第2土曜の翌日曜 0:00–7:00／カードローン：毎週月曜 1:00–5:00",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "【じぶん銀行スマホデビット】システムメンテナンスのお知らせ メンテナンス日時 2026年11月1日（日）2:00 ～ 5:30",
+     "url": "https://www.jibunbank.co.jp/maintenance/",
+     "date": "2026-11-01",
+     "posted_date": null,
+     "event_date": "2026-11-01",
+     "services": [
+      "アプリ",
+      "カード"
+     ],
+     "period": "2026年11月1日（日）2:00 ～ 5:30"
+    }
+   ],
    "diag": {
-    "status": "no_notice",
-    "raw_count": 0,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 1,
+    "kept_count": 1,
     "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
-     "none"
+     "text_block"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-11-01",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
       "ok": true,
-      "raw": 0,
-      "parser": "none"
+      "raw": 1,
+      "parser": "text_block"
      }
     ]
    }
@@ -359,25 +383,12 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026.10.21 システムメンテナンスに伴う、サービス停止のお知らせ（10月26日（月）0:00～7:00）",
-     "url": "https://www.aeonbank.co.jp/news/2026/1021_01/",
-     "date": "2026-10-26",
-     "posted_date": "2026-10-21",
-     "event_date": "2026-10-26",
-     "services": [
-      "アプリ",
-      "投信",
-      "カード"
-     ]
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 35,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
@@ -475,6 +486,16 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "2026年10月22日 【全面再開】 一部Webサービスの提供停止について",
+     "url": "https://www.okb.co.jp/archive/2026/20261021-02.html",
+     "date": "2026-10-22",
+     "posted_date": "2026-10-22",
+     "event_date": null,
+     "services": [
+      "アプリ"
+     ]
+    },
+    {
      "title": "2026年10月21日 一部Webサービスの提供停止について",
      "url": "https://www.okb.co.jp/archive/2026/20261021-00.html",
      "date": "2026-10-21",
@@ -487,19 +508,19 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 3,
-    "kept_count": 1,
-    "dropped_past": 1,
-    "dropped_undated": 1,
+    "raw_count": 2,
+    "kept_count": 2,
+    "dropped_past": 0,
+    "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-21",
+    "latest_seen": "2026-10-22",
     "sources": [
      {
       "url": "https://www.okb.co.jp/",
       "ok": true,
-      "raw": 3,
+      "raw": 2,
       "parser": "link_list"
      }
     ]
@@ -1063,7 +1084,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-23",
+    "latest_seen": "2026-10-26",
     "sources": [
      {
       "url": "https://www.fukuibank.co.jp/info/",
