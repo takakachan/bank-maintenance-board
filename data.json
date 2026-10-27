@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T00:37:13.002717+09:00",
+ "updated": "2026-10-27T09:17:49.287526+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -117,24 +117,13 @@
       "アプリ"
      ],
      "period": "2026年10月28日（水）15:00～17:00"
-    },
-    {
-     "title": "「JP BANK カード」および「ゆうちょデビット」お申し込みサイトのシステムメンテナンスのお知らせ",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002506.html",
-     "date": "2026-10-27",
-     "posted_date": null,
-     "event_date": "2026-10-27",
-     "services": [
-      "カード"
-     ],
-     "period": "2026年10月27日（火）1:00～6:00"
     }
    ],
    "diag": {
     "status": "ok",
     "raw_count": 31,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -604,17 +593,6 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "2026年10月19日 お知らせ メンテナンスに伴うWeb口振サービスの休止について",
-     "url": "https://www.aichibank.co.jp/important_infomation/details/261019.html",
-     "date": "2026-10-27",
-     "posted_date": "2026-10-19",
-     "event_date": "2026-10-27",
-     "services": [
-      "振込"
-     ],
-     "period": "2026年10月27日（火）午前1時～午前6時 3"
-    },
-    {
      "title": "2026年09月30日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/260930.html",
      "date": "2026-10-27",
@@ -629,8 +607,8 @@
    "diag": {
     "status": "ok",
     "raw_count": 5,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -875,29 +853,17 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026年10月09日 フリーローン「おまとめ太郎」WEB完結サービス 定期メンテナンスのお知らせ",
-     "url": "https://www.gunmabank.co.jp/info/gbnotice/gbnotice20261009.html",
-     "date": "2026-10-27",
-     "posted_date": "2026-10-09",
-     "event_date": "2026-10-27",
-     "services": [
-      "アプリ"
-     ],
-     "period": "2026年10月27日(火) 0:00 ～ 8:00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 2,
-    "kept_count": 1,
-    "dropped_past": 1,
+    "kept_count": 0,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-27",
+    "latest_seen": "2026-10-09",
     "sources": [
      {
       "url": "https://www.gunmabank.co.jp/info/gbnotice/",
@@ -1106,6 +1072,16 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "（10/27 8:00現在）ホームページの臨時メンテナンスに伴う一部機能・サービス等の再開について",
+     "url": "https://www.fukuokabank.co.jp/announcement/important/y2026/1021.html",
+     "date": "2026-10-27",
+     "posted_date": null,
+     "event_date": "2026-10-27",
+     "services": [
+      "振込"
+     ]
+    },
+    {
      "title": "他行宛振込の即時入金停止のお知らせ",
      "url": "https://www.fukuokabank.co.jp/announcement/important/y2026/service-suspension_3.html",
      "date": "2027-09-19",
@@ -1119,8 +1095,8 @@
    "diag": {
     "status": "ok",
     "raw_count": 3,
-    "kept_count": 1,
-    "dropped_past": 2,
+    "kept_count": 2,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
