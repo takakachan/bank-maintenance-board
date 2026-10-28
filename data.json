@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T00:00:58.867449+09:00",
+ "updated": "2026-10-28T09:21:22.058087+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -108,6 +108,17 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "「ことら送金」システムメンテナンスのお知らせ",
+     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002498.html",
+     "date": "2026-11-02",
+     "posted_date": null,
+     "event_date": "2026-11-02",
+     "services": [
+      "振込"
+     ],
+     "period": "2026年11月2日（月）AM2:00 ～ AM6:00"
+    },
+    {
      "title": "「ゆうちょレコ」システムメンテナンスのお知らせ",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002495.html",
      "date": "2026-10-28",
@@ -121,19 +132,19 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 31,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "raw_count": 32,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-28",
+    "latest_seen": "2026-11-02",
     "sources": [
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
       "ok": true,
-      "raw": 31,
+      "raw": 32,
       "parser": "link_list"
      }
     ]
@@ -595,13 +606,13 @@
     {
      "title": "2026年09月30日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/260930.html",
-     "date": "2026-10-27",
+     "date": "2026-11-05",
      "posted_date": "2026-09-30",
-     "event_date": "2026-10-27",
+     "event_date": "2026-11-05",
      "services": [
       "ATM"
      ],
-     "period": "2026年10月27日（火）18時～2026年10月28日（水）8時"
+     "period": "2026年11月5日（木）18時～2026年11月6日（金）8時"
     }
    ],
    "diag": {
@@ -613,7 +624,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-27",
+    "latest_seen": "2026-11-05",
     "sources": [
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
@@ -669,22 +680,35 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026年10月28日 お知らせ 「105スマホ投信」投信口座開設・投信取引機能の臨時停止について（再掲）",
+     "url": "https://www.hyakugo.co.jp/whats_new/20261028_01.html",
+     "date": "2026-11-14",
+     "posted_date": "2026-10-28",
+     "event_date": "2026-11-14",
+     "services": [
+      "アプリ",
+      "投信"
+     ],
+     "period": "2026年11月14日（土）0:00 ～ 11月16日（月）6:00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 9,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "status": "ok",
+    "raw_count": 10,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-22",
+    "latest_seen": "2026-11-14",
     "sources": [
      {
       "url": "https://www.hyakugo.co.jp/whats_new/",
       "ok": true,
-      "raw": 9,
+      "raw": 10,
       "parser": "link_list"
      }
     ]
@@ -699,17 +723,26 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026/10/28 臨時メンテナンスに伴う一部サービス停止のお知らせ",
+     "url": "https://www.33bank.co.jp/news/oshirase20261022.html",
+     "date": "2026-10-28",
+     "posted_date": "2026-10-28",
+     "event_date": "2026-10-28",
+     "services": []
+    }
+   ],
    "diag": {
-    "status": "all_past",
+    "status": "ok",
     "raw_count": 4,
-    "kept_count": 0,
-    "dropped_past": 4,
+    "kept_count": 1,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-23",
+    "latest_seen": "2026-10-28",
     "sources": [
      {
       "url": "https://www.33bank.co.jp/",
@@ -853,29 +886,17 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026年10月09日 フリーローン「おまとめ太郎」WEB完結サービス 定期メンテナンスのお知らせ",
-     "url": "https://www.gunmabank.co.jp/info/gbnotice/gbnotice20261009.html",
-     "date": "2026-10-28",
-     "posted_date": "2026-10-09",
-     "event_date": "2026-10-28",
-     "services": [
-      "アプリ"
-     ],
-     "period": "2026年10月28日(水) 0:00 ～ 8:00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 2,
-    "kept_count": 1,
-    "dropped_past": 1,
+    "kept_count": 0,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-28",
+    "latest_seen": "2026-10-09",
     "sources": [
      {
       "url": "https://www.gunmabank.co.jp/info/gbnotice/",
