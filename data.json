@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T09:41:16.660270+09:00",
+ "updated": "2026-10-30T00:43:29.388550+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -593,6 +593,15 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "2026年10月29日 お知らせ 三菱UFJニコスの臨時システムメンテナンスに伴う中京カードWebサイトからの「あいちカード」Web入会システムの一時休止について",
+     "url": "https://www.aichibank.co.jp/important_infomation/details/261029.html",
+     "date": "2026-10-28",
+     "posted_date": "2026-10-29",
+     "event_date": "2026-10-28",
+     "services": [],
+     "period": "2026年10月28日（水）17:00～2026年10月30日（金）17:00"
+    },
+    {
      "title": "2026年09月30日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/260930.html",
      "date": "2026-11-05",
@@ -606,8 +615,8 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 4,
-    "kept_count": 1,
+    "raw_count": 5,
+    "kept_count": 2,
     "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
@@ -618,7 +627,7 @@
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
       "ok": true,
-      "raw": 4,
+      "raw": 5,
       "parser": "link_list"
      }
     ]
