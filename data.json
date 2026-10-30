@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T00:43:29.388550+09:00",
+ "updated": "2026-10-30T09:41:44.031716+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -724,19 +724,19 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 4,
+    "raw_count": 3,
     "kept_count": 0,
-    "dropped_past": 4,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-28",
+    "latest_seen": "2026-09-07",
     "sources": [
      {
       "url": "https://www.33bank.co.jp/",
       "ok": true,
-      "raw": 4,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
@@ -1094,6 +1094,19 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "新システム移行に伴う各種サービス休止のお知らせ",
+     "url": "https://www.fukuokabank.co.jp/announcement/important/y2026/service-suspension_4.html",
+     "date": "2026-12-30",
+     "posted_date": null,
+     "event_date": "2026-12-30",
+     "services": [
+      "ATM",
+      "振込",
+      "アプリ"
+     ],
+     "period": "2026年12月30日(水)23:00～2027年1月4日(月)8:30"
+    },
+    {
      "title": "（10/27 8:00現在）ホームページの臨時メンテナンスに伴う一部機能・サービス等の再開について",
      "url": "https://www.fukuokabank.co.jp/announcement/important/y2026/1021.html",
      "date": "2027-10-21",
@@ -1116,8 +1129,8 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 3,
-    "kept_count": 2,
+    "raw_count": 4,
+    "kept_count": 3,
     "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
@@ -1128,7 +1141,7 @@
      {
       "url": "https://www.fukuokabank.co.jp/announcement/important/",
       "ok": true,
-      "raw": 3,
+      "raw": 4,
       "parser": "link_list"
      }
     ]
