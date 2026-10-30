@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T09:41:44.031716+09:00",
+ "updated": "2026-10-31T00:25:38.622435+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -593,15 +593,6 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "2026年10月29日 お知らせ 三菱UFJニコスの臨時システムメンテナンスに伴う中京カードWebサイトからの「あいちカード」Web入会システムの一時休止について",
-     "url": "https://www.aichibank.co.jp/important_infomation/details/261029.html",
-     "date": "2026-10-28",
-     "posted_date": "2026-10-29",
-     "event_date": "2026-10-28",
-     "services": [],
-     "period": "2026年10月28日（水）17:00～2026年10月30日（金）17:00"
-    },
-    {
      "title": "2026年09月30日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/260930.html",
      "date": "2026-11-05",
@@ -616,8 +607,8 @@
    "diag": {
     "status": "ok",
     "raw_count": 5,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -787,22 +778,35 @@
    "regular": "しずぎんダイレクト・アプリ：毎月第1・第3月曜 2:00–6:00",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "ATMなどのオンラインサービスの一時休止のお知らせ",
+     "url": "https://www.shizuokabank.co.jp/notice/detail/20261102_nKF/",
+     "date": "2026-12-31",
+     "posted_date": "2026-11-02",
+     "event_date": "2026-12-31",
+     "services": [
+      "ATM",
+      "アプリ"
+     ],
+     "period": "2026年12月31日（木）21：00～2027年1月2日（土）8：00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 4,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 5,
+    "kept_count": 1,
     "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "json"
     ],
-    "latest_seen": "2026-10-15",
+    "latest_seen": "2026-12-31",
     "sources": [
      {
       "url": "https://www.shizuokabank.co.jp/common/components/info.json",
       "ok": true,
-      "raw": 4,
+      "raw": 5,
       "parser": "json"
      }
     ]
