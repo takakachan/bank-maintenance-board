@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T00:25:38.622435+09:00",
+ "updated": "2026-10-31T09:35:01.162460+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -821,20 +821,45 @@
    "regular": "インターネット支店：毎月第2・第3日曜 23:00–翌7:00",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "【重要】ちばぎんアプリおよびちばぎんマイアクセスのシステムメンテナンスのお知らせ（サービス臨時休止）",
+     "url": "https://www.chibabank.co.jp/notices/notices20261030_03",
+     "date": "2026-11-14",
+     "posted_date": "2026-10-30",
+     "event_date": "2026-11-14",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026年11月14日（土）0:00～11月16日（月）7:00"
+    },
+    {
+     "title": "【重要】ちばぎんアプリの臨時休止について",
+     "url": "https://www.chibabank.co.jp/notices/notices20261030_01",
+     "date": "2026-11-09",
+     "posted_date": "2026-10-30",
+     "event_date": "2026-11-09",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026年11月9日（月）1:00～4:00"
+    }
+   ],
    "diag": {
-    "status": "no_notice",
-    "raw_count": 0,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 2,
+    "kept_count": 2,
     "dropped_past": 0,
     "dropped_undated": 0,
-    "parsers": [],
-    "latest_seen": null,
+    "parsers": [
+     "sitemap"
+    ],
+    "latest_seen": "2026-11-14",
     "sources": [
      {
       "url": "https://www.chibabank.co.jp/sitemap/www.chibabank.co.jp/sitemap_notices_0.xml",
       "ok": true,
-      "raw": 0,
+      "raw": 2,
       "parser": "sitemap"
      }
     ]
