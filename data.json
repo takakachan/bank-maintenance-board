@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T23:54:05.518017+09:00",
+ "updated": "2026-11-01T08:58:56.131997+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -257,23 +257,12 @@
    "regular": "1・4・7・10月の最終火曜 1:00–6:00（全体）／日曜未明に一部機能停止あり",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "FXサービスの停止のお知らせ（10月31日）",
-     "url": "https://www.paypay-bank.co.jp/news/2026/1019-03.html",
-     "date": "2026-10-31",
-     "posted_date": null,
-     "event_date": "2026-10-31",
-     "services": [
-      "アプリ"
-     ]
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 4,
-    "kept_count": 1,
-    "dropped_past": 3,
+    "kept_count": 0,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -338,8 +327,7 @@
      "services": [
       "アプリ",
       "カード"
-     ],
-     "period": "2026年11月1日（日）2：00 ～ 5：30"
+     ]
     }
    ],
    "diag": {
