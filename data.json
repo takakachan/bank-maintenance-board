@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T08:58:56.131997+09:00",
+ "updated": "2026-11-02T00:35:29.164026+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -317,24 +317,12 @@
    "regular": "毎月第2土曜の翌日曜 0:00–7:00／カードローン：毎週月曜 1:00–5:00",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "【じぶん銀行スマホデビット】システムメンテナンスのお知らせ メンテナンス日時 2026年11月1日（日）2：00 ～ 5：30",
-     "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-11-01",
-     "posted_date": null,
-     "event_date": "2026-11-01",
-     "services": [
-      "アプリ",
-      "カード"
-     ]
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 3,
-    "kept_count": 1,
-    "dropped_past": 0,
+    "kept_count": 0,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "text_block"
