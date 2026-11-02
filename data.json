@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T09:27:47.715248+09:00",
+ "updated": "2026-11-03T03:58:04.550705+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -208,24 +208,37 @@
    "regular": "毎週日曜 0:00–5:00 各種手続き停止ほか",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "11月 2日(月)19:00 〜 11月 6日(金) 0:00 WEBサイト・アプリ ことら送金による送金 振込時の自動判定によることら送金の適用 ※メンテナンス期間中に送金される場合は、通常の振込をご利用ください。 ※ことら送金によるお受",
+     "url": "https://www.netbk.co.jp/contents/company/info/maintenance/",
+     "date": "2026-11-02",
+     "posted_date": null,
+     "event_date": "2026-11-02",
+     "services": [
+      "振込",
+      "アプリ"
+     ],
+     "period": "11月 2日(月)19:00 〜 11月 6日(金) 0:00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 12,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "status": "ok",
+    "raw_count": 13,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
-     "none"
+     "text_block"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-11-02",
     "sources": [
      {
       "url": "https://www.netbk.co.jp/contents/company/info/maintenance/",
       "ok": true,
-      "raw": 0,
-      "parser": "none"
+      "raw": 1,
+      "parser": "text_block"
      },
      {
       "url": "https://www.netbk.co.jp/contents/company/info/",
@@ -248,19 +261,19 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 4,
+    "raw_count": 3,
     "kept_count": 0,
-    "dropped_past": 4,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-31",
+    "latest_seen": "2026-06-25",
     "sources": [
      {
       "url": "https://www.paypay-bank.co.jp/news/index.html",
       "ok": true,
-      "raw": 4,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
@@ -305,17 +318,30 @@
    "regular": "毎月第2土曜の翌日曜 0:00–7:00／カードローン：毎週月曜 1:00–5:00",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "【じぶん銀行スマホデビット】システムメンテナンスのお知らせ メンテナンス日時 2026年11月1日（日）2：00 ～ 5：30",
+     "url": "https://www.jibunbank.co.jp/maintenance/",
+     "date": "2026-11-09",
+     "posted_date": null,
+     "event_date": "2026-11-09",
+     "services": [
+      "アプリ",
+      "カード"
+     ],
+     "period": "2026年11月9日（月）1：30 ～ 7：00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
+    "status": "ok",
     "raw_count": 3,
-    "kept_count": 0,
-    "dropped_past": 1,
+    "kept_count": 1,
+    "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
      "text_block"
     ],
-    "latest_seen": "2026-11-01",
+    "latest_seen": "2026-11-09",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
@@ -757,6 +783,17 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "個人向けローンのインターネット申し込み受付一時停止のお知らせ",
+     "url": "https://www.shizuokabank.co.jp/notice/detail/20261102_xPO/",
+     "date": "2026-11-04",
+     "posted_date": "2026-11-02",
+     "event_date": "2026-11-04",
+     "services": [
+      "カード"
+     ],
+     "period": "2026年11月4日（水）0:00～5:00"
+    },
+    {
      "title": "ATMなどのオンラインサービスの一時休止のお知らせ",
      "url": "https://www.shizuokabank.co.jp/notice/detail/20261102_nKF/",
      "date": "2026-12-31",
@@ -767,18 +804,11 @@
       "アプリ"
      ],
      "period": "2026年12月31日（木）21：00～2027年1月2日（土）8：00"
-    },
-    {
-     "title": "個人向けローンのインターネット申し込み受付一時停止のお知らせ",
-     "url": "https://www.shizuokabank.co.jp/notice/detail/20261015_ZB1/",
-     "date": "2026-10-15",
-     "posted_date": "2026-10-15",
-     "event_date": null
     }
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 5,
+    "raw_count": 6,
     "kept_count": 2,
     "dropped_past": 3,
     "dropped_undated": 0,
@@ -790,7 +820,7 @@
      {
       "url": "https://www.shizuokabank.co.jp/common/components/info.json",
       "ok": true,
-      "raw": 5,
+      "raw": 6,
       "parser": "json"
      }
     ]
@@ -806,6 +836,15 @@
    "note": null,
    "fetch_ok": true,
    "items": [
+    {
+     "title": "ちばぎんビジネスポータル等のサービス臨時休止について",
+     "url": "https://www.chibabank.co.jp/notices/notices20261102_01",
+     "date": "2026-11-09",
+     "posted_date": "2026-11-02",
+     "event_date": "2026-11-09",
+     "services": [],
+     "period": "2026年11月9日（月） 1:00～4:00"
+    },
     {
      "title": "【重要】ちばぎんアプリおよびちばぎんマイアクセスのシステムメンテナンスのお知らせ（サービス臨時休止）",
      "url": "https://www.chibabank.co.jp/notices/notices20261030_03",
@@ -831,8 +870,8 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 2,
-    "kept_count": 2,
+    "raw_count": 3,
+    "kept_count": 3,
     "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
@@ -843,7 +882,7 @@
      {
       "url": "https://www.chibabank.co.jp/sitemap/www.chibabank.co.jp/sitemap_notices_0.xml",
       "ok": true,
-      "raw": 2,
+      "raw": 3,
       "parser": "sitemap"
      }
     ]
