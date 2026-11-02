@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T00:35:29.164026+09:00",
+ "updated": "2026-11-02T09:27:47.715248+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -106,29 +106,17 @@
    "regular": "夜間（23:55前後–翌朝）に振込・アプリの休止が入ることが多い",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "「ことら送金」システムメンテナンスのお知らせ",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002498.html",
-     "date": "2026-11-02",
-     "posted_date": null,
-     "event_date": "2026-11-02",
-     "services": [
-      "振込"
-     ],
-     "period": "2026年11月2日（月）AM2:00 ～ AM6:00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 32,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-02",
+    "latest_seen": "2026-10-27",
     "sources": [
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
@@ -347,18 +335,32 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026.11.02 システムメンテナンスに伴う、サービス停止のお知らせ（11月9日（月）0:00～7:00）",
+     "url": "https://www.aeonbank.co.jp/news/2026/1102_02/",
+     "date": "2026-11-09",
+     "posted_date": "2026-11-02",
+     "event_date": "2026-11-09",
+     "services": [
+      "ATM",
+      "振込",
+      "アプリ"
+     ],
+     "period": "2026年11月9日（月）00:00～07:00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 34,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "status": "ok",
+    "raw_count": 35,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
      "none"
     ],
-    "latest_seen": "2026-10-26",
+    "latest_seen": "2026-11-09",
     "sources": [
      {
       "url": "https://www.aeonbank.co.jp/maintenance/",
@@ -369,7 +371,7 @@
      {
       "url": "https://www.aeonbank.co.jp/news/",
       "ok": true,
-      "raw": 34,
+      "raw": 35,
       "parser": "link_list"
      }
     ]
@@ -765,13 +767,20 @@
       "アプリ"
      ],
      "period": "2026年12月31日（木）21：00～2027年1月2日（土）8：00"
+    },
+    {
+     "title": "個人向けローンのインターネット申し込み受付一時停止のお知らせ",
+     "url": "https://www.shizuokabank.co.jp/notice/detail/20261015_ZB1/",
+     "date": "2026-10-15",
+     "posted_date": "2026-10-15",
+     "event_date": null
     }
    ],
    "diag": {
     "status": "ok",
     "raw_count": 5,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "json"
