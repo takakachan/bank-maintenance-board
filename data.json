@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T10:07:47.688115+09:00",
+ "updated": "2026-11-05T01:40:35.197215+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -345,14 +345,14 @@
     {
      "title": "【じぶん銀行スマホデビット】システムメンテナンスのお知らせ メンテナンス日時 2026年11月1日（日）2：00 ～ 5：30",
      "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-11-09",
+     "date": "2026-11-07",
      "posted_date": null,
-     "event_date": "2026-11-09",
+     "event_date": "2026-11-07",
      "services": [
       "アプリ",
       "カード"
      ],
-     "period": "2026年11月9日（月）1：30 ～ 7：00"
+     "period": "2026年11月7日（土）6：50 ～ 17：00"
     }
    ],
    "diag": {
@@ -364,7 +364,7 @@
     "parsers": [
      "text_block"
     ],
-    "latest_seen": "2026-11-09",
+    "latest_seen": "2026-11-07",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
@@ -661,15 +661,15 @@
    "fetch_ok": true,
    "items": [],
    "diag": {
-    "status": "no_notice",
-    "raw_count": 0,
+    "status": "all_past",
+    "raw_count": 1,
     "kept_count": 0,
-    "dropped_past": 0,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
-     "none"
+     "link_list"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-11-04",
     "sources": [
      {
       "url": "https://www.meigin.com/kojin/bankstage/news/",
@@ -680,8 +680,8 @@
      {
       "url": "https://www.meigin.com/",
       "ok": true,
-      "raw": 0,
-      "parser": "none"
+      "raw": 1,
+      "parser": "link_list"
      }
     ]
    }
@@ -939,17 +939,29 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026年10月09日 フリーローン「おまとめ太郎」WEB完結サービス 定期メンテナンスのお知らせ",
+     "url": "https://www.gunmabank.co.jp/info/gbnotice/gbnotice20261009.html",
+     "date": "2026-11-17",
+     "posted_date": "2026-10-09",
+     "event_date": "2026-11-17",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026年11月17日(火) 0:00 ～ 8:00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
+    "status": "ok",
     "raw_count": 2,
-    "kept_count": 0,
-    "dropped_past": 2,
+    "kept_count": 1,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-09",
+    "latest_seen": "2026-11-17",
     "sources": [
      {
       "url": "https://www.gunmabank.co.jp/info/gbnotice/",
@@ -1129,19 +1141,19 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 8,
+    "raw_count": 9,
     "kept_count": 0,
     "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-26",
+    "latest_seen": "2026-11-04",
     "sources": [
      {
       "url": "https://www.fukuibank.co.jp/info/",
       "ok": true,
-      "raw": 8,
+      "raw": 9,
       "parser": "link_list"
      }
     ]
