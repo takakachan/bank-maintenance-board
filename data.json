@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T10:23:45.817487+09:00",
+ "updated": "2026-11-06T01:56:58.505708+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -235,14 +235,14 @@
     {
      "title": "11月 2日(月)19:00 〜 11月 6日(金) 0:00 WEBサイト・アプリ ことら送金による送金 振込時の自動判定によることら送金の適用 ※メンテナンス期間中に送金される場合は、通常の振込をご利用ください。 ※ことら送金によるお受",
      "url": "https://www.netbk.co.jp/contents/company/info/maintenance/",
-     "date": "2026-11-02",
+     "date": "2026-11-07",
      "posted_date": null,
-     "event_date": "2026-11-02",
+     "event_date": "2026-11-07",
      "services": [
       "振込",
       "アプリ"
      ],
-     "period": "11月 2日(月)19:00 〜 11月 6日(金) 0:00"
+     "period": "11月 7日(土) 0:15 〜 11月 7日(土) 5:00"
     }
    ],
    "diag": {
@@ -255,7 +255,7 @@
      "link_list",
      "text_block"
     ],
-    "latest_seen": "2026-11-02",
+    "latest_seen": "2026-11-07",
     "sources": [
      {
       "url": "https://www.netbk.co.jp/contents/company/info/maintenance/",
@@ -343,34 +343,34 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "【じぶん銀行スマホデビット】システムメンテナンスのお知らせ メンテナンス日時 2026年11月1日（日）2：00 ～ 5：30",
-     "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-11-07",
+     "title": "【SMS配信】携帯キャリア（ソフトバンク）システムメンテナンスのお知らせ（対象:ソフトバンク回線ご利用のお客さま）",
+     "url": "https://www.jibunbank.co.jp/maintenance/#flg-temporarily",
+     "date": "2026-11-06",
      "posted_date": null,
-     "event_date": "2026-11-07",
+     "event_date": "2026-11-06",
      "services": [
-      "アプリ",
-      "カード"
+      "振込",
+      "アプリ"
      ],
-     "period": "2026年11月7日（土）6：50 ～ 17：00"
+     "period": "2026年11月6日（金）0：00 ～ 2：00"
     }
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 3,
+    "raw_count": 1,
     "kept_count": 1,
     "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
-     "text_block"
+     "link_list"
     ],
-    "latest_seen": "2026-11-07",
+    "latest_seen": "2026-11-06",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
       "ok": true,
-      "raw": 3,
-      "parser": "text_block"
+      "raw": 1,
+      "parser": "link_list"
      }
     ]
    }
@@ -509,22 +509,12 @@
      "services": [
       "アプリ"
      ]
-    },
-    {
-     "title": "2026年10月21日 一部Webサービスの提供停止について",
-     "url": "https://www.okb.co.jp/archive/2026/20261021-00.html",
-     "date": "2026-10-21",
-     "posted_date": "2026-10-21",
-     "event_date": null,
-     "services": [
-      "アプリ"
-     ]
     }
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 2,
-    "kept_count": 2,
+    "raw_count": 1,
+    "kept_count": 1,
     "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
@@ -535,7 +525,7 @@
      {
       "url": "https://www.okb.co.jp/",
       "ok": true,
-      "raw": 2,
+      "raw": 1,
       "parser": "link_list"
      }
     ]
@@ -617,24 +607,12 @@
    "regular": "インターネットバンキング：毎日 2:00–6:00 は利用不可",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026年09月30日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
-     "url": "https://www.aichibank.co.jp/important_infomation/details/260930.html",
-     "date": "2026-11-05",
-     "posted_date": "2026-09-30",
-     "event_date": "2026-11-05",
-     "services": [
-      "ATM"
-     ],
-     "period": "2026年11月5日（木）18時～2026年11月6日（金）8時"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
-    "raw_count": 5,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "status": "all_past",
+    "raw_count": 6,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -644,7 +622,7 @@
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
       "ok": true,
-      "raw": 5,
+      "raw": 6,
       "parser": "link_list"
      }
     ]
@@ -711,7 +689,7 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 10,
+    "raw_count": 11,
     "kept_count": 1,
     "dropped_past": 4,
     "dropped_undated": 0,
@@ -723,7 +701,7 @@
      {
       "url": "https://www.hyakugo.co.jp/whats_new/",
       "ok": true,
-      "raw": 10,
+      "raw": 11,
       "parser": "link_list"
      }
     ]
@@ -1141,19 +1119,19 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 9,
+    "raw_count": 10,
     "kept_count": 0,
     "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-04",
+    "latest_seen": "2026-11-05",
     "sources": [
      {
       "url": "https://www.fukuibank.co.jp/info/",
       "ok": true,
-      "raw": 9,
+      "raw": 10,
       "parser": "link_list"
      }
     ]
