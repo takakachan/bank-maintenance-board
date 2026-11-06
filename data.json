@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T01:56:58.505708+09:00",
+ "updated": "2026-11-06T10:26:05.033027+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -231,37 +231,24 @@
    "regular": "毎週日曜 0:00–5:00 各種手続き停止ほか",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "11月 2日(月)19:00 〜 11月 6日(金) 0:00 WEBサイト・アプリ ことら送金による送金 振込時の自動判定によることら送金の適用 ※メンテナンス期間中に送金される場合は、通常の振込をご利用ください。 ※ことら送金によるお受",
-     "url": "https://www.netbk.co.jp/contents/company/info/maintenance/",
-     "date": "2026-11-07",
-     "posted_date": null,
-     "event_date": "2026-11-07",
-     "services": [
-      "振込",
-      "アプリ"
-     ],
-     "period": "11月 7日(土) 0:15 〜 11月 7日(土) 5:00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
-    "raw_count": 13,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "status": "all_past",
+    "raw_count": 12,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
-     "text_block"
+     "none"
     ],
-    "latest_seen": "2026-11-07",
+    "latest_seen": null,
     "sources": [
      {
       "url": "https://www.netbk.co.jp/contents/company/info/maintenance/",
       "ok": true,
-      "raw": 1,
-      "parser": "text_block"
+      "raw": 0,
+      "parser": "none"
      },
      {
       "url": "https://www.netbk.co.jp/contents/company/info/",
@@ -345,14 +332,14 @@
     {
      "title": "【SMS配信】携帯キャリア（ソフトバンク）システムメンテナンスのお知らせ（対象:ソフトバンク回線ご利用のお客さま）",
      "url": "https://www.jibunbank.co.jp/maintenance/#flg-temporarily",
-     "date": "2026-11-06",
+     "date": "2026-11-07",
      "posted_date": null,
-     "event_date": "2026-11-06",
+     "event_date": "2026-11-07",
      "services": [
       "振込",
       "アプリ"
      ],
-     "period": "2026年11月6日（金）0：00 ～ 2：00"
+     "period": "2026年11月7日（土）0：00 ～ 2：00"
     }
    ],
    "diag": {
@@ -364,7 +351,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-06",
+    "latest_seen": "2026-11-07",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
@@ -607,22 +594,34 @@
    "regular": "インターネットバンキング：毎日 2:00–6:00 は利用不可",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026年11月06日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
+     "url": "https://www.aichibank.co.jp/important_infomation/details/261106.html",
+     "date": "2026-11-06",
+     "posted_date": "2026-11-06",
+     "event_date": "2026-11-06",
+     "services": [
+      "ATM"
+     ],
+     "period": "2026年11月6日（金）18時～2026年11月7日（土）8時"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 6,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "status": "ok",
+    "raw_count": 7,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-05",
+    "latest_seen": "2026-11-06",
     "sources": [
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
       "ok": true,
-      "raw": 6,
+      "raw": 7,
       "parser": "link_list"
      }
     ]
@@ -675,6 +674,16 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "2026年11月05日 お知らせ 緊急システムメンテナンスによる「百五多目的ローンWeb完結型」の一時利用休止について",
+     "url": "https://www.hyakugo.co.jp/whats_new/20261105_06.pdf",
+     "date": "2026-11-05",
+     "posted_date": "2026-11-05",
+     "event_date": null,
+     "services": [
+      "アプリ"
+     ]
+    },
+    {
      "title": "2026年10月28日 お知らせ 「105スマホ投信」投信口座開設・投信取引機能の臨時停止について（再掲）",
      "url": "https://www.hyakugo.co.jp/whats_new/20261028_01.html",
      "date": "2026-11-14",
@@ -690,8 +699,8 @@
    "diag": {
     "status": "ok",
     "raw_count": 11,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -919,6 +928,18 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "2026年11月06日 システムメンテナンスによる「ぐんぎんアプリ 投信取引サービス」休止について",
+     "url": "https://www.gunmabank.co.jp/info/gbnotice/gbnotice20261106.html",
+     "date": "2026-11-14",
+     "posted_date": "2026-11-06",
+     "event_date": "2026-11-14",
+     "services": [
+      "アプリ",
+      "投信"
+     ],
+     "period": "2026年11月14日（土）0：00～2026年11月16日（月）6：00"
+    },
+    {
      "title": "2026年10月09日 フリーローン「おまとめ太郎」WEB完結サービス 定期メンテナンスのお知らせ",
      "url": "https://www.gunmabank.co.jp/info/gbnotice/gbnotice20261009.html",
      "date": "2026-11-17",
@@ -932,8 +953,8 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 2,
-    "kept_count": 1,
+    "raw_count": 3,
+    "kept_count": 2,
     "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
@@ -944,7 +965,7 @@
      {
       "url": "https://www.gunmabank.co.jp/info/gbnotice/",
       "ok": true,
-      "raw": 2,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
