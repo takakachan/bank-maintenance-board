@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T10:26:05.033027+09:00",
+ "updated": "2026-11-07T01:28:51.700676+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -639,14 +639,14 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 1,
+    "raw_count": 2,
     "kept_count": 0,
-    "dropped_past": 1,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-04",
+    "latest_seen": "2026-11-06",
     "sources": [
      {
       "url": "https://www.meigin.com/kojin/bankstage/news/",
@@ -657,7 +657,7 @@
      {
       "url": "https://www.meigin.com/",
       "ok": true,
-      "raw": 1,
+      "raw": 2,
       "parser": "link_list"
      }
     ]
@@ -758,7 +758,7 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 10,
+    "raw_count": 12,
     "kept_count": 0,
     "dropped_past": 5,
     "dropped_undated": 0,
@@ -770,13 +770,13 @@
      {
       "url": "https://www.hekishin.jp/news/",
       "ok": true,
-      "raw": 7,
+      "raw": 8,
       "parser": "link_list"
      },
      {
       "url": "https://www.hekishin.jp/news/important/",
       "ok": true,
-      "raw": 3,
+      "raw": 4,
       "parser": "link_list"
      }
     ]
