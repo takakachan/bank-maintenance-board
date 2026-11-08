@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T00:15:52.360887+09:00",
+ "updated": "2026-11-08T09:17:41.134768+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -106,40 +106,17 @@
    "regular": "夜間（23:55前後–翌朝）に振込・アプリの休止が入ることが多い",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "「ゆうちょ通帳アプリ」システムメンテナンスのお知らせ",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002513.html",
-     "date": "2026-11-08",
-     "posted_date": null,
-     "event_date": "2026-11-08",
-     "services": [
-      "アプリ"
-     ],
-     "period": "2026年11月8日（日）0:00 ～ 5:59"
-    },
-    {
-     "title": "「ゆうちょの国際送金」webサイトのシステムメンテナンスのお知らせ",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002512.html",
-     "date": "2026-11-07",
-     "posted_date": null,
-     "event_date": "2026-11-07",
-     "services": [
-      "振込"
-     ],
-     "period": "2026年 11月 7日（土）23:55 ～ 2026年 11月 8日（日） 2:00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 34,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-08",
+    "latest_seen": "2026-10-27",
     "sources": [
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
