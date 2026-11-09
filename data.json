@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T09:39:54.906719+09:00",
+ "updated": "2026-11-10T04:19:42.559738+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -309,14 +309,14 @@
     {
      "title": "【SMS配信】携帯キャリア（ソフトバンク）システムメンテナンスのお知らせ（対象:ソフトバンク回線ご利用のお客さま）",
      "url": "https://www.jibunbank.co.jp/maintenance/#flg-temporarily",
-     "date": "2026-11-10",
+     "date": "2026-11-14",
      "posted_date": null,
-     "event_date": "2026-11-10",
+     "event_date": "2026-11-14",
      "services": [
       "振込",
       "アプリ"
      ],
-     "period": "2026年11月10日（火）0：00 ～ 2：00"
+     "period": "2026年11月14日（土）21：00 ～ 2026年11月15日（日）7：00"
     }
    ],
    "diag": {
@@ -328,7 +328,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-10",
+    "latest_seen": "2026-11-14",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
@@ -361,25 +361,13 @@
       "カード"
      ],
      "period": "2026年11月16日（月）0:00～7:00"
-    },
-    {
-     "title": "2026.11.02 システムメンテナンスに伴う、サービス停止のお知らせ（11月9日（月）0:00～7:00）",
-     "url": "https://www.aeonbank.co.jp/news/2026/1102_02/",
-     "date": "2026-11-09",
-     "posted_date": "2026-11-02",
-     "event_date": "2026-11-09",
-     "services": [
-      "ATM",
-      "振込",
-      "アプリ"
-     ]
     }
    ],
    "diag": {
     "status": "ok",
     "raw_count": 36,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
@@ -475,34 +463,23 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026年10月22日 【全面再開】 一部Webサービスの提供停止について",
-     "url": "https://www.okb.co.jp/archive/2026/20261021-02.html",
-     "date": "2026-10-22",
-     "posted_date": "2026-10-22",
-     "event_date": null,
-     "services": [
-      "アプリ"
-     ]
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
-    "raw_count": 1,
-    "kept_count": 1,
+    "status": "no_notice",
+    "raw_count": 0,
+    "kept_count": 0,
     "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
-     "link_list"
+     "none"
     ],
-    "latest_seen": "2026-10-22",
+    "latest_seen": null,
     "sources": [
      {
       "url": "https://www.okb.co.jp/",
       "ok": true,
-      "raw": 1,
-      "parser": "link_list"
+      "raw": 0,
+      "parser": "none"
      }
     ]
    }
@@ -583,34 +560,22 @@
    "regular": "インターネットバンキング：毎日 2:00–6:00 は利用不可",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026年11月06日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
-     "url": "https://www.aichibank.co.jp/important_infomation/details/261106.html",
-     "date": "2026-11-10",
-     "posted_date": "2026-11-06",
-     "event_date": "2026-11-10",
-     "services": [
-      "ATM"
-     ],
-     "period": "2026年11月10日（火）18時～2026年11月11日（水）8時"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
-    "raw_count": 7,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "status": "all_past",
+    "raw_count": 9,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-10",
+    "latest_seen": "2026-11-09",
     "sources": [
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
       "ok": true,
-      "raw": 7,
+      "raw": 9,
       "parser": "link_list"
      }
     ]
@@ -714,22 +679,34 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026/11/09 メンテナンス 【三十三銀行アプリ】普通預金口座開設等における本人確認サービスのメンテナンス実施について",
+     "url": "https://www.33bank.co.jp/news/oshirase20261109.html",
+     "date": "2026-11-11",
+     "posted_date": "2026-11-09",
+     "event_date": "2026-11-11",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026年11月11日（水）0:00 ～ 5:00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 3,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 4,
+    "kept_count": 1,
     "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-09-07",
+    "latest_seen": "2026-11-11",
     "sources": [
      {
       "url": "https://www.33bank.co.jp/",
       "ok": true,
-      "raw": 3,
+      "raw": 4,
       "parser": "link_list"
      }
     ]
@@ -1109,19 +1086,19 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 10,
+    "raw_count": 11,
     "kept_count": 0,
     "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-05",
+    "latest_seen": "2026-11-09",
     "sources": [
      {
       "url": "https://www.fukuibank.co.jp/info/",
       "ok": true,
-      "raw": 10,
+      "raw": 11,
       "parser": "link_list"
      }
     ]
