@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T04:19:42.559738+09:00",
+ "updated": "2026-11-10T12:19:17.726827+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -590,17 +590,26 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026/11/10 めいぎん Big Advanceの一時停止について 別ウィンドウでPDFを開きます",
+     "url": "https://www.meigin.com/news/files/20261110_oshirase_1.pdf",
+     "date": "2026-11-10",
+     "posted_date": "2026-11-10",
+     "event_date": "2026-11-10",
+     "services": []
+    }
+   ],
    "diag": {
-    "status": "all_past",
+    "status": "ok",
     "raw_count": 1,
-    "kept_count": 0,
-    "dropped_past": 1,
+    "kept_count": 1,
+    "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-04",
+    "latest_seen": "2026-11-10",
     "sources": [
      {
       "url": "https://www.meigin.com/kojin/bankstage/news/",
@@ -682,7 +691,7 @@
    "items": [
     {
      "title": "2026/11/09 メンテナンス 【三十三銀行アプリ】普通預金口座開設等における本人確認サービスのメンテナンス実施について",
-     "url": "https://www.33bank.co.jp/news/oshirase20261109.html",
+     "url": "https://www.33bank.co.jp/news/oshirase20261109_2.html",
      "date": "2026-11-11",
      "posted_date": "2026-11-09",
      "event_date": "2026-11-11",
