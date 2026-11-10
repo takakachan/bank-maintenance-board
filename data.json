@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T12:19:17.726827+09:00",
+ "updated": "2026-11-11T01:40:33.740629+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -307,8 +307,8 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "【SMS配信】携帯キャリア（ソフトバンク）システムメンテナンスのお知らせ（対象:ソフトバンク回線ご利用のお客さま）",
-     "url": "https://www.jibunbank.co.jp/maintenance/#flg-temporarily",
+     "title": "じぶん銀行FX メンテナンス日時 2026年11月7日（土）6：50 ～ 17：00 じぶん銀行FXのシステムメンテナンス時間を通常よりも延長し、サービスを停止いたします。 ※ 終了時間は前後する場合があります。あらかじめご了承ください。 ",
+     "url": "https://www.jibunbank.co.jp/maintenance/",
      "date": "2026-11-14",
      "posted_date": null,
      "event_date": "2026-11-14",
@@ -321,20 +321,20 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 1,
+    "raw_count": 3,
     "kept_count": 1,
     "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
-     "link_list"
+     "text_block"
     ],
     "latest_seen": "2026-11-14",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
       "ok": true,
-      "raw": 1,
-      "parser": "link_list"
+      "raw": 3,
+      "parser": "text_block"
      }
     ]
    }
@@ -563,19 +563,19 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 9,
+    "raw_count": 10,
     "kept_count": 0,
     "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-09",
+    "latest_seen": "2026-11-10",
     "sources": [
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
       "ok": true,
-      "raw": 9,
+      "raw": 10,
       "parser": "link_list"
      }
     ]
@@ -590,21 +590,12 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026/11/10 めいぎん Big Advanceの一時停止について 別ウィンドウでPDFを開きます",
-     "url": "https://www.meigin.com/news/files/20261110_oshirase_1.pdf",
-     "date": "2026-11-10",
-     "posted_date": "2026-11-10",
-     "event_date": "2026-11-10",
-     "services": []
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 1,
-    "kept_count": 1,
-    "dropped_past": 0,
+    "kept_count": 0,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
