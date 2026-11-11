@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T01:40:33.740629+09:00",
+ "updated": "2026-11-11T10:07:45.724077+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -592,15 +592,15 @@
    "fetch_ok": true,
    "items": [],
    "diag": {
-    "status": "all_past",
-    "raw_count": 1,
+    "status": "no_notice",
+    "raw_count": 0,
     "kept_count": 0,
-    "dropped_past": 1,
+    "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
-     "link_list"
+     "none"
     ],
-    "latest_seen": "2026-11-10",
+    "latest_seen": null,
     "sources": [
      {
       "url": "https://www.meigin.com/kojin/bankstage/news/",
@@ -611,8 +611,8 @@
      {
       "url": "https://www.meigin.com/",
       "ok": true,
-      "raw": 1,
-      "parser": "link_list"
+      "raw": 0,
+      "parser": "none"
      }
     ]
    }
@@ -679,34 +679,22 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026/11/09 メンテナンス 【三十三銀行アプリ】普通預金口座開設等における本人確認サービスのメンテナンス実施について",
-     "url": "https://www.33bank.co.jp/news/oshirase20261109_2.html",
-     "date": "2026-11-11",
-     "posted_date": "2026-11-09",
-     "event_date": "2026-11-11",
-     "services": [
-      "アプリ"
-     ],
-     "period": "2026年11月11日（水）0:00 ～ 5:00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
-    "raw_count": 4,
-    "kept_count": 1,
+    "status": "all_past",
+    "raw_count": 3,
+    "kept_count": 0,
     "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-11",
+    "latest_seen": "2026-09-07",
     "sources": [
      {
       "url": "https://www.33bank.co.jp/",
       "ok": true,
-      "raw": 4,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
@@ -1083,22 +1071,31 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026年11月11日 【重要】「Fukui Big Advance」メンテナンス終了およびサービス再開のお知らせ",
+     "url": "https://www.fukuibank.co.jp/info/docs/bigadvance20261111.html",
+     "date": "2026-11-11",
+     "posted_date": "2026-11-11",
+     "event_date": "2026-11-11",
+     "services": []
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 11,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "status": "ok",
+    "raw_count": 12,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-09",
+    "latest_seen": "2026-11-11",
     "sources": [
      {
       "url": "https://www.fukuibank.co.jp/info/",
       "ok": true,
-      "raw": 11,
+      "raw": 12,
       "parser": "link_list"
      }
     ]
