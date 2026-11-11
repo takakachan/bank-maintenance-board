@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T10:07:45.724077+09:00",
+ "updated": "2026-11-12T01:45:27.687567+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -208,18 +208,31 @@
    "regular": "毎週日曜 0:00–5:00 各種手続き停止ほか",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "臨時メンテナンスのお知らせ",
+     "url": "https://www.netbk.co.jp/contents/company/info/2026/1111_006564.html",
+     "date": "2026-11-22",
+     "posted_date": null,
+     "event_date": "2026-11-22",
+     "services": [
+      "振込",
+      "アプリ"
+     ],
+     "period": "2026年11月22日(日) 2:00 ～ 11月22日(日) 5:00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 12,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "status": "ok",
+    "raw_count": 13,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
      "none"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-11-22",
     "sources": [
      {
       "url": "https://www.netbk.co.jp/contents/company/info/maintenance/",
@@ -230,7 +243,7 @@
      {
       "url": "https://www.netbk.co.jp/contents/company/info/",
       "ok": true,
-      "raw": 12,
+      "raw": 13,
       "parser": "link_list"
      }
     ]
@@ -313,10 +326,11 @@
      "posted_date": null,
      "event_date": "2026-11-14",
      "services": [
+      "ATM",
       "振込",
       "アプリ"
      ],
-     "period": "2026年11月14日（土）21：00 ～ 2026年11月15日（日）7：00"
+     "period": "2026年11月14日（土）6：50 ～ 15：00"
     }
    ],
    "diag": {
@@ -463,23 +477,37 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "システムメンテナンスによるサービス一時休止について",
+     "url": "https://www.okb.co.jp/archive/2026/20261111-02.html",
+     "date": "2026-11-16",
+     "posted_date": null,
+     "event_date": "2026-11-16",
+     "services": [
+      "ATM",
+      "振込",
+      "アプリ"
+     ],
+     "period": "２０２６年１１月１６日（月） 午前０時～午前７時 ３"
+    }
+   ],
    "diag": {
-    "status": "no_notice",
-    "raw_count": 0,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 1,
+    "kept_count": 1,
     "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
-     "none"
+     "link_list"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-11-16",
     "sources": [
      {
       "url": "https://www.okb.co.jp/",
       "ok": true,
-      "raw": 0,
-      "parser": "none"
+      "raw": 1,
+      "parser": "link_list"
      }
     ]
    }
@@ -761,7 +789,7 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 6,
+    "raw_count": 7,
     "kept_count": 1,
     "dropped_past": 4,
     "dropped_undated": 0,
@@ -773,7 +801,7 @@
      {
       "url": "https://www.shizuokabank.co.jp/common/components/info.json",
       "ok": true,
-      "raw": 6,
+      "raw": 7,
       "parser": "json"
      }
     ]
@@ -1071,21 +1099,12 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026年11月11日 【重要】「Fukui Big Advance」メンテナンス終了およびサービス再開のお知らせ",
-     "url": "https://www.fukuibank.co.jp/info/docs/bigadvance20261111.html",
-     "date": "2026-11-11",
-     "posted_date": "2026-11-11",
-     "event_date": "2026-11-11",
-     "services": []
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 12,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
