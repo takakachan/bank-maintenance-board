@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T01:45:27.687567+09:00",
+ "updated": "2026-11-12T11:09:59.826260+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -364,6 +364,17 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "2026.11.12 マネックス証券のシステムメンテナンスに伴う投資信託（金融商品仲介）受付業務休止について（11月21日（土）12:00～11月22日（日）13:00）",
+     "url": "https://www.aeonbank.co.jp/news/2026/1112_02/",
+     "date": "2026-11-21",
+     "posted_date": "2026-11-12",
+     "event_date": "2026-11-21",
+     "services": [
+      "投信"
+     ],
+     "period": "2026年11月21日（土）12:00～11月22日（日）13:00"
+    },
+    {
      "title": "2026.11.09 システムメンテナンスに伴う、サービス停止のお知らせ（11月16日（月）、24日（火）0:00～7:00）",
      "url": "https://www.aeonbank.co.jp/news/2026/1109_01/",
      "date": "2026-11-16",
@@ -379,15 +390,15 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 36,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "raw_count": 37,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
      "none"
     ],
-    "latest_seen": "2026-11-16",
+    "latest_seen": "2026-11-21",
     "sources": [
      {
       "url": "https://www.aeonbank.co.jp/maintenance/",
@@ -398,7 +409,7 @@
      {
       "url": "https://www.aeonbank.co.jp/news/",
       "ok": true,
-      "raw": 36,
+      "raw": 37,
       "parser": "link_list"
      }
     ]
@@ -737,28 +748,39 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "信金ギャランティ株式会社への保証申込一時停止のお知らせ",
+     "url": "https://www.hekishin.jp/news/files/20261112.pdf",
+     "date": "2026-11-12",
+     "posted_date": null,
+     "event_date": "2026-11-12",
+     "services": [
+      "カード"
+     ]
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 12,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "status": "ok",
+    "raw_count": 14,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-11-12",
     "sources": [
      {
       "url": "https://www.hekishin.jp/news/",
       "ok": true,
-      "raw": 8,
+      "raw": 9,
       "parser": "link_list"
      },
      {
       "url": "https://www.hekishin.jp/news/important/",
       "ok": true,
-      "raw": 4,
+      "raw": 5,
       "parser": "link_list"
      }
     ]
