@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T10:43:43.132499+09:00",
+ "updated": "2026-11-14T01:50:42.329057+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -210,7 +210,7 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "臨時メンテナンスのお知らせ",
+     "title": "（更新）臨時メンテナンスのお知らせ",
      "url": "https://www.netbk.co.jp/contents/company/info/2026/1111_006564.html",
      "date": "2026-11-22",
      "posted_date": null,
@@ -258,22 +258,32 @@
    "regular": "1・4・7・10月の最終火曜 1:00–6:00（全体）／日曜未明に一部機能停止あり",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "外貨預金サービスの停止のお知らせ（11月21日）",
+     "url": "https://www.paypay-bank.co.jp/news/2026/1113.html",
+     "date": "2026-11-21",
+     "posted_date": null,
+     "event_date": "2026-11-21",
+     "services": [],
+     "period": "2026年11月21日（土曜日）9時～24時"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 3,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 4,
+    "kept_count": 1,
     "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-06-25",
+    "latest_seen": "2026-11-21",
     "sources": [
      {
       "url": "https://www.paypay-bank.co.jp/news/index.html",
       "ok": true,
-      "raw": 3,
+      "raw": 4,
       "parser": "link_list"
      }
     ]
@@ -327,8 +337,7 @@
      "event_date": "2026-11-14",
      "services": [
       "ATM",
-      "アプリ",
-      "カード"
+      "アプリ"
      ],
      "period": "2026年11月14日（土）6：50 ～ 15：00"
     }
