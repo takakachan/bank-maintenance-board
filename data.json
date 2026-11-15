@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T00:24:33.299867+09:00",
+ "updated": "2026-11-15T09:54:27.083139+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -170,13 +170,13 @@
     {
      "title": "【重要なお知らせ】 りそなグループアプリ・マイゲートのサービス利用休止等に関するご案内",
      "url": "https://www.saitamaresona.co.jp/kojin/oshirase_s/2026/detail/oshirase_10093.html",
-     "date": "2026-11-14",
+     "date": "2026-11-06",
      "posted_date": null,
-     "event_date": "2026-11-14",
+     "event_date": "2026-11-06",
      "services": [
       "アプリ"
      ],
-     "period": "2026年11月14日(土)21時～11月15日(日)6時 20"
+     "period": "2026年11月6日(金)19時～11月20日(金)9時"
     }
    ],
    "diag": {
@@ -188,7 +188,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-14",
+    "latest_seen": "2026-11-06",
     "sources": [
      {
       "url": "https://www.saitamaresona.co.jp/kojin/oshirase/",
@@ -332,14 +332,14 @@
     {
      "title": "じぶん銀行FX メンテナンス日時 2026年11月14日（土）6：50 ～ 15：00 じぶん銀行FXのシステムメンテナンス時間を通常よりも延長し、サービスを停止いたします。 ※ 終了時間は前後する場合があります。あらかじめご了承ください。",
      "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-11-14",
+     "date": "2026-11-15",
      "posted_date": null,
-     "event_date": "2026-11-14",
+     "event_date": "2026-11-15",
      "services": [
       "ATM",
       "アプリ"
      ],
-     "period": "2026年11月14日（土）21：00 ～ 2026年11月15日（日）7：00"
+     "period": "2026年11月15日（日）10：00 ～ 18：00"
     }
    ],
    "diag": {
@@ -351,7 +351,7 @@
     "parsers": [
      "text_block"
     ],
-    "latest_seen": "2026-11-14",
+    "latest_seen": "2026-11-15",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
