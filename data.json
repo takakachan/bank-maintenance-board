@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T00:57:48.717812+09:00",
+ "updated": "2026-11-16T09:52:54.052585+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -386,15 +386,15 @@
     {
      "title": "2026.11.09 システムメンテナンスに伴う、サービス停止のお知らせ（11月16日（月）、24日（火）0:00～7:00）",
      "url": "https://www.aeonbank.co.jp/news/2026/1109_01/",
-     "date": "2026-11-16",
+     "date": "2026-11-24",
      "posted_date": "2026-11-09",
-     "event_date": "2026-11-16",
+     "event_date": "2026-11-24",
      "services": [
       "アプリ",
       "投信",
       "カード"
      ],
-     "period": "2026年11月16日（月）0:00～7:00"
+     "period": "2026年11月24日（火）0:00～7:00"
     }
    ],
    "diag": {
@@ -407,7 +407,7 @@
      "link_list",
      "none"
     ],
-    "latest_seen": "2026-11-21",
+    "latest_seen": "2026-11-24",
     "sources": [
      {
       "url": "https://www.aeonbank.co.jp/maintenance/",
@@ -497,31 +497,17 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "システムメンテナンスによるサービス一時休止について",
-     "url": "https://www.okb.co.jp/archive/2026/20261111-02.html",
-     "date": "2026-11-16",
-     "posted_date": null,
-     "event_date": "2026-11-16",
-     "services": [
-      "ATM",
-      "振込",
-      "アプリ"
-     ],
-     "period": "２０２６年１１月１６日（月） 午前０時～午前７時 ３"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 1,
-    "kept_count": 1,
-    "dropped_past": 0,
+    "kept_count": 0,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-16",
+    "latest_seen": null,
     "sources": [
      {
       "url": "https://www.okb.co.jp/",
@@ -684,30 +670,18 @@
      "services": [
       "アプリ"
      ]
-    },
-    {
-     "title": "2026年10月28日 お知らせ 「105スマホ投信」投信口座開設・投信取引機能の臨時停止について（再掲）",
-     "url": "https://www.hyakugo.co.jp/whats_new/20261028_01.html",
-     "date": "2026-11-14",
-     "posted_date": "2026-10-28",
-     "event_date": "2026-11-14",
-     "services": [
-      "アプリ",
-      "投信"
-     ],
-     "period": "2026年11月14日（土）0:00 ～ 11月16日（月）6:00"
     }
    ],
    "diag": {
     "status": "ok",
     "raw_count": 11,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-14",
+    "latest_seen": "2026-11-05",
     "sources": [
      {
       "url": "https://www.hyakugo.co.jp/whats_new/",
@@ -836,29 +810,17 @@
    "regular": "インターネット支店：毎月第2・第3日曜 23:00–翌7:00",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "【重要】ちばぎんアプリおよびちばぎんマイアクセスのシステムメンテナンスのお知らせ（サービス臨時休止）",
-     "url": "https://www.chibabank.co.jp/notices/notices20261030_03",
-     "date": "2026-11-14",
-     "posted_date": "2026-10-30",
-     "event_date": "2026-11-14",
-     "services": [
-      "アプリ"
-     ],
-     "period": "2026年11月14日（土）0:00～11月16日（月）7:00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 1,
-    "kept_count": 1,
-    "dropped_past": 0,
+    "kept_count": 0,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "sitemap"
     ],
-    "latest_seen": "2026-11-14",
+    "latest_seen": "2026-10-30",
     "sources": [
      {
       "url": "https://www.chibabank.co.jp/sitemap/www.chibabank.co.jp/sitemap_notices_0.xml",
@@ -910,18 +872,6 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "2026年11月06日 システムメンテナンスによる「ぐんぎんアプリ 投信取引サービス」休止について",
-     "url": "https://www.gunmabank.co.jp/info/gbnotice/gbnotice20261106.html",
-     "date": "2026-11-14",
-     "posted_date": "2026-11-06",
-     "event_date": "2026-11-14",
-     "services": [
-      "アプリ",
-      "投信"
-     ],
-     "period": "2026年11月14日（土）0：00～2026年11月16日（月）6：00"
-    },
-    {
      "title": "2026年10月09日 フリーローン「おまとめ太郎」WEB完結サービス 定期メンテナンスのお知らせ",
      "url": "https://www.gunmabank.co.jp/info/gbnotice/gbnotice20261009.html",
      "date": "2026-11-17",
@@ -936,8 +886,8 @@
    "diag": {
     "status": "ok",
     "raw_count": 3,
-    "kept_count": 2,
-    "dropped_past": 1,
+    "kept_count": 1,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
