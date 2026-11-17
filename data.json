@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T12:33:37.176418+09:00",
+ "updated": "2026-11-18T02:59:15.894103+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -180,32 +180,32 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "【重要なお知らせ】 りそなグループアプリ・マイゲートのサービス利用休止等に関するご案内",
-     "url": "https://www.saitamaresona.co.jp/kojin/oshirase_s/2026/detail/oshirase_10093.html",
-     "date": "2026-11-06",
+     "title": "【お知らせ】システムメンテナンスに伴う来店予約サービスの一時利用停止について（2026年11月18日）",
+     "url": "https://www.saitamaresona.co.jp/kojin/oshirase_s/2026/detail/oshirase_10265.html",
+     "date": "2026-11-18",
      "posted_date": null,
-     "event_date": "2026-11-06",
+     "event_date": "2026-11-18",
      "services": [
       "アプリ"
      ],
-     "period": "2026年11月6日(金)19時～11月20日(金)9時"
+     "period": "2026年11月18日（水）午後10：00～11月19日（木）午前0：00"
     }
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 6,
+    "raw_count": 7,
     "kept_count": 1,
     "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-06",
+    "latest_seen": "2026-11-18",
     "sources": [
      {
       "url": "https://www.saitamaresona.co.jp/kojin/oshirase/",
       "ok": true,
-      "raw": 6,
+      "raw": 7,
       "parser": "link_list"
      }
     ]
@@ -551,7 +551,7 @@
     "parsers": [
      "link_list"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-11-11",
     "sources": [
      {
       "url": "https://www.okb.co.jp/",
@@ -748,19 +748,19 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 3,
+    "raw_count": 4,
     "kept_count": 0,
-    "dropped_past": 3,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-09-07",
+    "latest_seen": "2026-11-17",
     "sources": [
      {
       "url": "https://www.33bank.co.jp/",
       "ok": true,
-      "raw": 3,
+      "raw": 4,
       "parser": "link_list"
      }
     ]
@@ -1099,22 +1099,32 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026年11月17日 個人 法人 来店予約サービスのメンテナンスによる一時停止について",
+     "url": "https://www.fukuibank.co.jp/info/docs/webreserve20261117.html",
+     "date": "2026-11-18",
+     "posted_date": "2026-11-17",
+     "event_date": "2026-11-18",
+     "services": [],
+     "period": "2026年11月18日（水）22:00～24:00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 11,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "status": "ok",
+    "raw_count": 12,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-11",
+    "latest_seen": "2026-11-18",
     "sources": [
      {
       "url": "https://www.fukuibank.co.jp/info/",
       "ok": true,
-      "raw": 11,
+      "raw": 12,
       "parser": "link_list"
      }
     ]
