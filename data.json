@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T02:59:15.894103+09:00",
+ "updated": "2026-11-18T11:47:42.744908+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -286,8 +286,7 @@
      "date": "2026-11-18",
      "posted_date": null,
      "event_date": "2026-11-18",
-     "services": [],
-     "period": "2026年11月18日（水曜日）午前0時～午前6時"
+     "services": []
     }
    ],
    "diag": {
@@ -367,14 +366,14 @@
     {
      "title": "じぶん銀行FX メンテナンス日時 2026年11月14日（土）6：50 ～ 15：00 じぶん銀行FXのシステムメンテナンス時間を通常よりも延長し、サービスを停止いたします。 ※ 終了時間は前後する場合があります。あらかじめご了承ください。",
      "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-11-18",
+     "date": "2026-11-22",
      "posted_date": null,
-     "event_date": "2026-11-18",
+     "event_date": "2026-11-22",
      "services": [
       "ATM",
       "アプリ"
      ],
-     "period": "2026年11月18日（水）0：30 ～ 7：45"
+     "period": "2026年11月22日（日）0：50 ～ 6：10"
     }
    ],
    "diag": {
@@ -386,7 +385,7 @@
     "parsers": [
      "text_block"
     ],
-    "latest_seen": "2026-11-18",
+    "latest_seen": "2026-11-22",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
@@ -748,19 +747,19 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 4,
+    "raw_count": 3,
     "kept_count": 0,
-    "dropped_past": 4,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-17",
+    "latest_seen": "2026-09-07",
     "sources": [
      {
       "url": "https://www.33bank.co.jp/",
       "ok": true,
-      "raw": 4,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
@@ -974,6 +973,14 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "システムメンテナンスに伴う「来店予約サービス」の一時休止について",
+     "url": "https://www.dhbk.co.jp/information/1202869_2306.html",
+     "date": "2026-11-18",
+     "posted_date": null,
+     "event_date": "2026-11-18",
+     "services": []
+    },
+    {
      "title": "サムズウオロク巻店出張所ATM一時休止のお知らせ（PDF：216 KB）",
      "url": "https://www.dhbk.co.jp/information/__icsFiles/afieldfile/2026/10/09/20261009.pdf",
      "date": "2026-10-19",
@@ -988,13 +995,13 @@
    "diag": {
     "status": "ok",
     "raw_count": 2,
-    "kept_count": 1,
-    "dropped_past": 1,
+    "kept_count": 2,
+    "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-10-19",
+    "latest_seen": "2026-11-18",
     "sources": [
      {
       "url": "https://www.dhbk.co.jp/information/",
