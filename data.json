@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T11:09:27.511710+09:00",
+ "updated": "2026-11-21T02:25:02.433948+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -108,17 +108,6 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "一部サービスの臨時メンテナンス実施について(11月20日10時更新)",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002530.html",
-     "date": "2026-11-20",
-     "posted_date": null,
-     "event_date": "2026-11-20",
-     "services": [
-      "アプリ",
-      "カード"
-     ]
-    },
-    {
      "title": "「ゆうちょの国際送金」webサイトのシステムメンテナンスのお知らせ",
      "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002528.html",
      "date": "2026-11-21",
@@ -128,23 +117,34 @@
       "振込"
      ],
      "period": "2026年 11月 21日（土）23:55 ～ 2026年 11月 22日（日） 2:00"
+    },
+    {
+     "title": "「口座開設サポートシステム」・「メールオーダー用異動届出書受付Webサイト」・「相続Web案内サービス」のシステムメンテナンスのお知らせ",
+     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002527.html",
+     "date": "2026-11-26",
+     "posted_date": null,
+     "event_date": "2026-11-26",
+     "services": [
+      "アプリ"
+     ],
+     "period": "2026年11月26日（木）1:00～3:00"
     }
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 37,
+    "raw_count": 36,
     "kept_count": 2,
     "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-21",
+    "latest_seen": "2026-11-26",
     "sources": [
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
       "ok": true,
-      "raw": 37,
+      "raw": 36,
       "parser": "link_list"
      }
     ]
@@ -221,6 +221,17 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "銀行からのお知らせ ［臨時メンテナンス］振込サービス停止 11月22日（日）02:00 ～ 11月22日（日）5:00 詳細はこちら",
+     "url": "https://www.netbk.co.jp/contents/company/info/maintenance/",
+     "date": "2026-11-22",
+     "posted_date": null,
+     "event_date": "2026-11-22",
+     "services": [
+      "振込"
+     ],
+     "period": "11月22日（日）02:00 ～ 11月22日（日）5:00"
+    },
+    {
      "title": "（更新）臨時メンテナンスのお知らせ",
      "url": "https://www.netbk.co.jp/contents/company/info/2026/1111_006564.html",
      "date": "2026-11-22",
@@ -235,21 +246,21 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 13,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "raw_count": 15,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
-     "none"
+     "text_block"
     ],
     "latest_seen": "2026-11-22",
     "sources": [
      {
       "url": "https://www.netbk.co.jp/contents/company/info/maintenance/",
       "ok": true,
-      "raw": 0,
-      "parser": "none"
+      "raw": 2,
+      "parser": "text_block"
      },
      {
       "url": "https://www.netbk.co.jp/contents/company/info/",
@@ -418,15 +429,6 @@
      "period": "2026年11月21日（土）12:00～11月22日（日）13:00"
     },
     {
-     "title": "2026.11.18 システムメンテナンスに伴う、サービス停止のお知らせ（11月20日（金）22:00～11月21日（土）1:00）",
-     "url": "https://www.aeonbank.co.jp/news/2026/1119_01/",
-     "date": "2026-11-20",
-     "posted_date": "2026-11-18",
-     "event_date": "2026-11-20",
-     "services": [],
-     "period": "2026年11月20日（金）22:00～11月21日（土）1:00"
-    },
-    {
      "title": "2026.11.09 システムメンテナンスに伴う、サービス停止のお知らせ（11月16日（月）、24日（火）0:00～7:00）",
      "url": "https://www.aeonbank.co.jp/news/2026/1109_01/",
      "date": "2026-11-24",
@@ -443,8 +445,8 @@
    "diag": {
     "status": "ok",
     "raw_count": 39,
-    "kept_count": 4,
-    "dropped_past": 1,
+    "kept_count": 3,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
@@ -552,6 +554,18 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "2026年11月19日 システムメンテナンスに伴う一部サービスの利用停止について",
+     "url": "https://www.okb.co.jp/archive/2026/20261119-03.html",
+     "date": "2026-11-19",
+     "posted_date": "2026-11-19",
+     "event_date": null,
+     "services": [
+      "ATM",
+      "振込",
+      "アプリ"
+     ]
+    },
+    {
      "title": "システムメンテナンスのため、スーパーOKダイレクトを･･･",
      "url": "https://www.okb.co.jp/personal/okdirect/",
      "date": "2026-11-23",
@@ -565,10 +579,10 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 4,
-    "kept_count": 1,
-    "dropped_past": 2,
-    "dropped_undated": 1,
+    "raw_count": 3,
+    "kept_count": 2,
+    "dropped_past": 1,
+    "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
@@ -577,7 +591,7 @@
      {
       "url": "https://www.okb.co.jp/",
       "ok": true,
-      "raw": 4,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
@@ -659,22 +673,34 @@
    "regular": "インターネットバンキング：毎日 2:00–6:00 は利用不可",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026年11月06日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
+     "url": "https://www.aichibank.co.jp/important_infomation/details/261106.html",
+     "date": "2026-11-26",
+     "posted_date": "2026-11-06",
+     "event_date": "2026-11-26",
+     "services": [
+      "ATM"
+     ],
+     "period": "2026年11月26日（木）18時～2026年11月27日（金）8時"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 9,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "status": "ok",
+    "raw_count": 6,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-12",
+    "latest_seen": "2026-11-26",
     "sources": [
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
       "ok": true,
-      "raw": 9,
+      "raw": 6,
       "parser": "link_list"
      }
     ]
@@ -689,23 +715,12 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026/11/20 ホームページにおける一部サービスの一時停止について 別ウィンドウでPDFを開きます",
-     "url": "https://www.meigin.com/news/files/20261120_oshirase_1.pdf",
-     "date": "2026-11-20",
-     "posted_date": "2026-11-20",
-     "event_date": "2026-11-20",
-     "services": [
-      "投信"
-     ]
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 1,
-    "kept_count": 1,
-    "dropped_past": 0,
+    "kept_count": 0,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -806,28 +821,30 @@
    "official": "https://www.hekishin.jp/news/",
    "regular": "",
    "note": null,
-   "fetch_ok": false,
+   "fetch_ok": true,
    "items": [],
    "diag": {
-    "status": "fetch_failed",
-    "raw_count": 0,
+    "status": "all_past",
+    "raw_count": 14,
     "kept_count": 0,
-    "dropped_past": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
-    "parsers": [],
+    "parsers": [
+     "link_list"
+    ],
     "latest_seen": null,
     "sources": [
      {
       "url": "https://www.hekishin.jp/news/",
-      "ok": false,
-      "raw": 0,
-      "parser": "fetch_failed"
+      "ok": true,
+      "raw": 9,
+      "parser": "link_list"
      },
      {
       "url": "https://www.hekishin.jp/news/important/",
-      "ok": false,
-      "raw": 0,
-      "parser": "fetch_failed"
+      "ok": true,
+      "raw": 5,
+      "parser": "link_list"
      }
     ]
    }
@@ -843,6 +860,17 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "個人向けローンのインターネット申し込み受付およびマイページの一時停止のお知らせ",
+     "url": "https://www.shizuokabank.co.jp/notice/detail/20261120_upt/",
+     "date": "2026-11-25",
+     "posted_date": "2026-11-20",
+     "event_date": "2026-11-25",
+     "services": [
+      "カード"
+     ],
+     "period": "2026年11月25日 午前0時～午前1時"
+    },
+    {
      "title": "ATMなどのオンラインサービスの一時休止のお知らせ",
      "url": "https://www.shizuokabank.co.jp/notice/detail/20261102_nKF/",
      "date": "2026-12-31",
@@ -857,9 +885,9 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 6,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "raw_count": 7,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "json"
@@ -869,7 +897,7 @@
      {
       "url": "https://www.shizuokabank.co.jp/common/components/info.json",
       "ok": true,
-      "raw": 6,
+      "raw": 7,
       "parser": "json"
      }
     ]
@@ -945,19 +973,19 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 3,
+    "raw_count": 2,
     "kept_count": 0,
-    "dropped_past": 3,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-19",
+    "latest_seen": "2026-10-09",
     "sources": [
      {
       "url": "https://www.gunmabank.co.jp/info/gbnotice/",
       "ok": true,
-      "raw": 3,
+      "raw": 2,
       "parser": "link_list"
      }
     ]
@@ -1128,23 +1156,12 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026年11月20日 【重要】一部システムの緊急メンテナンスを実施しております。（2026年11月20日9時00分）",
-     "url": "https://www.fukuibank.co.jp/info/docs/php20261119.html",
-     "date": "2026-11-20",
-     "posted_date": "2026-11-20",
-     "event_date": "2026-11-20",
-     "services": [
-      "アプリ"
-     ]
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 13,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
