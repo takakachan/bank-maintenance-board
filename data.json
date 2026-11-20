@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T02:49:31.054674+09:00",
+ "updated": "2026-11-20T11:09:27.511710+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -108,32 +108,43 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "「口座開設サポートシステム」・「メールオーダー用異動届出書受付Webサイト」・「相続Web案内サービス」のシステムメンテナンスのお知らせ",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002527.html",
-     "date": "2026-11-26",
+     "title": "一部サービスの臨時メンテナンス実施について(11月20日10時更新)",
+     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002530.html",
+     "date": "2026-11-20",
      "posted_date": null,
-     "event_date": "2026-11-26",
+     "event_date": "2026-11-20",
      "services": [
-      "アプリ"
+      "アプリ",
+      "カード"
+     ]
+    },
+    {
+     "title": "「ゆうちょの国際送金」webサイトのシステムメンテナンスのお知らせ",
+     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002528.html",
+     "date": "2026-11-21",
+     "posted_date": null,
+     "event_date": "2026-11-21",
+     "services": [
+      "振込"
      ],
-     "period": "2026年11月26日（木）1:00～3:00"
+     "period": "2026年 11月 21日（土）23:55 ～ 2026年 11月 22日（日） 2:00"
     }
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 35,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "raw_count": 37,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-26",
+    "latest_seen": "2026-11-21",
     "sources": [
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
       "ok": true,
-      "raw": 35,
+      "raw": 37,
       "parser": "link_list"
      }
     ]
@@ -465,28 +476,38 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "システムメンテナンスに伴うネット決済サービスの利用停止について",
+     "url": "https://www.sevenbank.co.jp/support/info_notice128.html",
+     "date": "2026-11-23",
+     "posted_date": null,
+     "event_date": "2026-11-23",
+     "services": [],
+     "period": "2026年11月23日（月）23:00 ～ 2026年11月24日（火）01:00"
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 16,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "status": "ok",
+    "raw_count": 18,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-07-15",
+    "latest_seen": "2026-11-23",
     "sources": [
      {
       "url": "https://www.sevenbank.co.jp/support/important.html",
       "ok": true,
-      "raw": 14,
+      "raw": 15,
       "parser": "link_list"
      },
      {
       "url": "https://www.sevenbank.co.jp/",
       "ok": true,
-      "raw": 2,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
@@ -544,9 +565,9 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 3,
+    "raw_count": 4,
     "kept_count": 1,
-    "dropped_past": 1,
+    "dropped_past": 2,
     "dropped_undated": 1,
     "parsers": [
      "link_list"
@@ -556,7 +577,7 @@
      {
       "url": "https://www.okb.co.jp/",
       "ok": true,
-      "raw": 3,
+      "raw": 4,
       "parser": "link_list"
      }
     ]
@@ -570,28 +591,31 @@
    "official": "https://www.juroku.co.jp/",
    "regular": "インターネットバンキング：毎月第2・第3土曜 21:00–23:00／1月1日 21:00–23:00",
    "note": null,
-   "fetch_ok": false,
+   "fetch_ok": true,
    "items": [],
    "diag": {
-    "status": "fetch_failed",
-    "raw_count": 0,
+    "status": "all_past",
+    "raw_count": 1,
     "kept_count": 0,
     "dropped_past": 0,
-    "dropped_undated": 0,
-    "parsers": [],
+    "dropped_undated": 1,
+    "parsers": [
+     "link_list",
+     "none"
+    ],
     "latest_seen": null,
     "sources": [
      {
       "url": "https://www.juroku.co.jp/oshirase_personal/",
-      "ok": false,
-      "raw": 0,
-      "parser": "fetch_failed"
+      "ok": true,
+      "raw": 1,
+      "parser": "link_list"
      },
      {
       "url": "https://www.16fg.co.jp/news/16bank/",
-      "ok": false,
+      "ok": true,
       "raw": 0,
-      "parser": "fetch_failed"
+      "parser": "none"
      }
     ]
    }
@@ -634,22 +658,24 @@
    "official": "https://www.aichibank.co.jp/important_infomation/",
    "regular": "インターネットバンキング：毎日 2:00–6:00 は利用不可",
    "note": null,
-   "fetch_ok": false,
+   "fetch_ok": true,
    "items": [],
    "diag": {
-    "status": "fetch_failed",
-    "raw_count": 0,
+    "status": "all_past",
+    "raw_count": 9,
     "kept_count": 0,
-    "dropped_past": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
-    "parsers": [],
-    "latest_seen": null,
+    "parsers": [
+     "link_list"
+    ],
+    "latest_seen": "2026-11-12",
     "sources": [
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
-      "ok": false,
-      "raw": 0,
-      "parser": "fetch_failed"
+      "ok": true,
+      "raw": 9,
+      "parser": "link_list"
      }
     ]
    }
@@ -663,17 +689,28 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026/11/20 ホームページにおける一部サービスの一時停止について 別ウィンドウでPDFを開きます",
+     "url": "https://www.meigin.com/news/files/20261120_oshirase_1.pdf",
+     "date": "2026-11-20",
+     "posted_date": "2026-11-20",
+     "event_date": "2026-11-20",
+     "services": [
+      "投信"
+     ]
+    }
+   ],
    "diag": {
-    "status": "no_notice",
-    "raw_count": 0,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 1,
+    "kept_count": 1,
     "dropped_past": 0,
     "dropped_undated": 0,
     "parsers": [
-     "none"
+     "link_list"
     ],
-    "latest_seen": null,
+    "latest_seen": "2026-11-20",
     "sources": [
      {
       "url": "https://www.meigin.com/kojin/bankstage/news/",
@@ -684,8 +721,8 @@
      {
       "url": "https://www.meigin.com/",
       "ok": true,
-      "raw": 0,
-      "parser": "none"
+      "raw": 1,
+      "parser": "link_list"
      }
     ]
    }
@@ -979,9 +1016,9 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 3,
+    "raw_count": 2,
     "kept_count": 1,
-    "dropped_past": 2,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -991,7 +1028,7 @@
      {
       "url": "https://www.dhbk.co.jp/information/",
       "ok": true,
-      "raw": 3,
+      "raw": 2,
       "parser": "link_list"
      }
     ]
@@ -1091,17 +1128,28 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026年11月20日 【重要】一部システムの緊急メンテナンスを実施しております。（2026年11月20日9時00分）",
+     "url": "https://www.fukuibank.co.jp/info/docs/php20261119.html",
+     "date": "2026-11-20",
+     "posted_date": "2026-11-20",
+     "event_date": "2026-11-20",
+     "services": [
+      "アプリ"
+     ]
+    }
+   ],
    "diag": {
-    "status": "all_past",
+    "status": "ok",
     "raw_count": 13,
-    "kept_count": 0,
-    "dropped_past": 5,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-19",
+    "latest_seen": "2026-11-20",
     "sources": [
      {
       "url": "https://www.fukuibank.co.jp/info/",
