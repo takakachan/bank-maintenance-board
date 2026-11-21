@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T11:01:50.574424+09:00",
+ "updated": "2026-11-22T01:29:31.802843+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -280,22 +280,12 @@
    "regular": "1・4・7・10月の最終火曜 1:00–6:00（全体）／日曜未明に一部機能停止あり",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "外貨預金サービスの停止のお知らせ（11月21日）",
-     "url": "https://www.paypay-bank.co.jp/news/2026/1113.html",
-     "date": "2026-11-21",
-     "posted_date": null,
-     "event_date": "2026-11-21",
-     "services": [],
-     "period": "2026年11月21日（土曜日）9時～24時"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 4,
-    "kept_count": 1,
-    "dropped_past": 3,
+    "kept_count": 0,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -368,14 +358,14 @@
     {
      "title": "じぶん銀行FX メンテナンス日時 2026年11月21日（土）6：50 ～ 18：00 じぶん銀行FXのシステムメンテナンス時間を通常よりも延長し、サービスを停止いたします。 ※ 終了時間は前後する場合があります。あらかじめご了承ください。",
      "url": "https://www.jibunbank.co.jp/maintenance/",
-     "date": "2026-11-21",
+     "date": "2026-11-22",
      "posted_date": null,
-     "event_date": "2026-11-21",
+     "event_date": "2026-11-22",
      "services": [
       "ATM",
       "アプリ"
      ],
-     "period": "2026年11月21日（土）6：50 ～ 18：00"
+     "period": "2026年11月22日（日）0：50 ～ 6：10"
     }
    ],
    "diag": {
@@ -387,7 +377,7 @@
     "parsers": [
      "text_block"
     ],
-    "latest_seen": "2026-11-21",
+    "latest_seen": "2026-11-22",
     "sources": [
      {
       "url": "https://www.jibunbank.co.jp/maintenance/",
