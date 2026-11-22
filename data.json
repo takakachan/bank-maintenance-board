@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T10:04:48.276393+09:00",
+ "updated": "2026-11-23T01:46:57.216029+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -313,8 +313,8 @@
      "posted_date": null,
      "event_date": "2026-11-25",
      "services": [
-      "ATM",
-      "アプリ"
+      "アプリ",
+      "カード"
      ],
      "period": "2026年11月25日（水）1：50 ～ 5：40"
     }
@@ -359,17 +359,6 @@
      "period": "2026年11月24日（火）21:00～21:30"
     },
     {
-     "title": "2026.11.12 マネックス証券のシステムメンテナンスに伴う投資信託（金融商品仲介）受付業務休止について（11月21日（土）12:00～11月22日（日）13:00）",
-     "url": "https://www.aeonbank.co.jp/news/2026/1112_02/",
-     "date": "2026-11-21",
-     "posted_date": "2026-11-12",
-     "event_date": "2026-11-21",
-     "services": [
-      "投信"
-     ],
-     "period": "2026年11月21日（土）12:00～11月22日（日）13:00"
-    },
-    {
      "title": "2026.11.09 システムメンテナンスに伴う、サービス停止のお知らせ（11月16日（月）、24日（火）0:00～7:00）",
      "url": "https://www.aeonbank.co.jp/news/2026/1109_01/",
      "date": "2026-11-24",
@@ -386,8 +375,8 @@
    "diag": {
     "status": "ok",
     "raw_count": 39,
-    "kept_count": 3,
-    "dropped_past": 2,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
@@ -1100,19 +1089,19 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 13,
+    "raw_count": 14,
     "kept_count": 0,
     "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-20",
+    "latest_seen": "2026-11-22",
     "sources": [
      {
       "url": "https://www.fukuibank.co.jp/info/",
       "ok": true,
-      "raw": 13,
+      "raw": 14,
       "parser": "link_list"
      }
     ]
