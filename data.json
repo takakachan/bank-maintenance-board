@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T10:28:24.562921+09:00",
+ "updated": "2026-11-24T05:42:14.835958+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -408,27 +408,17 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "システムメンテナンスに伴うネット決済サービスの利用停止について",
-     "url": "https://www.sevenbank.co.jp/support/info_notice128.html",
-     "date": "2026-11-23",
-     "posted_date": null,
-     "event_date": "2026-11-23",
-     "services": [],
-     "period": "2026年11月23日（月）23:00 ～ 2026年11月24日（火）01:00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 18,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-23",
+    "latest_seen": "2026-07-15",
     "sources": [
      {
       "url": "https://www.sevenbank.co.jp/support/important.html",
@@ -594,17 +584,6 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "2026年11月23日 お知らせ 【重要】あいぎんアプリ「スマホATM」機能の緊急メンテナンスを実施しております。（2026年11月23日8:30）",
-     "url": "https://www.aichibank.co.jp/important_infomation/details/261123.html",
-     "date": "2026-11-23",
-     "posted_date": "2026-11-23",
-     "event_date": "2026-11-23",
-     "services": [
-      "ATM",
-      "アプリ"
-     ]
-    },
-    {
      "title": "2026年11月06日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/261106.html",
      "date": "2026-11-26",
@@ -619,8 +598,8 @@
    "diag": {
     "status": "ok",
     "raw_count": 7,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -645,24 +624,12 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "2026/11/23 システムメンテナンスに伴うスマホATMサービス停止のお知らせ 別ウィンドウでPDFを開きます",
-     "url": "https://www.meigin.com/news/files/20261123_oshirase_1.pdf",
-     "date": "2026-11-23",
-     "posted_date": "2026-11-23",
-     "event_date": "2026-11-23",
-     "services": [
-      "ATM",
-      "アプリ"
-     ]
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 2,
-    "kept_count": 1,
-    "dropped_past": 1,
+    "kept_count": 0,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
