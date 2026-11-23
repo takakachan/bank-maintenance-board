@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T01:46:57.216029+09:00",
+ "updated": "2026-11-23T10:28:24.562921+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -494,34 +494,23 @@
       "振込",
       "アプリ"
      ]
-    },
-    {
-     "title": "システムメンテナンスのため、スーパーOKダイレクトを･･･",
-     "url": "https://www.okb.co.jp/personal/okdirect/",
-     "date": "2026-11-23",
-     "posted_date": null,
-     "event_date": "2026-11-23",
-     "services": [
-      "アプリ"
-     ],
-     "period": "2026年11月23日（月） 午前0:00 ～ 午前7:00"
     }
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 3,
-    "kept_count": 2,
+    "raw_count": 2,
+    "kept_count": 1,
     "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-23",
+    "latest_seen": "2026-11-20",
     "sources": [
      {
       "url": "https://www.okb.co.jp/",
       "ok": true,
-      "raw": 3,
+      "raw": 2,
       "parser": "link_list"
      }
     ]
@@ -605,6 +594,17 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "2026年11月23日 お知らせ 【重要】あいぎんアプリ「スマホATM」機能の緊急メンテナンスを実施しております。（2026年11月23日8:30）",
+     "url": "https://www.aichibank.co.jp/important_infomation/details/261123.html",
+     "date": "2026-11-23",
+     "posted_date": "2026-11-23",
+     "event_date": "2026-11-23",
+     "services": [
+      "ATM",
+      "アプリ"
+     ]
+    },
+    {
      "title": "2026年11月06日 お知らせ システムメンテナンスに伴う一部ATMサービス休止について",
      "url": "https://www.aichibank.co.jp/important_infomation/details/261106.html",
      "date": "2026-11-26",
@@ -618,9 +618,9 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 6,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "raw_count": 7,
+    "kept_count": 2,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -630,7 +630,7 @@
      {
       "url": "https://www.aichibank.co.jp/important_infomation/",
       "ok": true,
-      "raw": 6,
+      "raw": 7,
       "parser": "link_list"
      }
     ]
@@ -645,17 +645,29 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [],
+   "items": [
+    {
+     "title": "2026/11/23 システムメンテナンスに伴うスマホATMサービス停止のお知らせ 別ウィンドウでPDFを開きます",
+     "url": "https://www.meigin.com/news/files/20261123_oshirase_1.pdf",
+     "date": "2026-11-23",
+     "posted_date": "2026-11-23",
+     "event_date": "2026-11-23",
+     "services": [
+      "ATM",
+      "アプリ"
+     ]
+    }
+   ],
    "diag": {
-    "status": "all_past",
-    "raw_count": 1,
-    "kept_count": 0,
+    "status": "ok",
+    "raw_count": 2,
+    "kept_count": 1,
     "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-20",
+    "latest_seen": "2026-11-23",
     "sources": [
      {
       "url": "https://www.meigin.com/kojin/bankstage/news/",
@@ -666,7 +678,7 @@
      {
       "url": "https://www.meigin.com/",
       "ok": true,
-      "raw": 1,
+      "raw": 2,
       "parser": "link_list"
      }
     ]
