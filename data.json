@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T14:11:46.077284+09:00",
+ "updated": "2026-11-25T04:48:09.467271+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -248,19 +248,19 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 4,
+    "raw_count": 3,
     "kept_count": 0,
-    "dropped_past": 4,
+    "dropped_past": 3,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-21",
+    "latest_seen": "2026-11-18",
     "sources": [
      {
       "url": "https://www.paypay-bank.co.jp/news/index.html",
       "ok": true,
-      "raw": 4,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
@@ -359,22 +359,13 @@
       "アプリ"
      ],
      "period": "2026年11月25日（水）～2026年11月30日（月）12:00"
-    },
-    {
-     "title": "2026.11.17 来店予約・オンライン相談予約・セミナー予約システムメンテナンスに伴う、サービス停止のお知らせ（11月24日（火））",
-     "url": "https://www.aeonbank.co.jp/news/2026/1117_01/",
-     "date": "2026-11-24",
-     "posted_date": "2026-11-17",
-     "event_date": "2026-11-24",
-     "services": [],
-     "period": "2026年11月24日（火）21:00～21:30"
     }
    ],
    "diag": {
     "status": "ok",
     "raw_count": 40,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "link_list",
@@ -625,9 +616,9 @@
    "items": [],
    "diag": {
     "status": "all_past",
-    "raw_count": 2,
+    "raw_count": 1,
     "kept_count": 0,
-    "dropped_past": 2,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
@@ -643,7 +634,7 @@
      {
       "url": "https://www.meigin.com/",
       "ok": true,
-      "raw": 2,
+      "raw": 1,
       "parser": "link_list"
      }
     ]
@@ -767,17 +758,6 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "個人向けローンのインターネット申し込み受付およびマイページの一時停止のお知らせ",
-     "url": "https://www.shizuokabank.co.jp/notice/detail/20261120_upt/",
-     "date": "2026-11-25",
-     "posted_date": "2026-11-20",
-     "event_date": "2026-11-25",
-     "services": [
-      "カード"
-     ],
-     "period": "2026年11月25日 午前0時～午前1時"
-    },
-    {
      "title": "ATMなどのオンラインサービスの一時休止のお知らせ",
      "url": "https://www.shizuokabank.co.jp/notice/detail/20261102_nKF/",
      "date": "2026-12-31",
@@ -793,8 +773,8 @@
    "diag": {
     "status": "ok",
     "raw_count": 7,
-    "kept_count": 2,
-    "dropped_past": 3,
+    "kept_count": 1,
+    "dropped_past": 4,
     "dropped_undated": 0,
     "parsers": [
      "json"
@@ -1095,6 +1075,17 @@
    "fetch_ok": true,
    "items": [
     {
+     "title": "（11/24 16:30現在）ホームページの臨時メンテナンスに伴う一部機能・サービス等の停止について",
+     "url": "https://www.fukuokabank.co.jp/announcement/important/y2026/1119.html",
+     "date": "2027-11-19",
+     "posted_date": null,
+     "event_date": "2027-11-19",
+     "services": [
+      "振込",
+      "アプリ"
+     ]
+    },
+    {
      "title": "新システム移行に伴う各種サービス休止のお知らせ",
      "url": "https://www.fukuokabank.co.jp/announcement/important/y2026/service-suspension_4.html",
      "date": "2026-12-30",
@@ -1131,13 +1122,13 @@
    "diag": {
     "status": "ok",
     "raw_count": 5,
-    "kept_count": 3,
-    "dropped_past": 2,
+    "kept_count": 4,
+    "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2027-10-21",
+    "latest_seen": "2027-11-19",
     "sources": [
      {
       "url": "https://www.fukuokabank.co.jp/announcement/important/",

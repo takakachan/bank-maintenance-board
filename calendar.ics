@@ -9,7 +9,7 @@ X-WR-CALDESC:銀行のシステムメンテナンス・サービス停止
  予定
 BEGIN:VEVENT
 UID:6dd9e55100416d28e63c4aba32a8aab8@bank-maintenance-board
-DTSTAMP:20261124T051146Z
+DTSTAMP:20261124T194809Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:百五銀行 停止（アプリ）
@@ -20,7 +20,7 @@ URL:https://www.hyakugo.co.jp/whats_new/20261105_06.pdf
 END:VEVENT
 BEGIN:VEVENT
 UID:25d9a6cdf5588788a92bfa7c558f7f14@bank-maintenance-board
-DTSTAMP:20261124T051146Z
+DTSTAMP:20261124T194809Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:大垣共立銀行 停止（ATM・振込・アプリ）
@@ -29,20 +29,8 @@ DESCRIPTION:システムメンテナンスに伴う一部サービスの
 URL:https://www.okb.co.jp/archive/2026/20261119-03.html
 END:VEVENT
 BEGIN:VEVENT
-UID:c11daa1072498114498f61929f30eda9@bank-maintenance-board
-DTSTAMP:20261124T051146Z
-DTSTART:20261124T120000Z
-DTEND:20261124T123000Z
-SUMMARY:イオン銀行 停止
-DESCRIPTION:来店予約・オンライン相談予約・セミナー予
- 約システムメンテナンスに伴う、サービス停止のお知
- らせ（11月24日（火））\n停止期間: 2026年11月24日（火
- ）21:00～21:30\nhttps://www.aeonbank.co.jp/news/2026/1117_01/
-URL:https://www.aeonbank.co.jp/news/2026/1117_01/
-END:VEVENT
-BEGIN:VEVENT
 UID:b1e24cc920ebc2d3920567deac733fa5@bank-maintenance-board
-DTSTAMP:20261124T051146Z
+DTSTAMP:20261124T194809Z
 DTSTART:20261124T165000Z
 DTEND:20261124T204000Z
 SUMMARY:auじぶん銀行 停止（アプリ・カード）
@@ -52,7 +40,7 @@ URL:https://www.jibunbank.co.jp/maintenance/
 END:VEVENT
 BEGIN:VEVENT
 UID:13bee14d230e823252b0f754b2b4e2bc@bank-maintenance-board
-DTSTAMP:20261124T051146Z
+DTSTAMP:20261124T194809Z
 DTSTART;VALUE=DATE:20261125
 DTEND;VALUE=DATE:20261201
 SUMMARY:イオン銀行 停止（アプリ）
@@ -63,20 +51,8 @@ DESCRIPTION:【重要】2026年11月～12月初旬のiDeCoのお手続き
 URL:https://www.aeonbank.co.jp/news/2026/1124_01/
 END:VEVENT
 BEGIN:VEVENT
-UID:63af4cba9477648e5e15c0a5e84f64a1@bank-maintenance-board
-DTSTAMP:20261124T051146Z
-DTSTART:20261124T150000Z
-DTEND:20261124T160000Z
-SUMMARY:静岡銀行 停止（カード）
-DESCRIPTION:向けローンのインターネット申し込み受付お
- よびマイページの一時停止\n停止期間: 2026年11月25日 
- 午前0時～午前1時\nhttps://www.shizuokabank.co.jp/notice/detail/20
- 261120_upt/
-URL:https://www.shizuokabank.co.jp/notice/detail/20261120_upt/
-END:VEVENT
-BEGIN:VEVENT
 UID:3b0673cf04b44f953a926c4dcb028445@bank-maintenance-board
-DTSTAMP:20261124T051146Z
+DTSTAMP:20261124T194809Z
 DTSTART:20261125T160000Z
 DTEND:20261125T180000Z
 SUMMARY:ゆうちょ銀行 停止（アプリ）
@@ -89,7 +65,7 @@ URL:https://www.jp-bank.japanpost.jp/news/2026/news_id002527.html
 END:VEVENT
 BEGIN:VEVENT
 UID:89367719714718bcbac69713443d28b1@bank-maintenance-board
-DTSTAMP:20261124T051146Z
+DTSTAMP:20261124T194809Z
 DTSTART:20261126T090000Z
 DTEND:20261126T230000Z
 SUMMARY:あいち銀行 停止（ATM）
@@ -101,7 +77,7 @@ URL:https://www.aichibank.co.jp/important_infomation/details/261106.html
 END:VEVENT
 BEGIN:VEVENT
 UID:c404d9a4a1886dc518f336393744cf14@bank-maintenance-board
-DTSTAMP:20261124T051146Z
+DTSTAMP:20261124T194809Z
 DTSTART;VALUE=DATE:20261126
 DTEND;VALUE=DATE:20261127
 SUMMARY:第四北越銀行 停止（ATM）
@@ -113,7 +89,7 @@ URL:https://www.dhbk.co.jp/information/__icsFiles/afieldfile/2026/11/19/1
 END:VEVENT
 BEGIN:VEVENT
 UID:e732442b7d38175cf91a0d5663e0d774@bank-maintenance-board
-DTSTAMP:20261124T051146Z
+DTSTAMP:20261124T194809Z
 DTSTART:20261218T200000Z
 DTEND:20261219T120000Z
 SUMMARY:北國銀行 停止（振込）
@@ -124,7 +100,7 @@ URL:https://www.hokkokubank.co.jp/other/news/2026/20260817.html
 END:VEVENT
 BEGIN:VEVENT
 UID:2278f7a1768eba734179496d7cb81cba@bank-maintenance-board
-DTSTAMP:20261124T051146Z
+DTSTAMP:20261124T194809Z
 DTSTART:20261230T120000Z
 DTEND:20270102T220000Z
 SUMMARY:北國銀行 停止（ATM・アプリ・カード）
@@ -136,7 +112,7 @@ URL:https://www.hokkokubank.co.jp/other/news/2026/pdf/20261019.pdf
 END:VEVENT
 BEGIN:VEVENT
 UID:4e037180ea6e55ecf227173c4d44ab45@bank-maintenance-board
-DTSTAMP:20261124T051146Z
+DTSTAMP:20261124T194809Z
 DTSTART:20261230T140000Z
 DTEND:20270103T233000Z
 SUMMARY:福岡銀行 停止（ATM・振込・アプリ）
@@ -149,7 +125,7 @@ URL:https://www.fukuokabank.co.jp/announcement/important/y2026/service-su
 END:VEVENT
 BEGIN:VEVENT
 UID:1ff935b5fe3e1277201371847bd99b62@bank-maintenance-board
-DTSTAMP:20261124T051146Z
+DTSTAMP:20261124T194809Z
 DTSTART:20261231T120000Z
 DTEND:20270101T230000Z
 SUMMARY:静岡銀行 停止（ATM・アプリ）
@@ -160,7 +136,7 @@ URL:https://www.shizuokabank.co.jp/notice/detail/20261102_nKF/
 END:VEVENT
 BEGIN:VEVENT
 UID:7696cfc71cdfc29e904673720d84dedd@bank-maintenance-board
-DTSTAMP:20261124T051146Z
+DTSTAMP:20261124T194809Z
 DTSTART;VALUE=DATE:20270919
 DTEND;VALUE=DATE:20270920
 SUMMARY:福岡銀行 停止（振込）
@@ -171,7 +147,7 @@ URL:https://www.fukuokabank.co.jp/announcement/important/y2026/service-su
 END:VEVENT
 BEGIN:VEVENT
 UID:1fa98baf9344377c4ea432e7f595a05c@bank-maintenance-board
-DTSTAMP:20261124T051146Z
+DTSTAMP:20261124T194809Z
 DTSTART;VALUE=DATE:20271021
 DTEND;VALUE=DATE:20271022
 SUMMARY:福岡銀行 停止（振込）
@@ -179,5 +155,16 @@ DESCRIPTION:（10/27 8:00現在）ホームページの臨時メンテナ
  ンスに伴う一部機能・サービス等の再開\nhttps://www.fuku
  okabank.co.jp/announcement/important/y2026/1021.html
 URL:https://www.fukuokabank.co.jp/announcement/important/y2026/1021.html
+END:VEVENT
+BEGIN:VEVENT
+UID:5211c6408dc79d1a1e45e642116a6398@bank-maintenance-board
+DTSTAMP:20261124T194809Z
+DTSTART;VALUE=DATE:20271119
+DTEND;VALUE=DATE:20271120
+SUMMARY:福岡銀行 停止（振込・アプリ）
+DESCRIPTION:（11/24 16:30現在）ホームページの臨時メンテ
+ ナンスに伴う一部機能・サービス等の停止\nhttps://www.f
+ ukuokabank.co.jp/announcement/important/y2026/1119.html
+URL:https://www.fukuokabank.co.jp/announcement/important/y2026/1119.html
 END:VEVENT
 END:VCALENDAR
