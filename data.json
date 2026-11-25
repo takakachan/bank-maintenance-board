@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T13:01:35.810192+09:00",
+ "updated": "2026-11-26T03:54:10.469534+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -106,29 +106,17 @@
    "regular": "夜間（23:55前後–翌朝）に振込・アプリの休止が入ることが多い",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "「口座開設サポートシステム」・「メールオーダー用異動届出書受付Webサイト」・「相続Web案内サービス」のシステムメンテナンスのお知らせ",
-     "url": "https://www.jp-bank.japanpost.jp/news/2026/news_id002527.html",
-     "date": "2026-11-26",
-     "posted_date": null,
-     "event_date": "2026-11-26",
-     "services": [
-      "アプリ"
-     ],
-     "period": "2026年11月26日（木）1:00～3:00"
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 36,
-    "kept_count": 1,
-    "dropped_past": 4,
+    "kept_count": 0,
+    "dropped_past": 5,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-26",
+    "latest_seen": "2026-11-16",
     "sources": [
      {
       "url": "https://www.jp-bank.japanpost.jp/news/2026/news_2026.html",
