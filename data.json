@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T12:26:21.739928+09:00",
+ "updated": "2026-11-27T03:42:53.015856+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -331,7 +331,7 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "【じぶん銀行スマホデビット】システムメンテナンスのお知らせ メンテナンス日時 2026年11月22日（日）0：50 ～ 6：10",
+     "title": "じぶん銀行FX メンテナンス日時 2026年11月28日（土）6：50 ～ 18：00 じぶん銀行FXのシステムメンテナンス時間を通常よりも延長し、サービスを停止いたします。 ※ 終了時間は前後する場合があります。あらかじめご了承ください。",
      "url": "https://www.jibunbank.co.jp/maintenance/",
      "date": "2026-11-28",
      "posted_date": null,
@@ -941,28 +941,17 @@
    "regular": "",
    "note": null,
    "fetch_ok": true,
-   "items": [
-    {
-     "title": "レインボーセンター出張所ATM一時休止のお知らせ（PDF：214 KB）",
-     "url": "https://www.dhbk.co.jp/information/__icsFiles/afieldfile/2026/11/19/1.pdf",
-     "date": "2026-11-26",
-     "posted_date": null,
-     "event_date": "2026-11-26",
-     "services": [
-      "ATM"
-     ]
-    }
-   ],
+   "items": [],
    "diag": {
-    "status": "ok",
+    "status": "all_past",
     "raw_count": 2,
-    "kept_count": 1,
-    "dropped_past": 1,
+    "kept_count": 0,
+    "dropped_past": 2,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2026-11-26",
+    "latest_seen": null,
     "sources": [
      {
       "url": "https://www.dhbk.co.jp/information/",
