@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T03:54:10.469534+09:00",
+ "updated": "2026-11-26T12:26:21.739928+09:00",
  "banks": [
   {
    "id": "mizuho",
@@ -1099,16 +1099,6 @@
    "fetch_ok": true,
    "items": [
     {
-     "title": "（11/24 18:00現在）ホームページの臨時メンテナンスに伴う一部機能・サービス等の停止について",
-     "url": "https://www.fukuokabank.co.jp/announcement/important/y2026/1119.html",
-     "date": "2027-11-19",
-     "posted_date": null,
-     "event_date": "2027-11-19",
-     "services": [
-      "振込"
-     ]
-    },
-    {
      "title": "新システム移行に伴う各種サービス休止のお知らせ",
      "url": "https://www.fukuokabank.co.jp/announcement/important/y2026/service-suspension_4.html",
      "date": "2026-12-30",
@@ -1120,16 +1110,6 @@
       "アプリ"
      ],
      "period": "2026年12月30日(水)23:00～2027年1月4日(月)8:30"
-    },
-    {
-     "title": "（10/27 8:00現在）ホームページの臨時メンテナンスに伴う一部機能・サービス等の再開について",
-     "url": "https://www.fukuokabank.co.jp/announcement/important/y2026/1021.html",
-     "date": "2027-10-21",
-     "posted_date": null,
-     "event_date": "2027-10-21",
-     "services": [
-      "振込"
-     ]
     },
     {
      "title": "他行宛振込の即時入金停止のお知らせ",
@@ -1144,19 +1124,19 @@
    ],
    "diag": {
     "status": "ok",
-    "raw_count": 5,
-    "kept_count": 4,
+    "raw_count": 3,
+    "kept_count": 2,
     "dropped_past": 1,
     "dropped_undated": 0,
     "parsers": [
      "link_list"
     ],
-    "latest_seen": "2027-11-19",
+    "latest_seen": "2027-09-19",
     "sources": [
      {
       "url": "https://www.fukuokabank.co.jp/announcement/important/",
       "ok": true,
-      "raw": 5,
+      "raw": 3,
       "parser": "link_list"
      }
     ]
